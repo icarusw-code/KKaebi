@@ -48,6 +48,7 @@ export default class extends Sandbox {
         this.state.players.set(client.sessionId, player);
 
         // console.log(IngredientData["조미료"].id);
+        // IngredientData["조미료"].map((d : any) => console.log(d.name));
     }
 
     // Client가 Room에서 퇴장할 때 호출

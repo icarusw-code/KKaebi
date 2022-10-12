@@ -13,6 +13,8 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
 
     private currentPlayers : Map<string, Player> = new Map<string, Player>();
 
+    // private tmp : string = " ";
+
     Start() {    
 
         // 이벤트 리스너 
@@ -23,6 +25,11 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
         this.multiplay.RoomJoined += (room : Room) => {
             room.OnStateChange += this.OnStateChange;
         };
+
+        // UnityEngine.PlayerPrefs.SetString("test", "change");
+        
+        // this.tmp = UnityEngine.PlayerPrefs.GetString("test"); 
+        // console.log(this.tmp);
     }
 
     private OnStateChange(state: State, isFirst:boolean){
