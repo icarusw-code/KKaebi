@@ -17,6 +17,10 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
 
     Start() {    
 
+        // from
+        // JSON.parse()
+        // toJson
+        // JSON.stringify
         // 이벤트 리스너 
         this.multiplay.RoomCreated += (room: Room) => {
             this.room = room;
