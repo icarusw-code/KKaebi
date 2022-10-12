@@ -1,7 +1,7 @@
 import { Sandbox, SandboxOptions, SandboxPlayer } from "ZEPETO.Multiplay";
 import { DataStorage } from 'ZEPETO.Multiplay.DataStorage';
 import { Player } from 'ZEPETO.Multiplay.Schema';
-import { IngredientData } from './IngredientData';
+// import { IngredientData } from './IngredientData';
 
 export default class extends Sandbox {
 

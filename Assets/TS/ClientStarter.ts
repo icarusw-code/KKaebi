@@ -17,10 +17,6 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
 
     Start() {    
 
-        // from
-        // JSON.parse()
-        // toJson
-        // JSON.stringify
         // 이벤트 리스너 
         this.multiplay.RoomCreated += (room: Room) => {
             this.room = room;
@@ -31,6 +27,17 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
         };
 
         // UnityEngine.PlayerPrefs.SetString("test", "change");
+
+        // 퀘스트가 완료되면 해당 요리 도감 카운트를 올려준다.
+        // 1. 그 퀘스트 요리이름을 가져오고
+        // 2. string 변수 하나 선언해서 요리이름 으로 만들어줌
+        // 3. 현재 카운트를 playerprefs로 가져옴
+        // 4. 카운트를 올려준다.
+        // 5. 바뀐 카운트를 playerprefs로 다시 저장
+
+        // var count : number = UnityEngine.PlayerPrefs.GetInt("떡꼬치"); 
+
+        // UnityEngine.PlayerPrefs.SetString("도감_떡꼬치", count);
         
         // this.tmp = UnityEngine.PlayerPrefs.GetString("test"); 
         // console.log(this.tmp);
