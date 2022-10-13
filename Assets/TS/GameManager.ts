@@ -26,9 +26,15 @@ export default class GameManager extends ZepetoScriptBehaviour {
     }
 
 
-    public IngredientCountUP(){
+    public IngredientCountUP(id : number){
 
-        // UnityEngine.PlayerPrefs.SetString("test", "change");
+        //해당 id를 데이터에서 찾아서 카운트를 올려 저장해줄거임.
+        var IngreCount : number = UnityEngine.PlayerPrefs.GetInt(id.toString());
+        IngreCount++;
+        UnityEngine.PlayerPrefs.SetInt(id.toString(),IngreCount);
+        console.log("현재 이녀석의 id는: "+ id + "이고 현재먹은 이 재료의 개수 : " + UnityEngine.PlayerPrefs.GetInt(id.toString()));
+    }
+    // UnityEngine.PlayerPrefs.SetString("test", "change");
 
         // 퀘스트가 완료되면 해당 요리 도감 카운트를 올려준다.
         // 1. 그 퀘스트 요리이름을 가져오고
@@ -55,7 +61,5 @@ export default class GameManager extends ZepetoScriptBehaviour {
         //     UnityEngine.PlayerPrefs.SetInt(keyId.toString(), count);
         //     console.log(keyId);
         // });
-
-    }
 
 }

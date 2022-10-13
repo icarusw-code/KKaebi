@@ -3,11 +3,14 @@ import { Collider, GameObject, Object,Vector3,Camera} from 'UnityEngine';
 import { ZepetoPlayers } from 'ZEPETO.Character.Controller';
 import { Button } from 'UnityEngine.UI';
 import ButtonClick from './ButtonClick';
+import GameManager from '../TS/GameManager';
+import IngredientInfo from '../TS/IngredientInfo';
 export default class ingerdientInteraction extends ZepetoScriptBehaviour {
     public btnFactory : GameObject;
     private btn : GameObject;
     private turnCheck : bool = false;
     public DestroyBtn: Button;
+    private myID : number;
     Start() {    
         this.btn = GameObject.Instantiate(this.btnFactory) as GameObject; //재료 생성될때 버튼도 함께 생성
         this.btn.transform.parent = GameObject.Find("Canvas_UI").transform; //캔버스 자식으로 생성
@@ -16,6 +19,7 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
         this.DestroyBtn = this.btn.GetComponent<Button>(); 
         this.DestroyBtn.onClick.AddListener(() => { //먹는 버튼 누르면 먹어지는 동작
             this.DoDestroy();
+            this.AddIngredientCount();
         });
     }
 
@@ -53,6 +57,9 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
     }
 
     public AddIngredientCount(){
-        
+        //자기 자신의 ingrdient info 컴포넌트에서 gamemanager의 countup 함수에id값을 인자로 넘겨줘야된다
+        this.myID = this.gameObject.GetComponent<IngredientInfo>().id;
+
+        GameManager.getInstance().IngredientCountUP(this.myID);
     }
 }

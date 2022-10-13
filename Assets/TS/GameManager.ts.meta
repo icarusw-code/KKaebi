@@ -28,29 +28,13 @@ ScriptedImporter:
     // number \uBCC0\uC218 \uD558\uB098 \uC120\uC5B8\uD574\uC11C \uC694\uB9AC\uC544\uC774\uB514
     \uC73C\uB85C \uB9CC\uB4E4\uC5B4\uC90C\\r\\n            var keyId = d.GetComponent($typeof(IngredientInfo_1.default)).id;\\r\\n           
     // 0\uC73C\uB85C \uCD08\uAE30\uD654 \uC138\uD305\\r\\n            UnityEngine.PlayerPrefs.SetInt(keyId.toString(),
-    0);\\r\\n        });\\r\\n    }\\r\\n    IngredientCountUP() {\\r\\n        //
-    UnityEngine.PlayerPrefs.SetString(\\\"test\\\", \\\"change\\\");\\r\\n       
-    // \uD018\uC2A4\uD2B8\uAC00 \uC644\uB8CC\uB418\uBA74 \uD574\uB2F9 \uC694\uB9AC
-    \uB3C4\uAC10 \uCE74\uC6B4\uD2B8\uB97C \uC62C\uB824\uC900\uB2E4.\\r\\n       
-    // 1. \uADF8 \uD018\uC2A4\uD2B8 \uC694\uB9AC\uC774\uB984\uC744 \uAC00\uC838\uC624\uACE0\\r\\n       
-    // 2. string \uBCC0\uC218 \uD558\uB098 \uC120\uC5B8\uD574\uC11C \uC694\uB9AC\uC774\uB984
-    \uC73C\uB85C \uB9CC\uB4E4\uC5B4\uC90C\\r\\n        // 3. \uD604\uC7AC \uCE74\uC6B4\uD2B8\uB97C
-    playerprefs\uB85C \uAC00\uC838\uC634\\r\\n        // 4. \uCE74\uC6B4\uD2B8\uB97C
-    \uC62C\uB824\uC900\uB2E4.\\r\\n        // 5. \uBC14\uB010 \uCE74\uC6B4\uD2B8\uB97C
-    playerprefs\uB85C \uB2E4\uC2DC \uC800\uC7A5\\r\\n        // var count : number
-    = UnityEngine.PlayerPrefs.GetInt(\\\"\uB5A1\uAF2C\uCE58\\\"); \\r\\n        //
-    UnityEngine.PlayerPrefs.SetString(\\\"\uB3C4\uAC10_\uB5A1\uAF2C\uCE58\\\", count);\\r\\n       
-    // this.tmp = UnityEngine.PlayerPrefs.GetString(\\\"test\\\"); \\r\\n       
-    // console.log(this.tmp);\\r\\n        // this.IngreArr.map((d) => {\\r\\n       
-    //     // 2. number \uBCC0\uC218 \uD558\uB098 \uC120\uC5B8\uD574\uC11C \uC694\uB9AC\uC544\uC774\uB514
-    \uC73C\uB85C \uB9CC\uB4E4\uC5B4\uC90C\\r\\n        //     var keyId : number
-    = d.GetComponent<IngredientInfo>().id\\r\\n        //     // 3. \uD604\uC7AC
-    \uCE74\uC6B4\uD2B8\uB97C playerprefs\uB85C \uAC00\uC838\uC634\\r\\n        //    
-    var count : number = UnityEngine.PlayerPrefs.GetInt(keyId.toString());\\r\\n       
-    //     // 4. \uCE74\uC6B4\uD2B8\uB97C \uC62C\uB824\uC900\uB2E4.\\r\\n       
-    //     count++;\\r\\n        //     // 5. \uBC14\uB010 \uCE74\uC6B4\uD2B8\uB97C
-    playerprefs\uB85C \uB2E4\uC2DC \uC800\uC7A5\\r\\n        //     UnityEngine.PlayerPrefs.SetInt(keyId.toString(),
-    count);\\r\\n        //     console.log(keyId);\\r\\n        // });\\r\\n   
-    }\\r\\n}\\r\\nexports.default = GameManager;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR2FtZU1hbmFnZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJHYW1lTWFuYWdlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlEQUFxRDtBQUNyRCwyQ0FBMEM7QUFDMUMscURBQThDO0FBQzlDLE1BQXFCLFdBQVksU0FBUSxxQ0FBcUI7SUFLMUQsTUFBTSxDQUFDLFdBQVc7UUFDZCxPQUFPLElBQUksQ0FBQyxRQUFRLElBQUUsQ0FBQyxJQUFJLENBQUMsUUFBUSxHQUFHLElBQUksSUFBSSxFQUFFLENBQUMsQ0FBQztJQUN2RCxDQUFDO0lBRUQsS0FBSztRQUNELFdBQVcsQ0FBQyxRQUFRLEdBQUcsSUFBSSxDQUFDO0lBRWhDLENBQUM7SUFFTSxtQkFBbUI7UUFFdEIsSUFBSSxDQUFDLFFBQVEsQ0FBQyxHQUFHLENBQUMsQ0FBQyxDQUFDLEVBQUUsRUFBRTtZQUNwQixrQ0FBa0M7WUFDbEMsSUFBSSxLQUFLLEdBQVksQ0FBQyxDQUFDLFlBQVksU0FBQyx3QkFBYyxHQUFJLEVBQUUsQ0FBQztZQUN6RCxhQUFhO1lBQ2IsV0FBVyxDQUFDLFdBQVcsQ0FBQyxNQUFNLENBQUMsS0FBSyxDQUFDLFFBQVEsRUFBRSxFQUFFLENBQUMsQ0FBQyxDQUFDO1FBQ3hELENBQUMsQ0FBQyxDQUFDO0lBQ1AsQ0FBQztJQUdNLGlCQUFpQjtRQUVwQix1REFBdUQ7UUFFdkQsZ0NBQWdDO1FBQ2hDLHNCQUFzQjtRQUN0QixvQ0FBb0M7UUFDcEMsOEJBQThCO1FBQzlCLGdCQUFnQjtRQUNoQixnQ0FBZ0M7UUFFaEMsK0RBQStEO1FBRS9ELHNEQUFzRDtRQUV0RCx5REFBeUQ7UUFDekQseUJBQXlCO1FBRXpCLDZCQUE2QjtRQUM3Qiw0Q0FBNEM7UUFDNUMsK0RBQStEO1FBQy9ELHFDQUFxQztRQUNyQyw2RUFBNkU7UUFDN0UsdUJBQXVCO1FBQ3ZCLGVBQWU7UUFDZix1Q0FBdUM7UUFDdkMsK0RBQStEO1FBQy9ELDBCQUEwQjtRQUMxQixNQUFNO0lBRVYsQ0FBQztDQUVKO0FBekRELDhCQXlEQyJ9\",\"assetPath\":\"Assets/TS/GameManager.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"IngreArr\",\"type\":\"UnityEngine.GameObject[]\",\"isArray\":true,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"GameManager\",\"description\":\"\"},\"isCompiled\":true}"
-  typescriptHash: 4b90399e27420944610cbd103dc42a88
+    0);\\r\\n        });\\r\\n    }\\r\\n    IngredientCountUP(id) {\\r\\n       
+    //\uD574\uB2F9 id\uB97C \uB370\uC774\uD130\uC5D0\uC11C \uCC3E\uC544\uC11C \uCE74\uC6B4\uD2B8\uB97C
+    \uC62C\uB824 \uC800\uC7A5\uD574\uC904\uAC70\uC784.\\r\\n        var IngreCount
+    = UnityEngine.PlayerPrefs.GetInt(id.toString());\\r\\n        IngreCount++;\\r\\n       
+    UnityEngine.PlayerPrefs.SetInt(id.toString(), IngreCount);\\r\\n        console.log(\\\"\uD604\uC7AC
+    \uC774\uB140\uC11D\uC758 id\uB294: \\\" + id + \\\"\uC774\uACE0 \uD604\uC7AC\uBA39\uC740
+    \uC774 \uC7AC\uB8CC\uC758 \uAC1C\uC218 : \\\" + UnityEngine.PlayerPrefs.GetInt(id.toString()));\\r\\n   
+    }\\r\\n}\\r\\nexports.default = GameManager;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiR2FtZU1hbmFnZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJHYW1lTWFuYWdlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlEQUFxRDtBQUNyRCwyQ0FBMEM7QUFDMUMscURBQThDO0FBQzlDLE1BQXFCLFdBQVksU0FBUSxxQ0FBcUI7SUFLMUQsTUFBTSxDQUFDLFdBQVc7UUFDZCxPQUFPLElBQUksQ0FBQyxRQUFRLElBQUUsQ0FBQyxJQUFJLENBQUMsUUFBUSxHQUFHLElBQUksSUFBSSxFQUFFLENBQUMsQ0FBQztJQUN2RCxDQUFDO0lBRUQsS0FBSztRQUNELFdBQVcsQ0FBQyxRQUFRLEdBQUcsSUFBSSxDQUFDO0lBRWhDLENBQUM7SUFFTSxtQkFBbUI7UUFFdEIsSUFBSSxDQUFDLFFBQVEsQ0FBQyxHQUFHLENBQUMsQ0FBQyxDQUFDLEVBQUUsRUFBRTtZQUNwQixrQ0FBa0M7WUFDbEMsSUFBSSxLQUFLLEdBQVksQ0FBQyxDQUFDLFlBQVksU0FBQyx3QkFBYyxHQUFJLEVBQUUsQ0FBQztZQUN6RCxhQUFhO1lBQ2IsV0FBVyxDQUFDLFdBQVcsQ0FBQyxNQUFNLENBQUMsS0FBSyxDQUFDLFFBQVEsRUFBRSxFQUFFLENBQUMsQ0FBQyxDQUFDO1FBQ3hELENBQUMsQ0FBQyxDQUFDO0lBQ1AsQ0FBQztJQUdNLGlCQUFpQixDQUFDLEVBQVc7UUFFaEMsa0NBQWtDO1FBQ2xDLElBQUksVUFBVSxHQUFZLFdBQVcsQ0FBQyxXQUFXLENBQUMsTUFBTSxDQUFDLEVBQUUsQ0FBQyxRQUFRLEVBQUUsQ0FBQyxDQUFDO1FBQ3hFLFVBQVUsRUFBRSxDQUFDO1FBQ2IsV0FBVyxDQUFDLFdBQVcsQ0FBQyxNQUFNLENBQUMsRUFBRSxDQUFDLFFBQVEsRUFBRSxFQUFDLFVBQVUsQ0FBQyxDQUFDO1FBQ3pELE9BQU8sQ0FBQyxHQUFHLENBQUMsZUFBZSxHQUFFLEVBQUUsR0FBRyxxQkFBcUIsR0FBRyxXQUFXLENBQUMsV0FBVyxDQUFDLE1BQU0sQ0FBQyxFQUFFLENBQUMsUUFBUSxFQUFFLENBQUMsQ0FBQyxDQUFDO0lBQzdHLENBQUM7Q0E2Qko7QUE3REQsOEJBNkRDIn0=\",\"assetPath\":\"Assets/TS/GameManager.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"IngreArr\",\"type\":\"UnityEngine.GameObject[]\",\"isArray\":true,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"GameManager\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: c9a1b5ab5b14bfbd257181f5337579d0
   onlyWriteTrigger: 0
