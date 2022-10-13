@@ -1,6 +1,6 @@
 import { Sandbox, SandboxOptions, SandboxPlayer } from "ZEPETO.Multiplay";
 import { DataStorage } from 'ZEPETO.Multiplay.DataStorage';
-import { Player } from 'ZEPETO.Multiplay.Schema';
+import { Player, Transform, Vector3 } from 'ZEPETO.Multiplay.Schema';
 
 // import { IngredientData } from './IngredientData';
 
@@ -8,10 +8,29 @@ export default class extends Sandbox {
 
     // Room이 생성될 때 1회 호출되며, Room에 대한 초기화 로직을 추가 가능
     onCreate(options: SandboxOptions) {
+
+        this.onMessage("onChangedTransform", (client, message) => {
+            const player = this.state.players.get(client.sessionId); 
+
+            const transform = new Transform();
+
+            transform.position = new Vector3();
+            transform.position.x = message.position.x;
+            transform.position.y = message.position.y;
+            transform.position.z = message.position.z;
+
+            transform.rotation = new Vector3();
+            transform.rotation.x = message.rotation.x;
+            transform.rotation.y = message.rotation.y;
+            transform.rotation.z = message.rotation.z;
+
+            player.transform = transform;
+        });
+
         this.onMessage("onChangedState", (client, message) => {
             const player = this.state.players.get(client.sessionId);
             player.state = message.state;
-        })
+        });
     }
 
     // Client가 Room에 입장할 때 호출된다.
@@ -59,7 +78,8 @@ export default class extends Sandbox {
     // Client가 Room에서 퇴장할 때 호출
     // 클라이언트가 연결 해제를 요청한 경우, Consented 값이 true로 호출되며 그렇지 않은 경우 false로 호출
     onLeave(client: SandboxPlayer, consented?: boolean) {
-        
+        // 목록에서 제거
+        this.state.players.delete(client.sessionId);
     }
 
     // SandboxOptions에서 설정된 tickInterval 마다 반복적으로 호출되며, 각종 Interval 이벤트를 관리
