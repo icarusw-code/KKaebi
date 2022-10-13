@@ -1,6 +1,7 @@
 import { Sandbox, SandboxOptions, SandboxPlayer } from "ZEPETO.Multiplay";
 import { DataStorage } from 'ZEPETO.Multiplay.DataStorage';
 import { Player } from 'ZEPETO.Multiplay.Schema';
+
 // import { IngredientData } from './IngredientData';
 
 export default class extends Sandbox {
@@ -37,7 +38,11 @@ export default class extends Sandbox {
 
         // 방문횟수 불러오기
         let visit_cnt = await storage.get("VisitCount") as number;
-        if(visit_cnt == null) visit_cnt = 0;
+        if(visit_cnt == null)
+        {
+            visit_cnt = 0;
+        } 
+
 
         console.log(`[OnJoin] ${client.sessionId}'s visiting count : ${visit_cnt}`);
 

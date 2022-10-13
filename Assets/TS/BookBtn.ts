@@ -34,6 +34,7 @@ export default class BookBtn extends ZepetoScriptBehaviour {
             this.isActive ? this.playerController.SetActive(true) : this.playerController.SetActive(false);
 
             this.isActive = !this.isActive;
+            
         });
 
 

@@ -6,6 +6,8 @@ export default class GameManager extends ZepetoScriptBehaviour {
     public static instance:GameManager;
     public IngreArr : UnityEngine.GameObject[];
 
+    private isVisited : number;
+
     static getInstance(){
         return this.instance||(this.instance = new this());
     }

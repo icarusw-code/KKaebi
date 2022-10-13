@@ -1,0 +1,39 @@
+fileFormatVersion: 2
+guid: bfe2e766c9dc4b5488e06df7928221c0
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    UnityEngine_UI_1 = require(\\\"UnityEngine.UI\\\");\\r\\nconst ZEPETO_Script_1
+    = require(\\\"ZEPETO.Script\\\");\\r\\nconst IngredientInfo_1 = require(\\\"./IngredientInfo\\\");\\r\\nclass
+    IngredientBookController extends ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n   
+    constructor() {\\r\\n        super(...arguments);\\r\\n        this.ingredientDict
+    = new Map();\\r\\n    }\\r\\n    Start() {\\r\\n        // \uC774\uB984 : id
+    \uB97C \uAC00\uC9C4 \uC7AC\uB8CC \uB515\uC154\uB108\uB9AC \uC0DD\uC131\\r\\n       
+    this.ingredientList.map((d) => {\\r\\n            this.ingredientDict.set(d.gameObject.name,
+    d.GetComponent($typeof(IngredientInfo_1.default)).id);\\r\\n        });\\r\\n   
+    }\\r\\n    Update() {\\r\\n        // \uC7AC\uB8CC \uB3C4\uAC10 \uCE74\uC6B4\uD2B8
+    \uC138\uD305\\r\\n        // \uD14D\uC2A4\uD2B8 \uAC12\uC744 PlayerPrefs \uB85C
+    \uCE74\uC6B4\uD2B8\uB97C \uAC00\uC838\uC640\uC11C \uC801\uC6A9\uD574\uC90C\\r\\n       
+    this.ingredientList.map((d) => {\\r\\n            d.transform.GetChild(1).GetComponent($typeof(UnityEngine_UI_1.Text)).text
+    = UnityEngine_1.PlayerPrefs.GetInt(d.GetComponent($typeof(IngredientInfo_1.default)).id.toString()).toString();\\r\\n       
+    });\\r\\n    }\\r\\n}\\r\\nexports.default = IngredientBookController;\\r\\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiSW5ncmVkaWVudEJvb2tDb250cm9sbGVyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiSW5ncmVkaWVudEJvb2tDb250cm9sbGVyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQXFEO0FBQ3JELG1EQUFxQztBQUNyQyxpREFBcUQ7QUFDckQscURBQThDO0FBRTlDLE1BQXFCLHdCQUF5QixTQUFRLHFDQUFxQjtJQUEzRTs7UUFJVyxtQkFBYyxHQUF5QixJQUFJLEdBQUcsRUFBa0IsQ0FBQztJQW9CNUUsQ0FBQztJQWxCRyxLQUFLO1FBRUQsMEJBQTBCO1FBQzFCLElBQUksQ0FBQyxjQUFjLENBQUMsR0FBRyxDQUFDLENBQUMsQ0FBQyxFQUFFLEVBQUU7WUFDMUIsSUFBSSxDQUFDLGNBQWMsQ0FBQyxHQUFHLENBQUMsQ0FBQyxDQUFDLFVBQVUsQ0FBQyxJQUFJLEVBQUUsQ0FBQyxDQUFDLFlBQVksU0FBQyx3QkFBYyxHQUFJLEVBQUUsQ0FBQyxDQUFDO1FBQ3BGLENBQUMsQ0FBQyxDQUFDO0lBRVAsQ0FBQztJQUVELE1BQU07UUFFRixlQUFlO1FBQ2Ysc0NBQXNDO1FBQ3RDLElBQUksQ0FBQyxjQUFjLENBQUMsR0FBRyxDQUFDLENBQUMsQ0FBQyxFQUFFLEVBQUU7WUFDMUIsQ0FBQyxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsWUFBWSxTQUFDLHFCQUFJLEdBQUksSUFBSSxHQUFHLHlCQUFXLENBQUMsTUFBTSxDQUFDLENBQUMsQ0FBQyxZQUFZLFNBQUMsd0JBQWMsR0FBSSxFQUFFLENBQUMsUUFBUSxFQUFFLENBQUMsQ0FBQyxRQUFRLEVBQUUsQ0FBQztRQUN0SSxDQUFDLENBQUMsQ0FBQTtJQUNOLENBQUM7Q0FFSjtBQXhCRCwyQ0F3QkMifQ==\",\"assetPath\":\"Assets/TS/IngredientBookController.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"ingredientList\",\"type\":\"UnityEngine.GameObject[]\",\"isArray\":true,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"IngredientBookController\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: f93d1cf8ab30121e52db496fe413df5f
+  onlyWriteTrigger: 0
