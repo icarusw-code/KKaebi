@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: 179842b8c3ef2d647aa835abeaafff94
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass RandomSpawn extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    Start() {\r\n        this.SpawnPoint = UnityEngine_1.GameObject.Find(\"SpawnPoint\");\r\n       
+    this.Spawn();\r\n    }\r\n    Spawn() {\r\n        var Ingredient = UnityEngine_1.GameObject.Instantiate(this.IngredientFactory);\r\n       
+    Ingredient.transform.position = this.SpawnPoint.transform.position;\r\n    }\r\n}\r\nexports.default
+    = RandomSpawn;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUmFuZG9tU3Bhd24uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJSYW5kb21TcGF3bi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUF5QztBQUN6QyxpREFBcUQ7QUFFckQsTUFBcUIsV0FBWSxTQUFRLHFDQUFxQjtJQUcxRCxLQUFLO1FBQ0QsSUFBSSxDQUFDLFVBQVUsR0FBRyx3QkFBVSxDQUFDLElBQUksQ0FBQyxZQUFZLENBQUMsQ0FBQztRQUNoRCxJQUFJLENBQUMsS0FBSyxFQUFFLENBQUM7SUFDakIsQ0FBQztJQUVELEtBQUs7UUFDRCxJQUFJLFVBQVUsR0FBZ0Isd0JBQVUsQ0FBQyxXQUFXLENBQUMsSUFBSSxDQUFDLGlCQUFpQixDQUFjLENBQUM7UUFDMUYsVUFBVSxDQUFDLFNBQVMsQ0FBQyxRQUFRLEdBQUcsSUFBSSxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDO0lBQ3ZFLENBQUM7Q0FDSjtBQVpELDhCQVlDIn0=","assetPath":"Assets/Scripts/RandomSpawn.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"IngredientFactory","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"SpawnPoint","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"RandomSpawn","description":""},"isCompiled":true}'
+  typescriptHash: 61035d621e75a3ef9fec9b7db45635a5
+  onlyWriteTrigger: 0
