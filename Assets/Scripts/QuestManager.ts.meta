@@ -1,0 +1,53 @@
+fileFormatVersion: 2
+guid: 5bd9b929c0677d54dba305b629a28418
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst UnityEngine_UI_1
+    = require(\\\"UnityEngine.UI\\\");\\r\\nconst FoodInfo_1 = require(\\\"./FoodInfo\\\");\\r\\nclass
+    QuestManager extends ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    static
+    getInstance() {\\r\\n        return this.instance || (this.instance = new this());\\r\\n   
+    }\\r\\n    Start() {\\r\\n        QuestManager.instance = this;\\r\\n       
+    for (let i = 0; i < this.btnsGO.Length; i++) {\\r\\n            this.btns[i]
+    = this.btnsGO[i].GetComponent($typeof(UnityEngine_UI_1.Button));\\r\\n       
+    }\\r\\n        //\uBC84\uD2BC \uC774\uBCA4\uD2B8\\r\\n        for (let i = 0;
+    i < this.btns.Length; i++) {\\r\\n            this.btns[i].onClick.AddListener(()
+    => {\\r\\n                console.log(\\\"\uD604\uC7AC \uB204\uB974\uACE0\uC788\uB294
+    \uBC84\uD2BC \uC774\uB984:\\\" + this.btns[i]);\\r\\n                this.QuestIngreGiveAuthority(this.btnsGO[i].GetComponent($typeof(FoodInfo_1.default)).idArr,
+    this.btnsGO[i].GetComponent($typeof(FoodInfo_1.default)).idArr.length);\\r\\n           
+    });\\r\\n        }\\r\\n    }\\r\\n    //\uD574\uB2F9 \uD018\uC2A4\uD2B8\uB97C
+    \uB20C\uB800\uC744\uB54C \uC7AC\uB8CC \uC544\uC774\uB514\uAC12 \uB123\uC740 \uBC30\uC5F4
+    \uBD88\uB7EC\uC628\uB2E4.\\r\\n    QuestIngreGiveAuthority(IDArr, idcount) {\\r\\n       
+    this.QuestIngreNum = idcount; //\uD018\uC2A4\uD2B8 \uBC1B\uC740 \uC7AC\uB8CC
+    \uC885\uB958 \uC218\uB3C4 \uB4F1\uB85D\uD558\uC5EC ingridientinteraction\uD560\uB54C
+    \uC4F8\uAC83\\r\\n        for (let i = 0; i < idcount; i++) {\\r\\n           
+    this.QuestIngreIDArr[i] = IDArr[i];\\r\\n        }\\r\\n        //\uBC1B\uC740
+    \uC74C\uC2DD\uC7AC\uB8CC\uC758 id\uC5D0 \uD574\uB2F9\uD558\uB294 \uC7AC\uB8CC\uB9CC
+    ingridientinteraction\uC774 \uAC00\uB2A5\uD1A0\uB85D\uD558\uAC8C \uD55C\uB2E4.\\r\\n       
+    //\uD574\uB2F9 \uC74C\uC2DD\uC758 \uC7AC\uB8CC\uAC00 \uBB34\uC5C7\uC778\uC9C0
+    \uB728\uAC8C\uD55C\uB2E4.\\r\\n        //this.TurnOnFoodsIngreImage(IDArr);\\r\\n   
+    }\\r\\n    QuestAccept() {\\r\\n        this.QuestAcceptIngreNum = this.QuestIngreNum;
+    //\uC784\uC2DC\uAC12\uC744 \uC218\uB77D\uAC12\uC73C\uB85C \uD655\uC815\\r\\n       
+    for (let i = 0; i < this.QuestAcceptIngreNum; i++) {\\r\\n            this.QuestAcceptIngreIDArr[i]
+    = this.QuestIngreIDArr[i]; //\uC784\uC2DC\uAC12\uC744 \uC218\uB77D\uAC12\uC73C\uB85C
+    \uD655\uC815\\r\\n        }\\r\\n    }\\r\\n    TurnOnFoodsIngreImage(IDArr)
+    {\\r\\n    }\\r\\n}\\r\\nexports.default = QuestManager;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUXVlc3RNYW5hZ2VyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiUXVlc3RNYW5hZ2VyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQTZEO0FBQzdELGlEQUFxRDtBQUNyRCxtREFBd0M7QUFDeEMseUNBQWtDO0FBQ2xDLE1BQXFCLFlBQWEsU0FBUSxxQ0FBcUI7SUFnQjNELE1BQU0sQ0FBQyxXQUFXO1FBQ2QsT0FBTyxJQUFJLENBQUMsUUFBUSxJQUFFLENBQUMsSUFBSSxDQUFDLFFBQVEsR0FBRyxJQUFJLElBQUksRUFBRSxDQUFDLENBQUM7SUFDdkQsQ0FBQztJQUVELEtBQUs7UUFDRCxZQUFZLENBQUMsUUFBUSxHQUFHLElBQUksQ0FBQztRQUU3QixLQUFJLElBQUksQ0FBQyxHQUFDLENBQUMsRUFBRSxDQUFDLEdBQUMsSUFBSSxDQUFDLE1BQU0sQ0FBQyxNQUFNLEVBQUMsQ0FBQyxFQUFFLEVBQUM7WUFDbEMsSUFBSSxDQUFDLElBQUksQ0FBQyxDQUFDLENBQUMsR0FBRyxJQUFJLENBQUMsTUFBTSxDQUFDLENBQUMsQ0FBQyxDQUFDLFlBQVksU0FBQyx1QkFBTSxFQUFHLENBQUM7U0FDeEQ7UUFDRCxRQUFRO1FBQ1IsS0FBSSxJQUFJLENBQUMsR0FBQyxDQUFDLEVBQUUsQ0FBQyxHQUFDLElBQUksQ0FBQyxJQUFJLENBQUMsTUFBTSxFQUFDLENBQUMsRUFBRSxFQUFDO1lBQ2hDLElBQUksQ0FBQyxJQUFJLENBQUMsQ0FBQyxDQUFDLENBQUMsT0FBTyxDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUU7Z0JBQ2xDLE9BQU8sQ0FBQyxHQUFHLENBQUMsaUJBQWlCLEdBQUUsSUFBSSxDQUFDLElBQUksQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDO2dCQUM3QyxJQUFJLENBQUMsdUJBQXVCLENBQUMsSUFBSSxDQUFDLE1BQU0sQ0FBQyxDQUFDLENBQUMsQ0FBQyxZQUFZLFNBQUMsa0JBQVEsR0FBSSxLQUFLLEVBQUUsSUFBSSxDQUFDLE1BQU0sQ0FBQyxDQUFDLENBQUMsQ0FBQyxZQUFZLFNBQUMsa0JBQVEsR0FBSSxLQUFLLENBQUMsTUFBTSxDQUFDLENBQUM7WUFDdEksQ0FBQyxDQUFDLENBQUM7U0FDTjtJQUVMLENBQUM7SUFFQSxrQ0FBa0M7SUFDM0IsdUJBQXVCLENBQUMsS0FBZ0IsRUFBRSxPQUFlO1FBQzdELElBQUksQ0FBQyxhQUFhLEdBQUcsT0FBTyxDQUFDLENBQUMsaURBQWlEO1FBQy9FLEtBQUksSUFBSSxDQUFDLEdBQUMsQ0FBQyxFQUFDLENBQUMsR0FBQyxPQUFPLEVBQUMsQ0FBQyxFQUFFLEVBQUM7WUFDdEIsSUFBSSxDQUFDLGVBQWUsQ0FBQyxDQUFDLENBQUMsR0FBRyxLQUFLLENBQUMsQ0FBQyxDQUFDLENBQUM7U0FDdEM7UUFHRCx5REFBeUQ7UUFHekQsdUJBQXVCO1FBQ3ZCLG9DQUFvQztJQUV4QyxDQUFDO0lBQ00sV0FBVztRQUNkLElBQUksQ0FBQyxtQkFBbUIsR0FBRyxJQUFJLENBQUMsYUFBYSxDQUFDLENBQUMsZUFBZTtRQUM5RCxLQUFJLElBQUksQ0FBQyxHQUFDLENBQUMsRUFBQyxDQUFDLEdBQUMsSUFBSSxDQUFDLG1CQUFtQixFQUFDLENBQUMsRUFBRSxFQUFDO1lBQ3ZDLElBQUksQ0FBQyxxQkFBcUIsQ0FBQyxDQUFDLENBQUMsR0FBRyxJQUFJLENBQUMsZUFBZSxDQUFDLENBQUMsQ0FBQyxDQUFDLENBQUMsZUFBZTtTQUMzRTtJQUNMLENBQUM7SUFFTSxxQkFBcUIsQ0FBQyxLQUFnQjtJQUU3QyxDQUFDO0NBQ0o7QUE3REQsK0JBNkRDIn0=\",\"assetPath\":\"Assets/Scripts/QuestManager.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"mscorlib\",\"name\":\"QuestIngreIDArr\",\"type\":\"System.Single[]\",\"isArray\":true,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"mscorlib\",\"name\":\"QuestIngreNum\",\"type\":\"System.Single\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"mscorlib\",\"name\":\"QuestAcceptIngreIDArr\",\"type\":\"System.Single[]\",\"isArray\":true,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"mscorlib\",\"name\":\"QuestAcceptIngreNum\",\"type\":\"System.Single\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"btnsGO\",\"type\":\"UnityEngine.GameObject[]\",\"isArray\":true,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"btns\",\"type\":\"UnityEngine.UI.Button[]\",\"isArray\":true,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"acceptBtn\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"QuestManager\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: a493ec04333995775bea732346b32a94
+  onlyWriteTrigger: 0
