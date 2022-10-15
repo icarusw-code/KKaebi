@@ -5,11 +5,14 @@ import { Button } from 'UnityEngine.UI';
 import ButtonClick from './ButtonClick';
 import GameManager from '../TS/GameManager';
 import IngredientInfo from '../TS/IngredientInfo';
+
 export default class ingerdientInteraction extends ZepetoScriptBehaviour {
     public btnFactory : GameObject;
     private btn : GameObject;
     private turnCheck : bool = false;
     public DestroyBtn: Button;
+
+    public nowScore : number;
     private myID : number;
     Start() {    
         this.btn = GameObject.Instantiate(this.btnFactory) as GameObject; //재료 생성될때 버튼도 함께 생성
@@ -20,6 +23,7 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
         this.DestroyBtn.onClick.AddListener(() => { //먹는 버튼 누르면 먹어지는 동작
             this.DoDestroy();
             this.AddIngredientCount();
+
         });
     }
 

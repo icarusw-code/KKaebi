@@ -136,12 +136,15 @@ MonoBehaviour:
     keys:
     - btnFactory
     - DestroyBtn
+    - nowScore
     unityValues:
     - {fileID: 2231140363182708993, guid: 0d25589be16fe8c428f793b1d1a16457, type: 3}
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - 
     - 
+    - '{"type":"System.Single, mscorlib","value":"0"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 849653a5ba7c70345b7af70981ecb203, type: 3}
