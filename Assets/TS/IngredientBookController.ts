@@ -7,13 +7,13 @@ export default class IngredientBookController extends ZepetoScriptBehaviour {
 
     public ingredientList : GameObject[];
 
-    public ingredientDict : Map<string, number> = new Map<string, number>();
+    public ingredientDict : Map<number, string> = new Map<number, string>();
 
     Start(){
 
-        // 이름 : id 를 가진 재료 딕셔너리 생성
+        // id : 이름 를 가진 재료 딕셔너리 생성
         this.ingredientList.map((d) => {
-            this.ingredientDict.set(d.gameObject.name, d.GetComponent<IngredientInfo>().id);
+            this.ingredientDict.set(d.GetComponent<IngredientInfo>().id, d.gameObject.name);
         });
 
     }

@@ -18,11 +18,31 @@ ScriptedImporter:
   wrapperTypes: []
   WrapperFilters: []
   wrapperOutputDirectory: Generated
-  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
-    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
-    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst Slot_1 = require(\"./Slot\");\r\nclass
-    InventoryController extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start()
-    {\r\n        this.slots = this.slotHolder.GetComponentsInChildren($typeof(Slot_1.default));\r\n   
-    }\r\n}\r\nexports.default = InventoryController;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiSW52ZW50b3J5Q29udHJvbGxlci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkludmVudG9yeUNvbnRyb2xsZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBd0M7QUFDeEMsaURBQXFEO0FBQ3JELGlDQUF5QjtBQUV6QixNQUFxQixtQkFBb0IsU0FBUSxxQ0FBcUI7SUFLbEUsS0FBSztRQUNELElBQUksQ0FBQyxLQUFLLEdBQUcsSUFBSSxDQUFDLFVBQVUsQ0FBQyx1QkFBdUIsU0FBQyxjQUFJLEVBQUcsQ0FBQztJQUNqRSxDQUFDO0NBRUo7QUFURCxzQ0FTQyJ9","assetPath":"Assets/TS/InventoryController.ts","manifest":{"properties":[{"assembly":"","name":"slots","type":"D:/Unity_Project/KKaebi/Assets/TS/Slot.default","isArray":true,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"slotHolder","type":"UnityEngine.Transform","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"InventoryController","description":""},"isCompiled":true}'
-  typescriptHash: dfef246052dba62cf6190dc21b17b705
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst QuestManager_1 =
+    require(\\\"../Scripts/QuestManager\\\");\\r\\nconst IngredientBookController_1
+    = require(\\\"./IngredientBookController\\\");\\r\\nconst Slot_1 = require(\\\"./Slot\\\");\\r\\nclass
+    InventoryController extends ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n   
+    constructor() {\\r\\n        super(...arguments);\\r\\n        this.ingredientDict
+    = new Map();\\r\\n    }\\r\\n    Start() {\\r\\n        this.ingredientDict =
+    this.UIManger.GetComponent($typeof(IngredientBookController_1.default)).ingredientDict;\\r\\n   
+    }\\r\\n    Update() {\\r\\n        this.isChange = QuestManager_1.default.getInstance().checkAccept;\\r\\n       
+    // \uBCC0\uD654\uAC00 \uC788\uC744\uB54C \\r\\n        if (this.isChange) {\\r\\n           
+    // \uC778\uBCA4\uD1A0\uB9AC \uC0AC\uC774\uC988 \uBC1B\uC544\uC624\uAE30\\r\\n           
+    // this.invenSize = QuestManager.getInstance().QuestIngreNum;\\r\\n           
+    // \uC778\uBCA0\uD1A0\uB9AC \uC7AC\uB8CC ID\uBAA9\uB85D \uAC00\uC838\uC624\uAE30\\r\\n           
+    // this.invenContentsId = QuestManager.getInstance().QuestAcceptIngreIDArr;\\r\\n       
+    }\\r\\n    }\\r\\n    SetInventory(size, invenContentsId) {\\r\\n        for
+    (let i = 0; i < size; i++) {\\r\\n            // \uC790\uC2DD\uC73C\uB85C \uC0DD\uC131\\r\\n           
+    var slot;\\r\\n            slot = UnityEngine_1.GameObject.Instantiate(this.slotFactory,
+    this.content);\\r\\n            slot.name = this.ingredientDict.get(invenContentsId[i]);\\r\\n           
+    // \uC7AC\uB8CC \uC774\uB984 \uC124\uC815\\r\\n            slot.GetComponent($typeof(Slot_1.default)).ingredientName.text
+    = this.ingredientDict.get(invenContentsId[i]);\\r\\n        }\\r\\n    }\\r\\n   
+    ClearInventory() {\\r\\n        console.log(\\\"\uC0AD\uC81C\uC2E4\uD589\\\");\\r\\n       
+    for (let i = 0; i < this.content.childCount; i++) {\\r\\n            console.log(\\\"\uC0AD\uC81C\uC911
+    \\\" + this.content.GetComponentsInChildren($typeof(Slot_1.default))[i]);\\r\\n           
+    UnityEngine_1.GameObject.Destroy(this.content.GetComponentsInChildren($typeof(Slot_1.default))[i].gameObject);\\r\\n       
+    }\\r\\n    }\\r\\n}\\r\\nexports.default = InventoryController;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiSW52ZW50b3J5Q29udHJvbGxlci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkludmVudG9yeUNvbnRyb2xsZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBNEQ7QUFFNUQsaURBQXFEO0FBQ3JELDBEQUFtRDtBQUNuRCx5RUFBa0U7QUFDbEUsaUNBQXlCO0FBRXpCLE1BQXFCLG1CQUFvQixTQUFRLHFDQUFxQjtJQUF0RTs7UUFTVyxtQkFBYyxHQUF5QixJQUFJLEdBQUcsRUFBa0IsQ0FBQztJQXNENUUsQ0FBQztJQXBERyxLQUFLO1FBRUQsSUFBSSxDQUFDLGNBQWMsR0FBRyxJQUFJLENBQUMsUUFBUSxDQUFDLFlBQVksU0FBQyxrQ0FBd0IsR0FBSSxjQUFjLENBQUM7SUFFaEcsQ0FBQztJQUVELE1BQU07UUFFRixJQUFJLENBQUMsUUFBUSxHQUFHLHNCQUFZLENBQUMsV0FBVyxFQUFFLENBQUMsV0FBVyxDQUFDO1FBRXZELFdBQVc7UUFDWCxJQUFHLElBQUksQ0FBQyxRQUFRLEVBQ2hCO1lBQ0ksZ0JBQWdCO1lBQ2hCLDZEQUE2RDtZQUU3RCxvQkFBb0I7WUFDcEIsMkVBQTJFO1NBSTlFO0lBQ0wsQ0FBQztJQUVNLFlBQVksQ0FBQyxJQUFhLEVBQUUsZUFBMEI7UUFFekQsS0FBSSxJQUFJLENBQUMsR0FBRyxDQUFDLEVBQUUsQ0FBQyxHQUFHLElBQUksRUFBRSxDQUFDLEVBQUUsRUFDNUI7WUFDSSxVQUFVO1lBQ1YsSUFBSSxJQUFpQixDQUFDO1lBRXRCLElBQUksR0FBRyx3QkFBVSxDQUFDLFdBQVcsQ0FBQyxJQUFJLENBQUMsV0FBVyxFQUFFLElBQUksQ0FBQyxPQUFPLENBQWUsQ0FBQztZQUU1RSxJQUFJLENBQUMsSUFBSSxHQUFHLElBQUksQ0FBQyxjQUFjLENBQUMsR0FBRyxDQUFDLGVBQWUsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDO1lBRXhELFdBQVc7WUFDWCxJQUFJLENBQUMsWUFBWSxTQUFDLGNBQUksR0FBSSxjQUFjLENBQUMsSUFBSSxHQUFHLElBQUksQ0FBQyxjQUFjLENBQUMsR0FBRyxDQUFDLGVBQWUsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDO1NBRS9GO0lBRUwsQ0FBQztJQUVNLGNBQWM7UUFFakIsT0FBTyxDQUFDLEdBQUcsQ0FBQyxNQUFNLENBQUMsQ0FBQztRQUNwQixLQUFJLElBQUksQ0FBQyxHQUFHLENBQUMsRUFBRSxDQUFDLEdBQUcsSUFBSSxDQUFDLE9BQU8sQ0FBQyxVQUFVLEVBQUUsQ0FBQyxFQUFFLEVBQy9DO1lBQ0ksT0FBTyxDQUFDLEdBQUcsQ0FBQyxNQUFNLEdBQUcsSUFBSSxDQUFDLE9BQU8sQ0FBQyx1QkFBdUIsU0FBQyxjQUFJLEdBQUksQ0FBQyxDQUFDLENBQUMsQ0FBQztZQUN0RSx3QkFBVSxDQUFDLE9BQU8sQ0FBQyxJQUFJLENBQUMsT0FBTyxDQUFDLHVCQUF1QixTQUFDLGNBQUksR0FBSSxDQUFDLENBQUMsQ0FBQyxVQUFVLENBQUMsQ0FBQztTQUNsRjtJQUNMLENBQUM7Q0FFSjtBQS9ERCxzQ0ErREMifQ==\",\"assetPath\":\"Assets/TS/InventoryController.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"UIManger\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"slotFactory\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"content\",\"type\":\"UnityEngine.Transform\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"mscorlib\",\"name\":\"isChange\",\"type\":\"System.Boolean\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"InventoryController\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: c2c3dd3f5057a06caef2de08fbad1cd7
   onlyWriteTrigger: 0

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1977427983499493911}
   - component: {fileID: -6537127312312485685}
   - component: {fileID: 1977427983499493909}
-  - component: {fileID: -3774563874200151273}
+  - component: {fileID: -8409507580568973625}
   m_Layer: 0
   m_Name: "0.\uC7AC\uB8CC"
   m_TagString: Untagged
@@ -120,7 +120,7 @@ MonoBehaviour:
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: f172d898e6bed9d4d911b07c9fec135b, type: 3}
     isExpaned: 0
---- !u!114 &-3774563874200151273
+--- !u!114 &-8409507580568973625
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,16 +136,27 @@ MonoBehaviour:
     keys:
     - btnFactory
     - DestroyBtn
-    - nowScore
+    - content
+    - imageList
     unityValues:
     - {fileID: 2231140363182708993, guid: 0d25589be16fe8c428f793b1d1a16457, type: 3}
+    - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
     values:
     - 
     - 
-    - '{"type":"System.Single, mscorlib","value":"0"}'
-    unityArrayValues: []
+    - 
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":7,\"type\":\"UnityEngine.Object,
+      UnityEngine.CoreModule\",\"isUnity\":true}"}'
+    unityArrayValues:
+    - {fileID: 21300000, guid: 7c9c1fe7ae3f7ba478f1324424479014, type: 3}
+    - {fileID: 21300000, guid: 70142b55f374c5a4aa824ca7bd3a0dea, type: 3}
+    - {fileID: 21300000, guid: 740145cecf614554b8cad3a92827a241, type: 3}
+    - {fileID: 21300000, guid: 8285b3c1b951ad74e89de6ac4bf444ad, type: 3}
+    - {fileID: 21300000, guid: 079a70709e8d662439c7359f55b8e9f3, type: 3}
+    - {fileID: 21300000, guid: 545910184dec1b747b65e63f3539a43f, type: 3}
+    - {fileID: 21300000, guid: c8a9c0b0c942c5c4c9617b123fd811dc, type: 3}
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 849653a5ba7c70345b7af70981ecb203, type: 3}
     isExpaned: 0

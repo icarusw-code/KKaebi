@@ -1,18 +1,27 @@
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
-import { Collider, GameObject, Object,Vector3,Camera} from 'UnityEngine';
+import { Collider, GameObject, Object,Vector3,Camera, Sprite} from 'UnityEngine';
 import { ZepetoPlayers } from 'ZEPETO.Character.Controller';
 import { Button } from 'UnityEngine.UI';
 import ButtonClick from './ButtonClick';
 import GameManager from '../TS/GameManager';
 import IngredientInfo from '../TS/IngredientInfo';
 import QuestManager from './QuestManager';
+import Slot from '../TS/Slot';
 export default class ingerdientInteraction extends ZepetoScriptBehaviour {
+
     public btnFactory : GameObject;
     private btn : GameObject;
     private turnCheck : bool = false;
     public DestroyBtn: Button;
     private myID : number;
+
+    public content : GameObject;
+    public imageList : Sprite[];
+
     Start() {    
+
+        this.content = GameObject.Find("Canvas_UI").transform.GetChild(1).GetChild(0).GetChild(0).GetChild(0).gameObject;
+
         this.myID = this.gameObject.GetComponent<IngredientInfo>().id;
 
         this.btn = GameObject.Instantiate(this.btnFactory) as GameObject; //재료 생성될때 버튼도 함께 생성
@@ -27,6 +36,7 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
                 if(QuestManager.getInstance().QuestAcceptIngreIDArr[i]==this.myID){
                     this.DoDestroy();
                     this.AddIngredientCount();
+                    this.AddIngredientImage();
                 }
             }
         });
@@ -67,8 +77,21 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
 
     public AddIngredientCount(){
         //자기 자신의 ingrdient info 컴포넌트에서 gamemanager의 countup 함수에id값을 인자로 넘겨줘야된다
-        
-
         GameManager.getInstance().IngredientCountUP(this.myID);
+    }
+
+    public AddIngredientImage()
+    {        
+        // 재료 이미지 설정
+        this.imageList.map((image) =>{
+            // 이미지의 이름이 content 자식 이름이랑 같으면
+            this.content.GetComponentsInChildren<Slot>().map((slot) => {
+                if(image.name == slot.gameObject.name){
+                    console.log("테스트 " + slot.gameObject.name);
+                    slot.gameObject.GetComponent<Slot>().ingredientImage.sprite = image;
+                }
+            })
+
+        })
     }
 }

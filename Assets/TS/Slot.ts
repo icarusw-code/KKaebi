@@ -10,7 +10,7 @@ export default class Slot extends ZepetoScriptBehaviour {
 
     Start() {    
         // 이름에 현재 음식이름 넣어주기
-        this.ingredientName.text = "빈박스";
+        // this.ingredientName.text = "빈박스";
         
 
     }

@@ -1,15 +1,22 @@
-import { TouchScreenKeyboard,GameObject } from 'UnityEngine';
+import { TouchScreenKeyboard,GameObject,WaitForSeconds } from 'UnityEngine';
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 import { Button } from 'UnityEngine.UI';
 import FoodInfo from './FoodInfo';
+import InventoryController from '../TS/InventoryController';
 export default class QuestManager extends ZepetoScriptBehaviour {
+
+    //quest 판넬
+    public QuestUI : GameObject;
+
     //퀘스트 음식목록 누를때마다 바뀔 변동 임시값들
     public QuestIngreIDArr : number[]; 
     public QuestIngreNum : number;
 
+
     //수락할때 최종값
     public QuestAcceptIngreIDArr : number[];
     public QuestAcceptIngreNum : number;
+    public checkAccept : boolean = false;
 
     //<------------------------------------------------------->//
 
@@ -24,6 +31,8 @@ export default class QuestManager extends ZepetoScriptBehaviour {
 
     Start() {    
         QuestManager.instance = this;
+        this.acceptBtn.gameObject.SetActive(false);
+        
 
         for(let i=0; i<this.btnsGO.Length;i++){
             this.btns[i] = this.btnsGO[i].GetComponent<Button>();
@@ -32,9 +41,14 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         for(let i=0; i<this.btns.Length;i++){
             this.btns[i].onClick.AddListener(() => { //버튼 누를때 마다 해당 음식에 따른 재료 아이디 퀘스트매니저 함수에 전송 (두번째 인자는 재료 종류수)
                 console.log("현재 누르고있는 버튼 이름:"+ this.btns[i]);
+                this.acceptBtn.gameObject.SetActive(true);
                 this.QuestIngreGiveAuthority(this.btnsGO[i].GetComponent<FoodInfo>().idArr, this.btnsGO[i].GetComponent<FoodInfo>().idArr.length);
             });
         }
+        this.acceptBtn.onClick.AddListener(()=>{
+            console.log("수락완료");
+            this.QuestAccept();
+        })
 
     }
     
@@ -58,6 +72,19 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         for(let i=0;i<this.QuestAcceptIngreNum;i++){
             this.QuestAcceptIngreIDArr[i] = this.QuestIngreIDArr[i]; //임시값을 수락값으로 확정
         }
+        this.checkAccept = true;
+        this.QuestUI.SetActive(false); //퀘스트창 끄기
+        this.GetComponent<InventoryController>().ClearInventory();
+        this.acceptBtn.gameObject.SetActive(false);
+        this.StartCoroutine(this.DoCheckAceeptAfterTime());
+
+        this.GetComponent<InventoryController>().SetInventory(this.QuestIngreNum, this.QuestIngreIDArr);
+
+    }
+
+    *DoCheckAceeptAfterTime(){
+        yield new WaitForSeconds(0.5);
+        this.checkAccept=false;
     }
 
     public TurnOnFoodsIngreImage(IDArr : number[]){
