@@ -3,10 +3,12 @@ import { Collider, GameObject, Object,Vector3,Camera} from 'UnityEngine';
 import { ZepetoPlayers } from 'ZEPETO.Character.Controller';
 import { Button } from 'UnityEngine.UI';
 import ButtonClick from './ButtonClick';
+import QuestManager from './QuestManager';
 export default class NpcInteraction extends ZepetoScriptBehaviour {
     public btnFactory : GameObject;
     private btn : GameObject;
     private turnCheck : bool = false;
+    private turnCheck2 : bool = false;
     public InteractBtn: Button;
     public QuestUI: GameObject;
     Start() {    
@@ -15,8 +17,13 @@ export default class NpcInteraction extends ZepetoScriptBehaviour {
         this.btn.GetComponent<ButtonClick>().TurnOffButton(); //버튼일단 꺼주고
 
         this.InteractBtn = this.btn.GetComponent<Button>(); 
-        this.InteractBtn.onClick.AddListener(() => { //먹는 버튼 누르면 먹어지는 동작
-            this.TurnOnQuestUI();
+        this.InteractBtn.onClick.AddListener(() => { //버튼누르면 퀘스트창뜸
+            if(QuestManager.getInstance().isNowAccept==false){ //지금 퀘스트 받은 상태가 아닐때만
+                this.TurnOnQuestUI();
+            }
+            else{//받은 상태라면
+
+            }
         });
     }
 
@@ -30,7 +37,9 @@ export default class NpcInteraction extends ZepetoScriptBehaviour {
     OnTriggerStay(coll:Collider){
         var localPlayer: GameObject = ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.gameObject;
         if(coll.gameObject==localPlayer){
-            this.btn.GetComponent<ButtonClick>().TurnOnButton();
+            if(this.turnCheck2==false){
+                this.btn.GetComponent<ButtonClick>().TurnOnButton();
+            }
             this.turnCheck= true; //들어오면 체크
         }
     }
@@ -38,6 +47,7 @@ export default class NpcInteraction extends ZepetoScriptBehaviour {
     OnTriggerExit(coll:Collider){ //플레이어가 나가면
         this.btn.GetComponent<ButtonClick>().TurnOffButton();
         this.turnCheck = false;
+        this.turnCheck2=false;
     }
 
     VisualOnScreen(){ //재료 본인 좌표로 버튼위치 스크린계로 이동
@@ -49,6 +59,9 @@ export default class NpcInteraction extends ZepetoScriptBehaviour {
 
     TurnOnQuestUI(){
         this.QuestUI.SetActive(true);
+        this.turnCheck=false;
+        this.btn.GetComponent<ButtonClick>().TurnOffButton();
+        this.turnCheck2=true;
     }
 
 
