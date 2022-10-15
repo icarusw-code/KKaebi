@@ -1,5 +1,5 @@
-export const RecipeData : {[key : number] : any} = {
-    "1": [
+export const RecipeData : {[key : string] : any} = {
+    "food": [
        {
           "name": "떡꼬치",
           "id": 1001,
@@ -33,7 +33,7 @@ export const RecipeData : {[key : number] : any} = {
        {
           "name": "송편",
           "id": 1006,
-          "recipe": ["쌀가루", "소금", "설탕", "깨"],
+          "recipe": ["쌀", "소금", "설탕", "깨"],
           "count": 0
        },
        {
@@ -71,9 +71,7 @@ export const RecipeData : {[key : number] : any} = {
           "id": 1012,
           "recipe": ["애호박", "밀가루", "소금", "계란"],
           "count": 0
-       }
-    ],
-    "2": [
+       },
        {
           "name": "떡볶이",
           "id": 2001,
@@ -129,19 +127,11 @@ export const RecipeData : {[key : number] : any} = {
           "count": 0
        },
        {
-          "name": "장어덮밥",
-          "id": 2010,
-          "recipe": ["쌀", "장어", "양파", "파", "간장", "설탕"],
-          "count": 0
-       },
-       {
           "name": "김밥",
-          "id": 2011,
+          "id": 2010,
           "recipe": ["쌀", "오이", "당근", "시금치", "햄", "단무지", "김"],
           "count": 0
-       }
-    ],
-    "3": [
+       },
        {
           "name": "팥빙수",
           "id": 3001,

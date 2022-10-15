@@ -65,7 +65,19 @@ export const IngredientData : {[key : string] : any} = {
           "id": 1011,
           "type": "조미료",
           "count": 0
-       }
+       },
+       {
+         "name": "깨",
+         "id": 1012,
+         "type": "조미료",
+         "count": 0
+      },
+      {
+         "name": "꿀",
+         "id": 1013,
+         "type": "조미료",
+         "count": 0
+      }
     ],
     "채소": [
        {
@@ -86,6 +98,12 @@ export const IngredientData : {[key : string] : any} = {
           "type": "곡류",
           "count": 0
        },
+       {
+         "name": "밤",
+         "id": 2004,
+         "type": "곡류",
+         "count": 0
+      },
        {
           "name": "양파",
           "id": 2101,
@@ -165,6 +183,12 @@ export const IngredientData : {[key : string] : any} = {
           "count": 0
        },
        {
+         "name": "생강",
+         "id": 2114,
+         "type": "야채",
+         "count": 0
+      },
+       {
           "name": "사과",
           "id": 2201,
           "type": "과일",
@@ -233,7 +257,13 @@ export const IngredientData : {[key : string] : any} = {
           "id": 4102,
           "type": "바다",
           "count": 0
-       }
+       },
+       {
+         "name": "낙지",
+         "id": 4103,
+         "type": "바다",
+         "count": 0
+      }
     ],
     "공산품": [
        {
@@ -325,6 +355,12 @@ export const IngredientData : {[key : string] : any} = {
           "id": 5015,
           "type": "공산품",
           "count": 0
-       }
+       },
+       {
+         "name": "밀가루",
+         "id": 5016,
+         "type": "공산품",
+         "count": 0
+      }
     ]
  }
