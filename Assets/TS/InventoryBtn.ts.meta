@@ -1,0 +1,33 @@
+fileFormatVersion: 2
+guid: dbe5c8e5083a4964a9ae68326b70df80
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nclass
+    InventoryBtn extends ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    constructor()
+    {\\r\\n        super(...arguments);\\r\\n        this.isActive = false;\\r\\n   
+    }\\r\\n    Start() {\\r\\n        // \uC778\uBCA4\uD1A0\uB9AC \uC544\uC774\uCF58
+    \uB20C\uB800\uC744 \uB584\\r\\n        this.invenBtn.onClick.AddListener(() =>
+    {\\r\\n            this.isActive = !this.isActive;\\r\\n            // \uC778\uBCA4\uD1A0\uB9AC
+    UI \uCF1C\uC8FC\uAE30\\r\\n            this.inventoryUI.SetActive(this.isActive);\\r\\n       
+    });\\r\\n        // X\uBC84\uD2BC \uB20C\uB800\uC744\uB54C\\r\\n        this.exitBtn.onClick.AddListener(()
+    => {\\r\\n            this.isActive = false;\\r\\n            this.inventoryUI.SetActive(false);\\r\\n       
+    });\\r\\n    }\\r\\n}\\r\\nexports.default = InventoryBtn;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiSW52ZW50b3J5QnRuLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiSW52ZW50b3J5QnRuLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBRUEsaURBQXFEO0FBR3JELE1BQXFCLFlBQWEsU0FBUSxxQ0FBcUI7SUFBL0Q7O1FBTUksYUFBUSxHQUFhLEtBQUssQ0FBQztJQXdCL0IsQ0FBQztJQXRCRyxLQUFLO1FBRUQsaUJBQWlCO1FBQ2pCLElBQUksQ0FBQyxRQUFRLENBQUMsT0FBTyxDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUU7WUFFbkMsSUFBSSxDQUFDLFFBQVEsR0FBRyxDQUFDLElBQUksQ0FBQyxRQUFRLENBQUM7WUFDL0IsY0FBYztZQUNkLElBQUksQ0FBQyxXQUFXLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxRQUFRLENBQUMsQ0FBQztRQUU5QyxDQUFDLENBQUMsQ0FBQztRQUVILFdBQVc7UUFDWCxJQUFJLENBQUMsT0FBTyxDQUFDLE9BQU8sQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFO1lBRWxDLElBQUksQ0FBQyxRQUFRLEdBQUcsS0FBSyxDQUFDO1lBQ3RCLElBQUksQ0FBQyxXQUFXLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO1FBQ3RDLENBQUMsQ0FBQyxDQUFBO0lBSU4sQ0FBQztDQUVKO0FBOUJELCtCQThCQyJ9\",\"assetPath\":\"Assets/TS/InventoryBtn.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.UI\",\"name\":\"invenBtn\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"exitBtn\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"inventoryUI\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"mscorlib\",\"name\":\"isActive\",\"type\":\"System.Boolean\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"InventoryBtn\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: 3258c6de348c8415ff2be12e9b30ac7d
+  onlyWriteTrigger: 0
