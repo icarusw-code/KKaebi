@@ -4,6 +4,7 @@ import { ZepetoPlayers } from 'ZEPETO.Character.Controller';
 import { Button } from 'UnityEngine.UI';
 import ButtonClick from './ButtonClick';
 import QuestManager from './QuestManager';
+import GameManager from '../TS/GameManager';
 export default class NpcInteraction extends ZepetoScriptBehaviour {
     public btnFactory : GameObject;
     private btn : GameObject;
@@ -21,7 +22,17 @@ export default class NpcInteraction extends ZepetoScriptBehaviour {
             if(QuestManager.getInstance().isNowAccept==false){ //지금 퀘스트 받은 상태가 아닐때만
                 this.TurnOnQuestUI();
             }
-            else{//받은 상태라면
+            else{//받은 상태이고
+                if(QuestManager.getInstance().QuestCompleteCheck()==true) {//완료했을경우
+                    //요리 만드는 애니메이션 실행
+
+                    
+                    QuestManager.getInstance().QuestComplete(); //완료동작수행
+
+                }
+                else if(QuestManager.getInstance().QuestCompleteCheck()==false){ //완료못했으면
+                    //"재료를 다 모아오지 못했구만"
+                }
 
             }
         });

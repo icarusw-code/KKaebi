@@ -31,13 +31,21 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
         this.DestroyBtn = this.btn.GetComponent<Button>(); 
         this.DestroyBtn.onClick.AddListener(() => { //먹는 버튼 누르면 먹어지는 동작
 
-            //재료(지금 현재 오브젝트)가 지금 퀘스트로 받은 재료들일때만 먹기동작 수행
+            //재료(지금 현재 오브젝트)가 지금 퀘스트로 받은 재료들일때만, 그리고 한번도 먹지 않았을경우에만 먹기동작 수행
             for(let i=0; i<QuestManager.getInstance().QuestAcceptIngreNum;i++){
-                if(QuestManager.getInstance().QuestAcceptIngreIDArr[i]==this.myID){
+                if(QuestManager.getInstance().QuestAcceptIngreIDArr[i]==this.myID&&QuestManager.getInstance().GetIngreCheckDiction.get(this.myID)==false){
                     this.DoDestroy();
+                    QuestManager.getInstance().GetIngreCheck(this.myID);
                     this.AddIngredientCount();
                     this.AddIngredientImage();
                 }
+            }
+            if(QuestManager.getInstance().GetIngreCheckDiction.get(this.myID)==true){
+                //"이미 해당재료는 획득했습니다.""
+            }
+
+            if(QuestManager.getInstance().QuestCompleteCheck()==true){ //재료를 모두 모았을경우
+                //"재료를 전부 모았다!"
             }
         });
     }
