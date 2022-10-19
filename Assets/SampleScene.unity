@@ -23798,6 +23798,7 @@ MonoBehaviour:
     - giveUpBtn
     - exitBtn
     - myQuestXScreen
+    - myQuestFoodImgIngre
     unityValues:
     - {fileID: 2852348533980181526}
     - {fileID: 735691264}
@@ -23830,6 +23831,7 @@ MonoBehaviour:
     - {fileID: 410765889}
     - {fileID: 2309474303704109048}
     - {fileID: 1328658314}
+    - {fileID: 0}
     values:
     - 
     - 
@@ -23869,6 +23871,8 @@ MonoBehaviour:
     - 
     - 
     - 
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":36,\"length\":2,\"type\":\"UnityEngine.Object,
+      UnityEngine.CoreModule\",\"isUnity\":true}"}'
     unityArrayValues:
     - {fileID: 21300000, guid: 7c9c1fe7ae3f7ba478f1324424479014, type: 3}
     - {fileID: 21300000, guid: 70142b55f374c5a4aa824ca7bd3a0dea, type: 3}
@@ -23906,6 +23910,8 @@ MonoBehaviour:
     - {fileID: 2852348534483267153}
     - {fileID: 2852348534375992866}
     - {fileID: 2852348533927089760}
+    - {fileID: 21300000, guid: 09778e83f5b527949bcf4ba301a698cb, type: 3}
+    - {fileID: 21300000, guid: 80c6007feae745340ae32628dfbb8c93, type: 3}
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 5bd9b929c0677d54dba305b629a28418, type: 3}
     isExpaned: 0
@@ -24917,7 +24923,7 @@ MonoBehaviour:
     values:
     - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":5,\"type\":\"System.Single,
       mscorlib\",\"isUnity\":false}"}'
-    - '{"type":"System.String, mscorlib","value":""}'
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uC18C\uB5A1\uC18C\uB5A1\"}"
     - '{"type":"System.Single, mscorlib","value":"1004"}'
     unityArrayValues: []
     arrayValues:
@@ -25566,7 +25572,7 @@ GameObject:
   - component: {fileID: 2852348533927089767}
   - component: {fileID: 2852348533927089766}
   m_Layer: 5
-  m_Name: "\uBD80\uB300\uCC0C\uAC1C(\uAE40\uCE58\uB4E4\uC5B4\uAC10)"
+  m_Name: "\uBD80\uB300\uCC0C\uAC1C"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25652,9 +25658,9 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     values:
-    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":13,\"type\":\"System.Single,
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":12,\"type\":\"System.Single,
       mscorlib\",\"isUnity\":false}"}'
-    - '{"type":"System.String, mscorlib","value":""}'
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uBD80\uB300\uCC0C\uAC1C\"}"
     - '{"type":"System.Single, mscorlib","value":"3003"}'
     unityArrayValues: []
     arrayValues:
@@ -25663,7 +25669,6 @@ MonoBehaviour:
     - 2101
     - 2104
     - 5001
-    - 0
     - 5006
     - 1001
     - 1009
@@ -26932,15 +26937,14 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     values:
-    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":10,\"type\":\"System.Single,
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":9,\"type\":\"System.Single,
       mscorlib\",\"isUnity\":false}"}'
-    - '{"type":"System.String, mscorlib","value":""}'
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uBD95\uC5B4\uCC1C\"}"
     - '{"type":"System.Single, mscorlib","value":"3002"}'
     unityArrayValues: []
     arrayValues:
     - 4001
     - 2106
-    - 0
     - 2104
     - 2101
     - 1001
@@ -27008,7 +27012,7 @@ GameObject:
   - component: {fileID: 2852348534375992865}
   - component: {fileID: 2852348534375992864}
   m_Layer: 5
-  m_Name: "\uBD95\uC5B4\uCC1C(\uAE40\uCE58\uB4E4\uC5B4\uAC10)"
+  m_Name: "\uBD95\uC5B4\uCC1C"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27406,7 +27410,7 @@ GameObject:
   - component: {fileID: 2852348534483267156}
   - component: {fileID: 2852348534483267159}
   m_Layer: 5
-  m_Name: "\uD325\uBE59\uC218(\uAE40\uCE58\uC640id\uAC00\uACB9\uCCD0\uC11C \uBBF8\uAD6C\uD604)"
+  m_Name: "\uD325\uBE59\uC218"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27528,19 +27532,18 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     values:
-    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":7,\"type\":\"System.Single,
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":6,\"type\":\"System.Single,
       mscorlib\",\"isUnity\":false}"}'
-    - '{"type":"System.String, mscorlib","value":""}'
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uD325\uBE59\uC218\"}"
     - '{"type":"System.Single, mscorlib","value":"3001"}'
     unityArrayValues: []
     arrayValues:
     - 5010
     - 5009
-    - 1009
     - 2002
-    - 0
-    - 0
-    - 0
+    - 5011
+    - 5013
+    - 5012
     script: {fileID: 4458252877524076426, guid: 28dd44ef6c428cc44b75c4159b2aa69a, type: 3}
     isExpaned: 0
 --- !u!222 &2852348534483267162
@@ -27613,7 +27616,7 @@ MonoBehaviour:
     values:
     - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":4,\"type\":\"System.Single,
       mscorlib\",\"isUnity\":false}"}'
-    - '{"type":"System.String, mscorlib","value":""}'
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uCC39\uC300\uB5A1\"}"
     - '{"type":"System.Single, mscorlib","value":"1009"}'
     unityArrayValues: []
     arrayValues:
@@ -29197,7 +29200,7 @@ MonoBehaviour:
     values:
     - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":7,\"type\":\"System.Single,
       mscorlib\",\"isUnity\":false}"}'
-    - '{"type":"System.String, mscorlib","value":""}'
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uAE40\uCE58\"}"
     - '{"type":"System.Single, mscorlib","value":"2006"}'
     unityArrayValues: []
     arrayValues:
