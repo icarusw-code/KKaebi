@@ -1,8 +1,8 @@
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
-import { Button} from "UnityEngine.UI";
-import { GameObject } from 'UnityEngine';
+import { Button, Image} from "UnityEngine.UI";
+import { GameObject, Sprite } from 'UnityEngine';
 import { UIZepetoPlayerControl, ZepetoPlayers } from 'ZEPETO.Character.Controller';
-import { ScrollView } from 'UnityEngine.UIElements';
+import { Background, ScrollView } from 'UnityEngine.UIElements';
 
 export default class BookBtn extends ZepetoScriptBehaviour {
 
@@ -17,13 +17,15 @@ export default class BookBtn extends ZepetoScriptBehaviour {
     public recipeBook : GameObject;
 
     isActive : boolean = false;
-
+    public backGroundImgList : Sprite[];
+    public backGroundImg : Image;
     private playerController : GameObject;
 
     Start() {    
         
         // 도감 아이콘 눌렀을 떄
         this.bookIconBtn.onClick.AddListener(() => {
+            this.backGroundImg = this.book.transform.GetChild(0).GetComponent<Image>();
 
             this.playerController = ZepetoPlayers.instance.transform.GetChild(4).gameObject;
 
@@ -43,7 +45,7 @@ export default class BookBtn extends ZepetoScriptBehaviour {
             // 재료 창만 띄우고 싶다.
             this.ingredientBook.SetActive(true);
             this.recipeBook.SetActive(false);
-
+            this.backGroundImg.sprite = this.backGroundImgList[0];
         });
 
         // 레시피 탭 눌렀을 때
@@ -51,7 +53,7 @@ export default class BookBtn extends ZepetoScriptBehaviour {
             // 레시피 창만 띄우고 싶다.
             this.ingredientBook.SetActive(false);
             this.recipeBook.SetActive(true);
-
+            this.backGroundImg.sprite = this.backGroundImgList[1];
         });
 
 
