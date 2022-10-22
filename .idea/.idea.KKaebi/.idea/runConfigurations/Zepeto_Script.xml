@@ -1,5 +1,9 @@
 <component name="ProjectRunConfigurationManager">
+<<<<<<< Updated upstream
     <configuration default="false" name="Zepeto Script" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="51660" restartOnDisconnect="true">
+=======
+    <configuration default="false" name="Zepeto Script" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="61767" restartOnDisconnect="true">
+>>>>>>> Stashed changes
     <method v="2" />
     </configuration>
 </component>

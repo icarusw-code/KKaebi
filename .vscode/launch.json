@@ -4,14 +4,22 @@
 		{
 			"name": "Zepeto Script",
 			"address": "127.0.0.1",
+<<<<<<< Updated upstream
 			"port": 51660,
+=======
+			"port": 61767,
+>>>>>>> Stashed changes
 			"request": "attach",
 			"type": "pwa-node"
 		},
 		{
 			"name": "Zepeto Multiplay Script",
 			"address": "127.0.0.1",
+<<<<<<< Updated upstream
 			"port": 51661,
+=======
+			"port": 61768,
+>>>>>>> Stashed changes
 			"request": "attach",
 			"type": "pwa-node"
 		}
