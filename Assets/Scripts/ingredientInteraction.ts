@@ -7,6 +7,8 @@ import GameManager from '../TS/GameManager';
 import IngredientInfo from '../TS/IngredientInfo';
 import QuestManager from './QuestManager';
 import Slot from '../TS/Slot';
+import IngredientBookController from '../TS/IngredientBookController';
+
 export default class ingerdientInteraction extends ZepetoScriptBehaviour {
 
     public btnFactory : GameObject;
@@ -92,9 +94,10 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
     {        
         // 재료 이미지 설정
         this.imageList.map((image) =>{
-            // 이미지의 이름이 content 자식 이름이랑 같으면
+            // 이미지의 이름이 content 자식 이름이랑 같으면 
+            // 그리고 내가 먹은거랑 이름이 같으면
             this.content.GetComponentsInChildren<Slot>().map((slot) => {
-                if(image.name == slot.gameObject.name){
+                if(image.name == slot.gameObject.name && image.name == QuestManager.getInstance().MyQuestIngreDiction.get(this.myID)){
                     console.log("테스트 " + slot.gameObject.name);
                     slot.gameObject.GetComponent<Slot>().ingredientImage.sprite = image;
                 }

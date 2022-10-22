@@ -1,9 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-<<<<<<< Updated upstream
-    <configuration default="false" name="Zepeto Multiplay Script" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="51661" restartOnDisconnect="true">
-=======
-    <configuration default="false" name="Zepeto Multiplay Script" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="61768" restartOnDisconnect="true">
->>>>>>> Stashed changes
+    <configuration default="false" name="Zepeto Multiplay Script" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="51195" restartOnDisconnect="true">
         <method v="2" />
     </configuration>
 </component>
