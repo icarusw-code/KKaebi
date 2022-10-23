@@ -23,7 +23,7 @@ export default class IngredientBookController extends ZepetoScriptBehaviour {
         // 재료 도감 카운트 세팅
         // 텍스트 값을 PlayerPrefs 로 카운트를 가져와서 적용해줌
         this.ingredientList.map((d) => {
-            d.transform.GetChild(1).GetComponent<Text>().text = PlayerPrefs.GetInt(d.GetComponent<IngredientInfo>().id.toString()).toString();
+            d.transform.GetChild(2).GetComponent<Text>().text = PlayerPrefs.GetInt(d.GetComponent<IngredientInfo>().id.toString()).toString();
         })
     }
 
