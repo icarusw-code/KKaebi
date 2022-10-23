@@ -138,8 +138,22 @@ export default class QuestManager extends ZepetoScriptBehaviour {
 
     //퀘스트 수락, 사실상 퀘스트에 필요한 데이터들을 부여
     public QuestAccept(){
+        //3성 음식인데 해당 재료인 2성음식 만든적 없다면 수락할수 없음
+        if(this.QuestFoodName=="팥빙수"){
+            if(UnityEngine.PlayerPrefs.GetInt("찹쌀떡보유함")!=1){
+                console.log("찹쌀떡 없어서 퀘스트 못맡음");
+                return;
+            }
+        }
+        else if(this.QuestFoodName=="부대찌개"||this.QuestFoodName=="붕어찜"){
+            if(UnityEngine.PlayerPrefs.GetInt("김치보유함")!=1){
+                console.log("김치 없어서 퀘스트 못맡음");
+                return;
+            }
+        }
         this.QuestAcceptIngreNum = this.QuestIngreNum; //임시값을 수락값으로 확정
         this.QuestAcceptFoodName = this.QuestFoodName;
+        
         for(let i=0;i<this.QuestAcceptIngreNum;i++){
             this.QuestAcceptIngreIDArr[i] = this.QuestIngreIDArr[i]; //임시값을 수락값으로 확정
             this.GetIngreCheckDiction.set(this.QuestAcceptIngreIDArr[i],false); //부여된 재료를 한번이라도 먹었는지 체크할 dictionary 초기화
@@ -187,11 +201,24 @@ export default class QuestManager extends ZepetoScriptBehaviour {
     public QuestComplete(){
         //퀘스트 안받은상태로 전환
         this.isNowAccept = false;
-
+        //playerpref에서 여태 음식만든 횟수 끌어옴
         var foodCount : number = UnityEngine.PlayerPrefs.GetInt(this.QuestAcceptFoodName);
         foodCount++;
         // Playerpref에 레시피 음식이름 키값으로 저장, 완료횟수
         UnityEngine.PlayerPrefs.SetInt(this.QuestAcceptFoodName,foodCount);
+
+        //완료한게 김치이거나 찹쌀떡이라면...playerpref에 재료가 있다고 저장할거임
+        if(this.QuestAcceptFoodName=="김치"||this.QuestAcceptFoodName=="찹쌀떡"){
+            UnityEngine.PlayerPrefs.SetInt(this.QuestAcceptFoodName+"보유함",1);
+        }
+        //완료한게 3성 음식이면... 해당 재료인 2성음식 소모
+        if(this.QuestAcceptFoodName=="팥빙수"){
+            UnityEngine.PlayerPrefs.SetInt("찹쌀떡보유함",0);
+        }
+        else if(this.QuestAcceptFoodName=="부대찌개"||this.QuestAcceptFoodName=="붕어찜"){
+            UnityEngine.PlayerPrefs.SetInt("김치보유함",0);
+        }
+
         //인벤토리 비우기
         this.GetComponent<InventoryController>().ClearInventory();
         //퀘스트도 비우기

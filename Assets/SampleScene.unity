@@ -14137,10 +14137,37 @@ MonoBehaviour:
     keys:
     - IngredientFactory
     - SpawnPoint
+    - IngredientFactory1
+    - IngredientFactory2
+    - IngredientFactory3
+    - IngredientFactory4
+    - IngredientFactory5
+    - IngredientFactory6
+    - IngredientFactory7
+    - IngredientFactory8
+    - IngredientFactory9
     unityValues:
-    - {fileID: 3723965545527246433, guid: 120c2a1682d766241a079277d86f6680, type: 3}
+    - {fileID: 3723965545527246433, guid: cf00115c0d28b4a40b486610dbc28ea7, type: 3}
     - {fileID: 272283877}
+    - {fileID: 3723965545527246433, guid: 7aa711301c05efc4b975a0f0cdf57f00, type: 3}
+    - {fileID: 3723965545527246433, guid: c3ac7ad30a8177a4190b662089c1bcfd, type: 3}
+    - {fileID: 3723965545527246433, guid: b23db6b47d6b6c24a99989ab69eedcd3, type: 3}
+    - {fileID: 3723965545527246433, guid: 13c20d8625e67f24585d11f2b0245468, type: 3}
+    - {fileID: 3723965545527246433, guid: d6259e11f2555714191c69158bc1a9c5, type: 3}
+    - {fileID: 3723965545527246433, guid: d11f981518b8f6841bec647133fe2806, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     values:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
     - 
     - 
     unityArrayValues: []
