@@ -15,11 +15,14 @@ export default class BookBtn extends ZepetoScriptBehaviour {
 
     public ingredientBook : GameObject;
     public recipeBook : GameObject;
+    public kkaebiBook: GameObject;
 
     isActive : boolean = false;
     public backGroundImgList : Sprite[];
     public backGroundImg : Image;
     private playerController : GameObject;
+
+    public exitBtn:Button;
 
     Start() {    
         
@@ -45,6 +48,7 @@ export default class BookBtn extends ZepetoScriptBehaviour {
             // 재료 창만 띄우고 싶다.
             this.ingredientBook.SetActive(true);
             this.recipeBook.SetActive(false);
+            this.kkaebiBook.SetActive(false);
             this.backGroundImg.sprite = this.backGroundImgList[0];
         });
 
@@ -53,9 +57,28 @@ export default class BookBtn extends ZepetoScriptBehaviour {
             // 레시피 창만 띄우고 싶다.
             this.ingredientBook.SetActive(false);
             this.recipeBook.SetActive(true);
+            this.kkaebiBook.SetActive(false);
             this.backGroundImg.sprite = this.backGroundImgList[1];
         });
 
+        // 깨비 탭 눌렀을 때
+        this.kkaebiTab.onClick.AddListener(() => {
+            // 깨비 창만 띄우고 싶다.
+            this.ingredientBook.SetActive(false);
+            this.recipeBook.SetActive(false);
+            this.kkaebiBook.SetActive(true);
+            this.backGroundImg.sprite = this.backGroundImgList[2];
+        });
+
+        this.exitBtn.onClick.AddListener(() => {
+            // 도감 켜주기
+            this.isActive ? this.book.SetActive(false) : this.book.SetActive(true);
+
+            // 컨트롤러 꺼주기
+            this.isActive ? this.playerController.SetActive(true) : this.playerController.SetActive(false);
+
+            this.isActive = !this.isActive;
+        });
 
     }
 
