@@ -49,7 +49,7 @@ export default class InventoryController extends ZepetoScriptBehaviour {
     {
         var ingreFood : GameObject;
         //3성음식일때는 2성재료도 추가로 instantiate해야됨
-        if(QuestManager.getInstance().QuestAcceptFoodName=="팥빙수"){
+        /*if(QuestManager.getInstance().QuestAcceptFoodName=="팥빙수"){
             ingreFood = GameObject.Instantiate(this.slotFactory, this.content) as GameObject;
             ingreFood.name = QuestManager.getInstance().myQuestFoodImgIngre[0].name;
 
@@ -62,7 +62,7 @@ export default class InventoryController extends ZepetoScriptBehaviour {
 
             ingreFood.GetComponent<QuestIngre>().ingredientName.text = QuestManager.getInstance().myQuestFoodImgIngre[1].name;
             ingreFood.GetComponent<QuestIngre>().ingredientImage.sprite = QuestManager.getInstance().myQuestFoodImgIngre[1];
-        }
+        }*/
 
         for(let i = 0; i < size; i++)
         {

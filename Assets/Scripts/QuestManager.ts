@@ -38,7 +38,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
     public QuestFoodName: string;
     public MainQuestFoodImg: Image;
     public MainQuestFoodTxt: Text;
-    public FoodImageList : Sprite[];
+    public FoodImageList : Sprite[]; //recipe에있는 음식들의 사진
 
     //수락할때 최종값
     public QuestAcceptIngreIDArr : number[];
@@ -210,7 +210,20 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         //완료한게 김치이거나 찹쌀떡이라면...playerpref에 재료가 있다고 저장할거임
         if(this.QuestAcceptFoodName=="김치"||this.QuestAcceptFoodName=="찹쌀떡"){
             UnityEngine.PlayerPrefs.SetInt(this.QuestAcceptFoodName+"보유함",1);
+            var ingreFood : GameObject;
+            ingreFood = GameObject.Instantiate(this.GetComponent<InventoryController>().slotFactory, this.GetComponent<InventoryController>().content) as GameObject;
+            if(this.QuestAcceptFoodName=="김치"){
+                ingreFood.name = QuestManager.getInstance().myQuestFoodImgIngre[1].name;
+                ingreFood.GetComponent<QuestIngre>().ingredientName.text = QuestManager.getInstance().myQuestFoodImgIngre[1].name;
+                ingreFood.GetComponent<QuestIngre>().ingredientImage.sprite = QuestManager.getInstance().myQuestFoodImgIngre[1];
+            }
+            else if(this.QuestAcceptFoodName=="찹쌀떡"){
+                ingreFood.name = QuestManager.getInstance().myQuestFoodImgIngre[0].name;
+                ingreFood.GetComponent<QuestIngre>().ingredientName.text = QuestManager.getInstance().myQuestFoodImgIngre[0].name;
+                ingreFood.GetComponent<QuestIngre>().ingredientImage.sprite = QuestManager.getInstance().myQuestFoodImgIngre[0];
+            }
         }
+        
         //완료한게 3성 음식이면... 해당 재료인 2성음식 소모
         if(this.QuestAcceptFoodName=="팥빙수"){
             UnityEngine.PlayerPrefs.SetInt("찹쌀떡보유함",0);
