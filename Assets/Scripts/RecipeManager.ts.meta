@@ -18,31 +18,45 @@ ScriptedImporter:
   wrapperTypes: []
   WrapperFilters: []
   wrapperOutputDirectory: Generated
-  compiledResult: "{\"source\":\"/*import { ZepetoScriptBehaviour } from 'ZEPETO.Script'\\r\\nimport
-    { Button, Image } from 'UnityEngine.UI'\\r\\nimport { GameObject } from 'UnityEngine';\\r\\nimport
-    QuestManager from './QuestManager';\\r\\nimport * as UnityEngine from 'UnityEngine';\\r\\nexport
-    default class RecipeManager extends ZepetoScriptBehaviour {\\r\\n    public recipeBtnObject:
-    GameObject[];\\r\\n    public recipeBtn: Button[];\\r\\n    Start() {\\r\\n       
-    \\r\\n\\r\\n        for (let i = 0; i < this.recipeBtnObject.Length; i++) {\\r\\n           
-    this.recipeBtn[i] = this.recipeBtnObject[i].GetComponent<Button>();\\r\\n       
-    for (let i = 0; i < this.recipeBtn.Length; i++) {\\r\\n            this.recipeBtn[i].onClick.AddListener(()
-    => { //\uBC84\uD2BC \uB204\uB97C\uB54C \uB9C8\uB2E4 \uD574\uB2F9 \uB808\uC2DC\uD53C
-    \uB728\uAC8C\uD560\uAC70\uC784)\\r\\n                //\uD574\uB2F9\uC74C\uC2DD\uC5D0
-    \uB9DE\uB294 \uB808\uC2DC\uD53C \uB744\uC6C0\\r\\n                //\uADF8\uB807\uB2E4\uBA74
-    \uD574\uBC29 \uBC84\uD2BC\uC624\uBE0C\uC81D\uD2B8\uC758 \uC774\uB984\uC744 \uAC00\uC838\uC624\uACE0\\r\\n               
-    //\uADF8 \uC774\uB984\uC5D0 \uB9DE\uB294\\r\\n            });\\r\\n        }\\r\\n   
-    }\\r\\n    }\\r\\n    //\uB808\uC2DC\uD53C\uB97C \uCC98\uC74C \uC81C\uC791\uD588\uC744\uB54C
-    \uB098\uC624\uAC8C\uD558\uB294, \uADF8\uB9AC\uACE0 \uB098\uAC14\uB2E4 \uB4E4\uC5B4\uC654\uC744\uB54C\uB3C4
-    \uB3C4\uAC10\uC758 \uC74C\uC2DD\uC744 \uD45C\uC2DC\uD558\uAC8C \uD558\uB294\uD568\uC218\\r\\n   
-    public TurnOnRecipeImage(btnObject:GameObject){\\r\\n        //playerpref\uC5D0\uC11C
-    \uD574\uB2F9 \uB808\uC2DC\uD53C\uC758 \uCE74\uC6B4\uD2B8\uAC00 1\uC774\uC0C1\uC774\uBA74\\r\\n       
-    if(UnityEngine.PlayerPrefs.GetInt(btnObject.name)>=1){\\r\\n            QuestManager.getInstance().FoodImageList.map((image)
-    =>{\\r\\n                if(btnObject.name == image.name){\\r\\n   \\r\\n               
-    }\\r\\n           })\\r\\n        }\\r\\n\\r\\n        //\uC774\uBBF8\uC9C0\uB9AC\uC2A4\uD2B8\uC5D0\uC11C
-    \uB808\uC2DC\uD53C \uBC84\uD2BC\uC758 \uC774\uB984\uACFC \uAC19\uC740 \uC774\uBBF8\uC9C0\uB97C
-    \uCC3E\uC73C\uBA74\\r\\n        /*QuestManager.getInstance().FoodImageList.map((image)
-    =>{\\r\\n             if(btnObject.name == image.name){\\r\\n\\r\\n            
-    }\\r\\n        })\\r\\n        // btnimagesibling\uC5D0 \uB123\uC5B4\uC57C\uD55C\uB2E4.\\r\\n   
-    }\\r\\n\\r\\n}*/ \\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUmVjaXBlTWFuYWdlci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlJlY2lwZU1hbmFnZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztHQTBDRyJ9\",\"assetPath\":\"Assets/Scripts/RecipeManager.ts\",\"manifest\":{\"properties\":[],\"name\":\"RecipeManager\",\"description\":\"\"},\"isCompiled\":true}"
-  typescriptHash: 2eef379b4f91d8131fff194255ed5782
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst
+    UnityEngine_UI_1 = require(\\\"UnityEngine.UI\\\");\\r\\nconst UnityEngine_1
+    = require(\\\"UnityEngine\\\");\\r\\nconst QuestManager_1 = require(\\\"./QuestManager\\\");\\r\\nconst
+    UnityEngine = require(\\\"UnityEngine\\\");\\r\\nclass RecipeManager extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    Start() {\\r\\n        for (let
+    i = 0; i < this.recipeBtnObject.Length; i++) {\\r\\n            this.recipeBtn[i]
+    = this.recipeBtnObject[i].GetComponent($typeof(UnityEngine_UI_1.Button));\\r\\n       
+    }\\r\\n        for (let i = 0; i < this.recipeBtn.Length; i++) {\\r\\n           
+    this.recipeBtn[i].onClick.AddListener(() => {\\r\\n                console.log(\\\"\uC774
+    \uBC84\uD2BC \uC774\uB984\uC740:\\\" + this.recipeBtn[i].name);\\r\\n               
+    //\uD574\uB2F9\uC74C\uC2DD\uC5D0 \uB9DE\uB294 \uB808\uC2DC\uD53C \uB744\uC6C0\\r\\n               
+    //\uADF8\uB807\uB2E4\uBA74 \uD574\uBC29 \uBC84\uD2BC\uC624\uBE0C\uC81D\uD2B8\uC758
+    \uC774\uB984\uC744 \uAC00\uC838\uC624\uACE0\\r\\n                //\uADF8 \uC774\uB984\uC5D0
+    \uB9DE\uB294 \\r\\n            });\\r\\n        }\\r\\n    }\\r\\n    ReplaceAllRecipeImage()
+    {\\r\\n        for (let i = 0; i < this.recipeBtnObject.Length; i++) {\\r\\n           
+    this.TurnOnRecipeImage(this.recipeBtnObject[i]);\\r\\n        }\\r\\n    }\\r\\n   
+    //\uB808\uC2DC\uD53C\uB97C \uCC98\uC74C \uC81C\uC791\uD588\uC744\uB54C \uB098\uC624\uAC8C\uD558\uB294,
+    \uADF8\uB9AC\uACE0 \uB098\uAC14\uB2E4 \uB4E4\uC5B4\uC654\uC744\uB54C\uB3C4 \uB3C4\uAC10\uC758
+    \uC74C\uC2DD\uC744 \uD45C\uC2DC\uD558\uAC8C \uD558\uB294\uD568\uC218\\r\\n   
+    TurnOnRecipeImage(btnObject) {\\r\\n        //playerpref\uC5D0\uC11C \uD574\uB2F9
+    \uB808\uC2DC\uD53C\uC758 \uCE74\uC6B4\uD2B8\uAC00 1\uC774\uC0C1\uC774\uBA74\\r\\n       
+    if (UnityEngine.PlayerPrefs.GetInt(btnObject.name) >= 1) {\\r\\n            console.log(\\\"\uC74C\uC2DD\uBA39\uC740\uAC83\uC740:\\\"
+    + btnObject.name + \\\"\uB9CC\uB4E0\uD69F\uC218\uB294:\\\" + UnityEngine.PlayerPrefs.GetInt(btnObject.name));\\r\\n           
+    QuestManager_1.default.getInstance().FoodImageList.map((image) => {\\r\\n               
+    if (btnObject.name == image.name) { //\uBC84\uD2BC\uC774\uB984\uACFC \uC774\uBBF8\uC9C0
+    \uC774\uB984\uC774 \uB9DE\uB294\uAC83\uC744 \uCC3E\uC544\uC11C\\r\\n                   
+    btnObject.transform.GetChild(0).gameObject.GetComponent($typeof(UnityEngine_UI_1.Image)).sprite
+    = image; //\uC790\uC2DD\uC624\uBE0C\uC81D\uD2B8(\uC74C\uC2DD\uC774\uBBF8\uC9C0\uAC00
+    \uB4E4\uC5B4\uAC08) \uC774\uBBF8\uC9C0\uC5D0 \uB300\uC785\uD55C\uB2E4\\r\\n                   
+    if (UnityEngine.PlayerPrefs.GetInt(btnObject.name) == 1) { //1\uAC1C \uBA39\uC740\uC0C1\uD0DC\uBA74\\r\\n                       
+    btnObject.transform.GetChild(2).gameObject.GetComponent($typeof(UnityEngine_UI_1.Image)).sprite
+    = this.makeImage; //\uC644\uC131\uD588\uB2E4\uB294 \uC219\uB828\uB3C4 \uD45C\uC2DC(\uCCAB\uBC88\uC9F8\uCE78)\\r\\n                   
+    }\\r\\n                    if (UnityEngine.PlayerPrefs.GetInt(btnObject.name)
+    >= 2) {\\r\\n                        btnObject.transform.GetChild(2).gameObject.GetComponent($typeof(UnityEngine_UI_1.Image)).sprite
+    = this.makeImage; //\uC644\uC131\uD588\uB2E4\uB294 \uC219\uB828\uB3C4 \uD45C\uC2DC(\uCCAB\uBC88\uC9F8\uCE78)\\r\\n                       
+    btnObject.transform.GetChild(3).gameObject.GetComponent($typeof(UnityEngine_UI_1.Image)).sprite
+    = this.makeImage; //\uC644\uC131\uD588\uB2E4\uB294 \uC219\uB828\uB3C4 \uD45C\uC2DC(\uB450\uBC88\uC9F8\uCE78)\\r\\n                   
+    }\\r\\n                }\\r\\n            });\\r\\n        }\\r\\n    }\\r\\n}\\r\\nexports.default
+    = RecipeManager;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUmVjaXBlTWFuYWdlci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlJlY2lwZU1hbmFnZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxpREFBcUQ7QUFDckQsbURBQThDO0FBQzlDLDZDQUEwRDtBQUMxRCxpREFBMEM7QUFDMUMsMkNBQTJDO0FBQzNDLE1BQXFCLGFBQWMsU0FBUSxxQ0FBcUI7SUFJNUQsS0FBSztRQUNELEtBQUssSUFBSSxDQUFDLEdBQUcsQ0FBQyxFQUFFLENBQUMsR0FBRyxJQUFJLENBQUMsZUFBZSxDQUFDLE1BQU0sRUFBRSxDQUFDLEVBQUUsRUFBRTtZQUNsRCxJQUFJLENBQUMsU0FBUyxDQUFDLENBQUMsQ0FBQyxHQUFHLElBQUksQ0FBQyxlQUFlLENBQUMsQ0FBQyxDQUFDLENBQUMsWUFBWSxTQUFDLHVCQUFNLEVBQUcsQ0FBQztTQUN0RTtRQUNELEtBQUssSUFBSSxDQUFDLEdBQUcsQ0FBQyxFQUFFLENBQUMsR0FBRyxJQUFJLENBQUMsU0FBUyxDQUFDLE1BQU0sRUFBRSxDQUFDLEVBQUUsRUFBRTtZQUM1QyxJQUFJLENBQUMsU0FBUyxDQUFDLENBQUMsQ0FBQyxDQUFDLE9BQU8sQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFO2dCQUN2QyxPQUFPLENBQUMsR0FBRyxDQUFDLFdBQVcsR0FBQyxJQUFJLENBQUMsU0FBUyxDQUFDLENBQUMsQ0FBQyxDQUFDLElBQUksQ0FBQyxDQUFDO2dCQUNoRCxpQkFBaUI7Z0JBQ2pCLDBCQUEwQjtnQkFDMUIsV0FBVztZQUNmLENBQUMsQ0FBQyxDQUFDO1NBRU47SUFDTCxDQUFDO0lBQ00scUJBQXFCO1FBQ3hCLEtBQUssSUFBSSxDQUFDLEdBQUcsQ0FBQyxFQUFFLENBQUMsR0FBRyxJQUFJLENBQUMsZUFBZSxDQUFDLE1BQU0sRUFBRSxDQUFDLEVBQUUsRUFBRTtZQUNsRCxJQUFJLENBQUMsaUJBQWlCLENBQUMsSUFBSSxDQUFDLGVBQWUsQ0FBQyxDQUFDLENBQUMsQ0FBQyxDQUFDO1NBQ25EO0lBQ0wsQ0FBQztJQUVELHVEQUF1RDtJQUNoRCxpQkFBaUIsQ0FBQyxTQUFvQjtRQUN6QyxpQ0FBaUM7UUFDakMsSUFBRyxXQUFXLENBQUMsV0FBVyxDQUFDLE1BQU0sQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLElBQUUsQ0FBQyxFQUFDO1lBQ2pELE9BQU8sQ0FBQyxHQUFHLENBQUMsU0FBUyxHQUFDLFNBQVMsQ0FBQyxJQUFJLEdBQUMsUUFBUSxHQUFDLFdBQVcsQ0FBQyxXQUFXLENBQUMsTUFBTSxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsQ0FBQyxDQUFDO1lBQzlGLHNCQUFZLENBQUMsV0FBVyxFQUFFLENBQUMsYUFBYSxDQUFDLEdBQUcsQ0FBQyxDQUFDLEtBQUssRUFBRSxFQUFFO2dCQUNuRCxJQUFHLFNBQVMsQ0FBQyxJQUFJLElBQUksS0FBSyxDQUFDLElBQUksRUFBQyxFQUFJLHdCQUF3QjtvQkFDeEQsU0FBUyxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUMsQ0FBQyxDQUFDLENBQUMsVUFBVSxDQUFDLFlBQVksU0FBQyxzQkFBSyxHQUFJLE1BQU0sR0FBRyxLQUFLLENBQUMsQ0FBQyw4QkFBOEI7b0JBQy9HLElBQUcsV0FBVyxDQUFDLFdBQVcsQ0FBQyxNQUFNLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxJQUFFLENBQUMsRUFBQyxFQUFFLFVBQVU7d0JBQzdELFNBQVMsQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFVBQVUsQ0FBQyxZQUFZLFNBQUMsc0JBQUssR0FBSSxNQUFNLEdBQUcsSUFBSSxDQUFDLFNBQVMsQ0FBQyxDQUFDLG9CQUFvQjtxQkFDakg7b0JBQ0QsSUFBRyxXQUFXLENBQUMsV0FBVyxDQUFDLE1BQU0sQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLElBQUUsQ0FBQyxFQUFDO3dCQUNqRCxTQUFTLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDLENBQUMsQ0FBQyxVQUFVLENBQUMsWUFBWSxTQUFDLHNCQUFLLEdBQUksTUFBTSxHQUFHLElBQUksQ0FBQyxTQUFTLENBQUMsQ0FBRyxvQkFBb0I7d0JBQ2hILFNBQVMsQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFDLFVBQVUsQ0FBQyxZQUFZLFNBQUMsc0JBQUssR0FBSSxNQUFNLEdBQUcsSUFBSSxDQUFDLFNBQVMsQ0FBQyxDQUFDLG9CQUFvQjtxQkFDakg7aUJBQ0o7WUFDTixDQUFDLENBQUMsQ0FBQztTQUNMO0lBQ0wsQ0FBQztDQUNKO0FBM0NELGdDQTJDQyJ9\",\"assetPath\":\"Assets/Scripts/RecipeManager.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"recipeBtnObject\",\"type\":\"UnityEngine.GameObject[]\",\"isArray\":true,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"recipeBtn\",\"type\":\"UnityEngine.UI.Button[]\",\"isArray\":true,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"makeImage\",\"type\":\"UnityEngine.Sprite\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"RecipeManager\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: abf59e81d7e3af0ae388643cbb2730b4
   onlyWriteTrigger: 0

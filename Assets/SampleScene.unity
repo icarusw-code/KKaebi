@@ -19592,6 +19592,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 776711151}
+  - component: {fileID: 776711152}
   m_Layer: 0
   m_Name: RecipeBookManager
   m_TagString: Untagged
@@ -19613,6 +19614,62 @@ Transform:
   m_Father: {fileID: 1348218651}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &776711152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776711150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - makeImage
+    - recipeBtn
+    - recipeBtnObject
+    unityValues:
+    - {fileID: 21300000, guid: b8eae3338d61da64ebe4ed2b02f27917, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    values:
+    - 
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":0,\"type\":\"UnityEngine.Object,
+      UnityEngine.CoreModule\",\"isUnity\":true}"}'
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":25,\"type\":\"UnityEngine.Object,
+      UnityEngine.CoreModule\",\"isUnity\":true}"}'
+    unityArrayValues:
+    - {fileID: 8369927973083084246}
+    - {fileID: 8369927972793889445}
+    - {fileID: 8369927972566202360}
+    - {fileID: 8369927973123963881}
+    - {fileID: 8369927972119619101}
+    - {fileID: 8369927973224721238}
+    - {fileID: 8369927972566109189}
+    - {fileID: 8369927972040713761}
+    - {fileID: 8369927973759781210}
+    - {fileID: 8369927972833211320}
+    - {fileID: 8369927972015993717}
+    - {fileID: 8369927972989633135}
+    - {fileID: 8369927971943693156}
+    - {fileID: 8369927972928431291}
+    - {fileID: 8369927973642687243}
+    - {fileID: 8369927972685292107}
+    - {fileID: 8369927973704911944}
+    - {fileID: 8369927973661907974}
+    - {fileID: 8369927972113409161}
+    - {fileID: 8369927973692737542}
+    - {fileID: 8369927971931353046}
+    - {fileID: 8369927972386448603}
+    - {fileID: 8369927972188585188}
+    - {fileID: 8369927971942842143}
+    - {fileID: 8369927972756312574}
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 15606b489fb6aa24987fd57543361c29, type: 3}
+    isExpaned: 0
 --- !u!1 &777936181
 GameObject:
   m_ObjectHideFlags: 0
@@ -30056,17 +30113,17 @@ MonoBehaviour:
     - IngredientFactory8
     - IngredientFactory9
     unityValues:
-    - {fileID: 3723965545527246433, guid: cf00115c0d28b4a40b486610dbc28ea7, type: 3}
+    - {fileID: 3723965545527246433, guid: cfdc3eb86790eac4ba77a3c346ce7e0d, type: 3}
     - {fileID: 272283877}
-    - {fileID: 3723965545527246433, guid: 7aa711301c05efc4b975a0f0cdf57f00, type: 3}
-    - {fileID: 3723965545527246433, guid: c3ac7ad30a8177a4190b662089c1bcfd, type: 3}
+    - {fileID: 3723965545527246433, guid: 120c2a1682d766241a079277d86f6680, type: 3}
+    - {fileID: 3723965545527246433, guid: 2eb2ea7488bc9c046a2b940a69c6ef78, type: 3}
     - {fileID: 3723965545527246433, guid: b23db6b47d6b6c24a99989ab69eedcd3, type: 3}
     - {fileID: 3723965545527246433, guid: 13c20d8625e67f24585d11f2b0245468, type: 3}
     - {fileID: 3723965545527246433, guid: d6259e11f2555714191c69158bc1a9c5, type: 3}
-    - {fileID: 3723965545527246433, guid: d11f981518b8f6841bec647133fe2806, type: 3}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 3723965545527246433, guid: 488de0a79d02a57489e5f17cbc7da4ba, type: 3}
+    - {fileID: 3723965545527246433, guid: 45b4a2f6dc79ae044ad6c3a10e08d3f2, type: 3}
+    - {fileID: 3723965545527246433, guid: 3c72b46848e248c48a4f77ce5dd6170a, type: 3}
+    - {fileID: 3723965545527246433, guid: 47dc0cf301b2aae45a2172695451b25a, type: 3}
     values:
     - 
     - 
@@ -48973,6 +49030,7 @@ MonoBehaviour:
     - exitBtn
     - myQuestXScreen
     - myQuestFoodImgIngre
+    - RecipeManager
     unityValues:
     - {fileID: 2852348533980181526}
     - {fileID: 735691264}
@@ -49006,6 +49064,7 @@ MonoBehaviour:
     - {fileID: 2309474303704109048}
     - {fileID: 1328658314}
     - {fileID: 0}
+    - {fileID: 776711150}
     values:
     - 
     - 
@@ -49027,7 +49086,7 @@ MonoBehaviour:
     - '{"type":"System.String, mscorlib","value":""}'
     - 
     - 
-    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":7,\"length\":4,\"type\":\"UnityEngine.Object,
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":7,\"length\":8,\"type\":\"UnityEngine.Object,
       UnityEngine.CoreModule\",\"isUnity\":true}"}'
     - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":0,\"type\":\"System.Single,
       mscorlib\",\"isUnity\":false}"}'
@@ -49036,17 +49095,18 @@ MonoBehaviour:
     - '{"type":"System.Boolean, mscorlib","value":"False"}'
     - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":0,\"type\":\"System.Boolean,
       mscorlib\",\"isUnity\":false}"}'
-    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":11,\"length\":25,\"type\":\"UnityEngine.Object,
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":15,\"length\":25,\"type\":\"UnityEngine.Object,
       UnityEngine.CoreModule\",\"isUnity\":true}"}'
-    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":36,\"length\":0,\"type\":\"UnityEngine.Object,
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":40,\"length\":0,\"type\":\"UnityEngine.Object,
       UnityEngine.CoreModule\",\"isUnity\":true}"}'
     - 
     - '{"type":"System.Boolean, mscorlib","value":"False"}'
     - 
     - 
     - 
-    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":36,\"length\":2,\"type\":\"UnityEngine.Object,
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":40,\"length\":2,\"type\":\"UnityEngine.Object,
       UnityEngine.CoreModule\",\"isUnity\":true}"}'
+    - 
     unityArrayValues:
     - {fileID: 21300000, guid: 7c9c1fe7ae3f7ba478f1324424479014, type: 3}
     - {fileID: 21300000, guid: 70142b55f374c5a4aa824ca7bd3a0dea, type: 3}
@@ -49059,6 +49119,10 @@ MonoBehaviour:
     - {fileID: 21300000, guid: c21d27066c6089e42820ea9f8356ea16, type: 3}
     - {fileID: 21300000, guid: ac665ad9c7b45e54dbeda21862bf84c2, type: 3}
     - {fileID: 21300000, guid: 9db45d60351b3ed4b9cbbd6590d31e22, type: 3}
+    - {fileID: 21300000, guid: 8f72729209bedb441bb6faf50da69892, type: 3}
+    - {fileID: 21300000, guid: 090252d10d880fb419a0a9565755068a, type: 3}
+    - {fileID: 21300000, guid: 67ac8611952a5fc429f286f9ab4c2922, type: 3}
+    - {fileID: 21300000, guid: 7b148c9a6f4be6349aa23d85ec7eda5a, type: 3}
     - {fileID: 2852348533775741438}
     - {fileID: 2852348533762442863}
     - {fileID: 2852348534523356492}
@@ -49084,8 +49148,8 @@ MonoBehaviour:
     - {fileID: 2852348534483267153}
     - {fileID: 2852348534375992866}
     - {fileID: 2852348533927089760}
-    - {fileID: 21300000, guid: 09778e83f5b527949bcf4ba301a698cb, type: 3}
-    - {fileID: 21300000, guid: 80c6007feae745340ae32628dfbb8c93, type: 3}
+    - {fileID: 21300000, guid: 7b148c9a6f4be6349aa23d85ec7eda5a, type: 3}
+    - {fileID: 21300000, guid: 67ac8611952a5fc429f286f9ab4c2922, type: 3}
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 5bd9b929c0677d54dba305b629a28418, type: 3}
     isExpaned: 0
@@ -60698,7 +60762,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 8369927972695123094}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.4338236
+  m_Size: 0.43382362
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -63869,7 +63933,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 70, y: 33.5}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &8369927972944256595

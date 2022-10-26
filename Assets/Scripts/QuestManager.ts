@@ -7,6 +7,7 @@ import InventoryController from '../TS/InventoryController';
 import IngredientBookController from '../TS/IngredientBookController';
 import QuestIngre from './QuestIngre';
 import { QuestionDotToken } from 'typescript';
+import RecipeManager from './RecipeManager';
 export default class QuestManager extends ZepetoScriptBehaviour {
     //quest 판넬
     public QuestUI : GameObject;
@@ -64,7 +65,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
     //퀘스트창 닫기 버튼
     public exitBtn: Button;
 
-
+    public RecipeManager: GameObject;
     public static instance:QuestManager;
     static getInstance(){
         return this.instance||(this.instance = new this());
@@ -121,6 +122,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
 
 
         this.MyQuestIngreDiction = this.UIManger.GetComponent<IngredientBookController>().ingredientDict;
+        this.RecipeManager.GetComponent<RecipeManager>().ReplaceAllRecipeImage();
     }
     
      //해당 퀘스트를 눌렀을때 재료 아이디값 넣은 배열 불러온다.
@@ -248,8 +250,8 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         this.QuestAcceptIngreIDArr = new Array();
         this.QuestAcceptIngreNum = 0;
         
-        
-
+        //레시피 숙련도 갱신
+        this.RecipeManager.GetComponent<RecipeManager>().ReplaceAllRecipeImage();
     }
 
 
