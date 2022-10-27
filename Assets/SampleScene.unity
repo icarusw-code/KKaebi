@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 2183104}
   - component: {fileID: 2183103}
   - component: {fileID: 2183102}
+  - component: {fileID: 2183105}
   m_Layer: 5
   m_Name: "\uBD95\uC5B4\uBE75\uAE68\uBE44"
   m_TagString: Untagged
@@ -350,6 +351,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2183100}
   m_CullTransparentMesh: 1
+--- !u!114 &2183105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2183100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - info
+    unityValues:
+    - {fileID: 0}
+    values:
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uBD95\uC5B4\uBE75\"}"
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
+    isExpaned: 0
 --- !u!224 &3571969
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2233,6 +2257,7 @@ GameObject:
   - component: {fileID: 88955853}
   - component: {fileID: 88955852}
   - component: {fileID: 88955851}
+  - component: {fileID: 88955854}
   m_Layer: 5
   m_Name: "\uBD80\uB300\uAE68\uBE44"
   m_TagString: Untagged
@@ -2345,6 +2370,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 88955849}
   m_CullTransparentMesh: 1
+--- !u!114 &88955854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88955849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - info
+    unityValues:
+    - {fileID: 0}
+    values:
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uBD80\uB300\uCC0C\uAC1C\"}"
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
+    isExpaned: 0
 --- !u!1 &90363663
 GameObject:
   m_ObjectHideFlags: 0
@@ -3683,6 +3731,101 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 168508023}
   m_CullTransparentMesh: 1
+--- !u!1 &168732596
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 168732597}
+  - component: {fileID: 168732598}
+  m_Layer: 0
+  m_Name: KKaebiManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &168732597
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168732596}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1348218651}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &168732598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168732596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - KkaebiBtnObjects
+    - KkaebiButtons
+    - SummonBtns
+    - UnsummonBtns
+    - beforeNumber
+    unityValues:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    values:
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":25,\"type\":\"UnityEngine.Object,
+      UnityEngine.CoreModule\",\"isUnity\":true}"}'
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":25,\"length\":0,\"type\":\"UnityEngine.Object,
+      UnityEngine.CoreModule\",\"isUnity\":true}"}'
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":25,\"length\":0,\"type\":\"UnityEngine.Object,
+      UnityEngine.CoreModule\",\"isUnity\":true}"}'
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":25,\"length\":0,\"type\":\"UnityEngine.Object,
+      UnityEngine.CoreModule\",\"isUnity\":true}"}'
+    - '{"type":"System.Single, mscorlib","value":"0"}'
+    unityArrayValues:
+    - {fileID: 1075247363}
+    - {fileID: 737931310}
+    - {fileID: 1669681302}
+    - {fileID: 766914548}
+    - {fileID: 647887304}
+    - {fileID: 2100718050}
+    - {fileID: 617166503}
+    - {fileID: 1826556079}
+    - {fileID: 1922477223}
+    - {fileID: 1119487227}
+    - {fileID: 2183100}
+    - {fileID: 1467714900}
+    - {fileID: 1206535956}
+    - {fileID: 1493492273}
+    - {fileID: 589342264}
+    - {fileID: 272011548}
+    - {fileID: 1084276401}
+    - {fileID: 306380499}
+    - {fileID: 559893120}
+    - {fileID: 312522804}
+    - {fileID: 335064964}
+    - {fileID: 806100618}
+    - {fileID: 1267282532}
+    - {fileID: 552187381}
+    - {fileID: 88955849}
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 203a0a3ec3e7a2b4698cdb9ed42cd3e0, type: 3}
+    isExpaned: 0
 --- !u!1 &169678040
 GameObject:
   m_ObjectHideFlags: 0
@@ -4195,7 +4338,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 7c9c1fe7ae3f7ba478f1324424479014, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5817,7 +5960,7 @@ RectTransform:
   m_Father: {fileID: 329296311}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.7370014}
+  m_AnchorMin: {x: 0, y: 0.7366593}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -6445,6 +6588,7 @@ GameObject:
   - component: {fileID: 272011552}
   - component: {fileID: 272011551}
   - component: {fileID: 272011550}
+  - component: {fileID: 272011553}
   m_Layer: 5
   m_Name: "\uAC08\uBE44\uCC1C\uAE68\uBE44"
   m_TagString: Untagged
@@ -6557,6 +6701,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272011548}
   m_CullTransparentMesh: 1
+--- !u!114 &272011553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272011548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - info
+    unityValues:
+    - {fileID: 0}
+    values:
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uC18C\uAC08\uBE44\uCC1C\"}"
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
+    isExpaned: 0
 --- !u!1 &272283877
 GameObject:
   m_ObjectHideFlags: 0
@@ -7105,6 +7272,7 @@ GameObject:
   - component: {fileID: 306380503}
   - component: {fileID: 306380502}
   - component: {fileID: 306380501}
+  - component: {fileID: 306380504}
   m_Layer: 5
   m_Name: "\uAE40\uCE58\uAE68\uBE44"
   m_TagString: Untagged
@@ -7217,6 +7385,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 306380499}
   m_CullTransparentMesh: 1
+--- !u!114 &306380504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306380499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - info
+    unityValues:
+    - {fileID: 0}
+    values:
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uAE40\uCE58\"}"
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
+    isExpaned: 0
 --- !u!1 &307893281
 GameObject:
   m_ObjectHideFlags: 0
@@ -7526,6 +7717,7 @@ GameObject:
   - component: {fileID: 312522808}
   - component: {fileID: 312522807}
   - component: {fileID: 312522806}
+  - component: {fileID: 312522809}
   m_Layer: 5
   m_Name: "\uCE7C\uAD6D\uAE68\uBE44"
   m_TagString: Untagged
@@ -7638,6 +7830,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 312522804}
   m_CullTransparentMesh: 1
+--- !u!114 &312522809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312522804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - info
+    unityValues:
+    - {fileID: 0}
+    values:
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uBC14\uC9C0\uB77D\uCE7C\uAD6D\uC218\"}"
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
+    isExpaned: 0
 --- !u!1 &314855672
 GameObject:
   m_ObjectHideFlags: 0
@@ -8112,6 +8327,7 @@ GameObject:
   - component: {fileID: 335064968}
   - component: {fileID: 335064967}
   - component: {fileID: 335064966}
+  - component: {fileID: 335064969}
   m_Layer: 5
   m_Name: "\uB9E4\uC6B4\uD0D5\uAE68\uBE44"
   m_TagString: Untagged
@@ -8224,6 +8440,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 335064964}
   m_CullTransparentMesh: 1
+--- !u!114 &335064969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335064964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - info
+    unityValues:
+    - {fileID: 0}
+    values:
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uC6B0\uB7ED\uB9E4\uC6B4\uD0D5\"}"
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
+    isExpaned: 0
 --- !u!1 &340412057
 GameObject:
   m_ObjectHideFlags: 0
@@ -12784,6 +13023,7 @@ GameObject:
   - component: {fileID: 552187385}
   - component: {fileID: 552187384}
   - component: {fileID: 552187383}
+  - component: {fileID: 552187386}
   m_Layer: 5
   m_Name: "\uBD95\uCC1C\uAE68\uBE44"
   m_TagString: Untagged
@@ -12896,6 +13136,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 552187381}
   m_CullTransparentMesh: 1
+--- !u!114 &552187386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552187381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - info
+    unityValues:
+    - {fileID: 0}
+    values:
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uBD95\uC5B4\uCC1C\"}"
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
+    isExpaned: 0
 --- !u!1 &553846610
 GameObject:
   m_ObjectHideFlags: 0
@@ -13066,6 +13329,7 @@ GameObject:
   - component: {fileID: 559893124}
   - component: {fileID: 559893123}
   - component: {fileID: 559893122}
+  - component: {fileID: 559893125}
   m_Layer: 5
   m_Name: "\uBE44\uBE54\uAE68\uBE44"
   m_TagString: Untagged
@@ -13178,6 +13442,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 559893120}
   m_CullTransparentMesh: 1
+--- !u!114 &559893125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 559893120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - info
+    unityValues:
+    - {fileID: 0}
+    values:
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uBE44\uBE54\uBC25\"}"
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
+    isExpaned: 0
 --- !u!1 &562633914
 GameObject:
   m_ObjectHideFlags: 0
@@ -14089,6 +14376,7 @@ GameObject:
   - component: {fileID: 589342268}
   - component: {fileID: 589342267}
   - component: {fileID: 589342266}
+  - component: {fileID: 589342269}
   m_Layer: 5
   m_Name: "\uACE0\uAE30\uAE68\uBE44"
   m_TagString: Untagged
@@ -14201,6 +14489,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 589342264}
   m_CullTransparentMesh: 1
+--- !u!114 &589342269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 589342264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - info
+    unityValues:
+    - {fileID: 0}
+    values:
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uC18C\uBD88\uACE0\uAE30\uCEF5\uBC25\"}"
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
+    isExpaned: 0
 --- !u!1 &598244816
 GameObject:
   m_ObjectHideFlags: 0
@@ -14726,6 +15037,7 @@ GameObject:
   - component: {fileID: 617166507}
   - component: {fileID: 617166506}
   - component: {fileID: 617166505}
+  - component: {fileID: 617166508}
   m_Layer: 5
   m_Name: "\uBC30\uC219\uAE68\uBE44"
   m_TagString: Untagged
@@ -14838,6 +15150,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 617166503}
   m_CullTransparentMesh: 1
+--- !u!114 &617166508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617166503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - info
+    unityValues:
+    - {fileID: 0}
+    values:
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uBC30\uC219\"}"
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
+    isExpaned: 0
 --- !u!1 &618764753
 GameObject:
   m_ObjectHideFlags: 0
@@ -15365,6 +15700,7 @@ GameObject:
   - component: {fileID: 647887308}
   - component: {fileID: 647887307}
   - component: {fileID: 647887306}
+  - component: {fileID: 647887309}
   m_Layer: 5
   m_Name: "\uC740\uD589\uAF2C\uCE58\uAE68\uBE44"
   m_TagString: Untagged
@@ -15477,6 +15813,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 647887304}
   m_CullTransparentMesh: 1
+--- !u!114 &647887309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647887304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - info
+    unityValues:
+    - {fileID: 0}
+    values:
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uC740\uD589\uAF2C\uCE58\"}"
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
+    isExpaned: 0
 --- !u!224 &653718308
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17480,6 +17839,7 @@ GameObject:
   - component: {fileID: 737931314}
   - component: {fileID: 737931313}
   - component: {fileID: 737931312}
+  - component: {fileID: 737931315}
   m_Layer: 5
   m_Name: "\uC57D\uACFC\uAE68\uBE44"
   m_TagString: Untagged
@@ -17592,6 +17952,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 737931310}
   m_CullTransparentMesh: 1
+--- !u!114 &737931315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737931310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - info
+    unityValues:
+    - {fileID: 0}
+    values:
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uC57D\uACFC\"}"
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
+    isExpaned: 0
 --- !u!1 &739285363
 GameObject:
   m_ObjectHideFlags: 0
@@ -19142,6 +19525,7 @@ GameObject:
   - component: {fileID: 766914552}
   - component: {fileID: 766914551}
   - component: {fileID: 766914550}
+  - component: {fileID: 766914553}
   m_Layer: 5
   m_Name: "\uC18C\uB5A1\uAE68\uBE44"
   m_TagString: Untagged
@@ -19254,6 +19638,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766914548}
   m_CullTransparentMesh: 1
+--- !u!114 &766914553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766914548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - info
+    unityValues:
+    - {fileID: 0}
+    values:
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uC18C\uB5A1\uC18C\uB5A1\"}"
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
+    isExpaned: 0
 --- !u!1 &766956250
 GameObject:
   m_ObjectHideFlags: 0
@@ -20064,6 +20471,7 @@ GameObject:
   - component: {fileID: 806100622}
   - component: {fileID: 806100621}
   - component: {fileID: 806100620}
+  - component: {fileID: 806100623}
   m_Layer: 5
   m_Name: "\uAE40\uBC25\uAE68\uBE44"
   m_TagString: Untagged
@@ -20176,6 +20584,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 806100618}
   m_CullTransparentMesh: 1
+--- !u!114 &806100623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806100618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - info
+    unityValues:
+    - {fileID: 0}
+    values:
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uAE40\uBC25\"}"
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
+    isExpaned: 0
 --- !u!1 &806472481
 GameObject:
   m_ObjectHideFlags: 0
@@ -20974,8 +21405,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 260357479}
   m_HandleRect: {fileID: 260357478}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.26299858
+  m_Value: 1.0000001
+  m_Size: 0.26334074
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -21585,7 +22016,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -252.7053, y: 123.77016}
+  m_AnchoredPosition: {x: -252.7053, y: 123.77009}
   m_SizeDelta: {x: 470, y: 940}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &885810177
@@ -24919,7 +25350,7 @@ RectTransform:
   m_Father: {fileID: 2090007635}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5555555}
+  m_AnchorMin: {x: 0, y: 0.5555556}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -25445,6 +25876,7 @@ GameObject:
   - component: {fileID: 1075247367}
   - component: {fileID: 1075247366}
   - component: {fileID: 1075247365}
+  - component: {fileID: 1075247368}
   m_Layer: 5
   m_Name: "\uB5A1\uAF2C\uCE58\uAE68\uBE44"
   m_TagString: Untagged
@@ -25557,6 +25989,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1075247363}
   m_CullTransparentMesh: 1
+--- !u!114 &1075247368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075247363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - info
+    unityValues:
+    - {fileID: 0}
+    values:
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uB5A1\uAF2C\uCE58\"}"
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
+    isExpaned: 0
 --- !u!1 &1075874726
 GameObject:
   m_ObjectHideFlags: 0
@@ -26128,6 +26583,7 @@ GameObject:
   - component: {fileID: 1084276405}
   - component: {fileID: 1084276404}
   - component: {fileID: 1084276403}
+  - component: {fileID: 1084276406}
   m_Layer: 5
   m_Name: "\uB099\uC9C0\uD638\uB871\uAE68\uBE44"
   m_TagString: Untagged
@@ -26240,6 +26696,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1084276401}
   m_CullTransparentMesh: 1
+--- !u!114 &1084276406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084276401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - info
+    unityValues:
+    - {fileID: 0}
+    values:
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uB099\uC9C0\uD638\uB871\uC774\"}"
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
+    isExpaned: 0
 --- !u!1 &1084501692
 GameObject:
   m_ObjectHideFlags: 0
@@ -26387,7 +26866,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: ec5ae06783a5b7c45bce4d72be134173, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -26793,6 +27272,7 @@ GameObject:
   - component: {fileID: 1119487231}
   - component: {fileID: 1119487230}
   - component: {fileID: 1119487229}
+  - component: {fileID: 1119487232}
   m_Layer: 5
   m_Name: "\uAD70\uBC24\uAE68\uBE44"
   m_TagString: Untagged
@@ -26905,6 +27385,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1119487227}
   m_CullTransparentMesh: 1
+--- !u!114 &1119487232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119487227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - info
+    unityValues:
+    - {fileID: 0}
+    values:
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uAD70\uBC24\"}"
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
+    isExpaned: 0
 --- !u!1 &1121650683
 GameObject:
   m_ObjectHideFlags: 0
@@ -29090,6 +29593,7 @@ GameObject:
   - component: {fileID: 1206535960}
   - component: {fileID: 1206535959}
   - component: {fileID: 1206535958}
+  - component: {fileID: 1206535961}
   m_Layer: 5
   m_Name: "\uB5A1\uBCF4\uAE68\uBE44"
   m_TagString: Untagged
@@ -29202,6 +29706,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1206535956}
   m_CullTransparentMesh: 1
+--- !u!114 &1206535961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206535956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - info
+    unityValues:
+    - {fileID: 0}
+    values:
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uB5A1\uBCF6\uC774\"}"
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
+    isExpaned: 0
 --- !u!1 &1213172930
 GameObject:
   m_ObjectHideFlags: 0
@@ -30320,6 +30847,7 @@ GameObject:
   - component: {fileID: 1267282536}
   - component: {fileID: 1267282535}
   - component: {fileID: 1267282534}
+  - component: {fileID: 1267282537}
   m_Layer: 5
   m_Name: "\uD325\uBE59\uAE68\uBE44"
   m_TagString: Untagged
@@ -30432,6 +30960,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1267282532}
   m_CullTransparentMesh: 1
+--- !u!114 &1267282537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267282532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - info
+    unityValues:
+    - {fileID: 0}
+    values:
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uD325\uBE59\uC218\"}"
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
+    isExpaned: 0
 --- !u!1 &1281358937
 GameObject:
   m_ObjectHideFlags: 0
@@ -32355,6 +32906,7 @@ Transform:
   - {fileID: 743932719}
   - {fileID: 682986625263740846}
   - {fileID: 776711151}
+  - {fileID: 168732597}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -34621,7 +35173,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1053503301}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.44444448
+  m_Size: 0.44444445
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -35558,6 +36110,7 @@ GameObject:
   - component: {fileID: 1467714904}
   - component: {fileID: 1467714903}
   - component: {fileID: 1467714902}
+  - component: {fileID: 1467714905}
   m_Layer: 5
   m_Name: "\uC560\uD638\uBC15\uC804\uAE68\uBE44"
   m_TagString: Untagged
@@ -35670,6 +36223,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1467714900}
   m_CullTransparentMesh: 1
+--- !u!114 &1467714905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467714900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - info
+    unityValues:
+    - {fileID: 0}
+    values:
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uC560\uD638\uBC15\uC804\"}"
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
+    isExpaned: 0
 --- !u!1 &1473587553
 GameObject:
   m_ObjectHideFlags: 0
@@ -36181,6 +36757,7 @@ GameObject:
   - component: {fileID: 1493492277}
   - component: {fileID: 1493492276}
   - component: {fileID: 1493492275}
+  - component: {fileID: 1493492278}
   m_Layer: 5
   m_Name: "\uB5A1\uAD6D\uAE68\uBE44"
   m_TagString: Untagged
@@ -36293,6 +36870,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1493492273}
   m_CullTransparentMesh: 1
+--- !u!114 &1493492278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1493492273}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - info
+    unityValues:
+    - {fileID: 0}
+    values:
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uB5A1\uAD6D\"}"
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
+    isExpaned: 0
 --- !u!1 &1498447192
 GameObject:
   m_ObjectHideFlags: 0
@@ -40265,6 +40865,7 @@ GameObject:
   - component: {fileID: 1669681306}
   - component: {fileID: 1669681305}
   - component: {fileID: 1669681304}
+  - component: {fileID: 1669681307}
   m_Layer: 5
   m_Name: "\uD638\uBC15\uC2DD\uD61C\uAE68\uBE44"
   m_TagString: Untagged
@@ -40377,6 +40978,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1669681302}
   m_CullTransparentMesh: 1
+--- !u!114 &1669681307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669681302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - info
+    unityValues:
+    - {fileID: 0}
+    values:
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uB2E8\uD638\uBC15\uC2DD\uD61C\"}"
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
+    isExpaned: 0
 --- !u!1 &1674651833
 GameObject:
   m_ObjectHideFlags: 0
@@ -42942,6 +43566,7 @@ GameObject:
   - component: {fileID: 1826556083}
   - component: {fileID: 1826556082}
   - component: {fileID: 1826556081}
+  - component: {fileID: 1826556084}
   m_Layer: 5
   m_Name: "\uAC10\uC790\uC804\uAE68\uBE44"
   m_TagString: Untagged
@@ -43054,6 +43679,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1826556079}
   m_CullTransparentMesh: 1
+--- !u!114 &1826556084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1826556079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - info
+    unityValues:
+    - {fileID: 0}
+    values:
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uAC10\uC790\uC804\"}"
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
+    isExpaned: 0
 --- !u!1 &1829032726
 GameObject:
   m_ObjectHideFlags: 0
@@ -45117,6 +45765,7 @@ GameObject:
   - component: {fileID: 1922477227}
   - component: {fileID: 1922477226}
   - component: {fileID: 1922477225}
+  - component: {fileID: 1922477228}
   m_Layer: 5
   m_Name: "\uCC39\uC300\uB5A1\uAE68\uBE44"
   m_TagString: Untagged
@@ -45229,6 +45878,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1922477223}
   m_CullTransparentMesh: 1
+--- !u!114 &1922477228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922477223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - info
+    unityValues:
+    - {fileID: 0}
+    values:
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uCC39\uC300\uB5A1\"}"
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
+    isExpaned: 0
 --- !u!1 &1925698959
 GameObject:
   m_ObjectHideFlags: 0
@@ -47829,6 +48501,7 @@ GameObject:
   - component: {fileID: 2100718054}
   - component: {fileID: 2100718053}
   - component: {fileID: 2100718052}
+  - component: {fileID: 2100718055}
   m_Layer: 5
   m_Name: "\uC1A1\uD3B8\uAE68\uBE44"
   m_TagString: Untagged
@@ -47941,6 +48614,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2100718050}
   m_CullTransparentMesh: 1
+--- !u!114 &2100718055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100718050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - info
+    unityValues:
+    - {fileID: 0}
+    values:
+    - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uC1A1\uD3B8\"}"
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
+    isExpaned: 0
 --- !u!1 &2106980150
 GameObject:
   m_ObjectHideFlags: 0
@@ -60762,7 +61458,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 8369927972695123094}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.4338236
+  m_Size: 0.43382362
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
