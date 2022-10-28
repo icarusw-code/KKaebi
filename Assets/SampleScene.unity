@@ -3781,7 +3781,9 @@ MonoBehaviour:
     - SummonBtns
     - UnsummonBtns
     - beforeNumber
+    - KkaebiPrefabs
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
@@ -3797,6 +3799,8 @@ MonoBehaviour:
     - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":25,\"length\":0,\"type\":\"UnityEngine.Object,
       UnityEngine.CoreModule\",\"isUnity\":true}"}'
     - '{"type":"System.Single, mscorlib","value":"0"}'
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":25,\"length\":25,\"type\":\"UnityEngine.Object,
+      UnityEngine.CoreModule\",\"isUnity\":true}"}'
     unityArrayValues:
     - {fileID: 1075247363}
     - {fileID: 737931310}
@@ -3823,6 +3827,31 @@ MonoBehaviour:
     - {fileID: 1267282532}
     - {fileID: 552187381}
     - {fileID: 88955849}
+    - {fileID: 7337481032346305901, guid: e70b4fc628ec0514cbef15540c72e2b2, type: 3}
+    - {fileID: 7337481032346305901, guid: 9e1f882f5cf4da441a25c079db6e9c59, type: 3}
+    - {fileID: 7337481032346305901, guid: 9f01ab122d361ca4b9b9cf7594e81732, type: 3}
+    - {fileID: 7337481032346305901, guid: 1997c56cc1c9b0b478d49684819eb0a6, type: 3}
+    - {fileID: 7337481032346305901, guid: 1e951315b1e8e68479889e7dc03e10e1, type: 3}
+    - {fileID: 7337481032346305901, guid: 920e8ba57d32319479777c6867a15daf, type: 3}
+    - {fileID: 7337481032346305901, guid: 223fd8cf74edecd4185fa5ba41c4ca57, type: 3}
+    - {fileID: 7337481032346305901, guid: 3dbf99573241f184bbebdbf8a1663940, type: 3}
+    - {fileID: 7337481032346305901, guid: 5d8fe9a2ec7cd074d99783ee00e64cd4, type: 3}
+    - {fileID: 7337481032346305901, guid: 33df5be6e17f20c40ab7c3e42fbe7a5c, type: 3}
+    - {fileID: 7337481032346305901, guid: f4254a2e00be4d74eae1ca1c0519a958, type: 3}
+    - {fileID: 7337481032346305901, guid: 77ab745b34ab3eb41b98026945a516fa, type: 3}
+    - {fileID: 7337481032346305901, guid: a3affe5a2b092b247873c8256dfc0f0b, type: 3}
+    - {fileID: 7337481032346305901, guid: 569dc4ae5507df84cb4d61fcc632ae1d, type: 3}
+    - {fileID: 7337481032346305901, guid: 6ef2de9adc69c0847b895848f555e80e, type: 3}
+    - {fileID: 7337481032346305901, guid: bb544b058192d8944b4293cd1cf6ebff, type: 3}
+    - {fileID: 7337481032346305901, guid: 7aa598f65d64a15418f47d6b76c8cc73, type: 3}
+    - {fileID: 7337481032346305901, guid: 48a9b27bd6cd8b64b87ae05ed748adf1, type: 3}
+    - {fileID: 7337481032346305901, guid: 61129ad11f176064d94ae707e37c40bd, type: 3}
+    - {fileID: 7337481032346305901, guid: b7eb22c533210bc40b1cce8e117e426e, type: 3}
+    - {fileID: 7337481032346305901, guid: 4944190ebb7c0cf4ca0f6cdcbed885d7, type: 3}
+    - {fileID: 7337481032346305901, guid: 0e66a11092f45f54a8f19cd1e0b4f5fe, type: 3}
+    - {fileID: 7337481032346305901, guid: 407be9a8b07ba2642b8ab73c43d04dbf, type: 3}
+    - {fileID: 7337481032346305901, guid: d560f728900e27849be57def911fcf9a, type: 3}
+    - {fileID: 7337481032346305901, guid: 357b6bdffb888c042ace933a72d36b9f, type: 3}
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 203a0a3ec3e7a2b4698cdb9ed42cd3e0, type: 3}
     isExpaned: 0

@@ -3,17 +3,22 @@ import { Button, Image } from 'UnityEngine.UI'
 import { GameObject } from 'UnityEngine';
 import * as UnityEngine from 'UnityEngine';
 import KkaebiInfo from '../TS/KkaebiInfo';
+import { ZepetoCharacter, ZepetoPlayer, ZepetoPlayers } from 'ZEPETO.Character.Controller';
 
 export default class KkaebiManager extends ZepetoScriptBehaviour {
     public KkaebiBtnObjects: GameObject[];
+    public KkaebiPrefabs : GameObject[]; // 깨비 모델들
     public KkaebiButtons : Button[];
     public SummonBtns : Button[];
     public UnsummonBtns : Button[];
     public beforeNumber : number = -1; //깨비 버튼 눌렀을때 다른 깨비버튼의 소환버튼을 없애기 위함
+
+    private selectNumber : number = -1;
     private foodName : string;
 
     private color : UnityEngine.Color;
     Start() {    
+
         for(let i=0; i<this.KkaebiBtnObjects.Length;i++){
             this.KkaebiButtons[i] = this.KkaebiBtnObjects[i].GetComponent<Button>();
             //버튼별 소환/비소환 버튼할당
@@ -57,11 +62,26 @@ export default class KkaebiManager extends ZepetoScriptBehaviour {
 
             //소환버튼을 누르면
             this.SummonBtns[i].onClick.AddListener(()=>{
+                var go : GameObject = GameObject.FindGameObjectWithTag("KKaebi");
+                if(go != null && this.selectNumber != i)
+                {
+                    GameObject.Destroy(go);
+                }
+                if(this.selectNumber != i){
+                    let _player = ZepetoPlayers.instance.LocalPlayer;
+                    GameObject.Instantiate(this.KkaebiPrefabs[i], _player.transform.position + new UnityEngine.Vector3(-1.5, 0, -1.5), UnityEngine.Quaternion.identity);
+                }
+                this.selectNumber = i;
                 
             });
             //비소환 버튼을 누르면
             this.UnsummonBtns[i].onClick.AddListener(()=>{
-                
+                var go : GameObject = GameObject.FindGameObjectWithTag("KKaebi");
+                if(go != null)
+                {
+                    GameObject.Destroy(go);
+                }
+                this.selectNumber = -1;
             });
         }
     }
