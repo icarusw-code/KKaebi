@@ -1,11 +1,18 @@
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
+import { Room, RoomData } from 'ZEPETO.Multiplay';
 import { Button, Image } from 'UnityEngine.UI'
 import { GameObject } from 'UnityEngine';
 import * as UnityEngine from 'UnityEngine';
 import KkaebiInfo from '../TS/KkaebiInfo';
-import { ZepetoCharacter, ZepetoPlayer, ZepetoPlayers } from 'ZEPETO.Character.Controller';
+import { ZepetoWorldMultiplay } from 'ZEPETO.World';
+import { ZepetoPlayers } from 'ZEPETO.Character.Controller';
 
 export default class KkaebiManager extends ZepetoScriptBehaviour {
+
+    public multiplay : ZepetoWorldMultiplay;
+
+    private room : Room;
+
     public KkaebiBtnObjects: GameObject[];
     public KkaebiPrefabs : GameObject[]; // 깨비 모델들
     public KkaebiButtons : Button[];
@@ -68,8 +75,8 @@ export default class KkaebiManager extends ZepetoScriptBehaviour {
                     GameObject.Destroy(go);
                 }
                 if(this.selectNumber != i){
-                    let _player = ZepetoPlayers.instance.LocalPlayer;
-                    GameObject.Instantiate(this.KkaebiPrefabs[i], _player.transform.position + new UnityEngine.Vector3(-1.5, 0, -1.5), UnityEngine.Quaternion.identity);
+                    const myPlayer = ZepetoPlayers.instance.ZepetoCamera.cameraParent;
+                    GameObject.Instantiate(this.KkaebiPrefabs[i], myPlayer.transform.position + new UnityEngine.Vector3(-1.5, 0, -1.5), UnityEngine.Quaternion.identity);
                 }
                 this.selectNumber = i;
                 
