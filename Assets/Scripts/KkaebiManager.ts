@@ -84,7 +84,7 @@ export default class KkaebiManager extends ZepetoScriptBehaviour {
             //비소환 버튼을 누르면
             this.UnsummonBtns[i].onClick.AddListener(()=>{
                 var go : GameObject = GameObject.FindGameObjectWithTag("KKaebi");
-                if(go != null)
+                if(go != null && this.selectNumber == i)
                 {
                     GameObject.Destroy(go);
                 }
