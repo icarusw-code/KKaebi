@@ -37,7 +37,10 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
             for(let i=0; i<QuestManager.getInstance().QuestAcceptIngreNum;i++){
                 if(QuestManager.getInstance().QuestAcceptIngreIDArr[i]==this.myID&&QuestManager.getInstance().GetIngreCheckDiction.get(this.myID)==false){
                     this.DoDestroy();
-                    QuestManager.getInstance().GetIngreCheck(this.myID);
+                    QuestManager.getInstance().GetIngreCheck(this.myID);//먹었음
+                    //먹었으니 myquest의 해당 재료 이미지의 투명값을 높여주자
+                    
+
                     this.AddIngredientCount();
                     this.AddIngredientImage();
                 }

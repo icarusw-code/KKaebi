@@ -4,8 +4,8 @@ import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 
 export default class KkaebiController extends ZepetoScriptBehaviour {
 
-    public maxDistance : number = 1;
-    public speed : number  = 5;
+    public maxDistance : number = 3;
+    public speed : number  = 20;
     dir : Vector3;
     myPlayer : Transform;
 

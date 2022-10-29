@@ -3782,7 +3782,9 @@ MonoBehaviour:
     - UnsummonBtns
     - beforeNumber
     - KkaebiPrefabs
+    - multiplay
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
@@ -3801,6 +3803,7 @@ MonoBehaviour:
     - '{"type":"System.Single, mscorlib","value":"0"}'
     - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":25,\"length\":25,\"type\":\"UnityEngine.Object,
       UnityEngine.CoreModule\",\"isUnity\":true}"}'
+    - 
     unityArrayValues:
     - {fileID: 1075247363}
     - {fileID: 737931310}
@@ -30669,17 +30672,17 @@ MonoBehaviour:
     - IngredientFactory8
     - IngredientFactory9
     unityValues:
-    - {fileID: 3723965545527246433, guid: cfdc3eb86790eac4ba77a3c346ce7e0d, type: 3}
+    - {fileID: 3723965545527246433, guid: 6a0e38c1f4e15e943bbc2b69a696bbad, type: 3}
     - {fileID: 272283877}
-    - {fileID: 3723965545527246433, guid: 120c2a1682d766241a079277d86f6680, type: 3}
-    - {fileID: 3723965545527246433, guid: 2eb2ea7488bc9c046a2b940a69c6ef78, type: 3}
+    - {fileID: 3723965545527246433, guid: c3ac7ad30a8177a4190b662089c1bcfd, type: 3}
+    - {fileID: 3723965545527246433, guid: 805e7b0cc0fdb554dbe2861dc2864b19, type: 3}
     - {fileID: 3723965545527246433, guid: b23db6b47d6b6c24a99989ab69eedcd3, type: 3}
-    - {fileID: 3723965545527246433, guid: 13c20d8625e67f24585d11f2b0245468, type: 3}
-    - {fileID: 3723965545527246433, guid: d6259e11f2555714191c69158bc1a9c5, type: 3}
+    - {fileID: 3723965545527246433, guid: cfdc3eb86790eac4ba77a3c346ce7e0d, type: 3}
+    - {fileID: 3723965545527246433, guid: 23ee20db04fb0d14a906459f07811c84, type: 3}
     - {fileID: 3723965545527246433, guid: 488de0a79d02a57489e5f17cbc7da4ba, type: 3}
-    - {fileID: 3723965545527246433, guid: 45b4a2f6dc79ae044ad6c3a10e08d3f2, type: 3}
-    - {fileID: 3723965545527246433, guid: 3c72b46848e248c48a4f77ce5dd6170a, type: 3}
-    - {fileID: 3723965545527246433, guid: 47dc0cf301b2aae45a2172695451b25a, type: 3}
+    - {fileID: 3723965545527246433, guid: 120c2a1682d766241a079277d86f6680, type: 3}
+    - {fileID: 3723965545527246433, guid: 13c20d8625e67f24585d11f2b0245468, type: 3}
+    - {fileID: 3723965545527246433, guid: 1092df390ad481e45bbbeeed1955c3c4, type: 3}
     values:
     - 
     - 
@@ -56073,7 +56076,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uB099\uC9C0\uD638\uB871\uC774"
+  m_Text: "\uB099\uC9C0 \uD638\uB871\uC774"
 --- !u!222 &2852348534980776269
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -56133,7 +56136,7 @@ GameObject:
   - component: {fileID: 2852348534986649403}
   - component: {fileID: 2852348534986649402}
   m_Layer: 5
-  m_Name: "\uB099\uC9C0\uD638\uB871\uC774"
+  m_Name: "\uB099\uC9C0 \uD638\uB871\uC774"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65702,7 +65705,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uB099\uC9C0\uD638\uB871\uC774"
+  m_Text: "\uB099\uC9C0 \uD638\uB871\uC774"
 --- !u!224 &8369927973526768857
 RectTransform:
   m_ObjectHideFlags: 0
@@ -66358,7 +66361,7 @@ GameObject:
   - component: {fileID: 8369927973704911941}
   - component: {fileID: 8369927973704911946}
   m_Layer: 5
-  m_Name: "\uB099\uC9C0\uD638\uB871\uC774"
+  m_Name: "\uB099\uC9C0 \uD638\uB871\uC774"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

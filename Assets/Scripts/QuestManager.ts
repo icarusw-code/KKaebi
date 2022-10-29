@@ -8,7 +8,11 @@ import IngredientBookController from '../TS/IngredientBookController';
 import QuestIngre from './QuestIngre';
 import { QuestionDotToken } from 'typescript';
 import RecipeManager from './RecipeManager';
+import NpcInteraction from './NpcInteraction';
+import { ZepetoPlayers } from 'ZEPETO.Character.Controller';
 export default class QuestManager extends ZepetoScriptBehaviour {
+    //플레이어 컨트롤러
+    private playerController : GameObject;
     //quest 판넬
     public QuestUI : GameObject;
 
@@ -71,7 +75,8 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         return this.instance||(this.instance = new this());
     }
 
-    Start() {    
+    Start() {
+        
         QuestManager.instance = this;
         //this.acceptBtn.gameObject.SetActive(false);
         this.LeftPanel.SetActive(false);
@@ -91,6 +96,8 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         this.acceptBtn.onClick.AddListener(()=>{
             console.log("수락완료");
             this.QuestAccept();
+            this.playerController = ZepetoPlayers.instance.transform.GetChild(4).gameObject;
+            this.playerController.SetActive(true);
         });
         this.giveUpBtn.onClick.AddListener(()=>{
             console.log("퀘스트 포기");
@@ -100,6 +107,8 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         this.myQuestBtn.onClick.AddListener(()=>{
             console.log("내 퀘스트 열기");
             this.myQuestUI.SetActive(true);
+            this.playerController = ZepetoPlayers.instance.transform.GetChild(4).gameObject;
+            this.playerController.SetActive(false);
             if(this.isNowAccept==false){
                 this.myQuestScreen.SetActive(false); //퀘스트 안맡았을경우
                 this.myQuestXScreen.SetActive(true);
@@ -112,12 +121,16 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         this.MyQuestExitBtn.onClick.AddListener(()=>{
             console.log("내 퀘스트 끄기");
             this.myQuestUI.SetActive(false);
+            this.playerController = ZepetoPlayers.instance.transform.GetChild(4).gameObject;
+            this.playerController.SetActive(true);
         });
 
         this.exitBtn.onClick.AddListener(()=>{
             //퀘스트창 끄기
             this.QuestUI.SetActive(false);
             this.LeftPanel.SetActive(false);
+            this.playerController = ZepetoPlayers.instance.transform.GetChild(4).gameObject;
+            this.playerController.SetActive(true);
         });
 
 
@@ -215,14 +228,14 @@ export default class QuestManager extends ZepetoScriptBehaviour {
             var ingreFood : GameObject;
             ingreFood = GameObject.Instantiate(this.GetComponent<InventoryController>().slotFactory, this.GetComponent<InventoryController>().content) as GameObject;
             if(this.QuestAcceptFoodName=="김치"){
-                ingreFood.name = QuestManager.getInstance().myQuestFoodImgIngre[1].name;
-                ingreFood.GetComponent<QuestIngre>().ingredientName.text = QuestManager.getInstance().myQuestFoodImgIngre[1].name;
-                ingreFood.GetComponent<QuestIngre>().ingredientImage.sprite = QuestManager.getInstance().myQuestFoodImgIngre[1];
+                ingreFood.name = QuestManager.getInstance().myQuestFoodImgIngre[0].name;
+                ingreFood.GetComponent<QuestIngre>().ingredientName.text = QuestManager.getInstance().myQuestFoodImgIngre[0].name; //한글화 문제
+                ingreFood.GetComponent<QuestIngre>().ingredientImage.sprite = QuestManager.getInstance().myQuestFoodImgIngre[0];
             }
             else if(this.QuestAcceptFoodName=="찹쌀떡"){
-                ingreFood.name = QuestManager.getInstance().myQuestFoodImgIngre[0].name;
-                ingreFood.GetComponent<QuestIngre>().ingredientName.text = QuestManager.getInstance().myQuestFoodImgIngre[0].name;
-                ingreFood.GetComponent<QuestIngre>().ingredientImage.sprite = QuestManager.getInstance().myQuestFoodImgIngre[0];
+                ingreFood.name = QuestManager.getInstance().myQuestFoodImgIngre[1].name;
+                ingreFood.GetComponent<QuestIngre>().ingredientName.text = QuestManager.getInstance().myQuestFoodImgIngre[1].name;  //한글화 문제
+                ingreFood.GetComponent<QuestIngre>().ingredientImage.sprite = QuestManager.getInstance().myQuestFoodImgIngre[1];
             }
         }
         
@@ -286,22 +299,22 @@ export default class QuestManager extends ZepetoScriptBehaviour {
     }
     public SetQuestIngreList(size:number, QuestContentsId : number[], foodName: string){
 
-        console.log("내가 지금 선택한 요리의 이름을 알까?: "+ foodName);
+        //console.log("내가 지금 선택한 요리의 이름을 알까?: "+ foodName);
         var ingreFood : GameObject;
         //3성음식일때는 2성재료도 추가로 instantiate해야됨
         if(foodName=="팥빙수"){
             ingreFood = GameObject.Instantiate(this.myQuestIngreFactory, this.MainQuestContentTransform) as GameObject;
-            ingreFood.name = this.myQuestFoodImgIngre[0].name;
+            ingreFood.name = this.myQuestFoodImgIngre[1].name;
 
-            ingreFood.GetComponent<QuestIngre>().ingredientName.text = this.myQuestFoodImgIngre[0].name;
-            ingreFood.GetComponent<QuestIngre>().ingredientImage.sprite = this.myQuestFoodImgIngre[0];
+            ingreFood.GetComponent<QuestIngre>().ingredientName.text = this.myQuestFoodImgIngre[1].name; //한글화문제
+            ingreFood.GetComponent<QuestIngre>().ingredientImage.sprite = this.myQuestFoodImgIngre[1]; //한글화문제
         }
         else if(foodName=="붕어찜"||foodName=="부대찌개"){
             ingreFood = GameObject.Instantiate(this.myQuestIngreFactory, this.MainQuestContentTransform) as GameObject;
-            ingreFood.name = this.myQuestFoodImgIngre[1].name;
+            ingreFood.name = this.myQuestFoodImgIngre[0].name;
 
-            ingreFood.GetComponent<QuestIngre>().ingredientName.text = this.myQuestFoodImgIngre[1].name;
-            ingreFood.GetComponent<QuestIngre>().ingredientImage.sprite = this.myQuestFoodImgIngre[1];
+            ingreFood.GetComponent<QuestIngre>().ingredientName.text = this.myQuestFoodImgIngre[0].name; //한글화문제
+            ingreFood.GetComponent<QuestIngre>().ingredientImage.sprite = this.myQuestFoodImgIngre[0]; 
         }
 
         for(let i = 0; i < size; i++)
@@ -314,29 +327,29 @@ export default class QuestManager extends ZepetoScriptBehaviour {
             Ingre.name = this.MyQuestIngreDiction.get(QuestContentsId[i]);
 
             // 재료 이름 설정
-            Ingre.GetComponent<QuestIngre>().ingredientName.text = this.MyQuestIngreDiction.get(QuestContentsId[i]);
+            Ingre.GetComponent<QuestIngre>().ingredientName.text = this.MyQuestIngreDiction.get(QuestContentsId[i]); //한글화문제
 
         }
         this.AddMainQuestIngredientImage();
     }
 
 
-    public SetMyQuest(size:number, MyQuestContentsId : number[],foodName:string){
+    public SetMyQuest(size:number, MyQuestContentsId : number[],foodName:string){  //내퀘스트 볼때
         var ingreFood : GameObject;
         //3성음식일때는 2성재료도 추가로 instantiate해야됨
         if(foodName=="팥빙수"){
             ingreFood = GameObject.Instantiate(this.myQuestIngreFactory, this.myQuestContentTransform) as GameObject;
-            ingreFood.name = this.myQuestFoodImgIngre[0].name;
-
-            ingreFood.GetComponent<QuestIngre>().ingredientName.text = this.myQuestFoodImgIngre[0].name;
-            ingreFood.GetComponent<QuestIngre>().ingredientImage.sprite = this.myQuestFoodImgIngre[0];
-        }
-        else if(foodName=="붕어찜"||foodName=="부대찌개"){
-            ingreFood = GameObject.Instantiate(this.myQuestIngreFactory, this.myQuestContentTransform) as GameObject;
             ingreFood.name = this.myQuestFoodImgIngre[1].name;
 
-            ingreFood.GetComponent<QuestIngre>().ingredientName.text = this.myQuestFoodImgIngre[1].name;
+            ingreFood.GetComponent<QuestIngre>().ingredientName.text = this.myQuestFoodImgIngre[1].name; //한글화문제
             ingreFood.GetComponent<QuestIngre>().ingredientImage.sprite = this.myQuestFoodImgIngre[1];
+        }
+        else if(foodName=="붕어찜"||foodName=="부대찌개"){ //투명도 50으로
+            ingreFood = GameObject.Instantiate(this.myQuestIngreFactory, this.myQuestContentTransform) as GameObject;
+            ingreFood.name = this.myQuestFoodImgIngre[0].name;
+
+            ingreFood.GetComponent<QuestIngre>().ingredientName.text = this.myQuestFoodImgIngre[0].name; //한글화문제
+            ingreFood.GetComponent<QuestIngre>().ingredientImage.sprite = this.myQuestFoodImgIngre[0];
         }
 
         for(let i = 0; i < size; i++)

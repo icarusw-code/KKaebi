@@ -12,7 +12,11 @@ export default class NpcInteraction extends ZepetoScriptBehaviour {
     private turnCheck2 : bool = false;
     public InteractBtn: Button;
     public QuestUI: GameObject;
+
+    private playerController : GameObject;
+
     Start() {    
+        
         this.btn = GameObject.Instantiate(this.btnFactory) as GameObject; //재료 생성될때 버튼도 함께 생성
         this.btn.transform.parent = GameObject.Find("Canvas_UI").transform; //캔버스 자식으로 생성
         this.btn.GetComponent<ButtonClick>().TurnOffButton(); //버튼일단 꺼주고
@@ -21,11 +25,12 @@ export default class NpcInteraction extends ZepetoScriptBehaviour {
         this.InteractBtn.onClick.AddListener(() => { //버튼누르면 퀘스트창뜸
             if(QuestManager.getInstance().isNowAccept==false){ //지금 퀘스트 받은 상태가 아닐때만
                 this.TurnOnQuestUI();
+                this.playerController = ZepetoPlayers.instance.transform.GetChild(4).gameObject;
+                this.playerController.SetActive(false);
             }
             else{//받은 상태이고
                 if(QuestManager.getInstance().QuestCompleteCheck()==true) {//완료했을경우
                     //요리 만드는 애니메이션 실행
-
                     
                     QuestManager.getInstance().QuestComplete(); //완료동작수행
 
@@ -75,5 +80,9 @@ export default class NpcInteraction extends ZepetoScriptBehaviour {
         this.turnCheck2=true;
     }
 
+    public TurnOnCharController(){
+        this.playerController = ZepetoPlayers.instance.transform.GetChild(4).gameObject;
+        this.playerController.SetActive(true); //**플레이어 컨트롤러 다시 풀기**
+    }
 
 }
