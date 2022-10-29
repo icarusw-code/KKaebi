@@ -1,0 +1,37 @@
+fileFormatVersion: 2
+guid: 8620a8247a54b3c478e60313eba118e7
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass KkaebiController extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    constructor() {\r\n        super(...arguments);\r\n       
+    this.maxDistance = 1;\r\n        this.speed = 5;\r\n    }\r\n    Start() {\r\n       
+    this.myPlayer = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.ZepetoCamera.cameraParent;\r\n   
+    }\r\n    Update() {\r\n        this.dir = UnityEngine_1.Vector3.op_Subtraction(new
+    UnityEngine_1.Vector3(this.myPlayer.transform.position.x, 0, this.myPlayer.transform.position.z),
+    new UnityEngine_1.Vector3(this.transform.position.x, 0, this.transform.position.z));\r\n       
+    var dist = this.dir.magnitude;\r\n        this.dir.Normalize();\r\n        if
+    (dist > this.maxDistance) {\r\n            this.transform.position = UnityEngine_1.Vector3.op_Addition(this.transform.position,
+    UnityEngine_1.Vector3.op_Multiply(UnityEngine_1.Vector3.op_Multiply(this.dir,
+    this.speed), UnityEngine_1.Time.deltaTime));\r\n        }\r\n        this.transform.forward
+    = this.dir;\r\n    }\r\n}\r\nexports.default = KkaebiController;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiS2thZWJpQ29udHJvbGxlci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIktrYWViaUNvbnRyb2xsZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBbUU7QUFDbkUsNkVBQTREO0FBQzVELGlEQUFxRDtBQUVyRCxNQUFxQixnQkFBaUIsU0FBUSxxQ0FBcUI7SUFBbkU7O1FBRVcsZ0JBQVcsR0FBWSxDQUFDLENBQUM7UUFDekIsVUFBSyxHQUFhLENBQUMsQ0FBQztJQXlCL0IsQ0FBQztJQXJCRyxLQUFLO1FBRUQsSUFBSSxDQUFDLFFBQVEsR0FBRywyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxZQUFZLENBQUMsWUFBWSxDQUFDO0lBRXJFLENBQUM7SUFFRCxNQUFNO1FBRUYsSUFBSSxDQUFDLEdBQUcsR0FuQnNCLHFCQUFPLENBZ0MwMnBCLGNBQWUsQ0FibjVwQixJQUFJLHFCQUFPLENBQUMsSUFBSSxDQUFDLFFBQVEsQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsRUFBRSxDQUFDLEVBQUUsSUFBSSxDQUFDLFFBQVEsQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxFQUFHLElBQUkscUJBQU8sQ0FBQyxJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDLEVBQUUsQ0FBQyxFQUFFLElBQUksQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUMsQ0FBQyxDQUFBLENBQUM7UUFDekssSUFBSSxJQUFJLEdBQUcsSUFBSSxDQUFDLEdBQUcsQ0FBQyxTQUFTLENBQUM7UUFDOUIsSUFBSSxDQUFDLEdBQUcsQ0FBQyxTQUFTLEVBQUUsQ0FBQztRQUVyQixJQUFHLElBQUksR0FBRyxJQUFJLENBQUMsV0FBVyxFQUMxQjtZQUNJLElBQUksQ0FBQyxTQUFTLENBQUMsUUFBUSxHQXpCRyxxQkFBTyxDQWdDNHhwQixXQUFZLENBUHowcEIsSUFBSSxDQUFDLFNBQVMsQ0FBQyxRQUFRLEVBekJHLHFCQUFPLENBZ0M0anFCLFdBQVksQ0FoQy9rcUIscUJBQU8sQ0FnQzRqcUIsV0FBWSxDQVA5a3FCLElBQUksQ0FBQyxHQUFHLEVBQUcsSUFBSSxDQUFDLEtBQUssR0FBRyxrQkFBSSxDQUFDLFNBQVMsR0FBQztTQUNyRTtRQUVELElBQUksQ0FBQyxTQUFTLENBQUMsT0FBTyxHQUFHLElBQUksQ0FBQyxHQUFHLENBQUM7SUFFdEMsQ0FBQztDQUVKO0FBNUJELG1DQTRCQyJ9","assetPath":"Assets/Scripts/KkaebiController.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"maxDistance","type":"System.Single","isArray":false,"initValue":["1"],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"speed","type":"System.Single","isArray":false,"initValue":["5"],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"dir","type":"UnityEngine.Vector3","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"myPlayer","type":"UnityEngine.Transform","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"KkaebiController","description":""},"isCompiled":true}'
+  typescriptHash: 5c94c9bc0b4710d3b47c43017c9e2cb2
+  onlyWriteTrigger: 0
