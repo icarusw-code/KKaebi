@@ -8755,7 +8755,9 @@ MonoBehaviour:
     - originPos
     - notificationTxt
     - imsiy
+    - imsix
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
@@ -8777,6 +8779,7 @@ MonoBehaviour:
     - '{"type":"UnityEngine.Vector2, UnityEngine.CoreModule","value":"{\"x\":0.0,\"y\":45.0}"}'
     - 
     - '{"type":"System.Single, mscorlib","value":"45"}'
+    - '{"type":"System.Single, mscorlib","value":"0"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 874104ded295dfe47aaff0896e2a41c2, type: 3}
