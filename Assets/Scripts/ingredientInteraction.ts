@@ -7,7 +7,9 @@ import GameManager from '../TS/GameManager';
 import IngredientInfo from '../TS/IngredientInfo';
 import QuestManager from './QuestManager';
 import Slot from '../TS/Slot';
+import * as UnityEngine from 'UnityEngine';
 import IngredientBookController from '../TS/IngredientBookController';
+import Notification from './Notification';
 
 export default class ingerdientInteraction extends ZepetoScriptBehaviour {
 
@@ -19,7 +21,7 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
 
     public content : GameObject;
     public imageList : Sprite[];
-
+    private color : UnityEngine.Color;
     Start() {    
 
         this.content = GameObject.Find("Canvas_UI").transform.GetChild(1).GetChild(0).GetChild(0).GetChild(0).gameObject;
@@ -39,10 +41,13 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
                     this.DoDestroy();
                     QuestManager.getInstance().GetIngreCheck(this.myID);//먹었음
                     //먹었으니 myquest의 해당 재료 이미지의 투명값을 높여주자
-                    
+
 
                     this.AddIngredientCount();
                     this.AddIngredientImage();
+                }
+                else if(QuestManager.getInstance().QuestAcceptIngreIDArr[i]!=this.myID){
+                    //Notification.getIns().UpLoadText("하하하");
                 }
             }
             if(QuestManager.getInstance().GetIngreCheckDiction.get(this.myID)==true){

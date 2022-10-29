@@ -39,10 +39,10 @@ export default class KkaebiManager extends ZepetoScriptBehaviour {
 
             // Count가 2 이상인 경우만 투명도 1
             console.log(this.foodName + "'s Count : " + UnityEngine.PlayerPrefs.GetInt(this.foodName));
-            if(UnityEngine.PlayerPrefs.GetInt(this.foodName) < 2)
+            if(UnityEngine.PlayerPrefs.GetInt(this.foodName) >= 2)
             {
                 this.color = this.KkaebiBtnObjects[i].transform.GetChild(0).gameObject.GetComponent<Image>().color;
-                this.color.a = 0;
+                this.color.a = 255;
                 this.KkaebiBtnObjects[i].transform.GetChild(0).gameObject.GetComponent<Image>().color = this.color;
             }
 
@@ -93,4 +93,13 @@ export default class KkaebiManager extends ZepetoScriptBehaviour {
         }
     }
 
+    public checkKkaebiCanSpawn(){
+        for (let i = 0; i < this.KkaebiBtnObjects.Length; i++) {
+            if (UnityEngine.PlayerPrefs.GetInt(this.foodName) >= 2) {
+                this.color = this.KkaebiBtnObjects[i].transform.GetChild(0).gameObject.GetComponent<Image>().color;
+                this.color.a = 255;
+                this.KkaebiBtnObjects[i].transform.GetChild(0).gameObject.GetComponent<Image>().color = this.color;
+            }
+        }
+    }
 }

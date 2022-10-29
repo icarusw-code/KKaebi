@@ -10,6 +10,7 @@ import { QuestionDotToken } from 'typescript';
 import RecipeManager from './RecipeManager';
 import NpcInteraction from './NpcInteraction';
 import { ZepetoPlayers } from 'ZEPETO.Character.Controller';
+import KkaebiManager from './KkaebiManager';
 export default class QuestManager extends ZepetoScriptBehaviour {
     //플레이어 컨트롤러
     private playerController : GameObject;
@@ -70,6 +71,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
     public exitBtn: Button;
 
     public RecipeManager: GameObject;
+    public KkkaebiManager: GameObject;
     public static instance:QuestManager;
     static getInstance(){
         return this.instance||(this.instance = new this());
@@ -265,6 +267,8 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         
         //레시피 숙련도 갱신
         this.RecipeManager.GetComponent<RecipeManager>().ReplaceAllRecipeImage();
+        //깨비매니저갱신
+        this.KkkaebiManager.GetComponent<KkaebiManager>().checkKkaebiCanSpawn();
     }
 
 
