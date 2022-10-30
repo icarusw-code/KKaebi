@@ -20202,11 +20202,15 @@ MonoBehaviour:
     - foodInfoObject
     - foodInfoExtBtn
     - foodInfo
+    - foodName
+    - foodImage
     unityValues:
     - {fileID: 21300000, guid: b8eae3338d61da64ebe4ed2b02f27917, type: 3}
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 7552236939986300495, guid: 23960c7868ab53d49b3574fce7b958c8, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
     values:
@@ -20215,6 +20219,8 @@ MonoBehaviour:
       UnityEngine.CoreModule\",\"isUnity\":true}"}'
     - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":25,\"type\":\"UnityEngine.Object,
       UnityEngine.CoreModule\",\"isUnity\":true}"}'
+    - 
+    - 
     - 
     - 
     - 
