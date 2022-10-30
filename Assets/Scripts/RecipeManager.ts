@@ -1,26 +1,62 @@
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
-import { Button, Image } from 'UnityEngine.UI'
+import { Button, Image, Text } from 'UnityEngine.UI'
 import { GameObject,Sprite,Transform } from 'UnityEngine';
 import QuestManager from './QuestManager';
 import * as UnityEngine from 'UnityEngine';
 export default class RecipeManager extends ZepetoScriptBehaviour {
+
+    // =========상세정보============== // 
+    public foodInfoObject : GameObject;
+    foodInfoExtBtn : Button;
+    foodName : Text;
+    foodImage : Image;
+    // ============================== // 
+
     public recipeBtnObject: GameObject[];
     public recipeBtn: Button[];
     public makeImage: Sprite;
+
+    foodInfo : GameObject;
+
     Start() {
         for (let i = 0; i < this.recipeBtnObject.Length; i++) {
             this.recipeBtn[i] = this.recipeBtnObject[i].GetComponent<Button>();
         }
         for (let i = 0; i < this.recipeBtn.Length; i++) {
             this.recipeBtn[i].onClick.AddListener(() => { //버튼 누를때 마다 해당 레시피 뜨게할거임)
-                console.log("이 버튼 이름은:"+this.recipeBtn[i].name);
-                //해당음식에 맞는 레시피 띄움
                 //그렇다면 해방 버튼오브젝트의 이름을 가져오고
                 //그 이름에 맞는 
+                console.log("이 버튼 이름은:"+this.recipeBtn[i].name);
+
+                if(UnityEngine.PlayerPrefs.GetInt(this.recipeBtn[i].name)>=1){
+                    // 그전꺼 지워주기
+                    if(this.foodInfo != null) GameObject.Destroy(this.foodInfo);
+                    //해당음식에 맞는 레시피 띄움
+                    this.foodInfo = GameObject.Instantiate(this.foodInfoObject) as GameObject;
+                    this.foodInfoExtBtn = this.foodInfo.transform.GetChild(0).GetComponentInChildren<Button>();
+                    this.foodName = this.foodInfo.transform.GetChild(0).GetChild(0).GetChild(2).GetComponentsInChildren<Text>()[0];
+                    // 음식 이름 넣기
+                    this.foodName.text = this.recipeBtn[i].name;
+                    // 음식 이미지 넣기
+                    this.foodImage = this.foodInfo.transform.GetChild(0).GetChild(0).GetChild(2).GetComponentsInChildren<Image>()[3];
+                    QuestManager.getInstance().FoodImageList.map((image) =>{
+                        if(this.recipeBtn[i].name == image.name){
+                            this.foodImage.sprite = image;
+                        }
+                    });
+                    // 창 종료 버튼 활성화
+                    this.foodInfoExtBtn.onClick.AddListener(()=>{
+                        console.log("상세정보 끄기");
+                        GameObject.Destroy(this.foodInfo);
+                    });
+                }
             });
 
         }
+
+
     }
+
     public ReplaceAllRecipeImage(){
         for (let i = 0; i < this.recipeBtnObject.Length; i++) {
             this.TurnOnRecipeImage(this.recipeBtnObject[i]);
