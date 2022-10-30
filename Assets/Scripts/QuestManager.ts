@@ -48,7 +48,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
     public FoodImageList : Sprite[]; //recipe에있는 음식들의 사진
     public IngreBasicImg : Sprite;
     public IngreSelectImg : Sprite;
-    public BeforeSelectnum: number;
+    public BeforeSelectnum : number;
     //수락할때 최종값
     public QuestAcceptIngreIDArr : number[];
     public QuestAcceptIngreNum : number;
@@ -94,7 +94,12 @@ export default class QuestManager extends ZepetoScriptBehaviour {
                 console.log("현재 누르고있는 버튼 이름:"+ this.btns[i]);
                 //this.acceptBtn.gameObject.SetActive(true);
                 this.LeftPanel.SetActive(true);
-                
+                //누를때마다 이미지 황금색테두리로 바꿈
+                if(this.BeforeSelectnum!=-1){
+                    this.btns[this.BeforeSelectnum].GetComponent<Image>().sprite = this.IngreBasicImg;
+                }
+                this.btns[i].gameObject.GetComponent<Image>().sprite = this.IngreSelectImg;
+                this.BeforeSelectnum = i;
                 this.QuestIngreGiveAuthority(this.btnsGO[i].GetComponent<FoodInfo>().idArr, this.btnsGO[i].GetComponent<FoodInfo>().idArr.length,this.btnsGO[i].GetComponent<FoodInfo>().foodname);
             });
         }
@@ -167,7 +172,10 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         }
         else if(this.QuestFoodName=="부대찌개"||this.QuestFoodName=="붕어찜"){
             if(UnityEngine.PlayerPrefs.GetInt("김치보유함")!=1){
-                this.NotificationUI.GetComponent<Notifications>().UpLoadText("김치를 요리할 수 있어야 붕어찜 요리법을 알 수 있습니다.");
+                if(this.QuestFoodName=="부대찌개")
+                    this.NotificationUI.GetComponent<Notifications>().UpLoadText("김치를 요리할 수 있어야 부대찌개 요리법을 알 수 있습니다.");
+                if(this.QuestFoodName=="붕어찜")
+                    this.NotificationUI.GetComponent<Notifications>().UpLoadText("김치를 요리할 수 있어야 붕어찜 요리법을 알 수 있습니다.");
                 return;
             }
         }
