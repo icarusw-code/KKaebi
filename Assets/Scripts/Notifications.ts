@@ -3,7 +3,7 @@ import { Rect, RectTransform, Time, Vector2, WaitForSeconds } from 'UnityEngine'
 import { Image,Text } from 'UnityEngine.UI'
 import { Vector3 } from 'ZEPETO.Multiplay.Schema';
 import { NotificationFlags } from 'UnityEngine.Timeline';
-export default class Notification extends ZepetoScriptBehaviour {
+export default class Notifications extends ZepetoScriptBehaviour {
     public notificationTxt : Text;
     public originPos : Vector2;
     public gotoPos: Vector2;
@@ -15,12 +15,12 @@ export default class Notification extends ZepetoScriptBehaviour {
     public canGoUp= false;
 
     public currentTime : float; 
-    public static notiInstance : Notification;
+    public static notiInstance : Notifications;
     static getIns(){
         return this.notiInstance||(this.notiInstance = new this());
     }
     Start() {
-        Notification.notiInstance = this;
+        Notifications.notiInstance = this;
         this.notificationTxt = this.transform.GetChild(0).GetComponent<Text>();
         this.thisTrans = this.GetComponent<RectTransform>();
         this.originPos = this.thisTrans.anchoredPosition;
@@ -58,6 +58,7 @@ export default class Notification extends ZepetoScriptBehaviour {
         this.thisTrans.anchoredPosition = new Vector2(this.thisTrans.anchoredPosition.x,this.imsiy); //계속 내려간다
         if(this.thisTrans.anchoredPosition.y<=this.gotoPos.y){ //정해진 위치까지 내려오면
             this.thisTrans.anchoredPosition = this.gotoPos;
+            this.imsiy=this.gotoPos.y;
             this.goTime=true; //시간세기 시작
             if(this.currentTime>=3){  //시간지났으면
                 //올라가자
@@ -67,13 +68,14 @@ export default class Notification extends ZepetoScriptBehaviour {
             }
         }
     }
-    public imsix = -45;
+    //public imsix = -45;
     public GoUpText(){
-        this.imsix += 60*Time.deltaTime; //계속올라간다
-        this.thisTrans.anchoredPosition = new Vector2(this.thisTrans.anchoredPosition.x,this.imsix);
+        this.imsiy += 60*Time.deltaTime; //계속올라간다
+        this.thisTrans.anchoredPosition = new Vector2(this.thisTrans.anchoredPosition.x,this.imsiy);
         if(this.thisTrans.anchoredPosition.y>=this.originPos.y){ //초기 위치까지 올라가면
             this.thisTrans.anchoredPosition = this.originPos; //위치 고정
-            this.canGoUp=false; 
+            this.imsiy=this.originPos.y;
+            this.canGoUp=false;
         }
     }
 }

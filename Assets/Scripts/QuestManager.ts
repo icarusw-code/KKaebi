@@ -11,6 +11,7 @@ import RecipeManager from './RecipeManager';
 import NpcInteraction from './NpcInteraction';
 import { ZepetoPlayers } from 'ZEPETO.Character.Controller';
 import KkaebiManager from './KkaebiManager';
+import Notifications from './Notifications';
 export default class QuestManager extends ZepetoScriptBehaviour {
     //플레이어 컨트롤러
     private playerController : GameObject;
@@ -45,14 +46,15 @@ export default class QuestManager extends ZepetoScriptBehaviour {
     public MainQuestFoodImg: Image;
     public MainQuestFoodTxt: Text;
     public FoodImageList : Sprite[]; //recipe에있는 음식들의 사진
-
+    public IngreBasicImg : Sprite;
+    public IngreSelectImg : Sprite;
+    public BeforeSelectnum: number;
     //수락할때 최종값
     public QuestAcceptIngreIDArr : number[];
     public QuestAcceptIngreNum : number;
     public QuestAcceptFoodName: string;
     public checkAccept : boolean = false;
     public isGetIngre : boolean[];
-
     //수락한 이후 재료먹을때 관련
     public GetIngreCheckDiction : Map<number,boolean> = new Map<number,boolean>();
 
@@ -72,6 +74,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
 
     public RecipeManager: GameObject;
     public KkkaebiManager: GameObject;
+    public NotificationUI: GameObject;
     public static instance:QuestManager;
     static getInstance(){
         return this.instance||(this.instance = new this());
@@ -158,13 +161,13 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         //3성 음식인데 해당 재료인 2성음식 만든적 없다면 수락할수 없음
         if(this.QuestFoodName=="팥빙수"){
             if(UnityEngine.PlayerPrefs.GetInt("찹쌀떡보유함")!=1){
-                console.log("찹쌀떡 없어서 퀘스트 못맡음");
+                this.NotificationUI.GetComponent<Notifications>().UpLoadText("찹쌀떡을 요리할 수 있어야 팥빙수 요리법을 알 수 있습니다.");
                 return;
             }
         }
         else if(this.QuestFoodName=="부대찌개"||this.QuestFoodName=="붕어찜"){
             if(UnityEngine.PlayerPrefs.GetInt("김치보유함")!=1){
-                console.log("김치 없어서 퀘스트 못맡음");
+                this.NotificationUI.GetComponent<Notifications>().UpLoadText("김치를 요리할 수 있어야 붕어찜 요리법을 알 수 있습니다.");
                 return;
             }
         }
@@ -187,7 +190,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         this.SetMyQuest(this.QuestAcceptIngreNum,this.QuestAcceptIngreIDArr,this.QuestAcceptFoodName); //재료 아이디 배열넘김
         this.SetMYQuestFoodImage(this.QuestAcceptFoodName);
         this.isGetIngre = new Array(this.QuestAcceptIngreNum);
-        
+        this.NotificationUI.GetComponent<Notifications>().UpLoadText(this.QuestAcceptFoodName+"의 재료를 모아오자");
     }
 
     *DoCheckAceeptAfterTime(){
@@ -212,6 +215,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         //부여된 퀘스트 재료 id배열이랑 크기도 초기화
         this.QuestAcceptIngreIDArr = new Array();
         this.QuestAcceptIngreNum = 0;
+        this.NotificationUI.GetComponent<Notifications>().UpLoadText(this.QuestAcceptFoodName+"요리를 그만 할래");
     }
 
     //퀘스트 완료

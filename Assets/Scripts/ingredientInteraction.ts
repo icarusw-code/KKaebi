@@ -9,7 +9,7 @@ import QuestManager from './QuestManager';
 import Slot from '../TS/Slot';
 import * as UnityEngine from 'UnityEngine';
 import IngredientBookController from '../TS/IngredientBookController';
-import Notification from './Notification';
+import Notifications from './Notifications';
 
 export default class ingerdientInteraction extends ZepetoScriptBehaviour {
 
@@ -22,6 +22,7 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
     public content : GameObject;
     public imageList : Sprite[];
     private color : UnityEngine.Color;
+    private isingrcheck: bool = false;
     Start() {    
 
         this.content = GameObject.Find("Canvas_UI").transform.GetChild(1).GetChild(0).GetChild(0).GetChild(0).gameObject;
@@ -34,7 +35,9 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
 
         this.DestroyBtn = this.btn.GetComponent<Button>(); 
         this.DestroyBtn.onClick.AddListener(() => { //먹는 버튼 누르면 먹어지는 동작
-
+            if(QuestManager.getInstance().GetIngreCheckDiction.get(this.myID)==true){
+                Notifications.getIns().UpLoadText("이미 획득한 재료입니다");
+            }
             //재료(지금 현재 오브젝트)가 지금 퀘스트로 받은 재료들일때만, 그리고 한번도 먹지 않았을경우에만 먹기동작 수행
             for(let i=0; i<QuestManager.getInstance().QuestAcceptIngreNum;i++){
                 if(QuestManager.getInstance().QuestAcceptIngreIDArr[i]==this.myID&&QuestManager.getInstance().GetIngreCheckDiction.get(this.myID)==false){
@@ -45,18 +48,16 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
 
                     this.AddIngredientCount();
                     this.AddIngredientImage();
+                    if(QuestManager.getInstance().QuestCompleteCheck()==true){
+                        Notifications.getIns().UpLoadText(QuestManager.getInstance().QuestAcceptFoodName+"의 재료를 전부 모았다! 대왕깨비에게 가서 요리를 부탁하자");
+                    }
+                    this.isingrcheck=true; //레시피에 해당 재료가 있는것이므로
                 }
-                else if(QuestManager.getInstance().QuestAcceptIngreIDArr[i]!=this.myID){
-                    //Notification.getIns().UpLoadText("하하하");
+                else if(QuestManager.getInstance().QuestAcceptIngreIDArr[i]!=this.myID&&i==QuestManager.getInstance().QuestAcceptIngreNum-1&&this.isingrcheck==false){
+                    Notifications.getIns().UpLoadText(QuestManager.getInstance().QuestAcceptFoodName+"에 필요한 재료가 아닙니다");
                 }
             }
-            if(QuestManager.getInstance().GetIngreCheckDiction.get(this.myID)==true){
-                //"이미 해당재료는 획득했습니다.""
-            }
-
-            if(QuestManager.getInstance().QuestCompleteCheck()==true){ //재료를 모두 모았을경우
-                //"재료를 전부 모았다!"
-            }
+            
         });
     }
 

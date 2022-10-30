@@ -29,16 +29,16 @@ export default class RandomSpawn extends ZepetoScriptBehaviour {
         var Ingredient7 : GameObject = GameObject.Instantiate(this.IngredientFactory7)as GameObject;
         var Ingredient8 : GameObject = GameObject.Instantiate(this.IngredientFactory8)as GameObject;
         var Ingredient9 : GameObject = GameObject.Instantiate(this.IngredientFactory9)as GameObject;
-        Ingredient.transform.position = this.SpawnPoint.transform.position + new Vector3(1,-1,0);
-        Ingredient1.transform.position = this.SpawnPoint.transform.position + new Vector3(2,-1,0);
-        Ingredient2.transform.position = this.SpawnPoint.transform.position + new Vector3(3,-1,0);
-        Ingredient3.transform.position = this.SpawnPoint.transform.position + new Vector3(-1,-1,0);
-        Ingredient4.transform.position = this.SpawnPoint.transform.position + new Vector3(-2,-1,0);
-        Ingredient5.transform.position = this.SpawnPoint.transform.position + new Vector3(-3,-1,0);
-        Ingredient6.transform.position = this.SpawnPoint.transform.position + new Vector3(2,-1,2);
-        Ingredient7.transform.position = this.SpawnPoint.transform.position + new Vector3(3,-1,3);
-        Ingredient8.transform.position = this.SpawnPoint.transform.position + new Vector3(4,-1,0);
-        Ingredient9.transform.position = this.SpawnPoint.transform.position + new Vector3(-4,-1,0);
-        Ingredient.transform.position = this.SpawnPoint.transform.position + new Vector3(5,-1,0);
+        Ingredient.transform.position = this.SpawnPoint.transform.position + new Vector3(1,0,0);
+        Ingredient1.transform.position = this.SpawnPoint.transform.position + new Vector3(2,0,0);
+        Ingredient2.transform.position = this.SpawnPoint.transform.position + new Vector3(3,0,0);
+        Ingredient3.transform.position = this.SpawnPoint.transform.position + new Vector3(-1,0,0);
+        Ingredient4.transform.position = this.SpawnPoint.transform.position + new Vector3(-2,0,0);
+        Ingredient5.transform.position = this.SpawnPoint.transform.position + new Vector3(-3,0,0);
+        Ingredient6.transform.position = this.SpawnPoint.transform.position + new Vector3(2,0,2);
+        Ingredient7.transform.position = this.SpawnPoint.transform.position + new Vector3(3,0,3);
+        Ingredient8.transform.position = this.SpawnPoint.transform.position + new Vector3(4,0,0);
+        Ingredient9.transform.position = this.SpawnPoint.transform.position + new Vector3(-4,0,0);
+        Ingredient.transform.position = this.SpawnPoint.transform.position + new Vector3(5,0,0);
     }
 }
