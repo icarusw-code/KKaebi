@@ -1,0 +1,35 @@
+fileFormatVersion: 2
+guid: 8e38f2629b777a648b192cc3cb4b8400
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_UI_1 = require(\\\"UnityEngine.UI\\\");\\r\\nconst
+    ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nclass LanguageChange extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    constructor() {\\r\\n       
+    super(...arguments);\\r\\n        this.KoreanPack = new Map();\\r\\n        this.EnlgishPack
+    = new Map();\\r\\n        this.JapanesePack = new Map();\\r\\n    }\\r\\n   
+    //NPC\uD018\uC2A4\uD2B8 \uCC3D\uC758 \uC74C\uC2DD\uBC84\uD2BC (\uD018\uC2A4\uD2B8
+    \uB9E4\uB2C8\uC800\uC758 foodname\uC744 \uC704\uD574)\\r\\n    // \uC815\uC801\uC778\uAC83
+    \uAD50\uCCB4 \uAD00\uB828\\r\\n    static getInstance() {\\r\\n        return
+    this.instance || (this.instance = new this());\\r\\n    }\\r\\n    Start() {\\r\\n       
+    LanguageChange.instance = this;\\r\\n    }\\r\\n    //\uB3D9\uC801\uC778 \uD14D\uC2A4\uD2B8\uB4E4
+    \uC804\uBD80 \uAD50\uCCB4\uD558\uB294 \uD568\uC218\\r\\n    ChangeTxtInStatics()
+    {\\r\\n    }\\r\\n}\\r\\nexports.default = LanguageChange;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiTGFuZ3VhZ2VDaGFuZ2UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJMYW5ndWFnZUNoYW5nZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLG1EQUF3QztBQUN4QyxpREFBcUQ7QUFFckQsTUFBcUIsY0FBZSxTQUFRLHFDQUFxQjtJQUFqRTs7UUFHVyxlQUFVLEdBQXdCLElBQUksR0FBRyxFQUFpQixDQUFDO1FBQzNELGdCQUFXLEdBQXdCLElBQUksR0FBRyxFQUFpQixDQUFDO1FBQzVELGlCQUFZLEdBQXdCLElBQUksR0FBRyxFQUFpQixDQUFDO0lBcUN4RSxDQUFDO0lBaENHLHdDQUF3QztJQUV4QyxhQUFhO0lBS2IsTUFBTSxDQUFDLFdBQVc7UUFDZCxPQUFPLElBQUksQ0FBQyxRQUFRLElBQUUsQ0FBQyxJQUFJLENBQUMsUUFBUSxHQUFHLElBQUksSUFBSSxFQUFFLENBQUMsQ0FBQztJQUN2RCxDQUFDO0lBY0QsS0FBSztRQUNELGNBQWMsQ0FBQyxRQUFRLEdBQUcsSUFBSSxDQUFDO0lBQ25DLENBQUM7SUFHRCxxQkFBcUI7SUFDZCxrQkFBa0I7SUFFekIsQ0FBQztDQUNKO0FBMUNELGlDQTBDQyJ9\",\"assetPath\":\"Assets/Scripts/Language/LanguageChange.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.UI\",\"name\":\"QMFoodButtonsObj\",\"type\":\"UnityEngine.UI.Button[]\",\"isArray\":true,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"mscorlib\",\"name\":\"LanguageMode\",\"type\":\"System.Single\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"LanguageChange\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: ceb5b9d5e6e403aaf9cbed47d8ea5c55
+  onlyWriteTrigger: 0

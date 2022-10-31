@@ -40,7 +40,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
 
     //퀘스트 음식목록 누를때마다 바뀔 변동 임시값들
     public LeftPanel: GameObject;
-    public QuestIngreIDArr : number[]; 
+    public QuestIngreIDArr : number[]; //퀘스트 음식선택하면 할당될 재료 id배열
     public QuestIngreNum : number;
     public QuestFoodName: string;
     public MainQuestFoodImg: Image;
