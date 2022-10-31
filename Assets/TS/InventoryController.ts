@@ -5,7 +5,7 @@ import QuestManager from '../Scripts/QuestManager';
 import IngredientBookController from './IngredientBookController';
 import QuestIngre from '../Scripts/QuestIngre';
 import Slot from './Slot'
-
+import LanguageChange from '../Scripts/Language/LanguageChange';
 export default class InventoryController extends ZepetoScriptBehaviour {
 
     public UIManger : GameObject;
@@ -74,7 +74,12 @@ export default class InventoryController extends ZepetoScriptBehaviour {
             slot.name = this.ingredientDict.get(invenContentsId[i]);
 
             // 재료 이름 설정
-            slot.GetComponent<Slot>().ingredientName.text = this.ingredientDict.get(invenContentsId[i]);
+            if (LanguageChange.getInstance().LanguageMode == 1){
+                slot.GetComponent<Slot>().ingredientName.text = this.ingredientDict.get(invenContentsId[i]);
+            }
+            else if (LanguageChange.getInstance().LanguageMode == 2){
+                slot.GetComponent<Slot>().ingredientName.text = LanguageChange.getInstance().EnlgishPack.get(this.ingredientDict.get(invenContentsId[i]));
+            }
 
         }
 
