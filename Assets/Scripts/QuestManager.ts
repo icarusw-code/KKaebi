@@ -220,7 +220,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
             this.NotificationUI.GetComponent<Notifications>().UpLoadText(this.QuestAcceptFoodName + "의 재료를 모아오자");
         }
         else if (LanguageChange.getInstance().LanguageMode == 2) {
-            this.NotificationUI.GetComponent<Notifications>().UpLoadText(LanguageChange.getInstance().EnlgishPack.get(this.QuestAcceptFoodName) + "의 재료를 모아오자");
+            this.NotificationUI.GetComponent<Notifications>().UpLoadText(LanguageChange.getInstance().EnlgishPack.get(this.QuestAcceptFoodName) + "let's get ingre");
         }
     }
 
@@ -250,7 +250,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
             this.NotificationUI.GetComponent<Notifications>().UpLoadText(this.QuestAcceptFoodName + "요리를 그만 할래");
         }
         else if (LanguageChange.getInstance().LanguageMode == 2) {
-            this.NotificationUI.GetComponent<Notifications>().UpLoadText(LanguageChange.getInstance().EnlgishPack.get(this.QuestAcceptFoodName) + "요리를 그만 할래");
+            this.NotificationUI.GetComponent<Notifications>().UpLoadText(LanguageChange.getInstance().EnlgishPack.get(this.QuestAcceptFoodName) + "stop yori");
         }
     }
 

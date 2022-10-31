@@ -11,7 +11,7 @@ export default class LanguageChange extends ZepetoScriptBehaviour {
 
     public static instance: LanguageChange;
     public EnlgishPack : Map<string,string> = new Map<string,string>(); //영어팩
-
+    public KoreanPack :  Map<string,string> = new Map<string,string>();
     //동적인것들 교체관련
     //NPC퀘스트 창의 음식버튼 (퀘스트 매니저의 foodname을 위해)
     public QMFoodButtonsObj : GameObject[];
@@ -50,9 +50,11 @@ export default class LanguageChange extends ZepetoScriptBehaviour {
         LanguageChange.instance = this;
         //동적
         for(let i=0; i<this.QMFoodButtonsObj.length;i++){ //음식이름 영어데이터 저장
+            this.KoreanPack.set(this.QMFoodButtonsObj[i].GetComponent<FoodInfo>().foodname,this.QMFoodButtonsObj[i].GetComponent<FoodInfo>().foodname);
             this.EnlgishPack.set(this.QMFoodButtonsObj[i].GetComponent<FoodInfo>().foodname,this.QMFoodButtonsObj[i].GetComponent<FoodInfo>().foodEnlgishName);
         }
         for(let i=0; i<this.QMIngrePrefabsObj.length;i++){ //재료이름 영어데이터 저장
+            this.KoreanPack.set(this.IngrdientBookController.GetComponent<IngredientBookController>().ingredientDict.get(this.QMIngrePrefabsObj[i].GetComponent<IngredientInfo>().id),this.IngrdientBookController.GetComponent<IngredientBookController>().ingredientDict.get(this.QMIngrePrefabsObj[i].GetComponent<IngredientInfo>().id));
             this.EnlgishPack.set(
                 this.IngrdientBookController.GetComponent<IngredientBookController>().ingredientDict.get(this.QMIngrePrefabsObj[i].GetComponent<IngredientInfo>().id),
             this.QMIngrePrefabsObj[i].GetComponent<IngredientInfo>().EnlgishName);
@@ -60,13 +62,16 @@ export default class LanguageChange extends ZepetoScriptBehaviour {
 
         //정적
         for(let i =0 ; i<this.BookIngreButtonObj.length;i++){ //재료도감 영어데이터 저장
+            this.KoreanPack.set(this.BookIngreButtonObj[i].name,this.BookIngreButtonObj[i].name);
             this.EnlgishPack.set(this.BookIngreButtonObj[i].name,this.BookIngreButtonObj[i].GetComponent<IngredientInfo>().EnlgishName);
         }
 
         for(let i =0 ; i<this.BookFoodButtonObj.length;i++){ //재료도감 영어데이터 저장
+            this.KoreanPack.set(this.BookFoodButtonObj[i].name,this.BookFoodButtonObj[i].name);
             this.EnlgishPack.set(this.BookFoodButtonObj[i].name,this.BookFoodButtonObj[i].GetComponent<FoodInfo>().foodEnlgishName);
         }
         for(let i =0 ; i<this.BookKkaebiButtonObj.length;i++){ //재료도감 영어데이터 저장
+            this.KoreanPack.set(this.BookKkaebiButtonObj[i].name,this.BookKkaebiButtonObj[i].name);
             this.EnlgishPack.set(this.BookKkaebiButtonObj[i].name,this.BookKkaebiButtonObj[i].GetComponent<KkaebiInfo>().EnglishName);
         }
         var Koreanbtn =  GameObject.Find("Btn11").GetComponent<Button>();
@@ -84,14 +89,38 @@ export default class LanguageChange extends ZepetoScriptBehaviour {
 
     //정적인 텍스트들 다른언어로 전부 교체하는 함수
     public ChangeTxtInStatics(languageType: number){
-        for(let i =0 ; i<this.BookIngreButtonObj.length;i++){ //재료도감 영어데이터 저장
-            this.BookIngreButtonObj[i].transform.GetChild(1).GetComponent<Text>().text = this.EnlgishPack.get(this.BookIngreButtonObj[i].name);
+        if(languageType ==1 ){
+            for (let i = 0; i < this.BookIngreButtonObj.length; i++) { //재료도감 영어데이터 저장
+                this.BookIngreButtonObj[i].transform.GetChild(1).GetComponent<Text>().text = this.BookIngreButtonObj[i].name;
+            }
+            for (let i = 0; i < this.BookFoodButtonObj.length; i++) { //음식도감 영어데이터 저장
+                this.BookFoodButtonObj[i].transform.GetChild(1).GetComponent<Text>().text =this.BookFoodButtonObj[i].name;
+            }
+            for (let i = 0; i < this.BookKkaebiButtonObj.length; i++) { //깨비도감 영어데이터 저장
+                this.BookKkaebiButtonObj[i].transform.GetChild(1).GetComponent<Text>().text = this.BookKkaebiButtonObj[i].name;
+            }
         }
-        for(let i =0 ; i<this.BookFoodButtonObj.length;i++){ //음식도감 영어데이터 저장
-            this.BookFoodButtonObj[i].transform.GetChild(1).GetComponent<Text>().text = this.EnlgishPack.get(this.BookFoodButtonObj[i].name);
+        if (languageType == 2) {
+            for (let i = 0; i < this.BookIngreButtonObj.length; i++) { //재료도감 영어데이터 저장
+                this.BookIngreButtonObj[i].transform.GetChild(1).GetComponent<Text>().text = this.EnlgishPack.get(this.BookIngreButtonObj[i].name);
+            }
+            for (let i = 0; i < this.BookFoodButtonObj.length; i++) { //음식도감 영어데이터 저장
+                this.BookFoodButtonObj[i].transform.GetChild(1).GetComponent<Text>().text = this.EnlgishPack.get(this.BookFoodButtonObj[i].name);
+            }
+            for (let i = 0; i < this.BookKkaebiButtonObj.length; i++) { //깨비도감 영어데이터 저장
+                this.BookKkaebiButtonObj[i].transform.GetChild(1).GetComponent<Text>().text = this.EnlgishPack.get(this.BookKkaebiButtonObj[i].name);
+            }
+            for(let i=0; i<this.QMFoodButtonsObj.length;i++){ //퀘스트 음식이름 영어데이터 저장
+                this.QMFoodButtonsObj[i].transform.GetChild(0).GetComponent<Text>().text = this.EnlgishPack.get(this.QMFoodButtonsObj[i].name);
+            }
         }
-        for(let i =0 ; i<this.BookKkaebiButtonObj.length;i++){ //깨비도감 영어데이터 저장
-            this.BookKkaebiButtonObj[i].transform.GetChild(1).GetComponent<Text>().text = this.EnlgishPack.get(this.BookKkaebiButtonObj[i].name);
-        }
+        
+
+
+        //인벤토리에 원래 들어있던것들이랑, 현재 맡고있는 퀘스트도 바꿔야됨
+        //컨텐트에 있는 자식개수들만큼 반복문
+        //그 자식들의 텍스트를 영어화/한글화
+
+        //정적인 모든 UI다 찾아서 한글화/영어화
     }
 }
