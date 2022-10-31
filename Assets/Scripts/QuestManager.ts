@@ -12,6 +12,7 @@ import NpcInteraction from './NpcInteraction';
 import { ZepetoPlayers } from 'ZEPETO.Character.Controller';
 import KkaebiManager from './KkaebiManager';
 import Notifications from './Notifications';
+import LanguageChange from './Language/LanguageChange';
 export default class QuestManager extends ZepetoScriptBehaviour {
     //플레이어 컨트롤러
     private playerController : GameObject;
@@ -166,16 +167,33 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         //3성 음식인데 해당 재료인 2성음식 만든적 없다면 수락할수 없음
         if(this.QuestFoodName=="팥빙수"){
             if(UnityEngine.PlayerPrefs.GetInt("찹쌀떡보유함")!=1){
-                this.NotificationUI.GetComponent<Notifications>().UpLoadText("찹쌀떡을 요리할 수 있어야 팥빙수 요리법을 알 수 있습니다.");
+                if(LanguageChange.getInstance().LanguageMode==1){
+                    this.NotificationUI.GetComponent<Notifications>().UpLoadText("찹쌀떡을 요리할 수 있어야 팥빙수 요리법을 알 수 있습니다.");
+                }
+                else if(LanguageChange.getInstance().LanguageMode==2){
+                    this.NotificationUI.GetComponent<Notifications>().UpLoadText("blah blah blah blah blah1");
+                }
                 return;
             }
         }
         else if(this.QuestFoodName=="부대찌개"||this.QuestFoodName=="붕어찜"){
             if(UnityEngine.PlayerPrefs.GetInt("김치보유함")!=1){
-                if(this.QuestFoodName=="부대찌개")
-                    this.NotificationUI.GetComponent<Notifications>().UpLoadText("김치를 요리할 수 있어야 부대찌개 요리법을 알 수 있습니다.");
-                if(this.QuestFoodName=="붕어찜")
-                    this.NotificationUI.GetComponent<Notifications>().UpLoadText("김치를 요리할 수 있어야 붕어찜 요리법을 알 수 있습니다.");
+                if (this.QuestFoodName == "부대찌개") {
+                    if (LanguageChange.getInstance().LanguageMode == 1) {
+                        this.NotificationUI.GetComponent<Notifications>().UpLoadText("김치를 요리할 수 있어야 부대찌개 요리법을 알 수 있습니다.");
+                    }
+                    else if(LanguageChange.getInstance().LanguageMode==2){
+                        this.NotificationUI.GetComponent<Notifications>().UpLoadText("blah blah blah blah blah1");
+                    }
+                }
+                if(this.QuestFoodName=="붕어찜"){
+                    if (LanguageChange.getInstance().LanguageMode == 1) {
+                        this.NotificationUI.GetComponent<Notifications>().UpLoadText("김치를 요리할 수 있어야 붕어찜 요리법을 알 수 있습니다.");
+                    }
+                    else if(LanguageChange.getInstance().LanguageMode==2){
+                        this.NotificationUI.GetComponent<Notifications>().UpLoadText("blah blah blah blah blah1");
+                    }
+                }
                 return;
             }
         }
@@ -198,7 +216,12 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         this.SetMyQuest(this.QuestAcceptIngreNum,this.QuestAcceptIngreIDArr,this.QuestAcceptFoodName); //재료 아이디 배열넘김
         this.SetMYQuestFoodImage(this.QuestAcceptFoodName);
         this.isGetIngre = new Array(this.QuestAcceptIngreNum);
-        this.NotificationUI.GetComponent<Notifications>().UpLoadText(this.QuestAcceptFoodName+"의 재료를 모아오자");
+        if (LanguageChange.getInstance().LanguageMode == 1) {
+            this.NotificationUI.GetComponent<Notifications>().UpLoadText(this.QuestAcceptFoodName + "의 재료를 모아오자");
+        }
+        else if (LanguageChange.getInstance().LanguageMode == 2) {
+            this.NotificationUI.GetComponent<Notifications>().UpLoadText(LanguageChange.getInstance().EnlgishPack.get(this.QuestAcceptFoodName) + "의 재료를 모아오자");
+        }
     }
 
     *DoCheckAceeptAfterTime(){
@@ -223,7 +246,12 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         //부여된 퀘스트 재료 id배열이랑 크기도 초기화
         this.QuestAcceptIngreIDArr = new Array();
         this.QuestAcceptIngreNum = 0;
-        this.NotificationUI.GetComponent<Notifications>().UpLoadText(this.QuestAcceptFoodName+"요리를 그만 할래");
+        if (LanguageChange.getInstance().LanguageMode == 1) {
+            this.NotificationUI.GetComponent<Notifications>().UpLoadText(this.QuestAcceptFoodName + "요리를 그만 할래");
+        }
+        else if (LanguageChange.getInstance().LanguageMode == 2) {
+            this.NotificationUI.GetComponent<Notifications>().UpLoadText(LanguageChange.getInstance().EnlgishPack.get(this.QuestAcceptFoodName) + "요리를 그만 할래");
+        }
     }
 
     //퀘스트 완료
@@ -243,12 +271,22 @@ export default class QuestManager extends ZepetoScriptBehaviour {
             ingreFood = GameObject.Instantiate(this.GetComponent<InventoryController>().slotFactory, this.GetComponent<InventoryController>().content) as GameObject;
             if(this.QuestAcceptFoodName=="김치"){
                 ingreFood.name = QuestManager.getInstance().myQuestFoodImgIngre[0].name;
-                ingreFood.GetComponent<QuestIngre>().ingredientName.text = QuestManager.getInstance().myQuestFoodImgIngre[0].name; //한글화 문제
+                if (LanguageChange.getInstance().LanguageMode == 1){ //한글
+                    ingreFood.GetComponent<QuestIngre>().ingredientName.text = this.myQuestFoodImgIngre[0].name;
+                }
+                else if (LanguageChange.getInstance().LanguageMode == 2){ //영어
+                    ingreFood.GetComponent<QuestIngre>().ingredientName.text = LanguageChange.getInstance().EnlgishPack.get(this.myQuestFoodImgIngre[0].name); //한글화 문제
+                }
                 ingreFood.GetComponent<QuestIngre>().ingredientImage.sprite = QuestManager.getInstance().myQuestFoodImgIngre[0];
             }
             else if(this.QuestAcceptFoodName=="찹쌀떡"){
                 ingreFood.name = QuestManager.getInstance().myQuestFoodImgIngre[1].name;
-                ingreFood.GetComponent<QuestIngre>().ingredientName.text = QuestManager.getInstance().myQuestFoodImgIngre[1].name;  //한글화 문제
+                if (LanguageChange.getInstance().LanguageMode == 1){ //한글
+                    ingreFood.GetComponent<QuestIngre>().ingredientName.text = this.myQuestFoodImgIngre[1].name;
+                }
+                else if (LanguageChange.getInstance().LanguageMode == 2){ //영어
+                    ingreFood.GetComponent<QuestIngre>().ingredientName.text = LanguageChange.getInstance().EnlgishPack.get(this.myQuestFoodImgIngre[1].name); //한글화 문제
+                }
                 ingreFood.GetComponent<QuestIngre>().ingredientImage.sprite = QuestManager.getInstance().myQuestFoodImgIngre[1];
             }
         }
@@ -322,14 +360,24 @@ export default class QuestManager extends ZepetoScriptBehaviour {
             ingreFood = GameObject.Instantiate(this.myQuestIngreFactory, this.MainQuestContentTransform) as GameObject;
             ingreFood.name = this.myQuestFoodImgIngre[1].name;
 
-            ingreFood.GetComponent<QuestIngre>().ingredientName.text = this.myQuestFoodImgIngre[1].name; //한글화문제
-            ingreFood.GetComponent<QuestIngre>().ingredientImage.sprite = this.myQuestFoodImgIngre[1]; //한글화문제
+            if (LanguageChange.getInstance().LanguageMode == 1) {
+                ingreFood.GetComponent<QuestIngre>().ingredientName.text = this.myQuestFoodImgIngre[1].name; //한글화문제
+            }
+            else if (LanguageChange.getInstance().LanguageMode == 2){
+                ingreFood.GetComponent<QuestIngre>().ingredientName.text = LanguageChange.getInstance().EnlgishPack.get(this.myQuestFoodImgIngre[1].name);
+            }
+            ingreFood.GetComponent<QuestIngre>().ingredientImage.sprite = this.myQuestFoodImgIngre[1];
         }
         else if(foodName=="붕어찜"||foodName=="부대찌개"){
             ingreFood = GameObject.Instantiate(this.myQuestIngreFactory, this.MainQuestContentTransform) as GameObject;
             ingreFood.name = this.myQuestFoodImgIngre[0].name;
 
-            ingreFood.GetComponent<QuestIngre>().ingredientName.text = this.myQuestFoodImgIngre[0].name; //한글화문제
+            if (LanguageChange.getInstance().LanguageMode == 1) {
+                ingreFood.GetComponent<QuestIngre>().ingredientName.text = this.myQuestFoodImgIngre[0].name; //한글화문제
+            }
+            else if (LanguageChange.getInstance().LanguageMode == 2){
+                ingreFood.GetComponent<QuestIngre>().ingredientName.text = LanguageChange.getInstance().EnlgishPack.get(this.myQuestFoodImgIngre[0].name);
+            }
             ingreFood.GetComponent<QuestIngre>().ingredientImage.sprite = this.myQuestFoodImgIngre[0]; 
         }
 
@@ -343,7 +391,12 @@ export default class QuestManager extends ZepetoScriptBehaviour {
             Ingre.name = this.MyQuestIngreDiction.get(QuestContentsId[i]);
 
             // 재료 이름 설정
-            Ingre.GetComponent<QuestIngre>().ingredientName.text = this.MyQuestIngreDiction.get(QuestContentsId[i]); //한글화문제
+            if (LanguageChange.getInstance().LanguageMode == 1) {
+                Ingre.GetComponent<QuestIngre>().ingredientName.text = this.MyQuestIngreDiction.get(QuestContentsId[i]); //한글화문제
+            }
+            else if (LanguageChange.getInstance().LanguageMode == 2){
+                Ingre.GetComponent<QuestIngre>().ingredientName.text = LanguageChange.getInstance().EnlgishPack.get(this.MyQuestIngreDiction.get(QuestContentsId[i]));
+            }
 
         }
         this.AddMainQuestIngredientImage();
@@ -357,14 +410,24 @@ export default class QuestManager extends ZepetoScriptBehaviour {
             ingreFood = GameObject.Instantiate(this.myQuestIngreFactory, this.myQuestContentTransform) as GameObject;
             ingreFood.name = this.myQuestFoodImgIngre[1].name;
 
-            ingreFood.GetComponent<QuestIngre>().ingredientName.text = this.myQuestFoodImgIngre[1].name; //한글화문제
+            if (LanguageChange.getInstance().LanguageMode == 1) {
+                ingreFood.GetComponent<QuestIngre>().ingredientName.text =this.myQuestFoodImgIngre[1].name; //한글화문제
+            }
+            else if (LanguageChange.getInstance().LanguageMode == 2){
+                ingreFood.GetComponent<QuestIngre>().ingredientName.text = LanguageChange.getInstance().EnlgishPack.get(this.myQuestFoodImgIngre[1].name);
+            }
             ingreFood.GetComponent<QuestIngre>().ingredientImage.sprite = this.myQuestFoodImgIngre[1];
         }
         else if(foodName=="붕어찜"||foodName=="부대찌개"){ //투명도 50으로
             ingreFood = GameObject.Instantiate(this.myQuestIngreFactory, this.myQuestContentTransform) as GameObject;
             ingreFood.name = this.myQuestFoodImgIngre[0].name;
 
-            ingreFood.GetComponent<QuestIngre>().ingredientName.text = this.myQuestFoodImgIngre[0].name; //한글화문제
+            if (LanguageChange.getInstance().LanguageMode == 1) {
+                ingreFood.GetComponent<QuestIngre>().ingredientName.text =this.myQuestFoodImgIngre[0].name; //한글화문제
+            }
+            else if (LanguageChange.getInstance().LanguageMode == 2){
+                ingreFood.GetComponent<QuestIngre>().ingredientName.text = LanguageChange.getInstance().EnlgishPack.get(this.myQuestFoodImgIngre[0].name);
+            }
             ingreFood.GetComponent<QuestIngre>().ingredientImage.sprite = this.myQuestFoodImgIngre[0];
         }
 
@@ -378,7 +441,12 @@ export default class QuestManager extends ZepetoScriptBehaviour {
             Ingre.name = this.MyQuestIngreDiction.get(MyQuestContentsId[i]);
 
             // 재료 이름 설정
-            Ingre.GetComponent<QuestIngre>().ingredientName.text = this.MyQuestIngreDiction.get(MyQuestContentsId[i]);
+            if (LanguageChange.getInstance().LanguageMode == 1) {
+                Ingre.GetComponent<QuestIngre>().ingredientName.text = this.MyQuestIngreDiction.get(MyQuestContentsId[i]);
+            }
+            else if (LanguageChange.getInstance().LanguageMode == 2){
+                Ingre.GetComponent<QuestIngre>().ingredientName.text = LanguageChange.getInstance().EnlgishPack.get(this.MyQuestIngreDiction.get(MyQuestContentsId[i]));
+            }
 
         }
         this.AddIngredientImage();
@@ -402,7 +470,12 @@ export default class QuestManager extends ZepetoScriptBehaviour {
                 this.MainQuestFoodImg.sprite = image;
             }
         });
-        this.MainQuestFoodTxt.text = imgname;
+        if (LanguageChange.getInstance().LanguageMode == 1) {
+            this.MainQuestFoodTxt.text = imgname;
+        }
+        else if (LanguageChange.getInstance().LanguageMode == 2){
+            this.MainQuestFoodTxt.text = LanguageChange.getInstance().EnlgishPack.get(imgname);
+        }
     }
 
     public SetMYQuestFoodImage(imgname: string){ //내 퀘스트 이미지 설정
@@ -411,7 +484,12 @@ export default class QuestManager extends ZepetoScriptBehaviour {
                 this.MyQuestFoodImg.sprite = image;
             }
         });
-        this.MyQuestFoodTxt.text = imgname;
+        if (LanguageChange.getInstance().LanguageMode == 1) {
+            this.MyQuestFoodTxt.text = imgname;
+        }
+        else if (LanguageChange.getInstance().LanguageMode == 2){
+            this.MyQuestFoodTxt.text = LanguageChange.getInstance().EnlgishPack.get(imgname);
+        }
     }
 
     public ClearMyQuestFoodImage(){

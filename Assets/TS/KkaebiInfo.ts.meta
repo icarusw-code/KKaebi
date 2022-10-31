@@ -21,6 +21,6 @@ ScriptedImporter:
   compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
     { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
     KkaebiInfo extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n}\r\nexports.default
-    = KkaebiInfo;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiS2thZWJpSW5mby5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIktrYWViaUluZm8udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxpREFBcUQ7QUFFckQsTUFBcUIsVUFBVyxTQUFRLHFDQUFxQjtDQUc1RDtBQUhELDZCQUdDIn0=","assetPath":"Assets/TS/KkaebiInfo.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"info","type":"System.String","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"KkaebiInfo","description":""},"isCompiled":true}'
-  typescriptHash: e4c976fe9a70dcc29cd04cea547f4e16
+    = KkaebiInfo;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiS2thZWJpSW5mby5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIktrYWViaUluZm8udHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxpREFBcUQ7QUFFckQsTUFBcUIsVUFBVyxTQUFRLHFDQUFxQjtDQUk1RDtBQUpELDZCQUlDIn0=","assetPath":"Assets/TS/KkaebiInfo.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"info","type":"System.String","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"mscorlib","name":"EnglishName","type":"System.String","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"KkaebiInfo","description":""},"isCompiled":true}'
+  typescriptHash: 66a4dc447cfac5c9f5fa17381963c568
   onlyWriteTrigger: 0

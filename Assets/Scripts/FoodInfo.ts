@@ -6,6 +6,7 @@ export default class FoodInfo extends ZepetoScriptBehaviour {
     public idArr : number[];
     public foodId: number;
     public foodname : string;
+    public foodEnlgishName: string;
     Start(){
         this.foodname = this.gameObject.name;
     }

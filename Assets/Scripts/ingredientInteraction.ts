@@ -23,6 +23,9 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
     public imageList : Sprite[];
     private color : UnityEngine.Color;
     private isingrcheck: bool = false;
+
+
+    //
     Start() {    
 
         this.content = GameObject.Find("Canvas_UI").transform.GetChild(1).GetChild(0).GetChild(0).GetChild(0).gameObject;
@@ -60,21 +63,21 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
                     this.AddIngredientImage();
                     if(QuestManager.getInstance().QuestCompleteCheck()==true){
                         if(LanguageChange.getInstance().LanguageMode == 1){ //한국어
-                            Notifications.getIns().UpLoadText(QuestManager.getInstance().QuestAcceptFoodName+"의 재료를 전부 모았다! 대왕깨비에게 가서 요리를 부탁하자");
-                        }
+                            Notifications.getIns().UpLoadText(LanguageChange.getInstance().EnlgishPack.get(QuestManager.getInstance().QuestAcceptFoodName)+"의 재료를 전부 모았다! 대왕깨비에게 가서 요리를 부탁하자");
+                        }   
                         else if(LanguageChange.getInstance().LanguageMode == 2){ //영어
-                            Notifications.getIns().UpLoadText(QuestManager.getInstance().QuestAcceptFoodName+"you've got it! go to king");
+                            Notifications.getIns().UpLoadText(LanguageChange.getInstance().EnlgishPack.get(QuestManager.getInstance().QuestAcceptFoodName)+"you've got it! go to king");
                         }
                     }
                     this.isingrcheck=true; //레시피에 해당 재료가 있는것이므로
                 }
                 else if(QuestManager.getInstance().QuestAcceptIngreIDArr[i]!=this.myID&&i==QuestManager.getInstance().QuestAcceptIngreNum-1&&this.isingrcheck==false){
                     if(LanguageChange.getInstance().LanguageMode == 1){ //한국어
-                        Notifications.getIns().UpLoadText(QuestManager.getInstance().QuestAcceptFoodName+"에 필요한 재료가 아닙니다");
+                        Notifications.getIns().UpLoadText(LanguageChange.getInstance().EnlgishPack.get(QuestManager.getInstance().QuestAcceptFoodName)+"에 필요한 재료가 아닙니다");
                     }
                     else if(LanguageChange.getInstance().LanguageMode == 2){ //영어
-                        Notifications.getIns().UpLoadText(QuestManager.getInstance().QuestAcceptFoodName+"not need");
-                    }
+                        Notifications.getIns().UpLoadText(LanguageChange.getInstance().EnlgishPack.get(QuestManager.getInstance().QuestAcceptFoodName)+"not need");
+                    } 
                     
                 }
             }
