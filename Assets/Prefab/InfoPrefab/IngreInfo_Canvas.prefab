@@ -235,7 +235,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -200}
+  m_AnchoredPosition: {x: 0, y: -220}
   m_SizeDelta: {x: 419.51, y: 127.6151}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6631076325634869852
@@ -268,7 +268,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 3164ec6ecc4258b43aa74cdc958791f4, type: 3}
-    m_FontSize: 20
+    m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -279,9 +279,17 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC790\uADF9\uC801\uC774\uACE0 \uD5A5\uAE0B\uD55C \uD5A5\uAE30\uC640 \uC9DC\uB9BF\uD55C
-    \uB9E4\uC6B4\uB9DB\uC774 \uD2B9\uC9D5\uC778 \uD5A5\uC2E0\uB8CC\uC774\uB2E4. \uB9D0\uB9B0
-    \uD6C4\uCD94 \uC5F4\uB9E4\uB97C \uAC00\uB8E8\uB85C \uB9CC\uB4E4\uC5B4\uC11C \uC0AC\uC6A9\uD55C\uB2E4."
+  m_Text: "\uC57D 70cm\uB85C \uBFCC\uB9AC \uBD80\uBD84\uC740 \uD76C\uACE0 \uC704\uB294
+    \uCD08\uB85D\uC0C9\uC758 \uC678\uB5A1\uC78E\uC2DD\uBB3C\uC774\uB2E4. \uB3D9\uC591\uC5D0\uB294
+    \uB110\uB9AC \uC7AC\uBC30\uD558\uACE0 \uC788\uC73C\uB098 \uC11C\uC591\uC5D0\uB294
+    \uAC70\uC758 \uC7AC\uBC30\uD558\uC9C0 \uC54A\uB294\uB2E4. \uC591\uD30C\uC640
+    \uAC19\uC774 \uC0DD\uC73C\uB85C \uBA39\uC744 \uB54C\uB294 \uB9E4\uC6B4\uB9DB\uC744
+    \uB0B4\uBA70, \uC8FC\uB85C \uBCF6\uAC70\uB098 \uB053\uC5EC \uB2E8\uB9DB\uACFC
+    \uD30C \uD5A5\uC744 \uB0B4\uC5B4 \uC74C\uC2DD\uC758 \uB9DB\uC744 \uB354\uD558\uB294
+    \uB370 \uC0AC\uC6A9\uB41C\uB2E4.\\n \uC11C\uC591\uC5D0\uC11C\uB294 \uD30C\uB97C
+    \uAD6C\uD558\uAE30 \uC5B4\uB835\uAE30 \uB54C\uBB38\uC5D0 \uC720\uC0AC\uD55C \uB9AC\uD06C(leek)\uB97C
+    \uC0AC\uC6A9\uD574 \uC694\uB9AC\uD558\uBA74 \uBE44\uC2B7\uD55C \uB9DB\uC744 \uB0BC
+    \uC218 \uC788\uB2E4."
 --- !u!1 &2554114959924210349
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,7 +522,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0.0015106201, y: -150}
+  m_AnchoredPosition: {x: 0.0015106201, y: -147}
   m_SizeDelta: {x: 419.51, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8661745900011899337
@@ -632,7 +640,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 90, y: 90}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3308129054054735940
 CanvasRenderer:
@@ -1319,7 +1327,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9a6c0e54880f9fb459dbfaa91d99f702, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 85514e5f5bb92d642a7519d8041788ee, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

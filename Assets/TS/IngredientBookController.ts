@@ -39,7 +39,7 @@ export default class IngredientBookController extends ZepetoScriptBehaviour {
         {
             this.ingreBtn[i].onClick.AddListener(() =>{
                 console.log("이 버튼 이름은 : " + this.ingreBtn[i].name);
-                if(PlayerPrefs.GetInt(this.ingredientList[i].GetComponent<IngredientInfo>().id.toString()) >= 1)
+                if(PlayerPrefs.GetInt(this.ingredientList[i].GetComponent<IngredientInfo>().id.toString()) >= 0)
                 {
                     // 그전꺼 지워주기
                     if(this.ingreInfo != null) GameObject.Destroy(this.ingreInfo);

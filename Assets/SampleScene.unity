@@ -2124,10 +2124,13 @@ MonoBehaviour:
   script:
     keys:
     - id
+    - EnlgishName
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - '{"type":"System.Single, mscorlib","value":"2104"}'
+    - '{"type":"System.String, mscorlib","value":""}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: f172d898e6bed9d4d911b07c9fec135b, type: 3}
@@ -8090,7 +8093,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uAC04\uC7A5"
+  m_Text: "\uD33D\uC774\uBC84\uC12F"
 --- !u!222 &300331204
 CanvasRenderer:
   m_ObjectHideFlags: 0
