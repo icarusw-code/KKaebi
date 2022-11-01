@@ -11,6 +11,8 @@ public class Option : MonoBehaviour
     public Button closeBtn;
     // 언어 선택 버튼
     public Button listBtn;
+    public Button bgImg;
+    public Button sfxImg;
 
     // 언어 버튼
     public Button korean;
@@ -32,7 +34,7 @@ public class Option : MonoBehaviour
     // 배경음 ON / OFF
     public GameObject bgON;
     public GameObject bgOFF;
-    
+
     // 효과음 ON / OFF
     public GameObject sfxON;
     public GameObject sfxOFF;
@@ -57,6 +59,8 @@ public class Option : MonoBehaviour
         option.onClick.AddListener(OptiOnClick);
         closeBtn.onClick.AddListener(CloesBtn);
         listBtn.onClick.AddListener(ListBtn);
+        bgImg.onClick.AddListener(bgImgBtn);
+        sfxImg.onClick.AddListener(sfxImgBtn);
 
         korean.onClick.AddListener(KoreanBtn);
         english.onClick.AddListener(EnglishBtn);
@@ -81,6 +85,40 @@ public class Option : MonoBehaviour
 
     }
 
+    int iCount = 0;
+    void bgImgBtn()
+    {
+        iCount++;
+
+        if(iCount == 1)
+        {
+            bgBtn.transform.position = bgOFF.transform.position;
+        }
+
+        if (iCount == 2)
+        {
+            bgBtn.transform.position = bgON.transform.position;
+            iCount = 0;
+        }
+    }
+
+    int sCount = 0;
+    void sfxImgBtn()
+    {
+        sCount++;
+
+        if (sCount == 1)
+        {
+            sfxBtn.transform.position = sfxOFF.transform.position;
+        }
+
+        if (sCount == 2)
+        {
+            sfxBtn.transform.position = sfxON.transform.position;
+            sCount = 0;
+        }
+    }
+
     // 설정 버튼 클릭 시
     void OptiOnClick()
     {
@@ -95,11 +133,13 @@ public class Option : MonoBehaviour
         optionManu.SetActive(false);
     }
 
+    int LCount = 0;
     // 언어 목록 버튼 클릭 시
     void ListBtn()
     {
         // 언어 목록 창 나오게
         list.SetActive(true);
+
     }
 
     // 배경음 ON / OFF 카운트 체크
@@ -109,14 +149,14 @@ public class Option : MonoBehaviour
         bgcount++;
 
         // 만약 카운트가 1이라면
-        if(bgcount == 1)
+        if (bgcount == 1)
         {
             // 버튼 위치를 off로
             bgBtn.transform.position = bgOFF.transform.position;
         }
 
         // 만약 카운트가 2라면
-        if(bgcount == 2)
+        if (bgcount == 2)
         {
             // 버튼 위치를 on으로
             bgBtn.transform.position = bgON.transform.position;
@@ -156,7 +196,7 @@ public class Option : MonoBehaviour
     bool isJapanese = false;
     bool isThai = false;
     bool isindonesian = false;
-    
+
     // 한국어 버튼
     void KoreanBtn()
     {
