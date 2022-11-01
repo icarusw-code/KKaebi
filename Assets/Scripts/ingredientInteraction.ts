@@ -38,6 +38,15 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
 
         this.DestroyBtn = this.btn.GetComponent<Button>(); 
         this.DestroyBtn.onClick.AddListener(() => { //먹는 버튼 누르면 먹어지는 동작
+            if(QuestManager.getInstance().isNowAccept==false){
+                if(LanguageChange.getInstance().LanguageMode == 1){ //한국어
+                    Notifications.getIns().UpLoadText("퀘스트를 맡지 않았습니다.");
+                }
+                //영어라면
+                else if(LanguageChange.getInstance().LanguageMode == 2){ //영어
+                    Notifications.getIns().UpLoadText("not quest accept");
+                }
+            }
             if(QuestManager.getInstance().GetIngreCheckDiction.get(this.myID)==true){
                 //한글이라면
                 if(LanguageChange.getInstance().LanguageMode == 1){ //한국어

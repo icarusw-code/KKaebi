@@ -6,6 +6,7 @@ import IngredientInfo from '../../TS/IngredientInfo';
 import KkaebiInfo from '../../TS/KkaebiInfo';
 import FoodInfo from '../FoodInfo';
 import QuestManager from '../QuestManager';
+import TxtEnglishName from './TxtEnglishName';
 
 export default class LanguageChange extends ZepetoScriptBehaviour {
 
@@ -25,8 +26,29 @@ export default class LanguageChange extends ZepetoScriptBehaviour {
     public BookFoodButtonObj : GameObject[];
     //깨비도감
     public BookKkaebiButtonObj : GameObject[];
+    //이미 맡은 퀘스트도 언어변경위함
+    public MyQuestContent :  GameObject;
+    //이미 맡은 퀘스트의 음식 이름 변경
+    public MyQuestFoodText: GameObject;
+    //이미 가지고있는 인벤토리
+    public InventoryContent: GameObject;
+    //NPC도 이미 띄워진 퀘스트 재료들
+    public NpcQuestContent : GameObject;
+    
+    //고정된 UI들
+    //1. 도감 메뉴 바꾸는 버튼 텍스트
+    public AllOfStaticTexts : Text[];
+    //2.깨비 도감 꺼내기 넣기 *일단 오브젝트에 들어간 스크립트는 UnsummonLang스크립트로 통일
+    //public KkaebiButtonSummonText : Text[];
+    //3. 내 퀘스트 제목, 내퀘스트 없을때 제목, 없습니다 텍스트
+
+    //4. 내퀘스트 요리중단하기
+
+    //5. NPC 퀘스트 요리하기버튼, 제목, 1성2성3성
 
 
+
+    //
     /////////////////////////////////////////////////
 
     public IngrdientBookController : GameObject;
@@ -35,15 +57,8 @@ export default class LanguageChange extends ZepetoScriptBehaviour {
     }
 
 
-    //!!!!지금 모든 스크립트에서 text변경하는 부분마다 코드 조건식으로 다 달아줄거임 == 체크 매우중요!!!!!! /
-    //제일 큰 문제 : questmanager의 퀘스트 foodname이 foodinfo스크립트에서 제공된 한글이름을 직접따옴... -> 언어별로 딕셔너리를 만들고 한글 음식 이름을 키값으로 해서 value를 쓰면 되려나? 
-
 
     //1. ingredientInteraction 스크립트의 알림창 텍스트
-    //2. questmanager 스크립트의 3성요리 만들려 할때 2성음식 없으면 띄우는 알림창 텍스트
-    //3.  questmanager 스크립트의 퀘스트 수락할때 ~의 재료를 모아오자
-    //4.  questmanager 스크립트의 퀘스트 포기할때 ~를 그만할래
-    //5.  questmanager에서 퀘스트 클릭시 재료이름들이랑 나의 퀘스트 재료이름들 부여 텍스트
 
     public LanguageMode : number; //1번: 한국어, 2번: 영어
     Start() {    
@@ -74,6 +89,9 @@ export default class LanguageChange extends ZepetoScriptBehaviour {
             this.KoreanPack.set(this.BookKkaebiButtonObj[i].name,this.BookKkaebiButtonObj[i].name);
             this.EnlgishPack.set(this.BookKkaebiButtonObj[i].name,this.BookKkaebiButtonObj[i].GetComponent<KkaebiInfo>().EnglishName);
         }
+        for(let i =0; i<this.AllOfStaticTexts.length;i++){
+            this.EnlgishPack.set(this.AllOfStaticTexts[i].gameObject.name,this.AllOfStaticTexts[i].GetComponent<TxtEnglishName>().EnglishName);
+        }
         var Koreanbtn =  GameObject.Find("Btn11").GetComponent<Button>();
         var Englishbtn =  GameObject.Find("Btn22").GetComponent<Button>();
         Koreanbtn.onClick.AddListener(()=>{
@@ -90,28 +108,60 @@ export default class LanguageChange extends ZepetoScriptBehaviour {
     //정적인 텍스트들 다른언어로 전부 교체하는 함수
     public ChangeTxtInStatics(languageType: number){
         if(languageType ==1 ){
-            for (let i = 0; i < this.BookIngreButtonObj.length; i++) { //재료도감 영어데이터 저장
+            for (let i = 0; i < this.BookIngreButtonObj.length; i++) { //재료도감 한글로 교체
                 this.BookIngreButtonObj[i].transform.GetChild(1).GetComponent<Text>().text = this.BookIngreButtonObj[i].name;
             }
-            for (let i = 0; i < this.BookFoodButtonObj.length; i++) { //음식도감 영어데이터 저장
+            for (let i = 0; i < this.BookFoodButtonObj.length; i++) { //음식도감 한글로 교체
                 this.BookFoodButtonObj[i].transform.GetChild(1).GetComponent<Text>().text =this.BookFoodButtonObj[i].name;
             }
-            for (let i = 0; i < this.BookKkaebiButtonObj.length; i++) { //깨비도감 영어데이터 저장
+            for (let i = 0; i < this.BookKkaebiButtonObj.length; i++) { //깨비도감 한글로 교체
                 this.BookKkaebiButtonObj[i].transform.GetChild(1).GetComponent<Text>().text = this.BookKkaebiButtonObj[i].name;
             }
+            for(let i=0; i<this.QMFoodButtonsObj.length;i++){ //퀘스트 음식이름 영어로 교체
+                this.QMFoodButtonsObj[i].transform.GetChild(0).GetComponent<Text>().text = this.QMFoodButtonsObj[i].name;
+            }
+            for(let i=0; i<this.InventoryContent.transform.childCount;i++){ //인벤토리에 이미 들어간 재료들 한글로 교체
+                this.InventoryContent.transform.GetChild(i).GetChild(1).GetComponent<Text>().text = this.InventoryContent.transform.GetChild(i).name;
+            }
+            for(let i=0; i<this.MyQuestContent.transform.childCount;i++){ //인벤토리에 이미 들어간 재료들 한글로 교체
+                this.MyQuestContent.transform.GetChild(i).GetChild(1).GetComponent<Text>().text = this.MyQuestContent.transform.GetChild(i).name;
+            }
+            for(let i=0; i<this.NpcQuestContent.transform.childCount;i++){ //인벤토리에 이미 들어간 재료들 한글로 교체
+                this.NpcQuestContent.transform.GetChild(i).GetChild(1).GetComponent<Text>().text = this.NpcQuestContent.transform.GetChild(i).name;
+            }
+
+            this.MyQuestFoodText.transform.GetChild(0).GetComponent<Text>().text = this.MyQuestFoodText.name; //내퀘스트 음식 이름 한글
+            for(let i =0; i<this.AllOfStaticTexts.length;i++){
+                this.AllOfStaticTexts[i].text = this.AllOfStaticTexts[i].gameObject.name;
+            }
+            
         }
         if (languageType == 2) {
-            for (let i = 0; i < this.BookIngreButtonObj.length; i++) { //재료도감 영어데이터 저장
+            for (let i = 0; i < this.BookIngreButtonObj.length; i++) { //재료도감 영어로 교체
                 this.BookIngreButtonObj[i].transform.GetChild(1).GetComponent<Text>().text = this.EnlgishPack.get(this.BookIngreButtonObj[i].name);
             }
-            for (let i = 0; i < this.BookFoodButtonObj.length; i++) { //음식도감 영어데이터 저장
+            for (let i = 0; i < this.BookFoodButtonObj.length; i++) { //음식도감 영어로 교체
                 this.BookFoodButtonObj[i].transform.GetChild(1).GetComponent<Text>().text = this.EnlgishPack.get(this.BookFoodButtonObj[i].name);
             }
-            for (let i = 0; i < this.BookKkaebiButtonObj.length; i++) { //깨비도감 영어데이터 저장
+            for (let i = 0; i < this.BookKkaebiButtonObj.length; i++) { //깨비도감 영어로 교체
                 this.BookKkaebiButtonObj[i].transform.GetChild(1).GetComponent<Text>().text = this.EnlgishPack.get(this.BookKkaebiButtonObj[i].name);
             }
-            for(let i=0; i<this.QMFoodButtonsObj.length;i++){ //퀘스트 음식이름 영어데이터 저장
+            for(let i=0; i<this.QMFoodButtonsObj.length;i++){ //퀘스트 음식이름 영어로 교체
                 this.QMFoodButtonsObj[i].transform.GetChild(0).GetComponent<Text>().text = this.EnlgishPack.get(this.QMFoodButtonsObj[i].name);
+            }
+            for(let i=0; i<this.InventoryContent.transform.childCount;i++){ //인벤토리에 이미 들어간 재료들 영어로 교체
+                this.InventoryContent.transform.GetChild(i).GetChild(1).GetComponent<Text>().text = this.EnlgishPack.get(this.InventoryContent.transform.GetChild(i).name);
+            }
+            for(let i=0; i<this.MyQuestContent.transform.childCount;i++){ //인벤토리에 이미 들어간 재료들 영어로 교체
+                this.MyQuestContent.transform.GetChild(i).GetChild(1).GetComponent<Text>().text = this.EnlgishPack.get(this.MyQuestContent.transform.GetChild(i).name);
+            }
+            for(let i=0; i<this.NpcQuestContent.transform.childCount;i++){ //인벤토리에 이미 들어간 재료들 한글로 교체
+                this.NpcQuestContent.transform.GetChild(i).GetChild(1).GetComponent<Text>().text = this.EnlgishPack.get(this.NpcQuestContent.transform.GetChild(i).name);
+            }
+
+            this.MyQuestFoodText.transform.GetChild(0).GetComponent<Text>().text = this.EnlgishPack.get(this.MyQuestFoodText.name); //내퀘스트 음식 이름 영어
+            for(let i =0; i<this.AllOfStaticTexts.length;i++){
+                this.AllOfStaticTexts[i].text = this.EnlgishPack.get(this.AllOfStaticTexts[i].gameObject.name);
             }
         }
         
@@ -120,7 +170,7 @@ export default class LanguageChange extends ZepetoScriptBehaviour {
         //인벤토리에 원래 들어있던것들이랑, 현재 맡고있는 퀘스트도 바꿔야됨
         //컨텐트에 있는 자식개수들만큼 반복문
         //그 자식들의 텍스트를 영어화/한글화
-
+        
         //정적인 모든 UI다 찾아서 한글화/영어화
     }
 }

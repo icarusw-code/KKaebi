@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: d0c2013c9f080464ca835711bb4de3d1
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass
+    TxtEnglishName extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    Start()
+    {\r\n    }\r\n}\r\nexports.default = TxtEnglishName;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVHh0RW5nbGlzaE5hbWUuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJUeHRFbmdsaXNoTmFtZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlEQUFxRDtBQUVyRCxNQUFxQixjQUFlLFNBQVEscUNBQXFCO0lBRTdELEtBQUs7SUFFTCxDQUFDO0NBRUo7QUFORCxpQ0FNQyJ9","assetPath":"Assets/Scripts/Language/TxtEnglishName.ts","manifest":{"properties":[{"assembly":"mscorlib","name":"EnglishName","type":"System.String","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"TxtEnglishName","description":""},"isCompiled":true}'
+  typescriptHash: e9b3a6d4faa4b6212ff41fc6731c1334
+  onlyWriteTrigger: 0
