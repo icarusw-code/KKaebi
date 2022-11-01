@@ -20882,6 +20882,7 @@ GameObject:
   m_Component:
   - component: {fileID: 776711151}
   - component: {fileID: 776711152}
+  - component: {fileID: 776711153}
   m_Layer: 0
   m_Name: RecipeBookManager
   m_TagString: Untagged
@@ -20925,11 +20926,17 @@ MonoBehaviour:
     - foodInfo
     - foodName
     - foodImage
+    - foodSub
+    - foodIngre
+    - foodRecipe
     unityValues:
     - {fileID: 21300000, guid: b8eae3338d61da64ebe4ed2b02f27917, type: 3}
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 7552236939986300495, guid: 23960c7868ab53d49b3574fce7b958c8, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
@@ -20940,6 +20947,9 @@ MonoBehaviour:
       UnityEngine.CoreModule\",\"isUnity\":true}"}'
     - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":25,\"type\":\"UnityEngine.Object,
       UnityEngine.CoreModule\",\"isUnity\":true}"}'
+    - 
+    - 
+    - 
     - 
     - 
     - 
@@ -20973,6 +20983,26 @@ MonoBehaviour:
     - {fileID: 8369927972756312574}
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 15606b489fb6aa24987fd57543361c29, type: 3}
+    isExpaned: 0
+--- !u!114 &776711153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776711150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys: []
+    unityValues: []
+    values: []
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 42447a1bbe344a54b9cd1e03e0e53741, type: 3}
     isExpaned: 0
 --- !u!1 &777936181
 GameObject:
@@ -41345,8 +41375,8 @@ MonoBehaviour:
     - 
     - 
     - 
-    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":193,\"length\":15,\"type\":\"UnityEngine.UI.Text,
-      UnityEngine.UI\",\"isUnity\":true}"}'
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":193,\"length\":15,\"type\":\"UnityEngine.Object,
+      UnityEngine.CoreModule\",\"isUnity\":true}"}'
     unityArrayValues:
     - {fileID: 2852348533775741438}
     - {fileID: 2852348533762442863}
