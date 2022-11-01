@@ -35579,6 +35579,7 @@ GameObject:
   - component: {fileID: 1344408516}
   - component: {fileID: 1344408518}
   - component: {fileID: 1344408519}
+  - component: {fileID: 1344408520}
   m_Layer: 0
   m_Name: UI_Manager
   m_TagString: Untagged
@@ -35675,10 +35676,36 @@ MonoBehaviour:
   script:
     keys:
     - ingredientList
+    - ingreInfoObject
+    - ingreBtn
+    - ingreName
+    - ingreImage
+    - ingreSub
+    - ingreInfo
+    - ingreInfoExtBtn
+    - ingredientImgList
     unityValues:
+    - {fileID: 0}
+    - {fileID: 7552236939986300495, guid: 5ea0ced1478435747a6d1d4a5f72c2c3, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":59,\"type\":\"UnityEngine.Object,
+      UnityEngine.CoreModule\",\"isUnity\":true}"}'
+    - 
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":59,\"length\":0,\"type\":\"UnityEngine.Object,
+      UnityEngine.CoreModule\",\"isUnity\":true}"}'
+    - 
+    - 
+    - 
+    - 
+    - 
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":59,\"length\":8,\"type\":\"UnityEngine.Object,
       UnityEngine.CoreModule\",\"isUnity\":true}"}'
     unityArrayValues:
     - {fileID: 1355591156}
@@ -35740,6 +35767,14 @@ MonoBehaviour:
     - {fileID: 1919003122}
     - {fileID: 1562534017}
     - {fileID: 709856134}
+    - {fileID: 21300000, guid: 7c9c1fe7ae3f7ba478f1324424479014, type: 3}
+    - {fileID: 21300000, guid: 70142b55f374c5a4aa824ca7bd3a0dea, type: 3}
+    - {fileID: 21300000, guid: 740145cecf614554b8cad3a92827a241, type: 3}
+    - {fileID: 21300000, guid: c866afb32f18a8e4b9e75e429f2dc948, type: 3}
+    - {fileID: 21300000, guid: c8a9c0b0c942c5c4c9617b123fd811dc, type: 3}
+    - {fileID: 21300000, guid: 8285b3c1b951ad74e89de6ac4bf444ad, type: 3}
+    - {fileID: 21300000, guid: 079a70709e8d662439c7359f55b8e9f3, type: 3}
+    - {fileID: 21300000, guid: 545910184dec1b747b65e63f3539a43f, type: 3}
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: bfe2e766c9dc4b5488e06df7928221c0, type: 3}
     isExpaned: 0
@@ -35774,6 +35809,26 @@ MonoBehaviour:
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: dbe5c8e5083a4964a9ae68326b70df80, type: 3}
+    isExpaned: 0
+--- !u!114 &1344408520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344408515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys: []
+    unityValues: []
+    values: []
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 09a7de351409b794aa87939607f9b8e8, type: 3}
     isExpaned: 0
 --- !u!114 &1347968006
 MonoBehaviour:
