@@ -482,6 +482,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         this.FoodImageList.map((image)=>{
             if(imgname==image.name){
                 this.MyQuestFoodImg.sprite = image;
+                this.MyQuestFoodImg.gameObject.name = image.name;
             }
         });
         if (LanguageChange.getInstance().LanguageMode == 1) {
