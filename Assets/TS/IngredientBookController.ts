@@ -1,4 +1,4 @@
-import { GameObject, PlayerPrefs, Sprite } from 'UnityEngine'
+import { Color, GameObject, PlayerPrefs, Sprite } from 'UnityEngine'
 import { Button, Image, Text } from 'UnityEngine.UI'
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 import IngreInfoData from '../Scripts/IngreInfoData';
@@ -33,6 +33,7 @@ export default class IngredientBookController extends ZepetoScriptBehaviour {
         // 버튼 넣어주기
         for(let i = 0; i <this.ingredientList.Length; i++){
             this.ingreBtn[i] = this.ingredientList[i].GetComponent<Button>();
+            this.IngreBookImageColor();
         }
 
         // 버튼 클릭시
@@ -96,6 +97,19 @@ export default class IngredientBookController extends ZepetoScriptBehaviour {
             d.transform.GetChild(2).GetComponent<Text>().text = PlayerPrefs.GetInt(d.GetComponent<IngredientInfo>().id.toString()).toString();
         });
 
+    }
+
+    public IngreBookImageColor(){
+        for(let i = 0; i <this.ingredientList.Length; i++){
+            //재료 먹은거 1개이상있으면
+            if(PlayerPrefs.GetInt(this.ingredientList[i].GetComponent<IngredientInfo>().id.toString())>=1){
+                let colors : Color;
+                colors = this.ingredientList[i].transform.GetChild(0).GetComponent<Image>().color;
+                colors.a = 255;
+                this.ingredientList[i].transform.GetChild(0).GetComponent<Image>().color = colors;
+                //투명도 선명하게
+            }
+        }
     }
 
 }

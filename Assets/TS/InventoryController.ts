@@ -21,10 +21,33 @@ export default class InventoryController extends ZepetoScriptBehaviour {
     {    
         this.ingredientDict = this.UIManger.GetComponent<IngredientBookController>().ingredientDict;
         //김치나 찹쌀떡을 보유했었다면 시작할때 불러올거임
-        //PlayerPrefs.SetInt("김치보유함",0);
+        if(PlayerPrefs.GetInt("김치보유함")==1){
+            var ingreFood : GameObject;
+            ingreFood = GameObject.Instantiate(this.slotFactory,this.content) as GameObject;
+            ingreFood.name = QuestManager.getInstance().myQuestFoodImgIngre[0].name;
+            if (LanguageChange.getInstance().LanguageMode == 1) { //한글
+                ingreFood.GetComponent<QuestIngre>().ingredientName.text = QuestManager.getInstance().myQuestFoodImgIngre[0].name;
+            }
+            else if (LanguageChange.getInstance().LanguageMode == 2) { //영어
+                ingreFood.GetComponent<QuestIngre>().ingredientName.text = LanguageChange.getInstance().EnlgishPack.get(QuestManager.getInstance().myQuestFoodImgIngre[0].name);
+            }
+            ingreFood.GetComponent<QuestIngre>().ingredientImage.sprite = QuestManager.getInstance().myQuestFoodImgIngre[0];
+        }
+        if(PlayerPrefs.GetInt("찹쌀떡보유함")==1){
+            var ingreFood : GameObject;
+            ingreFood = GameObject.Instantiate(this.slotFactory,this.content) as GameObject;
+            ingreFood.name = QuestManager.getInstance().myQuestFoodImgIngre[1].name;
+                if (LanguageChange.getInstance().LanguageMode == 1){ //한글
+                    ingreFood.GetComponent<QuestIngre>().ingredientName.text = QuestManager.getInstance().myQuestFoodImgIngre[1].name;
+                }
+                else if (LanguageChange.getInstance().LanguageMode == 2){ //영어
+                    ingreFood.GetComponent<QuestIngre>().ingredientName.text = LanguageChange.getInstance().EnlgishPack.get(QuestManager.getInstance().myQuestFoodImgIngre[1].name);  
+                }
+                ingreFood.GetComponent<QuestIngre>().ingredientImage.sprite = QuestManager.getInstance().myQuestFoodImgIngre[1];
+        }
         //PlayerPrefs.SetInt("찹쌀떡보유함",0);
         //위에 두줄 임시임
-
+        
     }
 
     Update()

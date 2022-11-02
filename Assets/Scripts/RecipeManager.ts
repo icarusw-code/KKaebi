@@ -91,8 +91,6 @@ export default class RecipeManager extends ZepetoScriptBehaviour {
             });
 
         }
-
-
     }
 
     public ReplaceAllRecipeImage(){
@@ -108,7 +106,11 @@ export default class RecipeManager extends ZepetoScriptBehaviour {
             console.log("음식먹은것은:"+btnObject.name+"만든횟수는:"+UnityEngine.PlayerPrefs.GetInt(btnObject.name));
             QuestManager.getInstance().FoodImageList.map((image) =>{    //퀘스트 매니저에 넣어놓은 음식 사진들리스트에서 찾는다.
                 if(btnObject.name == image.name){   //버튼이름과 이미지 이름이 맞는것을 찾아서
-                    btnObject.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = image; //자식오브젝트(음식이미지가 들어갈) 이미지에 대입한다
+                    let colortemp : UnityEngine.Color;
+                    colortemp = btnObject.transform.GetChild(0).gameObject.GetComponent<Image>().color;
+                    colortemp.a = 255;
+                    btnObject.transform.GetChild(0).gameObject.GetComponent<Image>().color = colortemp;
+                    //btnObject.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = image; //자식오브젝트(음식이미지가 들어갈) 이미지에 대입한다
                     if(UnityEngine.PlayerPrefs.GetInt(btnObject.name)==1){ //1개 먹은상태면
                         btnObject.transform.GetChild(2).gameObject.GetComponent<Image>().sprite = this.makeImage; //완성했다는 숙련도 표시(첫번째칸)
                     }

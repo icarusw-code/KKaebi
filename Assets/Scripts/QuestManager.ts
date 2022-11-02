@@ -270,14 +270,17 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         if(this.QuestAcceptFoodName=="김치"||this.QuestAcceptFoodName=="찹쌀떡"){
             UnityEngine.PlayerPrefs.SetInt(this.QuestAcceptFoodName+"보유함",1);
             var ingreFood : GameObject;
-            ingreFood = GameObject.Instantiate(this.GetComponent<InventoryController>().slotFactory, this.GetComponent<InventoryController>().content) as GameObject;
+            //지금 인벤토리에 이미 있는지 없는지부터 검사한다음에 없을때만 생성
+            if(this.GetComponent<InventoryController>().content.childCount==0){
+                ingreFood = GameObject.Instantiate(this.GetComponent<InventoryController>().slotFactory, this.GetComponent<InventoryController>().content) as GameObject;
+            }
             if(this.QuestAcceptFoodName=="김치"){
                 ingreFood.name = QuestManager.getInstance().myQuestFoodImgIngre[0].name;
                 if (LanguageChange.getInstance().LanguageMode == 1){ //한글
                     ingreFood.GetComponent<QuestIngre>().ingredientName.text = this.myQuestFoodImgIngre[0].name;
                 }
                 else if (LanguageChange.getInstance().LanguageMode == 2){ //영어
-                    ingreFood.GetComponent<QuestIngre>().ingredientName.text = LanguageChange.getInstance().EnlgishPack.get(this.myQuestFoodImgIngre[0].name); //한글화 문제
+                    ingreFood.GetComponent<QuestIngre>().ingredientName.text = LanguageChange.getInstance().EnlgishPack.get(this.myQuestFoodImgIngre[0].name); 
                 }
                 ingreFood.GetComponent<QuestIngre>().ingredientImage.sprite = QuestManager.getInstance().myQuestFoodImgIngre[0];
             }
@@ -287,7 +290,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
                     ingreFood.GetComponent<QuestIngre>().ingredientName.text = this.myQuestFoodImgIngre[1].name;
                 }
                 else if (LanguageChange.getInstance().LanguageMode == 2){ //영어
-                    ingreFood.GetComponent<QuestIngre>().ingredientName.text = LanguageChange.getInstance().EnlgishPack.get(this.myQuestFoodImgIngre[1].name); //한글화 문제
+                    ingreFood.GetComponent<QuestIngre>().ingredientName.text = LanguageChange.getInstance().EnlgishPack.get(this.myQuestFoodImgIngre[1].name);  
                 }
                 ingreFood.GetComponent<QuestIngre>().ingredientImage.sprite = QuestManager.getInstance().myQuestFoodImgIngre[1];
             }
@@ -328,11 +331,14 @@ export default class QuestManager extends ZepetoScriptBehaviour {
     public GetIngreCheck(getIngreId: number){
         //들어온 id를 ingrdientbookcontroller의 딕셔너리에서 이름으로 치환하고 나의 퀘스트 컨텐츠에서 그 이름에 맞는걸 찾으면 그 이미지에 해당하는 녀석의 자식에있는
         // 이미지 투명도 선명하게함
-        /*for(let i=0;i<this.myQuestContentTransform.childCount;i++){
+        for(let i=0;i<this.myQuestContentTransform.childCount;i++){
             if(this.myQuestContentTransform.GetChild(i).gameObject.name == this.IngrdientBookController.GetComponent<IngredientBookController>().ingredientDict.get(getIngreId)){
-                
+                let colors : UnityEngine.Color;
+                colors = this.myQuestContentTransform.GetChild(i).GetChild(0).GetComponent<Image>().color;
+                colors.a = 255;
+                this.myQuestContentTransform.GetChild(i).GetChild(0).GetComponent<Image>().color = colors;
             }
-        }*/
+        }
 
         //진행중일때만
         if(this.isNowAccept==true){
@@ -399,6 +405,11 @@ export default class QuestManager extends ZepetoScriptBehaviour {
 
             Ingre.name = this.MyQuestIngreDiction.get(QuestContentsId[i]);
 
+            let colorTemp : UnityEngine.Color;
+            colorTemp = Ingre.transform.GetChild(0).GetComponent<Image>().color;
+            colorTemp.a = 255;
+            Ingre.transform.GetChild(0).GetComponent<Image>().color = colorTemp;
+
             // 재료 이름 설정
             if (LanguageChange.getInstance().LanguageMode == 1) {
                 Ingre.GetComponent<QuestIngre>().ingredientName.text = this.MyQuestIngreDiction.get(QuestContentsId[i]); //한글화문제
@@ -446,9 +457,12 @@ export default class QuestManager extends ZepetoScriptBehaviour {
             var Ingre : GameObject;
 
             Ingre = GameObject.Instantiate(this.myQuestIngreFactory, this.myQuestContentTransform) as GameObject;
-
+            /*let colorTemp : UnityEngine.Color;
+            colorTemp = Ingre.transform.GetChild(0).GetComponent<Image>().color;
+            colorTemp.a = 60;
+            Ingre.transform.GetChild(0).GetComponent<Image>().color = colorTemp;
+            console.log("재료의 알파값:" + Ingre.transform.GetChild(0).GetComponent<Image>().color.a);*/
             Ingre.name = this.MyQuestIngreDiction.get(MyQuestContentsId[i]);
-
             // 재료 이름 설정
             if (LanguageChange.getInstance().LanguageMode == 1) {
                 Ingre.GetComponent<QuestIngre>().ingredientName.text = this.MyQuestIngreDiction.get(MyQuestContentsId[i]);

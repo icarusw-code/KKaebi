@@ -23,11 +23,10 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
     public imageList : Sprite[];
     private color : UnityEngine.Color;
     private isingrcheck: bool = false;
-
-
+    public IngredientController : GameObject;
     //
     Start() {    
-
+        this.IngredientController= GameObject.Find("UI_Manager");
         this.content = GameObject.Find("Canvas_UI").transform.GetChild(1).GetChild(0).GetChild(0).GetChild(0).gameObject;
 
         this.myID = this.gameObject.GetComponent<IngredientInfo>().id;
@@ -70,6 +69,7 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
                     
                     this.AddIngredientCount();
                     this.AddIngredientImage();
+                    this.IngredientController.GetComponent<IngredientBookController>().IngreBookImageColor();
                     if(QuestManager.getInstance().QuestCompleteCheck()==true){
                         if(LanguageChange.getInstance().LanguageMode == 1){ //한국어
                             Notifications.getIns().UpLoadText(QuestManager.getInstance().QuestAcceptFoodName+"의 재료를 전부 모았다! 대왕깨비에게 가서 요리를 부탁하자");
