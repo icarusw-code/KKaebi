@@ -328,11 +328,11 @@ export default class QuestManager extends ZepetoScriptBehaviour {
     public GetIngreCheck(getIngreId: number){
         //들어온 id를 ingrdientbookcontroller의 딕셔너리에서 이름으로 치환하고 나의 퀘스트 컨텐츠에서 그 이름에 맞는걸 찾으면 그 이미지에 해당하는 녀석의 자식에있는
         // 이미지 투명도 선명하게함
-        for(let i=0;i<this.myQuestContentTransform.childCount;i++){
+        /*for(let i=0;i<this.myQuestContentTransform.childCount;i++){
             if(this.myQuestContentTransform.GetChild(i).gameObject.name == this.IngrdientBookController.GetComponent<IngredientBookController>().ingredientDict.get(getIngreId)){
                 
             }
-        }
+        }*/
 
         //진행중일때만
         if(this.isNowAccept==true){
