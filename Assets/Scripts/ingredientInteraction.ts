@@ -40,11 +40,11 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
         this.DestroyBtn.onClick.AddListener(() => { //먹는 버튼 누르면 먹어지는 동작
             if(QuestManager.getInstance().isNowAccept==false){
                 if(LanguageChange.getInstance().LanguageMode == 1){ //한국어
-                    Notifications.getIns().UpLoadText("퀘스트를 맡지 않았습니다.");
+                    Notifications.getIns().UpLoadText("퀘스트를 맡지 않았습니다. 대왕깨비에게 가보세요!");
                 }
                 //영어라면
                 else if(LanguageChange.getInstance().LanguageMode == 2){ //영어
-                    Notifications.getIns().UpLoadText("not quest accept");
+                    Notifications.getIns().UpLoadText("You don't get the quest. Go to the King Goblin!");
                 }
             }
             if(QuestManager.getInstance().GetIngreCheckDiction.get(this.myID)==true){
@@ -54,7 +54,7 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
                 }
                 //영어라면
                 else if(LanguageChange.getInstance().LanguageMode == 2){ //영어
-                    Notifications.getIns().UpLoadText("It's already been");
+                    Notifications.getIns().UpLoadText("This ingredient has already been acquired.");
                 }
 
 
@@ -75,7 +75,7 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
                             Notifications.getIns().UpLoadText(QuestManager.getInstance().QuestAcceptFoodName+"의 재료를 전부 모았다! 대왕깨비에게 가서 요리를 부탁하자");
                         }   
                         else if(LanguageChange.getInstance().LanguageMode == 2){ //영어
-                            Notifications.getIns().UpLoadText(LanguageChange.getInstance().EnlgishPack.get(QuestManager.getInstance().QuestAcceptFoodName)+"you've got it! go to king");
+                            Notifications.getIns().UpLoadText("I collected all the ingredients of "+LanguageChange.getInstance().EnlgishPack.get(QuestManager.getInstance().QuestAcceptFoodName)+"! Let's go ask the King Goblin to cook");
                         }
                     }
                     this.isingrcheck=true; //레시피에 해당 재료가 있는것이므로
@@ -85,7 +85,7 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
                         Notifications.getIns().UpLoadText(QuestManager.getInstance().QuestAcceptFoodName+"에 필요한 재료가 아닙니다");
                     }
                     else if(LanguageChange.getInstance().LanguageMode == 2){ //영어
-                        Notifications.getIns().UpLoadText(LanguageChange.getInstance().EnlgishPack.get(QuestManager.getInstance().QuestAcceptFoodName)+"not need");
+                        Notifications.getIns().UpLoadText("Not required ingredients for "+LanguageChange.getInstance().EnlgishPack.get(QuestManager.getInstance().QuestAcceptFoodName));
                     } 
                     
                 }
@@ -140,7 +140,7 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
             // 그리고 내가 먹은거랑 이름이 같으면
             this.content.GetComponentsInChildren<Slot>().map((slot) => {
                 if(image.name == slot.gameObject.name && image.name == QuestManager.getInstance().MyQuestIngreDiction.get(this.myID)){
-                    console.log("테스트 " + slot.gameObject.name);
+                    //console.log("테스트 " + slot.gameObject.name);
                     slot.gameObject.GetComponent<Slot>().ingredientImage.sprite = image;
                 }
             })

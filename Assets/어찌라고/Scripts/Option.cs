@@ -13,6 +13,7 @@ public class Option : MonoBehaviour
     public Button listBtn;
     public Button bgImg;
     public Button sfxImg;
+    public Button listImg;
 
     // 언어 버튼
     public Button korean;
@@ -61,6 +62,7 @@ public class Option : MonoBehaviour
         listBtn.onClick.AddListener(ListBtn);
         bgImg.onClick.AddListener(bgImgBtn);
         sfxImg.onClick.AddListener(sfxImgBtn);
+        listImg.onClick.AddListener(ListBtn2);
 
         korean.onClick.AddListener(KoreanBtn);
         english.onClick.AddListener(EnglishBtn);
@@ -77,6 +79,8 @@ public class Option : MonoBehaviour
         japaneseColor = japanese.gameObject.GetComponent<Image>();
         thaiColor = thai.gameObject.GetComponent<Image>();
         indonesianColor = indonesian.gameObject.GetComponent<Image>();
+
+        listText.text = "한국어";
     }
 
     // Update is called once per frame
@@ -85,37 +89,54 @@ public class Option : MonoBehaviour
 
     }
 
-    int iCount = 0;
+
     void bgImgBtn()
     {
-        iCount++;
+        bgcount++;
 
-        if(iCount == 1)
+        if(bgcount == 1)
         {
             bgBtn.transform.position = bgOFF.transform.position;
         }
 
-        if (iCount == 2)
+        if (bgcount == 2)
         {
             bgBtn.transform.position = bgON.transform.position;
-            iCount = 0;
+            bgcount = 0;
         }
     }
 
-    int sCount = 0;
+   
     void sfxImgBtn()
     {
-        sCount++;
+        sfxcount++;
 
-        if (sCount == 1)
+        if (sfxcount == 1)
         {
             sfxBtn.transform.position = sfxOFF.transform.position;
         }
 
-        if (sCount == 2)
+        if (sfxcount == 2)
         {
             sfxBtn.transform.position = sfxON.transform.position;
-            sCount = 0;
+            sfxcount = 0;
+        }
+    }
+
+    int lcount = 0;
+    void ListBtn2()
+    {
+        lcount++;
+        if(lcount == 1)
+        {
+            // 언어 목록 창 나오게
+            list.SetActive(true);
+        }
+        
+        if(lcount == 2)
+        {
+            list.SetActive(false);
+            lcount = 0;
         }
     }
 
@@ -133,13 +154,11 @@ public class Option : MonoBehaviour
         optionManu.SetActive(false);
     }
 
-    int LCount = 0;
     // 언어 목록 버튼 클릭 시
     void ListBtn()
     {
         // 언어 목록 창 나오게
         list.SetActive(true);
-
     }
 
     // 배경음 ON / OFF 카운트 체크
@@ -219,6 +238,7 @@ public class Option : MonoBehaviour
         listText.text = "한국어";
         // 목록 창 끄기
         list.SetActive(false);
+        lcount = 0;
     }
 
     // 영어 버튼
@@ -243,6 +263,7 @@ public class Option : MonoBehaviour
         listText.text = "영어";
         // 목록 창 끄기
         list.SetActive(false);
+        lcount = 0;
 
     }
 
@@ -267,6 +288,7 @@ public class Option : MonoBehaviour
         listText.text = "일본어";
         // 목록 창 끄기
         list.SetActive(false);
+        lcount = 0;
     }
     void ThaiBtn()
     {
@@ -289,6 +311,7 @@ public class Option : MonoBehaviour
         listText.text = "태국어";
         // 목록 창 끄기
         list.SetActive(false);
+        lcount = 0;
     }
 
     void indonesianBtn()
@@ -312,6 +335,7 @@ public class Option : MonoBehaviour
         listText.text = "인도네시아어";
         // 목록 창 끄기
         list.SetActive(false);
+        lcount = 0;
     }
 
 }

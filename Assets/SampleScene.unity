@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 14474030}
   - component: {fileID: 14474029}
   m_Layer: 5
-  m_Name: "\uC5B8\uC5B4Text"
+  m_Name: "\uC5B8\uC5B4"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -491,8 +491,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -25.7, y: 17.2}
-  m_SizeDelta: {x: 250.94617, y: 163.89307}
+  m_AnchoredPosition: {x: -25, y: 20}
+  m_SizeDelta: {x: 250, y: 165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &14474029
 MonoBehaviour:
@@ -515,16 +515,16 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 53
+    m_Font: {fileID: 12800000, guid: 3164ec6ecc4258b43aa74cdc958791f4, type: 3}
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 5
     m_MaxSize: 69
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\uC5B8\uC5B4"
@@ -554,7 +554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &19647322
 RectTransform:
   m_ObjectHideFlags: 0
@@ -632,15 +632,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.66, g: 0.66, b: 0.66, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 8ad3318b7d5dbac418d3c0906df4e7e9, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1262,7 +1262,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &51083947
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1340,15 +1340,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.66, g: 0.66, b: 0.66, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 8ad3318b7d5dbac418d3c0906df4e7e9, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1612,9 +1612,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-    keys: []
-    unityValues: []
-    values: []
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Put in"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
@@ -1920,6 +1923,7 @@ GameObject:
   - component: {fileID: 61994982}
   - component: {fileID: 61994984}
   - component: {fileID: 61994983}
+  - component: {fileID: 61994985}
   m_Layer: 5
   m_Name: SummonText
   m_TagString: Untagged
@@ -1988,6 +1992,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 61994981}
   m_CullTransparentMesh: 1
+--- !u!114 &61994985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 61994981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Take out"}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
+    isExpaned: 0
 --- !u!1 &66774109
 GameObject:
   m_ObjectHideFlags: 0
@@ -2922,7 +2949,7 @@ MonoBehaviour:
     m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\uC694\uB9AC \uC7AC\uB8CC \uBAA9\uB85D"
@@ -3414,9 +3441,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-    keys: []
-    unityValues: []
-    values: []
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Put in"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
@@ -3593,9 +3623,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-    keys: []
-    unityValues: []
-    values: []
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Put in"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
@@ -6180,6 +6213,7 @@ GameObject:
   - component: {fileID: 212286357}
   - component: {fileID: 212286359}
   - component: {fileID: 212286358}
+  - component: {fileID: 212286360}
   m_Layer: 5
   m_Name: SummonText
   m_TagString: Untagged
@@ -6248,6 +6282,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212286356}
   m_CullTransparentMesh: 1
+--- !u!114 &212286360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212286356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Take out"}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
+    isExpaned: 0
 --- !u!1 &221599734
 GameObject:
   m_ObjectHideFlags: 0
@@ -7220,6 +7277,7 @@ GameObject:
   - component: {fileID: 271284893}
   - component: {fileID: 271284895}
   - component: {fileID: 271284894}
+  - component: {fileID: 271284896}
   m_Layer: 5
   m_Name: "\uC5B8\uC5B4Box"
   m_TagString: Untagged
@@ -7246,8 +7304,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18.4, y: 17.8}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 11, y: 21}
+  m_SizeDelta: {x: 120, y: 75.775}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &271284894
 MonoBehaviour:
@@ -7262,14 +7320,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6981132, g: 0.6981132, b: 0.6981132, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 4bd8562adbb50c14fa8a8657c57c2088, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7287,6 +7345,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 271284892}
   m_CullTransparentMesh: 1
+--- !u!114 &271284896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271284892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 271284894}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &271760928
 GameObject:
   m_ObjectHideFlags: 0
@@ -10293,7 +10395,7 @@ GameObject:
   - component: {fileID: 385340688}
   - component: {fileID: 385340687}
   m_Layer: 5
-  m_Name: "\uBC30\uACBD\uC74CText"
+  m_Name: "\uBC30\uACBD\uC74C"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10315,7 +10417,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -25.7, y: -2.8}
+  m_AnchoredPosition: {x: -25, y: 5}
   m_SizeDelta: {x: 281.2616, y: 161.36676}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &385340687
@@ -10339,16 +10441,16 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 53
+    m_Font: {fileID: 12800000, guid: 3164ec6ecc4258b43aa74cdc958791f4, type: 3}
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 5
     m_MaxSize: 69
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\uBC30\uACBD\uC74C"
@@ -10942,9 +11044,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-    keys: []
-    unityValues: []
-    values: []
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Put in"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
@@ -12189,12 +12294,12 @@ GameObject:
   - component: {fileID: 455600403}
   - component: {fileID: 455600402}
   m_Layer: 5
-  m_Name: OptionMenuI_UI
+  m_Name: OptionMenu_UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &455600401
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12204,7 +12309,7 @@ RectTransform:
   m_GameObject: {fileID: 455600400}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6.9824643, y: 3.8791468, z: 3.26665}
+  m_LocalScale: {x: 5.1819596, y: 3, z: 3}
   m_Children:
   - {fileID: 1071797177}
   - {fileID: 14474028}
@@ -12218,8 +12323,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -24}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 10.906, y: 30}
+  m_SizeDelta: {x: 92.279, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &455600402
 MonoBehaviour:
@@ -12241,7 +12346,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: f3fc60e7b5c5ff645b761ea99f010fee, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12702,8 +12807,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -26, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -3, y: 0}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &477847537
 GameObject:
@@ -13110,9 +13215,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-    keys: []
-    unityValues: []
-    values: []
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Put in"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
@@ -14693,9 +14801,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-    keys: []
-    unityValues: []
-    values: []
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Put in"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
@@ -15701,7 +15812,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &572246205
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15779,15 +15890,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.66, g: 0.66, b: 0.66, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 8ad3318b7d5dbac418d3c0906df4e7e9, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -16635,9 +16746,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-    keys: []
-    unityValues: []
-    values: []
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Put in"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
@@ -17265,6 +17379,7 @@ GameObject:
   - component: {fileID: 638670723}
   - component: {fileID: 638670725}
   - component: {fileID: 638670724}
+  - component: {fileID: 638670726}
   m_Layer: 5
   m_Name: SummonText
   m_TagString: Untagged
@@ -17333,6 +17448,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 638670722}
   m_CullTransparentMesh: 1
+--- !u!114 &638670726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638670722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Take out"}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
+    isExpaned: 0
 --- !u!1 &642555336
 GameObject:
   m_ObjectHideFlags: 0
@@ -17426,9 +17564,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-    keys: []
-    unityValues: []
-    values: []
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Put in"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
@@ -18111,9 +18252,9 @@ RectTransform:
   m_Father: {fileID: 271284893}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 39.00003, y: 0.000030517578}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -15, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &669971601
@@ -18902,6 +19043,7 @@ GameObject:
   - component: {fileID: 700331463}
   - component: {fileID: 700331465}
   - component: {fileID: 700331464}
+  - component: {fileID: 700331466}
   m_Layer: 5
   m_Name: SummonText
   m_TagString: Untagged
@@ -18970,6 +19112,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 700331462}
   m_CullTransparentMesh: 1
+--- !u!114 &700331466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700331462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Take out"}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
+    isExpaned: 0
 --- !u!114 &702043365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19948,9 +20113,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-    keys: []
-    unityValues: []
-    values: []
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Put in"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
@@ -20217,9 +20385,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-    keys: []
-    unityValues: []
-    values: []
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Put in"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
@@ -21137,6 +21308,7 @@ GameObject:
   - component: {fileID: 762618011}
   - component: {fileID: 762618013}
   - component: {fileID: 762618012}
+  - component: {fileID: 762618014}
   m_Layer: 5
   m_Name: SummonText
   m_TagString: Untagged
@@ -21205,6 +21377,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 762618010}
   m_CullTransparentMesh: 1
+--- !u!114 &762618014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762618010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Take out"}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
+    isExpaned: 0
 --- !u!1 &763055916
 GameObject:
   m_ObjectHideFlags: 0
@@ -21370,6 +21565,7 @@ GameObject:
   - component: {fileID: 764488697}
   - component: {fileID: 764488699}
   - component: {fileID: 764488698}
+  - component: {fileID: 764488700}
   m_Layer: 5
   m_Name: SummonText
   m_TagString: Untagged
@@ -21438,6 +21634,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764488696}
   m_CullTransparentMesh: 1
+--- !u!114 &764488700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764488696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Take out"}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
+    isExpaned: 0
 --- !u!1 &765021665
 GameObject:
   m_ObjectHideFlags: 0
@@ -21680,6 +21899,7 @@ GameObject:
   - component: {fileID: 766956251}
   - component: {fileID: 766956253}
   - component: {fileID: 766956252}
+  - component: {fileID: 766956254}
   m_Layer: 5
   m_Name: SummonText
   m_TagString: Untagged
@@ -21748,6 +21968,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 766956250}
   m_CullTransparentMesh: 1
+--- !u!114 &766956254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766956250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Take out"}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
+    isExpaned: 0
 --- !u!1 &767311422
 GameObject:
   m_ObjectHideFlags: 0
@@ -21930,6 +22173,7 @@ GameObject:
   - component: {fileID: 775880794}
   - component: {fileID: 775880796}
   - component: {fileID: 775880795}
+  - component: {fileID: 775880797}
   m_Layer: 5
   m_Name: SummonText
   m_TagString: Untagged
@@ -21998,6 +22242,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 775880793}
   m_CullTransparentMesh: 1
+--- !u!114 &775880797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775880793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Take out"}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
+    isExpaned: 0
 --- !u!1 &776711150
 GameObject:
   m_ObjectHideFlags: 0
@@ -22344,7 +22611,7 @@ RectTransform:
   m_GameObject: {fileID: 792760498}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.025, y: 3.3157, z: 3.3157}
+  m_LocalScale: {x: 3.025, y: 3, z: 3.3157}
   m_Children:
   - {fileID: 935863821}
   m_Father: {fileID: 1652859075}
@@ -22352,8 +22619,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 262, y: 41}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 263, y: 62.993}
+  m_SizeDelta: {x: 193, y: 36.005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &792760500
 MonoBehaviour:
@@ -22412,15 +22679,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.66, g: 0.66, b: 0.66, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: a7e15f15e29a9144ab13d8c01b1ea9d5, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -23076,6 +23343,7 @@ GameObject:
   - component: {fileID: 814417883}
   - component: {fileID: 814417885}
   - component: {fileID: 814417884}
+  - component: {fileID: 814417886}
   m_Layer: 5
   m_Name: SummonText
   m_TagString: Untagged
@@ -23144,6 +23412,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 814417882}
   m_CullTransparentMesh: 1
+--- !u!114 &814417886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814417882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Take out"}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
+    isExpaned: 0
 --- !u!222 &815679265
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -23316,9 +23607,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-    keys: []
-    unityValues: []
-    values: []
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Put in"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
@@ -23455,6 +23749,7 @@ GameObject:
   - component: {fileID: 861102539}
   - component: {fileID: 861102541}
   - component: {fileID: 861102540}
+  - component: {fileID: 861102542}
   m_Layer: 5
   m_Name: SummonText
   m_TagString: Untagged
@@ -23523,6 +23818,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 861102538}
   m_CullTransparentMesh: 1
+--- !u!114 &861102542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 861102538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Take out"}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
+    isExpaned: 0
 --- !u!1 &865217339
 GameObject:
   m_ObjectHideFlags: 0
@@ -23827,7 +24145,7 @@ RectTransform:
   m_GameObject: {fileID: 872508006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.025, y: 3.3157, z: 3.3157}
+  m_LocalScale: {x: 3.025, y: 3, z: 3.3157}
   m_Children:
   - {fileID: 1210254839}
   m_Father: {fileID: 1652859075}
@@ -23835,8 +24153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 262, y: -52.000057}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 260, y: -21}
+  m_SizeDelta: {x: 190, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &872508008
 MonoBehaviour:
@@ -23851,15 +24169,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.66, g: 0.66, b: 0.66, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 4bd8562adbb50c14fa8a8657c57c2088, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -24013,9 +24331,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-    keys: []
-    unityValues: []
-    values: []
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Put in"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
@@ -24531,6 +24852,7 @@ GameObject:
   - component: {fileID: 892998444}
   - component: {fileID: 892998446}
   - component: {fileID: 892998445}
+  - component: {fileID: 892998447}
   m_Layer: 5
   m_Name: SummonText
   m_TagString: Untagged
@@ -24599,6 +24921,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892998443}
   m_CullTransparentMesh: 1
+--- !u!114 &892998447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892998443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Take out"}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
+    isExpaned: 0
 --- !u!1 &912131837
 GameObject:
   m_ObjectHideFlags: 0
@@ -25184,8 +25529,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -36, y: 0.1}
-  m_SizeDelta: {x: 281.2616, y: 161.36676}
+  m_AnchoredPosition: {x: -0.000008061528, y: 0.0000011920929}
+  m_SizeDelta: {x: 526.1937, y: 91.7772}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &935863822
 MonoBehaviour:
@@ -25208,7 +25553,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 3164ec6ecc4258b43aa74cdc958791f4, type: 3}
     m_FontSize: 53
     m_FontStyle: 0
     m_BestFit: 0
@@ -26512,7 +26857,7 @@ RectTransform:
   m_GameObject: {fileID: 981338587}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2455572, y: 0.20678501, z: 0.20678501}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2128225805}
   - {fileID: 1364852351}
@@ -26522,8 +26867,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18, y: -1.5}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 25, y: 5}
+  m_SizeDelta: {x: 15, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &981338589
 MonoBehaviour:
@@ -26545,7 +26890,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 847a1a19637d97149b63f71d7c2799cc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 84cbdf5b048db754cb7e88b79e699802, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -26700,9 +27045,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-    keys: []
-    unityValues: []
-    values: []
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Put in"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
@@ -26797,6 +27145,7 @@ GameObject:
   - component: {fileID: 1003119397}
   - component: {fileID: 1003119399}
   - component: {fileID: 1003119398}
+  - component: {fileID: 1003119400}
   m_Layer: 5
   m_Name: SummonText
   m_TagString: Untagged
@@ -26865,6 +27214,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1003119396}
   m_CullTransparentMesh: 1
+--- !u!114 &1003119400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1003119396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Take out"}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
+    isExpaned: 0
 --- !u!1 &1009409453
 GameObject:
   m_ObjectHideFlags: 0
@@ -29984,6 +30356,7 @@ GameObject:
   - component: {fileID: 1117561418}
   - component: {fileID: 1117561420}
   - component: {fileID: 1117561419}
+  - component: {fileID: 1117561421}
   m_Layer: 5
   m_Name: SummonText
   m_TagString: Untagged
@@ -30052,6 +30425,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1117561417}
   m_CullTransparentMesh: 1
+--- !u!114 &1117561421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117561417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Take out"}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
+    isExpaned: 0
 --- !u!1 &1119487227
 GameObject:
   m_ObjectHideFlags: 0
@@ -31063,6 +31459,7 @@ GameObject:
   - component: {fileID: 1174950073}
   - component: {fileID: 1174950075}
   - component: {fileID: 1174950074}
+  - component: {fileID: 1174950076}
   m_Layer: 5
   m_Name: SummonText
   m_TagString: Untagged
@@ -31131,6 +31528,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1174950072}
   m_CullTransparentMesh: 1
+--- !u!114 &1174950076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174950072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Take out"}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
+    isExpaned: 0
 --- !u!1 &1176052007
 GameObject:
   m_ObjectHideFlags: 0
@@ -31521,6 +31941,7 @@ GameObject:
   - component: {fileID: 1183510011}
   - component: {fileID: 1183510013}
   - component: {fileID: 1183510012}
+  - component: {fileID: 1183510014}
   m_Layer: 5
   m_Name: SummonText
   m_TagString: Untagged
@@ -31589,6 +32010,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1183510010}
   m_CullTransparentMesh: 1
+--- !u!114 &1183510014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183510010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Take out"}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
+    isExpaned: 0
 --- !u!1 &1183933299
 GameObject:
   m_ObjectHideFlags: 0
@@ -32692,8 +33136,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -45, y: 0.1}
-  m_SizeDelta: {x: 281.2616, y: 161.36676}
+  m_AnchoredPosition: {x: 0.6126, y: 0.00006723404}
+  m_SizeDelta: {x: 518.1486, y: 99.471}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1210254840
 MonoBehaviour:
@@ -32716,7 +33160,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 3164ec6ecc4258b43aa74cdc958791f4, type: 3}
     m_FontSize: 53
     m_FontStyle: 0
     m_BestFit: 0
@@ -33085,6 +33529,7 @@ GameObject:
   - component: {fileID: 1226976852}
   - component: {fileID: 1226976854}
   - component: {fileID: 1226976853}
+  - component: {fileID: 1226976855}
   m_Layer: 5
   m_Name: SummonText
   m_TagString: Untagged
@@ -33153,6 +33598,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226976851}
   m_CullTransparentMesh: 1
+--- !u!114 &1226976855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1226976851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Take out"}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
+    isExpaned: 0
 --- !u!1 &1230031915
 GameObject:
   m_ObjectHideFlags: 0
@@ -34822,9 +35290,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-    keys: []
-    unityValues: []
-    values: []
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Put in"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
@@ -35001,9 +35472,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-    keys: []
-    unityValues: []
-    values: []
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Put in"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
@@ -36294,8 +36768,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 23.3, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 4, y: 0}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1368862656
 GameObject:
@@ -36504,6 +36978,7 @@ GameObject:
   - component: {fileID: 1371377519}
   - component: {fileID: 1371377521}
   - component: {fileID: 1371377520}
+  - component: {fileID: 1371377522}
   m_Layer: 5
   m_Name: SummonText
   m_TagString: Untagged
@@ -36572,6 +37047,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371377518}
   m_CullTransparentMesh: 1
+--- !u!114 &1371377522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371377518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Take out"}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
+    isExpaned: 0
 --- !u!1 &1378582729
 GameObject:
   m_ObjectHideFlags: 0
@@ -37717,6 +38215,7 @@ GameObject:
   - component: {fileID: 1411467364}
   - component: {fileID: 1411467366}
   - component: {fileID: 1411467365}
+  - component: {fileID: 1411467367}
   m_Layer: 5
   m_Name: SummonText
   m_TagString: Untagged
@@ -37785,6 +38284,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1411467363}
   m_CullTransparentMesh: 1
+--- !u!114 &1411467367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411467363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Take out"}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
+    isExpaned: 0
 --- !u!1 &1414078030
 GameObject:
   m_ObjectHideFlags: 0
@@ -38036,9 +38558,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-    keys: []
-    unityValues: []
-    values: []
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Put in"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
@@ -38948,9 +39473,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-    keys: []
-    unityValues: []
-    values: []
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Put in"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
@@ -39048,9 +39576,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-    keys: []
-    unityValues: []
-    values: []
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Put in"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
@@ -41907,9 +42438,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-    keys: []
-    unityValues: []
-    values: []
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Put in"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
@@ -42536,9 +43070,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-    keys: []
-    unityValues: []
-    values: []
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Put in"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
@@ -42774,8 +43311,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -25.2, y: 0.64666367}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -3, y: 0}
+  m_SizeDelta: {x: 20, y: 4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1579022842
 MonoBehaviour:
@@ -42841,7 +43378,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: a0e8baff9de1be146a0e5e3d8e9d36a2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -43102,9 +43639,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-    keys: []
-    unityValues: []
-    values: []
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Put in"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
@@ -43811,9 +44351,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-    keys: []
-    unityValues: []
-    values: []
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Put in"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
@@ -43950,6 +44493,7 @@ GameObject:
   - component: {fileID: 1613762252}
   - component: {fileID: 1613762254}
   - component: {fileID: 1613762253}
+  - component: {fileID: 1613762255}
   m_Layer: 5
   m_Name: SummonText
   m_TagString: Untagged
@@ -44018,6 +44562,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1613762251}
   m_CullTransparentMesh: 1
+--- !u!114 &1613762255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613762251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Take out"}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
+    isExpaned: 0
 --- !u!1 &1624480489
 GameObject:
   m_ObjectHideFlags: 0
@@ -44486,9 +45053,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-    keys: []
-    unityValues: []
-    values: []
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Put in"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
@@ -44850,9 +45420,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-    keys: []
-    unityValues: []
-    values: []
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Put in"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
@@ -45025,9 +45598,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script:
-    keys: []
-    unityValues: []
-    values: []
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Put in"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
@@ -46101,6 +46677,7 @@ GameObject:
   - component: {fileID: 1730937451}
   - component: {fileID: 1730937453}
   - component: {fileID: 1730937452}
+  - component: {fileID: 1730937454}
   m_Layer: 5
   m_Name: SummonText
   m_TagString: Untagged
@@ -46169,6 +46746,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1730937450}
   m_CullTransparentMesh: 1
+--- !u!114 &1730937454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730937450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Take out"}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
+    isExpaned: 0
 --- !u!1 &1735363069
 GameObject:
   m_ObjectHideFlags: 0
@@ -46180,6 +46780,7 @@ GameObject:
   - component: {fileID: 1735363070}
   - component: {fileID: 1735363072}
   - component: {fileID: 1735363071}
+  - component: {fileID: 1735363073}
   m_Layer: 5
   m_Name: SummonText
   m_TagString: Untagged
@@ -46248,6 +46849,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1735363069}
   m_CullTransparentMesh: 1
+--- !u!114 &1735363073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735363069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Take out"}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
+    isExpaned: 0
 --- !u!1 &1738208567
 GameObject:
   m_ObjectHideFlags: 0
@@ -46791,8 +47415,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -25.2, y: 0.64666367}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -3, y: 0}
+  m_SizeDelta: {x: 20, y: 4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1754994598
 MonoBehaviour:
@@ -46814,7 +47438,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: a0e8baff9de1be146a0e5e3d8e9d36a2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -48376,6 +49000,7 @@ GameObject:
   - component: {fileID: 1842562616}
   - component: {fileID: 1842562618}
   - component: {fileID: 1842562617}
+  - component: {fileID: 1842562619}
   m_Layer: 5
   m_Name: SummonText
   m_TagString: Untagged
@@ -48444,6 +49069,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1842562615}
   m_CullTransparentMesh: 1
+--- !u!114 &1842562619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842562615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Take out"}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
+    isExpaned: 0
 --- !u!224 &1843440997
 RectTransform:
   m_ObjectHideFlags: 0
@@ -49001,6 +49649,7 @@ GameObject:
   - component: {fileID: 1870432171}
   - component: {fileID: 1870432173}
   - component: {fileID: 1870432172}
+  - component: {fileID: 1870432174}
   m_Layer: 5
   m_Name: SummonText
   m_TagString: Untagged
@@ -49069,6 +49718,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1870432170}
   m_CullTransparentMesh: 1
+--- !u!114 &1870432174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870432170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Take out"}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
+    isExpaned: 0
 --- !u!1 &1875103814
 GameObject:
   m_ObjectHideFlags: 0
@@ -49372,7 +50044,7 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 1
+    m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "\uD604\uC7AC \uC694\uB9AC\uC5D0 \uBD88\uD544\uC694\uD55C \uC7AC\uB8CC\uC785\uB2C8\uB2E4."
@@ -50395,7 +51067,7 @@ GameObject:
   - component: {fileID: 1925018422}
   - component: {fileID: 1925018421}
   m_Layer: 5
-  m_Name: "\uD6A8\uACFC\uC74CText"
+  m_Name: "\uD6A8\uACFC\uC74C"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50417,7 +51089,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -25.7, y: -23.1}
+  m_AnchoredPosition: {x: -25, y: -12}
   m_SizeDelta: {x: 281.2616, y: 161.36676}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1925018421
@@ -50441,16 +51113,16 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 53
+    m_Font: {fileID: 12800000, guid: 3164ec6ecc4258b43aa74cdc958791f4, type: 3}
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 5
     m_MaxSize: 69
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\uD6A8\uACFC\uC74C"
@@ -50723,7 +51395,7 @@ RectTransform:
   m_GameObject: {fileID: 1945389951}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2455572, y: 0.20678501, z: 0.20678501}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 477579624}
   - {fileID: 1989139059}
@@ -50733,8 +51405,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18, y: -21.9}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 25, y: -12}
+  m_SizeDelta: {x: 15, y: 15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1945389953
 MonoBehaviour:
@@ -50756,7 +51428,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 847a1a19637d97149b63f71d7c2799cc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 84cbdf5b048db754cb7e88b79e699802, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -51604,6 +52276,7 @@ GameObject:
   - component: {fileID: 1983643930}
   - component: {fileID: 1983643932}
   - component: {fileID: 1983643931}
+  - component: {fileID: 1983643933}
   m_Layer: 5
   m_Name: SummonText
   m_TagString: Untagged
@@ -51672,6 +52345,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1983643929}
   m_CullTransparentMesh: 1
+--- !u!114 &1983643933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983643929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Take out"}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
+    isExpaned: 0
 --- !u!1 &1984844408
 GameObject:
   m_ObjectHideFlags: 0
@@ -51859,8 +52555,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 23.3, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 4, y: 0}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1991769324
 GameObject:
@@ -52839,7 +53535,7 @@ GameObject:
   - component: {fileID: 2076553308}
   - component: {fileID: 2076553309}
   m_Layer: 0
-  m_Name: SettingManager
+  m_Name: OptionManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52876,6 +53572,7 @@ MonoBehaviour:
   listBtn: {fileID: 669971601}
   bgImg: {fileID: 981338591}
   sfxImg: {fileID: 1945389955}
+  listImg: {fileID: 271284896}
   korean: {fileID: 792760500}
   english: {fileID: 872508010}
   japanese: {fileID: 51083948}
@@ -53912,7 +54609,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 3164ec6ecc4258b43aa74cdc958791f4, type: 3}
     m_FontSize: 53
     m_FontStyle: 0
     m_BestFit: 0
@@ -54023,6 +54720,7 @@ GameObject:
   - component: {fileID: 2118060680}
   - component: {fileID: 2118060682}
   - component: {fileID: 2118060681}
+  - component: {fileID: 2118060683}
   m_Layer: 5
   m_Name: SummonText
   m_TagString: Untagged
@@ -54091,6 +54789,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2118060679}
   m_CullTransparentMesh: 1
+--- !u!114 &2118060683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118060679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":"Take out"}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
+    isExpaned: 0
 --- !u!1 &2120295684
 GameObject:
   m_ObjectHideFlags: 0
@@ -54486,8 +55207,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -26, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -3, y: 0}
+  m_SizeDelta: {x: 5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2135332001
 GameObject:

@@ -92,7 +92,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         //버튼 이벤트
         for(let i=0; i<this.btns.Length;i++){
             this.btns[i].onClick.AddListener(() => { //버튼 누를때 마다 해당 음식에 따른 재료 아이디 퀘스트매니저 함수에 전송 (두번째 인자는 재료 종류수)
-                console.log("현재 누르고있는 버튼 이름:"+ this.btns[i]);
+                //console.log("현재 누르고있는 버튼 이름:"+ this.btns[i]);
                 //this.acceptBtn.gameObject.SetActive(true);
                 this.LeftPanel.SetActive(true);
                 //누를때마다 이미지 황금색테두리로 바꿈
@@ -105,18 +105,18 @@ export default class QuestManager extends ZepetoScriptBehaviour {
             });
         }
         this.acceptBtn.onClick.AddListener(()=>{
-            console.log("수락완료");
+            //console.log("수락완료");
             this.QuestAccept();
             this.playerController = ZepetoPlayers.instance.transform.GetChild(4).gameObject;
             this.playerController.SetActive(true);
         });
         this.giveUpBtn.onClick.AddListener(()=>{
-            console.log("퀘스트 포기");
+            //console.log("퀘스트 포기");
             this.QuestGiveUp();
         });
 
         this.myQuestBtn.onClick.AddListener(()=>{
-            console.log("내 퀘스트 열기");
+            //console.log("내 퀘스트 열기");
             this.myQuestUI.SetActive(true);
             this.playerController = ZepetoPlayers.instance.transform.GetChild(4).gameObject;
             this.playerController.SetActive(false);
@@ -130,7 +130,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
             }
         });
         this.MyQuestExitBtn.onClick.AddListener(()=>{
-            console.log("내 퀘스트 끄기");
+            //console.log("내 퀘스트 끄기");
             this.myQuestUI.SetActive(false);
             this.playerController = ZepetoPlayers.instance.transform.GetChild(4).gameObject;
             this.playerController.SetActive(true);
@@ -171,7 +171,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
                     this.NotificationUI.GetComponent<Notifications>().UpLoadText("찹쌀떡을 요리할 수 있어야 팥빙수 요리법을 알 수 있습니다.");
                 }
                 else if(LanguageChange.getInstance().LanguageMode==2){
-                    this.NotificationUI.GetComponent<Notifications>().UpLoadText("blah blah blah blah blah1");
+                    this.NotificationUI.GetComponent<Notifications>().UpLoadText("You can make when you knows how to cook stikcy rice cake");
                 }
                 return;
             }
@@ -183,7 +183,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
                         this.NotificationUI.GetComponent<Notifications>().UpLoadText("김치를 요리할 수 있어야 부대찌개 요리법을 알 수 있습니다.");
                     }
                     else if(LanguageChange.getInstance().LanguageMode==2){
-                        this.NotificationUI.GetComponent<Notifications>().UpLoadText("blah blah blah blah blah1");
+                        this.NotificationUI.GetComponent<Notifications>().UpLoadText("You can make when you knows how to cook Kimchi");
                     }
                 }
                 if(this.QuestFoodName=="붕어찜"){
@@ -191,7 +191,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
                         this.NotificationUI.GetComponent<Notifications>().UpLoadText("김치를 요리할 수 있어야 붕어찜 요리법을 알 수 있습니다.");
                     }
                     else if(LanguageChange.getInstance().LanguageMode==2){
-                        this.NotificationUI.GetComponent<Notifications>().UpLoadText("blah blah blah blah blah1");
+                        this.NotificationUI.GetComponent<Notifications>().UpLoadText("You can make when you knows how to cook Kimchi");
                     }
                 }
                 return;
@@ -220,7 +220,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
             this.NotificationUI.GetComponent<Notifications>().UpLoadText(this.QuestAcceptFoodName + "의 재료를 모아오자");
         }
         else if (LanguageChange.getInstance().LanguageMode == 2) {
-            this.NotificationUI.GetComponent<Notifications>().UpLoadText(LanguageChange.getInstance().EnlgishPack.get(this.QuestAcceptFoodName) + "let's get ingre");
+            this.NotificationUI.GetComponent<Notifications>().UpLoadText("Let's collect "+LanguageChange.getInstance().EnlgishPack.get(this.QuestAcceptFoodName) + "'s ingredients");
         }
     }
 
@@ -250,7 +250,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
             this.NotificationUI.GetComponent<Notifications>().UpLoadText(this.QuestAcceptFoodName + "요리를 그만 할래");
         }
         else if (LanguageChange.getInstance().LanguageMode == 2) {
-            this.NotificationUI.GetComponent<Notifications>().UpLoadText(LanguageChange.getInstance().EnlgishPack.get(this.QuestAcceptFoodName) + "stop yori");
+            this.NotificationUI.GetComponent<Notifications>().UpLoadText("Stop cooking"+LanguageChange.getInstance().EnlgishPack.get(this.QuestAcceptFoodName));
         }
     }
 
@@ -502,10 +502,10 @@ export default class QuestManager extends ZepetoScriptBehaviour {
 
     public ClearMyQuest()
     {
-        console.log("맡은 퀘스트 재료들 삭제실행");
+        //console.log("맡은 퀘스트 재료들 삭제실행");
         for(let i = 0; i < this.myQuestContentTransform.childCount; i++)
         {
-            console.log("퀘스트 재료 삭제중 " + this.myQuestContentTransform.GetComponentsInChildren<QuestIngre>()[i]);
+            //console.log("퀘스트 재료 삭제중 " + this.myQuestContentTransform.GetComponentsInChildren<QuestIngre>()[i]);
             GameObject.Destroy(this.myQuestContentTransform.GetComponentsInChildren<QuestIngre>()[i].gameObject);
         }
     }
@@ -534,7 +534,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
             // 이미지의 이름이 content 자식 이름이랑 같으면
             this.myQuestContentTransform.GetComponentsInChildren<QuestIngre>().map((ing) => {
                 if(image.name == ing.gameObject.name){
-                    console.log("테스트 " + ing.gameObject.name);
+                    //console.log("테스트 " + ing.gameObject.name);
                     ing.gameObject.GetComponent<QuestIngre>().ingredientImage.sprite = image;
                 }
             })
