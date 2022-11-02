@@ -69,7 +69,7 @@ export default class IngredientBookController extends ZepetoScriptBehaviour {
                     else if(LanguageChange.getInstance().LanguageMode == 2){                       
                          // 재료 이름 넣기
                         this.ingreName = this.ingreInfo.transform.GetChild(0).GetChild(0).GetChild(2).GetComponentsInChildren<Text>()[0];
-                        this.ingreName.text = "Name : " + IngreInfoData.getInstance().ingreDetailInfo_EN.get(LanguageChange.getInstance().EnlgishPack.get(this.ingreBtn[i].name));
+                        this.ingreName.text = "Name : " + LanguageChange.getInstance().EnlgishPack.get(this.ingreBtn[i].name);
                         // 재료 설명 넣기
                         this.ingreSub = this.ingreInfo.transform.GetChild(0).GetChild(0).GetChild(2).GetComponentsInChildren<Text>()[1];
                         this.ingreSub.text = IngreInfoData.getInstance().ingreDetailInfo_EN.get(LanguageChange.getInstance().EnlgishPack.get(this.ingreBtn[i].name))[0];
