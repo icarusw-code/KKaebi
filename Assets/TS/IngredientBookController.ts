@@ -2,6 +2,7 @@ import { GameObject, PlayerPrefs, Sprite } from 'UnityEngine'
 import { Button, Image, Text } from 'UnityEngine.UI'
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 import IngreInfoData from '../Scripts/IngreInfoData';
+import LanguageChange from '../Scripts/Language/LanguageChange';
 import IngredientInfo from './IngredientInfo';
 
 export default class IngredientBookController extends ZepetoScriptBehaviour {
@@ -39,7 +40,7 @@ export default class IngredientBookController extends ZepetoScriptBehaviour {
         {
             this.ingreBtn[i].onClick.AddListener(() =>{
                 console.log("이 버튼 이름은 : " + this.ingreBtn[i].name);
-                if(PlayerPrefs.GetInt(this.ingredientList[i].GetComponent<IngredientInfo>().id.toString()) >= 0)
+                if(PlayerPrefs.GetInt(this.ingredientList[i].GetComponent<IngredientInfo>().id.toString()) >= 1)
                 {
                     // 그전꺼 지워주기
                     if(this.ingreInfo != null) GameObject.Destroy(this.ingreInfo);
@@ -57,12 +58,23 @@ export default class IngredientBookController extends ZepetoScriptBehaviour {
                         }
                     });
 
-                    // 재료 이름 넣기
-                    this.ingreName = this.ingreInfo.transform.GetChild(0).GetChild(0).GetChild(2).GetComponentsInChildren<Text>()[0];
-                    this.ingreName.text = "이름 : " + this.ingreBtn[i].name;
-                    // 재료 설명 넣기
-                    this.ingreSub = this.ingreInfo.transform.GetChild(0).GetChild(0).GetChild(2).GetComponentsInChildren<Text>()[1];
-                    this.ingreSub.text = IngreInfoData.getInstance().ingreDetailInfo.get(this.ingreBtn[i].name)[0];
+                    if(LanguageChange.getInstance().LanguageMode == 1){
+                        // 재료 이름 넣기
+                        this.ingreName = this.ingreInfo.transform.GetChild(0).GetChild(0).GetChild(2).GetComponentsInChildren<Text>()[0];
+                        this.ingreName.text = "이름 : " + this.ingreBtn[i].name;
+                        // 재료 설명 넣기
+                        this.ingreSub = this.ingreInfo.transform.GetChild(0).GetChild(0).GetChild(2).GetComponentsInChildren<Text>()[1];
+                        this.ingreSub.text = IngreInfoData.getInstance().ingreDetailInfo.get(this.ingreBtn[i].name)[0];
+                    }
+                    else if(LanguageChange.getInstance().LanguageMode == 2){                       
+                         // 재료 이름 넣기
+                        this.ingreName = this.ingreInfo.transform.GetChild(0).GetChild(0).GetChild(2).GetComponentsInChildren<Text>()[0];
+                        this.ingreName.text = "Name : " + IngreInfoData.getInstance().ingreDetailInfo_EN.get(LanguageChange.getInstance().EnlgishPack.get(this.ingreBtn[i].name));
+                        // 재료 설명 넣기
+                        this.ingreSub = this.ingreInfo.transform.GetChild(0).GetChild(0).GetChild(2).GetComponentsInChildren<Text>()[1];
+                        this.ingreSub.text = IngreInfoData.getInstance().ingreDetailInfo_EN.get(LanguageChange.getInstance().EnlgishPack.get(this.ingreBtn[i].name))[0];
+                        
+                    }
 
                     // 창 종료 버튼 활성화
                     this.ingreInfoExtBtn.onClick.AddListener(()=>{

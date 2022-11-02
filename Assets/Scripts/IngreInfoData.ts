@@ -4,6 +4,7 @@ export default class IngreInfoData extends ZepetoScriptBehaviour {
 
     public static instance : IngreInfoData;
     public ingreDetailInfo : Map<string, string[]> = new Map<string, string[]>();
+    public ingreDetailInfo_EN : Map<string, string[]> = new Map<string, string[]>();
 
     static getInstance(){
         return this.instance||(this.instance = new this());
@@ -72,6 +73,68 @@ export default class IngreInfoData extends ZepetoScriptBehaviour {
         this.ingreDetailInfo.set("식용유", ["음식을 만드는 데 사용하는 기름이다."]);
         this.ingreDetailInfo.set("햄", ["돼지고기를 소금에 절여 훈제한 가공식품이다. "]);
         
+        this.ingreDetailInfo_EN.set("Pepper", ["It is a spice characterized by a pungent, and fragrant aroma and a thrilling spicy taste. Dried pepper fruits is ground to power to use it."]);
+        this.ingreDetailInfo_EN.set("Sugar", ["It is a natural sweetener made by refining raw sugar obtained from sugar cane or sugar beet and is often used in various dishes."]);
+        this.ingreDetailInfo_EN.set("Salt", ["Sodium chloride is the main ingredient and it tastes salty. often found in halite and the sea. Salt that has undergone the traditional Korean process of producing salt by drying seawater through salt fields, is called sea salt. (in Korean, Cheon-il Yeom)"]);
+        this.ingreDetailInfo_EN.set("Red pepper powder", ["It is powder that is ground after picking the top of the red pepper, cutting the pepper, removing the seeds, and drying them. Red pepper powder makes the dish red and spicy. The type of each dish varies depending on the particle size of red pepper powder. If red pepper powder is not available locally, it can be replaced with Chipotle powder, chili parsley, and paprika powder. (not spicy)"]);
+        this.ingreDetailInfo_EN.set("Sesame", ["It is a tall annual plant that grows in tropical and subtropical regions and is grown to gain oil-rich seeds. Its small brownish sesames taste nutty. In Korea, people also eat perilla leaves. If sesame seeds are not available locally, they can be replaced with sunflower seeds or crushed peanuts instead."]);
+        this.ingreDetailInfo_EN.set("Grain syrup", ["It is called grain syrup(in Korean Jocheong) means artificial honey, a sweetener made similar to honey after boiling and soaking grain with malt. If grain syrup is not available, it can be replaced with brown rice syrup. when you use brown rice syrup, you can add a little more sugar."]);
+        this.ingreDetailInfo_EN.set("Soy sauce", ["It is a sauce made by dipping a block of fermented soybean in salt water and boiling the liquid of it. It is a basic sauce to season food, and has a unique taste and a unique scent that combines salty, sweet, and savory taste. If soy sauce is not available, it can be replaced with Tmari, Worcestershire sauce, and coconut aminos."]);
+        this.ingreDetailInfo_EN.set("Sesame oil", ["It is a cooking oil that is used very often in Asian food. It is made by frying sesame seeds and pressing them. It has its unique and savory scent, so it is used to boost appetite by adding a small amount to food. If sesame oil is not available, it can be replaced with grape seed oil, canola oil, or sunflower oil."]);
+        this.ingreDetailInfo_EN.set("Cooking oil", ["It is an oil used to make food."]);
+        this.ingreDetailInfo_EN.set("Malt oil", ["malt is sprouted barely after poured by water. It is mainly used to make Korean taffy and sweet rice drink(sikhye). If there is no malt, it can be replaced with barley malt powder that makes beer."]);
+        this.ingreDetailInfo_EN.set("Ketchup", ["It is made from mixture of sugar, salt, spices, vinegar, others and the boiled and filtered tomatoes"]);
+        this.ingreDetailInfo_EN.set("Soybean paste", ["A traditional Korean seasoning made with a block of fermented soybean fermented in salt water. If soybean paste is not available, it can be replaced with Miso, soy sauce, or fish sauce."]);
+        this.ingreDetailInfo_EN.set("Red pepper paste", ["It is a traditional Korean seasoning that is fermented by mixing glutinous rice with red pepper powder, malt oil, and fermented soybean lump powder, and which is red and tastes spicy. If you don't have red pepper paste, you can replace it with Sriracha chili sauce and Thai chili paste."]);
+        this.ingreDetailInfo_EN.set("Honey", ["It is a sweet and fragrant sweetener that can be obtained from honeybees. If there is no honey, it can be replaced with maple syrup and golden syrup."]);
+        this.ingreDetailInfo_EN.set("Rice", ["It is a grain of peeled rice. Most Korean food goes well with cooked rice. All Korean food is cooked with japonica varieties of rice (from Korea), but if not available, indica rice (from Vietnam and India) can be used."]);
+        this.ingreDetailInfo_EN.set("Almond", ["It is a brown nut with a savory taste and is the seed of an almond tree. If you don't have almonds, you can replace them with peanuts and cashew nuts."]);
+        this.ingreDetailInfo_EN.set("Ginkgo Nut", ["It is the seed of the fruit that opens on the ginkgo tree, and it is eaten by peeling off the hard skin and cooking only the soft pulp. Eating too many ginkgo fruits in a day is not good for health. It is better to take about 10 fruits a day. It's a bit bitter and chewy when cooked."]);
+        this.ingreDetailInfo_EN.set("Chestnut", ["It is a fruit of the chestnut tree and it is a type of nut. You have to peel off the hard skin and eat it, and you can eat it raw, but you usually grill it. If not available, it can be replaced with pecans, macadamias, hazelnuts, and pistachios."]);
+        this.ingreDetailInfo_EN.set("Onion", ["It is a plant belonging to the subfamily Chives of Allioideae of the Daffodilaceae, and it has a pungent and spicy taste when eaten raw. On the other hand, if you eat it cooked, the sweetness becomes stronger. Brown-skinned onions are common in Asia, but purple onions with less spiciness are common in the Western countries."]);
+        this.ingreDetailInfo_EN.set("Carrot", ["It is a plant belonging to the lovage of Minaritidae family of the dicotyledonous plant, which is orange and hard, and tastes sweet when eaten raw."]);
+        this.ingreDetailInfo_EN.set("Sweet pumpkin", ["It has yellow flesh in its hard shell. It is characterized by a higher sugar content than regular pumpkins."]);
+        this.ingreDetailInfo_EN.set("Green Onion", ["It is monocotyledonous plant which is about 70 centimeters long and has a white root and a green color on top. It is widely cultivated in Aisa, but rarely in the Western countries. When eaten raw, such as onions, it gives a spicy taste, and is mainly used to add sweetness and green onion flavor by frying or boiling. Since it is difficult to get green onions in the West, cooking using similar leeks can produce a similar taste."]);
+        this.ingreDetailInfo_EN.set("Garlic", ["It is a vegetable that serves as a spice in cooking, and is mainly used in seasoning. If you eat it raw, it is very pungent and spicy. It is an indispensable ingredient in Korean food, as garlic is said to be included in almost all Korean foods."]);
+        this.ingreDetailInfo_EN.set("Radish", ["Asian radishes, including those from Korea, are generally large and white. Radish varieties mainly cultivated in the Western countries are generally smaller and rounded than oriental radishes, and often have dark colors such as red and purple."]);
+        this.ingreDetailInfo_EN.set("Bracken", ["It is a spore-producing fern. In Korea, young bracken are dried and boiled. If you don't have ferns, you can blanch leaf vegetables like spinach or asparagus."]);
+        this.ingreDetailInfo_EN.set("Spinach", ["Spinach is a green-yellow vegetable that contains a large amount of various nutrients such as vitamins, iron, and dietary fiber. Blanch it and mix with seasonings or boil it to make soup. Instead of spinach, romaine lettuce, escarole, or kale may be used."]);
+        this.ingreDetailInfo_EN.set("Potato", ["It is a representative hardy plants that is cooked using various recipes such as boiling, roasting, and frying in oil."]);
+        this.ingreDetailInfo_EN.set("Cheongyang pepper", ["It is a pepper with a strong spicy taste because it contains much higher capsaicin than other peppers. If you don't have Cheongyang chili pepper, you can use Serrano pepper. However, the spicier taste of serano is stronger, so add less. Or jalapeno or red pepper can be used."]);
+        this.ingreDetailInfo_EN.set("Green Pumpkin", ["It is an undergrown young pumpkin, and it is mainly used in various ways, such as stews/pancakes/fried/seasoned dishes. it can be replaced with zucchini pumpkin."]);
+        this.ingreDetailInfo_EN.set("Napa Cabbage", ["It is a two-year herbage crop grown in the field. It is characterized by wide leaves and crunchy texture."]);
+        this.ingreDetailInfo_EN.set("Cucumber", ["It is a fruit of gourds of bindweed with an elongated green shape, and is mainly eaten raw. In Korea, kimchi is made with it or cut raw and put in cooking."]);
+        this.ingreDetailInfo_EN.set("Ginger", ["It is a bulbous plant with a spicy and pungent scent. It is mainly used by peeling off the root bark and cutting it. If you don't have ginger, you can use ginger powder and nutmeg."]);
+        this.ingreDetailInfo_EN.set("Apple", ["It is a fruit that opens in the apple tree and tastes sweet. In Korea, the variety, Pusa is most famous for their red-colored the, but if you don't have red apples, you can use green apples."]);
+        this.ingreDetailInfo_EN.set("Pear", ["It is the fruit of the pear tree that is juicy and sweet. Korean food is usually made of oriental pears, but if you can't get Asian pears, you can use Western pears."]);
+        this.ingreDetailInfo_EN.set("Shiitake mushroom", ["It is a mushroom with a top-shaped dark brown cap and has a unique scent. If shiitake mushrooms are not available, button mushrooms, oyster mushrooms, and porcini may be used."]);
+        this.ingreDetailInfo_EN.set("Enoki mushroom", ["Korean enoki mushrooms have a white and elongated body, and when they are cooked, they have a soft texture. You must eat it cooked. If you don't have enoki mushrooms, use other kinds of mushrooms."]);
+        this.ingreDetailInfo_EN.set("Pork", ["It's meat from pigs. Depending on the meat part, various parts such as sirloin, tenderloin, pork neck, ribs, and front legs are used differently depending on the dish."]);
+        this.ingreDetailInfo_EN.set("Beef", ["It's meat from cattle. Depending on the part of the meat, various parts such as sirloin, tenderloin, chuck roll, sirloin with less fat, and rump are used differently depending on the dish."]);
+        this.ingreDetailInfo_EN.set("Chicken", ["It's meat from a chicken. It has a light taste and soft flesh due to its less fat."]);
+        this.ingreDetailInfo_EN.set("Eggs", ["It's a chicken egg. It is nutritious and can be used in various dishes."]);
+        this.ingreDetailInfo_EN.set("Carp", ["It is a freshwater fish from Cyprinidae of Cypriniformes. It can be replaced by fish, especially freshwater fish."]);
+        this.ingreDetailInfo_EN.set("Rockfish", ["It is a marine fish from Sebastidae of Scorpaeniformes. It can be replaced by hard-flesh fish or sea fish."]);
+        this.ingreDetailInfo_EN.set("Manila clam", ["It is a shellfish in the clam family. It is often used to make savory seafood broth."]);
+        this.ingreDetailInfo_EN.set("Poulp", ["It is a species belonging to Octopodidaeof Octopus family and its appearance is similar to octopuses, but much smaller."]);
+        this.ingreDetailInfo_EN.set("Bar rice cake", ["It is a thin cylindrical white rice cake that is shaped long and cut into a certain length."]);
+        this.ingreDetailInfo_EN.set("Fish cake", ["It is a food that is cooked and solidified by crushing fish flesh, adding salt, etc. and kneading it. It is also made by steaming on a wooden board or frying it in oil."]);
+        this.ingreDetailInfo_EN.set("Sausage", ["It is a meat processed product that is finely ground pork or beef and filled in animal intestines or artificial casing."]);
+        this.ingreDetailInfo_EN.set("Kalguksu noodles", ["Add 50g of water and 2g of salt to 100g of flour, knead, slice thinly, cut into 4mm thickness, and cook. The thickness is approximately 8 mm, which is much wider than the general surface."]);
+        this.ingreDetailInfo_EN.set("Ramen", ["It is an instant food is food made of dried noodles after steaming and frying noodles in oil."]);
+        this.ingreDetailInfo_EN.set("Dried Laver", ["After putting finely-cut wet laver in water, it is dried up completely with a laver mold."]);
+        this.ingreDetailInfo_EN.set("Pickled radish", ["It is made by pickling it with sugar water after soaking radish with salt and drying it."]);
+        this.ingreDetailInfo_EN.set("Sweet Red Beans", ["It is made by boiling red beans and mashing them with sugar."]);
+        this.ingreDetailInfo_EN.set("Milk", ["It is the cow's milk. It has white color. It is sterilized and drank as a beverage, and is also used as a raw material for ice cream, butter, cheese, and etc."]);
+        this.ingreDetailInfo_EN.set("Cereal", ["A food made to be eaten immediately by processing grains. It is mainly eaten for breakfast. by pouring it into milk or juice."]);
+        this.ingreDetailInfo_EN.set("Jelly", ["It is a dessert solidified with pectin or gelatin in fruit juice."]);
+        this.ingreDetailInfo_EN.set("Condensed milk", ["It is condensed milk which was concetrated to 1/2 to 1/3 of the milk in vacuum. Sweetened condensed milk is made by adding about 40 percent sugar after concentrating it, making the total sugar content about 53 percent."]);
+        this.ingreDetailInfo_EN.set("Dried seaweed flakes", ["It is roasted seaweeds cut into small pieces."]);
+        this.ingreDetailInfo_EN.set("Flour", ["It is a ground wheat powder and is mainly used as a material for bread, snacks, and noodles."]);
+        this.ingreDetailInfo_EN.set("Ham", ["It is a smoked processed food made with salted pork."]);
+
+
+
     }
 
 }

@@ -21,10 +21,11 @@ ScriptedImporter:
   compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
     \\\"__esModule\\\", { value: true });\\r\\nconst ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nclass
     IngreInfoData extends ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    constructor()
-    {\\r\\n        super(...arguments);\\r\\n        this.ingreDetailInfo = new Map();\\r\\n   
-    }\\r\\n    static getInstance() {\\r\\n        return this.instance || (this.instance
-    = new this());\\r\\n    }\\r\\n    Start() {\\r\\n        IngreInfoData.instance
-    = this;\\r\\n        this.ingreDetailInfo.set(\\\"\uD6C4\uCD94\\\", [\\\"\uC790\uADF9\uC801\uC774\uACE0
+    {\\r\\n        super(...arguments);\\r\\n        this.ingreDetailInfo = new Map();\\r\\n       
+    this.ingreDetailInfo_EN = new Map();\\r\\n    }\\r\\n    static getInstance()
+    {\\r\\n        return this.instance || (this.instance = new this());\\r\\n   
+    }\\r\\n    Start() {\\r\\n        IngreInfoData.instance = this;\\r\\n       
+    this.ingreDetailInfo.set(\\\"\uD6C4\uCD94\\\", [\\\"\uC790\uADF9\uC801\uC774\uACE0
     \uD5A5\uAE0B\uD55C \uD5A5\uAE30\uC640 \uC9DC\uB9BF\uD55C \uB9E4\uC6B4\uB9DB\uC774
     \uD2B9\uC9D5\uC778 \uD5A5\uC2E0\uB8CC\uC774\uB2E4. \uB9D0\uB9B0 \uD6C4\uCD94
     \uC5F4\uB9E4\uB97C \uAC00\uB8E8\uB85C \uB9CC\uB4E4\uC5B4\uC11C \uC0AC\uC6A9\uD55C\uB2E4.\\\"]);\\r\\n       
@@ -292,6 +293,178 @@ ScriptedImporter:
     \uB9CC\uB4DC\uB294 \uB370 \uC0AC\uC6A9\uD558\uB294 \uAE30\uB984\uC774\uB2E4.\\\"]);\\r\\n       
     this.ingreDetailInfo.set(\\\"\uD584\\\", [\\\"\uB3FC\uC9C0\uACE0\uAE30\uB97C
     \uC18C\uAE08\uC5D0 \uC808\uC5EC \uD6C8\uC81C\uD55C \uAC00\uACF5\uC2DD\uD488\uC774\uB2E4.
-    \\\"]);\\r\\n    }\\r\\n}\\r\\nexports.default = IngreInfoData;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiSW5ncmVJbmZvRGF0YS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkluZ3JlSW5mb0RhdGEudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxpREFBcUQ7QUFFckQsTUFBcUIsYUFBYyxTQUFRLHFDQUFxQjtJQUFoRTs7UUFHVyxvQkFBZSxHQUEyQixJQUFJLEdBQUcsRUFBb0IsQ0FBQztJQXVFakYsQ0FBQztJQXJFRyxNQUFNLENBQUMsV0FBVztRQUNkLE9BQU8sSUFBSSxDQUFDLFFBQVEsSUFBRSxDQUFDLElBQUksQ0FBQyxRQUFRLEdBQUcsSUFBSSxJQUFJLEVBQUUsQ0FBQyxDQUFDO0lBQ3ZELENBQUM7SUFFRCxLQUFLO1FBQ0QsYUFBYSxDQUFDLFFBQVEsR0FBRyxJQUFJLENBQUM7UUFFOUIsSUFBSSxDQUFDLGVBQWUsQ0FBQyxHQUFHLENBQUMsSUFBSSxFQUFFLENBQUMsNERBQTRELENBQUMsQ0FBQyxDQUFDO1FBQy9GLElBQUksQ0FBQyxlQUFlLENBQUMsR0FBRyxDQUFDLElBQUksRUFBRSxDQUFDLHFEQUFxRCxDQUFDLENBQUMsQ0FBQztRQUN4RixJQUFJLENBQUMsZUFBZSxDQUFDLEdBQUcsQ0FBQyxJQUFJLEVBQUUsQ0FBQywwR0FBMEcsQ0FBQyxDQUFDLENBQUM7UUFDN0ksSUFBSSxDQUFDLGVBQWUsQ0FBQyxHQUFHLENBQUMsTUFBTSxFQUFFLENBQUMsa0tBQWtLLENBQUMsQ0FBQyxDQUFDO1FBQ3ZNLElBQUksQ0FBQyxlQUFlLENBQUMsR0FBRyxDQUFDLEdBQUcsRUFBRSxDQUFDLG9LQUFvSyxDQUFDLENBQUMsQ0FBQztRQUN0TSxJQUFJLENBQUMsZUFBZSxDQUFDLEdBQUcsQ0FBQyxJQUFJLEVBQUUsQ0FBQyxvSEFBb0gsQ0FBQyxDQUFDLENBQUM7UUFDdkosSUFBSSxDQUFDLGVBQWUsQ0FBQyxHQUFHLENBQUMsSUFBSSxFQUFFLENBQUMsNkxBQTZMLENBQUMsQ0FBQyxDQUFDO1FBQ2hPLElBQUksQ0FBQyxlQUFlLENB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\",\"assetPath\":\"Assets/Scripts/IngreInfoData.ts\",\"manifest\":{\"properties\":[],\"name\":\"IngreInfoData\",\"description\":\"\"},\"isCompiled\":true}"
-  typescriptHash: 4e8929a69d6285f366c2847fb4e11f70
+    \\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Pepper\\\", [\\\"It is a
+    spice characterized by a pungent, and fragrant aroma and a thrilling spicy taste.
+    Dried pepper fruits is ground to power to use it.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Sugar\\\",
+    [\\\"It is a natural sweetener made by refining raw sugar obtained from sugar
+    cane or sugar beet and is often used in various dishes.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Salt\\\",
+    [\\\"Sodium chloride is the main ingredient and it tastes salty. often found
+    in halite and the sea. Salt that has undergone the traditional Korean process
+    of producing salt by drying seawater through salt fields, is called sea salt.
+    (in Korean, Cheon-il Yeom)\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Red
+    pepper powder\\\", [\\\"It is powder that is ground after picking the top of
+    the red pepper, cutting the pepper, removing the seeds, and drying them. Red
+    pepper powder makes the dish red and spicy. The type of each dish varies depending
+    on the particle size of red pepper powder. If red pepper powder is not available
+    locally, it can be replaced with Chipotle powder, chili parsley, and paprika
+    powder. (not spicy)\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Sesame\\\",
+    [\\\"It is a tall annual plant that grows in tropical and subtropical regions
+    and is grown to gain oil-rich seeds. Its small brownish sesames taste nutty.
+    In Korea, people also eat perilla leaves. If sesame seeds are not available locally,
+    they can be replaced with sunflower seeds or crushed peanuts instead.\\\"]);\\r\\n       
+    this.ingreDetailInfo_EN.set(\\\"Grain syrup\\\", [\\\"It is called grain syrup(in
+    Korean Jocheong) means artificial honey, a sweetener made similar to honey after
+    boiling and soaking grain with malt. If grain syrup is not available, it can
+    be replaced with brown rice syrup. when you use brown rice syrup, you can add
+    a little more sugar.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Soy
+    sauce\\\", [\\\"It is a sauce made by dipping a block of fermented soybean in
+    salt water and boiling the liquid of it. It is a basic sauce to season food,
+    and has a unique taste and a unique scent that combines salty, sweet, and savory
+    taste. If soy sauce is not available, it can be replaced with Tmari, Worcestershire
+    sauce, and coconut aminos.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Sesame
+    oil\\\", [\\\"It is a cooking oil that is used very often in Asian food. It is
+    made by frying sesame seeds and pressing them. It has its unique and savory scent,
+    so it is used to boost appetite by adding a small amount to food. If sesame oil
+    is not available, it can be replaced with grape seed oil, canola oil, or sunflower
+    oil.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Cooking oil\\\", [\\\"It
+    is an oil used to make food.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Malt
+    oil\\\", [\\\"malt is sprouted barely after poured by water. It is mainly used
+    to make Korean taffy and sweet rice drink(sikhye). If there is no malt, it can
+    be replaced with barley malt powder that makes beer.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Ketchup\\\",
+    [\\\"It is made from mixture of sugar, salt, spices, vinegar, others and the
+    boiled and filtered tomatoes\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Soybean
+    paste\\\", [\\\"A traditional Korean seasoning made with a block of fermented
+    soybean fermented in salt water. If soybean paste is not available, it can be
+    replaced with Miso, soy sauce, or fish sauce.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Red
+    pepper paste\\\", [\\\"It is a traditional Korean seasoning that is fermented
+    by mixing glutinous rice with red pepper powder, malt oil, and fermented soybean
+    lump powder, and which is red and tastes spicy. If you don't have red pepper
+    paste, you can replace it with Sriracha chili sauce and Thai chili paste.\\\"]);\\r\\n       
+    this.ingreDetailInfo_EN.set(\\\"Honey\\\", [\\\"It is a sweet and fragrant sweetener
+    that can be obtained from honeybees. If there is no honey, it can be replaced
+    with maple syrup and golden syrup.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Rice\\\",
+    [\\\"It is a grain of peeled rice. Most Korean food goes well with cooked rice.
+    All Korean food is cooked with japonica varieties of rice (from Korea), but if
+    not available, indica rice (from Vietnam and India) can be used.\\\"]);\\r\\n       
+    this.ingreDetailInfo_EN.set(\\\"Almond\\\", [\\\"It is a brown nut with a savory
+    taste and is the seed of an almond tree. If you don't have almonds, you can replace
+    them with peanuts and cashew nuts.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Ginkgo
+    Nut\\\", [\\\"It is the seed of the fruit that opens on the ginkgo tree, and
+    it is eaten by peeling off the hard skin and cooking only the soft pulp. Eating
+    too many ginkgo fruits in a day is not good for health. It is better to take
+    about 10 fruits a day. It's a bit bitter and chewy when cooked.\\\"]);\\r\\n       
+    this.ingreDetailInfo_EN.set(\\\"Chestnut\\\", [\\\"It is a fruit of the chestnut
+    tree and it is a type of nut. You have to peel off the hard skin and eat it,
+    and you can eat it raw, but you usually grill it. If not available, it can be
+    replaced with pecans, macadamias, hazelnuts, and pistachios.\\\"]);\\r\\n       
+    this.ingreDetailInfo_EN.set(\\\"Onion\\\", [\\\"It is a plant belonging to the
+    subfamily Chives of Allioideae of the Daffodilaceae, and it has a pungent and
+    spicy taste when eaten raw. On the other hand, if you eat it cooked, the sweetness
+    becomes stronger. Brown-skinned onions are common in Asia, but purple onions
+    with less spiciness are common in the Western countries.\\\"]);\\r\\n       
+    this.ingreDetailInfo_EN.set(\\\"Carrot\\\", [\\\"It is a plant belonging to the
+    lovage of Minaritidae family of the dicotyledonous plant, which is orange and
+    hard, and tastes sweet when eaten raw.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Sweet
+    pumpkin\\\", [\\\"It has yellow flesh in its hard shell. It is characterized
+    by a higher sugar content than regular pumpkins.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Green
+    Onion\\\", [\\\"It is monocotyledonous plant which is about 70 centimeters long
+    and has a white root and a green color on top. It is widely cultivated in Aisa,
+    but rarely in the Western countries. When eaten raw, such as onions, it gives
+    a spicy taste, and is mainly used to add sweetness and green onion flavor by
+    frying or boiling. Since it is difficult to get green onions in the West, cooking
+    using similar leeks can produce a similar taste.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Garlic\\\",
+    [\\\"It is a vegetable that serves as a spice in cooking, and is mainly used
+    in seasoning. If you eat it raw, it is very pungent and spicy. It is an indispensable
+    ingredient in Korean food, as garlic is said to be included in almost all Korean
+    foods.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Radish\\\", [\\\"Asian
+    radishes, including those from Korea, are generally large and white. Radish varieties
+    mainly cultivated in the Western countries are generally smaller and rounded
+    than oriental radishes, and often have dark colors such as red and purple.\\\"]);\\r\\n       
+    this.ingreDetailInfo_EN.set(\\\"Bracken\\\", [\\\"It is a spore-producing fern.
+    In Korea, young bracken are dried and boiled. If you don't have ferns, you can
+    blanch leaf vegetables like spinach or asparagus.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Spinach\\\",
+    [\\\"Spinach is a green-yellow vegetable that contains a large amount of various
+    nutrients such as vitamins, iron, and dietary fiber. Blanch it and mix with seasonings
+    or boil it to make soup. Instead of spinach, romaine lettuce, escarole, or kale
+    may be used.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Potato\\\",
+    [\\\"It is a representative hardy plants that is cooked using various recipes
+    such as boiling, roasting, and frying in oil.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Cheongyang
+    pepper\\\", [\\\"It is a pepper with a strong spicy taste because it contains
+    much higher capsaicin than other peppers. If you don't have Cheongyang chili
+    pepper, you can use Serrano pepper. However, the spicier taste of serano is stronger,
+    so add less. Or jalapeno or red pepper can be used.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Green
+    Pumpkin\\\", [\\\"It is an undergrown young pumpkin, and it is mainly used in
+    various ways, such as stews/pancakes/fried/seasoned dishes. it can be replaced
+    with zucchini pumpkin.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Napa
+    Cabbage\\\", [\\\"It is a two-year herbage crop grown in the field. It is characterized
+    by wide leaves and crunchy texture.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Cucumber\\\",
+    [\\\"It is a fruit of gourds of bindweed with an elongated green shape, and is
+    mainly eaten raw. In Korea, kimchi is made with it or cut raw and put in cooking.\\\"]);\\r\\n       
+    this.ingreDetailInfo_EN.set(\\\"Ginger\\\", [\\\"It is a bulbous plant with a
+    spicy and pungent scent. It is mainly used by peeling off the root bark and cutting
+    it. If you don't have ginger, you can use ginger powder and nutmeg.\\\"]);\\r\\n       
+    this.ingreDetailInfo_EN.set(\\\"Apple\\\", [\\\"It is a fruit that opens in the
+    apple tree and tastes sweet. In Korea, the variety, Pusa is most famous for their
+    red-colored the, but if you don't have red apples, you can use green apples.\\\"]);\\r\\n       
+    this.ingreDetailInfo_EN.set(\\\"Pear\\\", [\\\"It is the fruit of the pear tree
+    that is juicy and sweet. Korean food is usually made of oriental pears, but if
+    you can't get Asian pears, you can use Western pears.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Shiitake
+    mushroom\\\", [\\\"It is a mushroom with a top-shaped dark brown cap and has
+    a unique scent. If shiitake mushrooms are not available, button mushrooms, oyster
+    mushrooms, and porcini may be used.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Enoki
+    mushroom\\\", [\\\"Korean enoki mushrooms have a white and elongated body, and
+    when they are cooked, they have a soft texture. You must eat it cooked. If you
+    don't have enoki mushrooms, use other kinds of mushrooms.\\\"]);\\r\\n       
+    this.ingreDetailInfo_EN.set(\\\"Pork\\\", [\\\"It's meat from pigs. Depending
+    on the meat part, various parts such as sirloin, tenderloin, pork neck, ribs,
+    and front legs are used differently depending on the dish.\\\"]);\\r\\n       
+    this.ingreDetailInfo_EN.set(\\\"Beef\\\", [\\\"It's meat from cattle. Depending
+    on the part of the meat, various parts such as sirloin, tenderloin, chuck roll,
+    sirloin with less fat, and rump are used differently depending on the dish.\\\"]);\\r\\n       
+    this.ingreDetailInfo_EN.set(\\\"Chicken\\\", [\\\"It's meat from a chicken. It
+    has a light taste and soft flesh due to its less fat.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Eggs\\\",
+    [\\\"It's a chicken egg. It is nutritious and can be used in various dishes.\\\"]);\\r\\n       
+    this.ingreDetailInfo_EN.set(\\\"Carp\\\", [\\\"It is a freshwater fish from Cyprinidae
+    of Cypriniformes. It can be replaced by fish, especially freshwater fish.\\\"]);\\r\\n       
+    this.ingreDetailInfo_EN.set(\\\"Rockfish\\\", [\\\"It is a marine fish from Sebastidae
+    of Scorpaeniformes. It can be replaced by hard-flesh fish or sea fish.\\\"]);\\r\\n       
+    this.ingreDetailInfo_EN.set(\\\"Manila clam\\\", [\\\"It is a shellfish in the
+    clam family. It is often used to make savory seafood broth.\\\"]);\\r\\n       
+    this.ingreDetailInfo_EN.set(\\\"Poulp\\\", [\\\"It is a species belonging to
+    Octopodidaeof Octopus family and its appearance is similar to octopuses, but
+    much smaller.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Bar rice cake\\\",
+    [\\\"It is a thin cylindrical white rice cake that is shaped long and cut into
+    a certain length.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Fish cake\\\",
+    [\\\"It is a food that is cooked and solidified by crushing fish flesh, adding
+    salt, etc. and kneading it. It is also made by steaming on a wooden board or
+    frying it in oil.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Sausage\\\",
+    [\\\"It is a meat processed product that is finely ground pork or beef and filled
+    in animal intestines or artificial casing.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Kalguksu
+    noodles\\\", [\\\"Add 50g of water and 2g of salt to 100g of flour, knead, slice
+    thinly, cut into 4mm thickness, and cook. The thickness is approximately 8 mm,
+    which is much wider than the general surface.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Ramen\\\",
+    [\\\"It is an instant food is food made of dried noodles after steaming and frying
+    noodles in oil.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Dried Laver\\\",
+    [\\\"After putting finely-cut wet laver in water, it is dried up completely with
+    a laver mold.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Pickled radish\\\",
+    [\\\"It is made by pickling it with sugar water after soaking radish with salt
+    and drying it.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Sweet Red
+    Beans\\\", [\\\"It is made by boiling red beans and mashing them with sugar.\\\"]);\\r\\n       
+    this.ingreDetailInfo_EN.set(\\\"Milk\\\", [\\\"It is the cow's milk. It has white
+    color. It is sterilized and drank as a beverage, and is also used as a raw material
+    for ice cream, butter, cheese, and etc.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Cereal\\\",
+    [\\\"A food made to be eaten immediately by processing grains. It is mainly eaten
+    for breakfast. by pouring it into milk or juice.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Jelly\\\",
+    [\\\"It is a dessert solidified with pectin or gelatin in fruit juice.\\\"]);\\r\\n       
+    this.ingreDetailInfo_EN.set(\\\"Condensed milk\\\", [\\\"It is condensed milk
+    which was concetrated to 1/2 to 1/3 of the milk in vacuum. Sweetened condensed
+    milk is made by adding about 40 percent sugar after concentrating it, making
+    the total sugar content about 53 percent.\\\"]);\\r\\n        this.ingreDetailInfo_EN.set(\\\"Dried
+    seaweed flakes\\\", [\\\"It is roasted seaweeds cut into small pieces.\\\"]);\\r\\n       
+    this.ingreDetailInfo_EN.set(\\\"Flour\\\", [\\\"It is a ground wheat powder and
+    is mainly used as a material for bread, snacks, and noodles.\\\"]);\\r\\n       
+    this.ingreDetailInfo_EN.set(\\\"Ham\\\", [\\\"It is a smoked processed food made
+    with salted pork.\\\"]);\\r\\n    }\\r\\n}\\r\\nexports.default = IngreInfoData;\\r\\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiSW5ncmVJbmZvRGF0YS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkluZ3JlSW5mb0RhdGEudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxpREFBcUQ7QUFFckQsTUFBcUIsYUFBYyxTQUFRLHFDQUFxQjtJQUFoRTs7UUFHVyxvQkFBZSxHQUEyQixJQUFJLEdBQUcsRUFBb0IsQ0FBQztRQUN0RSx1QkFBa0IsR0FBMkIsSUFBSSxHQUFHLEVBQW9CLENBQUM7SUFxSXBGLENBQUM7SUFuSUcsTUFBTSxDQUFDLFdBQVc7UUFDZCxPQUFPLElBQUksQ0FBQyxRQUFRLElBQUUsQ0FBQyxJQUFJLENBQUMsUUFBUSxHQUFHLElBQUksSUFBSSxFQUFFLENBQUMsQ0FBQztJQUN2RCxDQUFDO0lBRUQsS0FBSztRQUNELGFBQWEsQ0FBQyxRQUFRLEdBQUcsSUFBSSxDQUFDO1FBRTlCLElBQUksQ0FBQyxlQUFlLENBQUMsR0FBRyxDQUFDLElBQUksRUFBRSxDQUFDLDREQUE0RCxDQUFDLENBQUMsQ0FBQztRQUMvRixJQUFJLENBQUMsZUFBZSxDQUFDLEdBQUcsQ0FBQyxJQUFJLEVBQUUsQ0FBQyxxREFBcUQsQ0FBQyxDQUFDLENBQUM7UUFDeEYsSUFBSSxDQUFDLGVBQWUsQ0FBQyxHQUFHLENBQUMsSUFBSSxFQUFFLENBQUMsMEdBQTBHLENBQUMsQ0FBQyxDQUFDO1FBQzdJLElBQUksQ0FBQyxlQUFlLENBQUMsR0FBRyxDQUFDLE1BQU0sRUFBRSxDQUFDLGtLQUFrSyxDQUFDLENBQUMsQ0FBQztRQUN2TSxJQUFJLENBQUMsZUFBZSxDQUFDLEdBQUcsQ0FBQyxHQUFHLEVBQUUsQ0FBQyxvS0FBb0ssQ0FBQyxDQUFDLENBQUM7UUFDdE0sSUFBSSxDQUFDLGVBQWUsQ0FBQyxHQUFHLENBQUMsSUFBSSxFQUFFLENBQUMsb0hBQW9ILENBQUMsQ0FBQyxDQUFDO1FBQ3ZKLElBQUksQ0FBQyxlQUFlLENBQUMsR0FBRyxDQUFDLElBQUksRUFBRSxDQUFDLDZMQUE2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\",\"assetPath\":\"Assets/Scripts/IngreInfoData.ts\",\"manifest\":{\"properties\":[],\"name\":\"IngreInfoData\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: 15e0bab0192686bdc35f859afd767647
   onlyWriteTrigger: 0

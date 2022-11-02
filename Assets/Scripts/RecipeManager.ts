@@ -4,6 +4,7 @@ import { GameObject,Sprite,Transform } from 'UnityEngine';
 import QuestManager from './QuestManager';
 import * as UnityEngine from 'UnityEngine';
 import FoodInfoData from './FoodInfoData';
+import LanguageChange from './Language/LanguageChange';
 export default class RecipeManager extends ZepetoScriptBehaviour {
 
     // =========상세정보============== // 
@@ -39,8 +40,6 @@ export default class RecipeManager extends ZepetoScriptBehaviour {
                     this.foodInfo = GameObject.Instantiate(this.foodInfoObject) as GameObject;
                     this.foodInfoExtBtn = this.foodInfo.transform.GetChild(0).GetComponentInChildren<Button>();
                     this.foodName = this.foodInfo.transform.GetChild(0).GetChild(0).GetChild(2).GetComponentsInChildren<Text>()[0];
-                    // 음식 이름 넣기
-                    this.foodName.text = "이름 : " + this.recipeBtn[i].name;
                     // 음식 이미지 넣기
                     this.foodImage = this.foodInfo.transform.GetChild(0).GetChild(0).GetChild(2).GetComponentsInChildren<Image>()[3];
                     QuestManager.getInstance().FoodImageList.map((image) =>{
@@ -48,17 +47,41 @@ export default class RecipeManager extends ZepetoScriptBehaviour {
                             this.foodImage.sprite = image;
                         }
                     });
-                    // 음식 간략 설명
-                    this.foodSub =  this.foodInfo.transform.GetChild(0).GetChild(0).GetChild(2).GetComponentsInChildren<Text>()[1];
-                    this.foodSub.text = FoodInfoData.getInstance().foodDetailInfo.get(this.recipeBtn[i].name)[0];
 
-                    // 음식 재료
-                    this.foodIngre = this.foodInfo.transform.GetChild(0).GetChild(0).GetChild(2).GetComponentsInChildren<Text>()[2];
-                    this.foodIngre.text = FoodInfoData.getInstance().foodDetailInfo.get(this.recipeBtn[i].name)[1];
+                    // 한국어
+                    if(LanguageChange.getInstance().LanguageMode == 1){
+                        // 음식 이름 넣기
+                        this.foodName.text = "이름 : " + this.recipeBtn[i].name;
+                        // 음식 간략 설명
+                        this.foodSub =  this.foodInfo.transform.GetChild(0).GetChild(0).GetChild(2).GetComponentsInChildren<Text>()[1];
+                        this.foodSub.text = FoodInfoData.getInstance().foodDetailInfo.get(this.recipeBtn[i].name)[0];
+    
+                        // 음식 재료
+                        this.foodIngre = this.foodInfo.transform.GetChild(0).GetChild(0).GetChild(2).GetComponentsInChildren<Text>()[2];
+                        this.foodIngre.text = FoodInfoData.getInstance().foodDetailInfo.get(this.recipeBtn[i].name)[1];
+    
+                        // 음식 제작 방법
+                        this.foodRecipe = this.foodInfo.transform.GetChild(0).GetChild(0).GetChild(2).GetComponentsInChildren<Text>()[3];
+                        this.foodRecipe.text = FoodInfoData.getInstance().foodDetailInfo.get(this.recipeBtn[i].name)[2];
+                    }
+                    // 영문
+                    else if(LanguageChange.getInstance().LanguageMode == 2){
 
-                    // 음식 제작 방법
-                    this.foodRecipe = this.foodInfo.transform.GetChild(0).GetChild(0).GetChild(2).GetComponentsInChildren<Text>()[3];
-                    this.foodRecipe.text = FoodInfoData.getInstance().foodDetailInfo.get(this.recipeBtn[i].name)[2];
+                        // 음식 이름 넣기
+                        this.foodName.text = "Name : " + LanguageChange.getInstance().EnlgishPack.get(this.recipeBtn[i].name);
+                        // 음식 간략 설명
+                        this.foodSub =  this.foodInfo.transform.GetChild(0).GetChild(0).GetChild(2).GetComponentsInChildren<Text>()[1];
+                        this.foodSub.text = FoodInfoData.getInstance().foodDetailInfo_EN.get(LanguageChange.getInstance().EnlgishPack.get(this.recipeBtn[i].name))[0];
+    
+                        // 음식 재료
+                        this.foodIngre = this.foodInfo.transform.GetChild(0).GetChild(0).GetChild(2).GetComponentsInChildren<Text>()[2];
+                        this.foodIngre.text = FoodInfoData.getInstance().foodDetailInfo_EN.get(LanguageChange.getInstance().EnlgishPack.get(this.recipeBtn[i].name))[1];
+    
+                        // 음식 제작 방법
+                        this.foodRecipe = this.foodInfo.transform.GetChild(0).GetChild(0).GetChild(2).GetComponentsInChildren<Text>()[3];
+                        this.foodRecipe.text = FoodInfoData.getInstance().foodDetailInfo_EN.get(LanguageChange.getInstance().EnlgishPack.get(this.recipeBtn[i].name))[2];
+
+                    }
 
                     // 창 종료 버튼 활성화
                     this.foodInfoExtBtn.onClick.AddListener(()=>{
