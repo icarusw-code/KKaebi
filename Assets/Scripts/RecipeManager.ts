@@ -48,6 +48,7 @@ export default class RecipeManager extends ZepetoScriptBehaviour {
                         }
                     });
 
+
                     // 한국어
                     if(LanguageChange.getInstance().LanguageMode == 1){
                         // 음식 이름 넣기
@@ -66,13 +67,11 @@ export default class RecipeManager extends ZepetoScriptBehaviour {
                     }
                     // 영문
                     else if(LanguageChange.getInstance().LanguageMode == 2){
-
                         // 음식 이름 넣기
                         this.foodName.text = "Name : " + LanguageChange.getInstance().EnlgishPack.get(this.recipeBtn[i].name);
                         // 음식 간략 설명
                         this.foodSub =  this.foodInfo.transform.GetChild(0).GetChild(0).GetChild(2).GetComponentsInChildren<Text>()[1];
                         this.foodSub.text = FoodInfoData.getInstance().foodDetailInfo_EN.get(LanguageChange.getInstance().EnlgishPack.get(this.recipeBtn[i].name))[0];
-    
                         // 음식 재료
                         this.foodIngre = this.foodInfo.transform.GetChild(0).GetChild(0).GetChild(2).GetComponentsInChildren<Text>()[2];
                         this.foodIngre.text = FoodInfoData.getInstance().foodDetailInfo_EN.get(LanguageChange.getInstance().EnlgishPack.get(this.recipeBtn[i].name))[1];
