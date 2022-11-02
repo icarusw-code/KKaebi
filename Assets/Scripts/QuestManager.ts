@@ -38,7 +38,6 @@ export default class QuestManager extends ZepetoScriptBehaviour {
     public QuestIngreImageList : Sprite[]; //여따 인벤토리 이미지 리스트랑 똑같이 넣어줘야됨!!!꼭
     public myQuestFoodImgIngre: Sprite[];
 
-
     //퀘스트 음식목록 누를때마다 바뀔 변동 임시값들
     public LeftPanel: GameObject;
     public QuestIngreIDArr : number[]; //퀘스트 음식선택하면 할당될 재료 id배열
@@ -324,6 +323,13 @@ export default class QuestManager extends ZepetoScriptBehaviour {
 
     //현재 유저가 퀘스트 진행중일때 퀘스트에 해당하는 재료를 먹었는지 안먹었는지 체크
     public GetIngreCheck(getIngreId: number){
+        //들어온 id를 ingrdientbookcontroller의 딕셔너리에서 이름으로 치환하고 나의 퀘스트 컨텐츠에서 그 이름에 맞는걸 찾으면 그 이미지에 해당하는 녀석의 자식에있는
+        // 이미지 투명도 선명하게함
+        for(let i=0;i<this.myQuestContentTransform.childCount;i++){
+            /*if(this.myQuestContentTransform.GetChild(i).gameObject.name == ){
+                
+            }*/
+        }
 
         //진행중일때만
         if(this.isNowAccept==true){

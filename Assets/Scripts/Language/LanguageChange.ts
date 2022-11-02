@@ -13,6 +13,10 @@ export default class LanguageChange extends ZepetoScriptBehaviour {
     public static instance: LanguageChange;
     public EnlgishPack : Map<string,string> = new Map<string,string>(); //영어팩
     public KoreanPack :  Map<string,string> = new Map<string,string>();
+
+    //영어 키값에서 한국value 얻기
+    public EnglishToKoreanDiction : Map<string,string> = new Map<string,string>();
+
     //동적인것들 교체관련
     //NPC퀘스트 창의 음식버튼 (퀘스트 매니저의 foodname을 위해)
     public QMFoodButtonsObj : GameObject[];
@@ -92,6 +96,16 @@ export default class LanguageChange extends ZepetoScriptBehaviour {
         for(let i =0; i<this.AllOfStaticTexts.length;i++){
             this.EnlgishPack.set(this.AllOfStaticTexts[i].gameObject.name,this.AllOfStaticTexts[i].GetComponent<TxtEnglishName>().EnglishName);
         }
+
+        //음식 이름이랑 재료 이름 다 상세설명용 딕셔너리에 넣기
+        for(let i=0; i<this.QMIngrePrefabsObj.length;i++){
+            this.EnglishToKoreanDiction.set(this.QMIngrePrefabsObj[i].GetComponent<IngredientInfo>().EnlgishName,this.IngrdientBookController.GetComponent<IngredientBookController>().ingredientDict.get(this.QMIngrePrefabsObj[i].GetComponent<IngredientInfo>().id));
+        }
+        for(let i=0; i<this.QMFoodButtonsObj.length;i++){
+            this.EnglishToKoreanDiction.set(this.QMFoodButtonsObj[i].GetComponent<FoodInfo>().foodEnlgishName,this.QMFoodButtonsObj[i].GetComponent<FoodInfo>().foodname);
+        }
+
+
         var Koreanbtn =  GameObject.Find("Btn11").GetComponent<Button>();
         var Englishbtn =  GameObject.Find("Btn22").GetComponent<Button>();
         Koreanbtn.onClick.AddListener(()=>{

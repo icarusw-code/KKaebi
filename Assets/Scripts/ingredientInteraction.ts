@@ -66,8 +66,8 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
                     this.DoDestroy();
                     QuestManager.getInstance().GetIngreCheck(this.myID);//먹었음
                     //먹었으니 myquest의 해당 재료 이미지의 투명값을 높여주자
-
-
+                    //지금 먹은 현재 id에 해당하는 재료 이름을 ingredient book controller 딕셔너리에서 id키값=>음식이름 으로 전환하고 그걸 현재 inventory에서 반복해서 찾아서 투명도
+                    
                     this.AddIngredientCount();
                     this.AddIngredientImage();
                     if(QuestManager.getInstance().QuestCompleteCheck()==true){
