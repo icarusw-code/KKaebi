@@ -1,13 +1,13 @@
-/*import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
+import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 import { Button,Text,Image } from 'UnityEngine.UI';
-import { GameObject } from 'UnityEngine';
+import { GameObject,Color, Sprite } from 'UnityEngine';
 export default class SettingManager extends ZepetoScriptBehaviour {
 // 설정 버튼
     public option : Button ;
     // 설정 닫는 X 버튼
     public closeBtn : Button;
     // 언어 선택 버튼
-    public listBtn 
+    public listBtn :Button;
     public bgImg : Button;
     public sfxImg : Button;
     public listImg : Button;
@@ -15,9 +15,9 @@ export default class SettingManager extends ZepetoScriptBehaviour {
     // 언어 버튼
     public korean : Button;
     public english: Button;
-    public japanese: Button;
-    public thai: Button;
-    public indonesian: Button;
+    //public japanese: Button;
+    //public thai: Button;
+    //public indonesian: Button;
 
     // 배경음 버튼
     public bgBtn : Button;
@@ -40,230 +40,228 @@ export default class SettingManager extends ZepetoScriptBehaviour {
     // 언어 버튼 이미지 색
     private koreanColor : Image;
     private englishColor: Image;
-    private japaneseColor : Image;
-    private thaiColor : Image;
-    private indonesianColor : Image;
+    //private japaneseColor : Image;
+    //private thaiColor : Image;
+    //private indonesianColor : Image;
 
     // 언어 목록 창 텍스트
     public listText : Text;
 
     // 언어 버튼 ON / OFF 체크
     private isClick : bool = true;
+
+    public BtnBackground : Sprite[];
+
     // Start is called before the first frame update
     Start()
     {
         // 버튼 클릭 시 함수 호출
-        this.option.onClick.AddListener(OptiOnClick);
-        this.closeBtn.onClick.AddListener(CloesBtn);
-        this.listBtn.onClick.AddListener(ListBtn);
-        this.bgImg.onClick.AddListener(bgImgBtn);
-        this.sfxImg.onClick.AddListener(sfxImgBtn);
-        this.listImg.onClick.AddListener(ListBtn2);
+        this.option.onClick.AddListener(()=>this.OptiOnClick());
+        this.closeBtn.onClick.AddListener(()=>this.CloesBtn());
+        this.listBtn.onClick.AddListener(()=>this.ListBtn());
+        this.bgImg.onClick.AddListener(()=>this.bgImgBtn());
+        this.sfxImg.onClick.AddListener(()=>this.sfxImgBtn());
+        this.listImg.onClick.AddListener(()=>this.ListBtn2());
 
-        this.korean.onClick.AddListener(KoreanBtn);
-        this.english.onClick.AddListener(EnglishBtn);
-        this.japanese.onClick.AddListener(JapaneseBtn);
-        this.thai.onClick.AddListener(ThaiBtn);
-        this.indonesian.onClick.AddListener(indonesianBtn);
+        this.korean.onClick.AddListener(()=>this.KoreanBtn());
+        this.english.onClick.AddListener(()=>this.EnglishBtn());
+        /*this.japanese.onClick.AddListener(()=>this.JapaneseBtn());
+        this.thai.onClick.AddListener(()=>this.ThaiBtn());
+        this.indonesian.onClick.AddListener(()=>this.indonesianBtn());*/
 
-        this.bgBtn.onClick.AddListener(BGOFF);
-        this.sfxBtn.onClick.AddListener(SFXOFF);
+        this.bgBtn.onClick.AddListener(()=>this.BGOFF());
+        this.sfxBtn.onClick.AddListener(()=>this.SFXOFF());
 
         // 언어 이미지 불러오기
-        this.koreanColor = korean.gameObject.GetComponent<Image>();
-        this.englishColor = english.gameObject.GetComponent<Image>();
-        this.japaneseColor = japanese.gameObject.GetComponent<Image>();
-        this.thaiColor = thai.gameObject.GetComponent<Image>();
-        this.indonesianColor = indonesian.gameObject.GetComponent<Image>();
+        this.koreanColor = this.korean.gameObject.GetComponent<Image>();
+        this.englishColor = this.english.gameObject.GetComponent<Image>();
+        //this.japaneseColor = this.japanese.gameObject.GetComponent<Image>();
+        //this.thaiColor = this.thai.gameObject.GetComponent<Image>();
+        //this.indonesianColor = this.indonesian.gameObject.GetComponent<Image>();
 
         this.listText.text = "한국어";
     }
 
-    // Update is called once per frame
-    void Update()
+
+
+    public bgImgBtn()
     {
+        this.bgcount++;
 
-    }
-
-
-    void bgImgBtn()
-    {
-        bgcount++;
-
-        if(bgcount == 1)
+        if(this.bgcount == 1)
         {
-            bgBtn.transform.position = bgOFF.transform.position;
+            this.bgBtn.transform.position = this.bgOFF.transform.position;
         }
 
-        if (bgcount == 2)
+        if (this.bgcount == 2)
         {
-            bgBtn.transform.position = bgON.transform.position;
-            bgcount = 0;
+            this.bgBtn.transform.position = this.bgON.transform.position;
+            this.bgcount = 0;
         }
     }
 
    
-    void sfxImgBtn()
+    public sfxImgBtn()
     {
-        sfxcount++;
+        this.sfxcount++;
 
-        if (sfxcount == 1)
+        if (this.sfxcount == 1)
         {
-            sfxBtn.transform.position = sfxOFF.transform.position;
+            this.sfxBtn.transform.position = this.sfxOFF.transform.position;
         }
 
-        if (sfxcount == 2)
+        if (this.sfxcount == 2)
         {
-            sfxBtn.transform.position = sfxON.transform.position;
-            sfxcount = 0;
+            this.sfxBtn.transform.position = this.sfxON.transform.position;
+            this.sfxcount = 0;
         }
     }
 
-    int lcount = 0;
-    void ListBtn2()
+    public lcount: number = 0;
+    public ListBtn2()
     {
-        lcount++;
-        if(lcount == 1)
+        this.lcount++;
+        if(this.lcount == 1)
         {
             // 언어 목록 창 나오게
-            list.SetActive(true);
+            this.list.SetActive(true);
         }
         
-        if(lcount == 2)
+        if(this.lcount == 2)
         {
-            list.SetActive(false);
-            lcount = 0;
+            this.list.SetActive(false);
+            this.lcount = 0;
         }
     }
 
     // 설정 버튼 클릭 시
-    void OptiOnClick()
+    public OptiOnClick()
     {
         // 설정 창 나오기
-        optionManu.SetActive(true);
+        this.optionManu.SetActive(true);
     }
 
     // 설정 창 X 버튼 클릭 시
-    void CloesBtn()
+    public CloesBtn()
     {
         // 설정 창 끄기
-        optionManu.SetActive(false);
+        this.optionManu.SetActive(false);
     }
 
     // 언어 목록 버튼 클릭 시
-    void ListBtn()
+    public ListBtn()
     {
         // 언어 목록 창 나오게
-        list.SetActive(true);
+        this.list.SetActive(true);
     }
 
     // 배경음 ON / OFF 카운트 체크
-    int bgcount = 0;
-    void BGOFF()
+    public bgcount:number = 0;
+    public BGOFF()
     {
-        bgcount++;
+        this.bgcount++;
 
         // 만약 카운트가 1이라면
-        if (bgcount == 1)
+        if(this.bgcount == 1)
         {
             // 버튼 위치를 off로
-            bgBtn.transform.position = bgOFF.transform.position;
+            this.bgBtn.transform.position = this.bgOFF.transform.position;
         }
 
         // 만약 카운트가 2라면
-        if (bgcount == 2)
+        if (this.bgcount == 2)
         {
             // 버튼 위치를 on으로
-            bgBtn.transform.position = bgON.transform.position;
+            this.bgBtn.transform.position = this.bgON.transform.position;
             // 카운트 초기화 해 주기
-            bgcount = 0;
+            this.bgcount = 0;
         }
 
     }
 
     // 효과음 ON / OFF 카운트 체크
-    int sfxcount = 0;
-    void SFXOFF()
+    public sfxcount : number = 0;
+    public SFXOFF()
     {
-        sfxcount++;
+        this.sfxcount++;
 
         // 만약 카운트가 1이면 
-        if (sfxcount == 1)
+        if (this.sfxcount == 1)
         {
             // 버튼 위치를 on으로
-            sfxBtn.transform.position = sfxOFF.transform.position;
+            this.sfxBtn.transform.position = this.sfxOFF.transform.position;
         }
 
         // 만약 카운트가 2라면
-        if (sfxcount == 2)
+        if (this.sfxcount == 2)
         {
             // 버튼 위치를 on으로
-            sfxBtn.transform.position = sfxON.transform.position;
+            this.sfxBtn.transform.position = this.sfxON.transform.position;
             // 카운트 초기화
-            sfxcount = 0;
+            this.sfxcount = 0;
         }
 
     }
 
     // 언어 클릭 체크
-    bool isKorean = false;
-    bool isEnglish = false;
-    bool isJapanese = false;
-    bool isThai = false;
-    bool isindonesian = false;
+    public isKorean : bool = false
+    public isEnglish : bool = false
+    //public isJapanese = false : bool;
+    //public isThai = false : bool;
+    //public isindonesian = false : bool;
 
     // 한국어 버튼
-    void KoreanBtn()
+    public KoreanBtn()
     {
-        isKorean = true;
+        this.isKorean = true;
 
         // 만약 isKorean = true라면
-        if (isKorean == true)
+        if (this.isKorean == true)
         {
             // 한국어 버튼 색을 하얀색으로
-            koreanColor.color = new Color(1f, 1f, 1f, 1f);
+            this.koreanColor.color = new Color(1, 1, 1, 1);
 
             // 나머지 언어 버튼 색은 원래 색(회색)으로
-            englishColor.color = new Color(0.66f, 0.66f, 0.66f, 1f);
-            thaiColor.color = new Color(0.66f, 0.66f, 0.66f, 1f);
-            japaneseColor.color = new Color(0.66f, 0.66f, 0.66f, 1f);
-            indonesianColor.color = new Color(0.66f, 0.66f, 0.66f, 1f);
+            this.englishColor.color = new Color(0.66, 0.66, 0.66, 1);
+            //this.thaiColor.color = new Color(0.66f, 0.66f, 0.66f, 1f);
+            //this.japaneseColor.color = new Color(0.66f, 0.66f, 0.66f, 1f);
+            //this.indonesianColor.color = new Color(0.66f, 0.66f, 0.66f, 1f);
         }
 
         // 목록 텍스트를 한국어로 바꿔주기
-        listText.text = "한국어";
+        this.listText.text = "한국어";
         // 목록 창 끄기
-        list.SetActive(false);
-        lcount = 0;
+        this.list.SetActive(false);
+        this.lcount = 0;
     }
 
     // 영어 버튼
-    void EnglishBtn()
+    public EnglishBtn()
     {
-        isEnglish = true;
+        this.isEnglish = true;
 
         // 만약 isEnglish = true라면
-        if (isEnglish == true)
+        if (this.isEnglish == true)
         {
             // 영어 버튼 색을 하얀색으로
-            englishColor.color = new Color(1f, 1f, 1f, 1f);
+            this.englishColor.color = new Color(1, 1, 1, 1);
 
             // 나머지 언어 버튼 색은 원래 색(회색)으로
-            koreanColor.color = new Color(0.66f, 0.66f, 0.66f, 1f);
-            thaiColor.color = new Color(0.66f, 0.66f, 0.66f, 1f);
-            japaneseColor.color = new Color(0.66f, 0.66f, 0.66f, 1f);
-            indonesianColor.color = new Color(0.66f, 0.66f, 0.66f, 1f);
+            this.koreanColor.color = new Color(0.66, 0.66, 0.66, 1);
+            //this.thaiColor.color = new Color(0.66, 0.66, 0.66, 1);
+            //this.japaneseColor.color = new Color(0.66, 0.66, 0.66, 1);
+            //this.indonesianColor.color = new Color(0.66, 0.66, 0.66, 1);
         }
 
         // 목록 텍스트를 영어로 바꿔주기
-        listText.text = "영어";
+        this.listText.text = "영어";
         // 목록 창 끄기
-        list.SetActive(false);
-        lcount = 0;
+        this.list.SetActive(false);
+        this.lcount = 0;
 
     }
 
-    void JapaneseBtn()
+    /*public JapaneseBtn()
     {
         isJapanese = true;
 
@@ -286,7 +284,7 @@ export default class SettingManager extends ZepetoScriptBehaviour {
         list.SetActive(false);
         lcount = 0;
     }
-    void ThaiBtn()
+    public ThaiBtn()
     {
         isThai = true;
 
@@ -310,7 +308,7 @@ export default class SettingManager extends ZepetoScriptBehaviour {
         lcount = 0;
     }
 
-    void indonesianBtn()
+    public indonesianBtn()
     {
         isindonesian = true;
 
@@ -332,5 +330,5 @@ export default class SettingManager extends ZepetoScriptBehaviour {
         // 목록 창 끄기
         list.SetActive(false);
         lcount = 0;
-    }
-}*/
+    }*/
+}
