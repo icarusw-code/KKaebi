@@ -13,6 +13,7 @@ import { ZepetoPlayers } from 'ZEPETO.Character.Controller';
 import KkaebiManager from './KkaebiManager';
 import Notifications from './Notifications';
 import LanguageChange from './Language/LanguageChange';
+import KkaebiInfo from '../TS/KkaebiInfo';
 export default class QuestManager extends ZepetoScriptBehaviour {
     //플레이어 컨트롤러
     private playerController : GameObject;
@@ -87,6 +88,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
     }
 
     Start() {
+        
         //this.acceptBtn.gameObject.SetActive(false);
         this.LeftPanel.SetActive(false);
         for(let i=0; i<this.btnsGO.Length;i++){
@@ -257,6 +259,12 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         }
     }
 
+    public completeWindowPrefab : GameObject;
+    public KkaebiImageList : Sprite[];
+    completeWindow : GameObject;
+    message : Text;
+    contentImg : Image;
+
     //퀘스트 완료
     public QuestComplete(){
         //퀘스트 안받은상태로 전환
@@ -264,6 +272,38 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         //playerpref에서 여태 음식만든 횟수 끌어옴
         var foodCount : number = UnityEngine.PlayerPrefs.GetInt(this.QuestAcceptFoodName);
         foodCount++;
+
+        //완료창 띄우기
+        this.completeWindow = GameObject.Instantiate(this.completeWindowPrefab) as GameObject;
+        this.message = this.completeWindow.transform.GetChild(4).GetComponent<Text>();
+        this.contentImg = this.completeWindow.transform.GetChild(2).GetChild(0).GetComponent<Image>();
+
+        // console.log(this.QuestAcceptFoodName + " : " + foodCount);
+        // foodCount 1번이면 => 음식완료 메시지
+        if(foodCount == 1){
+            this.message.text = "한식 획득!";
+            this.FoodImageList.map((image) => {
+                if(this.QuestAcceptFoodName == image.name){
+                    this.contentImg.sprite = image;
+                }
+            });
+        };
+        // foodCount 2번이면 => 깨비 완료 메시지
+        if(foodCount >= 2){
+            this.message.text = "한식깨비 획득!";
+            // 한식꺠비 이미지 리스트 삽입
+            this.KkaebiImageList.map((image) => {
+                this.KkkaebiManager.GetComponent<KkaebiManager>().KkaebiBtnObjects.map((d) => {
+                    if(this.QuestAcceptFoodName == d.GetComponent<KkaebiInfo>().info){
+                        if(d.name == image.name){
+                            this.contentImg.sprite = image;
+                        }
+
+                    };
+                });
+            });
+        };
+
         // Playerpref에 레시피 음식이름 키값으로 저장, 완료횟수
         UnityEngine.PlayerPrefs.SetInt(this.QuestAcceptFoodName,foodCount);
 

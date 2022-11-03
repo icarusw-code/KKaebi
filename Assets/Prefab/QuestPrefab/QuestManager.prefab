@@ -83,7 +83,9 @@ MonoBehaviour:
     - RecipeManager
     - KkkaebiManager
     - NotificationUI
+    - IngrdientBookController
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
@@ -166,6 +168,7 @@ MonoBehaviour:
     - 
     - 
     - '{"type":"System.Single, mscorlib","value":"0"}'
+    - 
     - 
     - 
     - 
