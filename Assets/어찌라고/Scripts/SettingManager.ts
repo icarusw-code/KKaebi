@@ -1,6 +1,7 @@
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 import { Button,Text,Image } from 'UnityEngine.UI';
 import { GameObject,Color, Sprite } from 'UnityEngine';
+import LanguageChange from '../../Scripts/Language/LanguageChange';
 export default class SettingManager extends ZepetoScriptBehaviour {
 // 설정 버튼
     public option : Button ;
@@ -25,7 +26,7 @@ export default class SettingManager extends ZepetoScriptBehaviour {
     public sfxBtn : Button;
 
     // 설정 창
-    public optionManu : GameObject;
+    public optionMenu : GameObject;
     // 언어 창
     public list : GameObject;
 
@@ -50,8 +51,9 @@ export default class SettingManager extends ZepetoScriptBehaviour {
     // 언어 버튼 ON / OFF 체크
     private isClick : bool = true;
 
-    public BtnBackground : Sprite[];
+    public BtnBackground : Sprite[]; //0번이 OFF인 이미지, 1번이ON이미지
 
+    public FinalAcceptBtn : Button;
     // Start is called before the first frame update
     Start()
     {
@@ -65,6 +67,7 @@ export default class SettingManager extends ZepetoScriptBehaviour {
 
         this.korean.onClick.AddListener(()=>this.KoreanBtn());
         this.english.onClick.AddListener(()=>this.EnglishBtn());
+        this.FinalAcceptBtn.onClick.AddListener(()=>this.AcceptBtn());
         /*this.japanese.onClick.AddListener(()=>this.JapaneseBtn());
         this.thai.onClick.AddListener(()=>this.ThaiBtn());
         this.indonesian.onClick.AddListener(()=>this.indonesianBtn());*/
@@ -80,6 +83,8 @@ export default class SettingManager extends ZepetoScriptBehaviour {
         //this.indonesianColor = this.indonesian.gameObject.GetComponent<Image>();
 
         this.listText.text = "한국어";
+        this.bgBtn.transform.position = this.bgOFF.transform.position;
+        this.sfxBtn.transform.position = this.sfxOFF.transform.position;
     }
 
 
@@ -88,14 +93,16 @@ export default class SettingManager extends ZepetoScriptBehaviour {
     {
         this.bgcount++;
 
-        if(this.bgcount == 1)
-        {
-            this.bgBtn.transform.position = this.bgOFF.transform.position;
-        }
-
-        if (this.bgcount == 2)
+        if(this.bgcount == 1) //끄기
         {
             this.bgBtn.transform.position = this.bgON.transform.position;
+            this.bgImg.GetComponent<Image>().sprite = this.BtnBackground[0];
+        }
+
+        if (this.bgcount == 2)//켜기
+        {
+            this.bgBtn.transform.position = this.bgOFF.transform.position;
+            this.bgImg.GetComponent<Image>().sprite = this.BtnBackground[1];
             this.bgcount = 0;
         }
     }
@@ -105,15 +112,17 @@ export default class SettingManager extends ZepetoScriptBehaviour {
     {
         this.sfxcount++;
 
-        if (this.sfxcount == 1)
-        {
-            this.sfxBtn.transform.position = this.sfxOFF.transform.position;
-        }
-
-        if (this.sfxcount == 2)
+        if (this.sfxcount == 1) //끄기
         {
             this.sfxBtn.transform.position = this.sfxON.transform.position;
-            this.sfxcount = 0;
+            this.sfxImg.GetComponent<Image>().sprite = this.BtnBackground[0];
+        }
+
+        if (this.sfxcount == 2) //켜기
+        {
+            this.sfxBtn.transform.position = this.sfxOFF.transform.position;
+            this.sfxImg.GetComponent<Image>().sprite = this.BtnBackground[1];
+            this.sfxcount = 0; //켜있는상태면 0임
         }
     }
 
@@ -138,14 +147,14 @@ export default class SettingManager extends ZepetoScriptBehaviour {
     public OptiOnClick()
     {
         // 설정 창 나오기
-        this.optionManu.SetActive(true);
+        this.optionMenu.SetActive(true);
     }
 
     // 설정 창 X 버튼 클릭 시
     public CloesBtn()
     {
         // 설정 창 끄기
-        this.optionManu.SetActive(false);
+        this.optionMenu.SetActive(false);
     }
 
     // 언어 목록 버튼 클릭 시
@@ -165,14 +174,16 @@ export default class SettingManager extends ZepetoScriptBehaviour {
         if(this.bgcount == 1)
         {
             // 버튼 위치를 off로
-            this.bgBtn.transform.position = this.bgOFF.transform.position;
+            this.bgBtn.transform.position = this.bgON.transform.position;
+            this.bgImg.GetComponent<Image>().sprite = this.BtnBackground[0];
         }
 
         // 만약 카운트가 2라면
         if (this.bgcount == 2)
         {
             // 버튼 위치를 on으로
-            this.bgBtn.transform.position = this.bgON.transform.position;
+            this.bgBtn.transform.position = this.bgOFF.transform.position;
+            this.bgImg.GetComponent<Image>().sprite = this.BtnBackground[1];
             // 카운트 초기화 해 주기
             this.bgcount = 0;
         }
@@ -189,14 +200,16 @@ export default class SettingManager extends ZepetoScriptBehaviour {
         if (this.sfxcount == 1)
         {
             // 버튼 위치를 on으로
-            this.sfxBtn.transform.position = this.sfxOFF.transform.position;
+            this.sfxBtn.transform.position = this.sfxON.transform.position;
+            this.sfxImg.GetComponent<Image>().sprite = this.BtnBackground[0];
         }
 
         // 만약 카운트가 2라면
         if (this.sfxcount == 2)
         {
             // 버튼 위치를 on으로
-            this.sfxBtn.transform.position = this.sfxON.transform.position;
+            this.sfxBtn.transform.position = this.sfxOFF.transform.position;
+            this.sfxImg.GetComponent<Image>().sprite = this.BtnBackground[1];
             // 카운트 초기화
             this.sfxcount = 0;
         }
@@ -214,7 +227,7 @@ export default class SettingManager extends ZepetoScriptBehaviour {
     public KoreanBtn()
     {
         this.isKorean = true;
-
+        LanguageChange.getInstance().LanguageMode=1;
         // 만약 isKorean = true라면
         if (this.isKorean == true)
         {
@@ -239,7 +252,7 @@ export default class SettingManager extends ZepetoScriptBehaviour {
     public EnglishBtn()
     {
         this.isEnglish = true;
-
+        LanguageChange.getInstance().LanguageMode=2;
         // 만약 isEnglish = true라면
         if (this.isEnglish == true)
         {
@@ -259,6 +272,16 @@ export default class SettingManager extends ZepetoScriptBehaviour {
         this.list.SetActive(false);
         this.lcount = 0;
 
+    }
+
+    public AcceptBtn(){
+        if(LanguageChange.getInstance().LanguageMode==1){
+            LanguageChange.getInstance().ChangeTxtInStatics(1);
+        }
+        else if(LanguageChange.getInstance().LanguageMode==2){
+            LanguageChange.getInstance().ChangeTxtInStatics(2);
+        }
+        this.optionMenu.SetActive(false);
     }
 
     /*public JapaneseBtn()

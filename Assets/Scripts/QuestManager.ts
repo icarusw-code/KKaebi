@@ -422,7 +422,10 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         if(foodName=="팥빙수"){
             ingreFood = GameObject.Instantiate(this.myQuestIngreFactory, this.MainQuestContentTransform) as GameObject;
             ingreFood.name = this.myQuestFoodImgIngre[1].name;
-
+            let colorTemp : UnityEngine.Color;
+            colorTemp = ingreFood.transform.GetChild(0).GetComponent<Image>().color;
+            colorTemp.a = 255;
+            ingreFood.transform.GetChild(0).GetComponent<Image>().color = colorTemp;
             if (LanguageChange.getInstance().LanguageMode == 1) {
                 ingreFood.GetComponent<QuestIngre>().ingredientName.text = this.myQuestFoodImgIngre[1].name; //한글화문제
             }
@@ -434,7 +437,10 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         else if(foodName=="붕어찜"||foodName=="부대찌개"){
             ingreFood = GameObject.Instantiate(this.myQuestIngreFactory, this.MainQuestContentTransform) as GameObject;
             ingreFood.name = this.myQuestFoodImgIngre[0].name;
-
+            let colorTemp : UnityEngine.Color;
+            colorTemp = ingreFood.transform.GetChild(0).GetComponent<Image>().color;
+            colorTemp.a = 255;
+            ingreFood.transform.GetChild(0).GetComponent<Image>().color = colorTemp;
             if (LanguageChange.getInstance().LanguageMode == 1) {
                 ingreFood.GetComponent<QuestIngre>().ingredientName.text = this.myQuestFoodImgIngre[0].name; //한글화문제
             }
