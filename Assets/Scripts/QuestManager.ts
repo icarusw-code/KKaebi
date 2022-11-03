@@ -264,6 +264,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
     completeWindow : GameObject;
     message : Text;
     contentImg : Image;
+    okButton : Button;
 
     //퀘스트 완료
     public QuestComplete(){
@@ -277,6 +278,11 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         this.completeWindow = GameObject.Instantiate(this.completeWindowPrefab) as GameObject;
         this.message = this.completeWindow.transform.GetChild(4).GetComponent<Text>();
         this.contentImg = this.completeWindow.transform.GetChild(2).GetChild(0).GetComponent<Image>();
+        this.okButton = this.completeWindow.transform.GetChild(3).GetComponent<Button>();
+
+        this.okButton.onClick.AddListener(() => {
+            GameObject.Destroy(this.completeWindow);
+        });
 
         // console.log(this.QuestAcceptFoodName + " : " + foodCount);
         // foodCount 1번이면 => 음식완료 메시지
