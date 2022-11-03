@@ -370,10 +370,13 @@ MonoBehaviour:
   script:
     keys:
     - info
+    - EnglishName
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uBD95\uC5B4\uBE75\"}"
+    - '{"type":"System.String, mscorlib","value":"Bungeoppang Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -16903,7 +16906,7 @@ MonoBehaviour:
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uBC30\uC219\"}"
-    - '{"type":"System.String, mscorlib","value":""}'
+    - '{"type":"System.String, mscorlib","value":"Baesook Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -17721,7 +17724,7 @@ MonoBehaviour:
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uC740\uD589\uAF2C\uCE58\"}"
-    - '{"type":"System.String, mscorlib","value":""}'
+    - '{"type":"System.String, mscorlib","value":"Gingko nuts Skewer Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -20015,7 +20018,7 @@ MonoBehaviour:
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uC57D\uACFC\"}"
-    - '{"type":"System.String, mscorlib","value":""}'
+    - '{"type":"System.String, mscorlib","value":"Yakgwa Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -21883,7 +21886,7 @@ MonoBehaviour:
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uC18C\uB5A1\uC18C\uB5A1\"}"
-    - '{"type":"System.String, mscorlib","value":"seoteokkabi"}'
+    - '{"type":"System.String, mscorlib","value":"Sotteok Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -29081,7 +29084,7 @@ MonoBehaviour:
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uB5A1\uAF2C\uCE58\"}"
-    - '{"type":"System.String, mscorlib","value":""}'
+    - '{"type":"System.String, mscorlib","value":"Tteok kkochi Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -30589,10 +30592,13 @@ MonoBehaviour:
   script:
     keys:
     - info
+    - EnglishName
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uAD70\uBC24\"}"
+    - '{"type":"System.String, mscorlib","value":"Roasted Chestnuts Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -33094,10 +33100,13 @@ MonoBehaviour:
   script:
     keys:
     - info
+    - EnglishName
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uB5A1\uBCF6\uC774\"}"
+    - '{"type":"System.String, mscorlib","value":""}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -34129,7 +34138,7 @@ MonoBehaviour:
     - {fileID: 3723965545527246433, guid: b23db6b47d6b6c24a99989ab69eedcd3, type: 3}
     - {fileID: 3723965545527246433, guid: cfdc3eb86790eac4ba77a3c346ce7e0d, type: 3}
     - {fileID: 3723965545527246433, guid: 23ee20db04fb0d14a906459f07811c84, type: 3}
-    - {fileID: 3723965545527246433, guid: 1092df390ad481e45bbbeeed1955c3c4, type: 3}
+    - {fileID: 3723965545527246433, guid: d6259e11f2555714191c69158bc1a9c5, type: 3}
     - {fileID: 3723965545527246433, guid: 120c2a1682d766241a079277d86f6680, type: 3}
     - {fileID: 3723965545527246433, guid: 13c20d8625e67f24585d11f2b0245468, type: 3}
     - {fileID: 3723965545527246433, guid: d11f981518b8f6841bec647133fe2806, type: 3}
@@ -40231,10 +40240,13 @@ MonoBehaviour:
   script:
     keys:
     - info
+    - EnglishName
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uC560\uD638\uBC15\uC804\"}"
+    - '{"type":"System.String, mscorlib","value":"Green Pumpkin Pancake Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -45755,7 +45767,7 @@ MonoBehaviour:
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uB2E8\uD638\uBC15\uC2DD\uD61C\"}"
-    - '{"type":"System.String, mscorlib","value":""}'
+    - '{"type":"System.String, mscorlib","value":"Pumkin Sikhye Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -48631,10 +48643,13 @@ MonoBehaviour:
   script:
     keys:
     - info
+    - EnglishName
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uAC10\uC790\uC804\"}"
+    - '{"type":"System.String, mscorlib","value":"Potato pancake Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -51047,10 +51062,13 @@ MonoBehaviour:
   script:
     keys:
     - info
+    - EnglishName
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uCC39\uC300\uB5A1\"}"
+    - '{"type":"System.String, mscorlib","value":"Sticky rice cake Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -54193,10 +54211,13 @@ MonoBehaviour:
   script:
     keys:
     - info
+    - EnglishName
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uC1A1\uD3B8\"}"
+    - '{"type":"System.String, mscorlib","value":"Songpyeon Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -64928,7 +64949,7 @@ MonoBehaviour:
       mscorlib\",\"isUnity\":false}"}'
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uB5A1\uAF2C\uCE58\"}"
     - '{"type":"System.Single, mscorlib","value":"1001"}'
-    - '{"type":"System.String, mscorlib","value":"Tteogkkochi"}'
+    - '{"type":"System.String, mscorlib","value":"Tteok kkochi"}'
     unityArrayValues: []
     arrayValues:
     - 5001
@@ -74645,7 +74666,7 @@ MonoBehaviour:
       mscorlib\",\"isUnity\":false}"}'
     - '{"type":"System.Single, mscorlib","value":"0"}'
     - '{"type":"System.String, mscorlib","value":""}'
-    - '{"type":"System.String, mscorlib","value":"Tteogkkochi"}'
+    - '{"type":"System.String, mscorlib","value":"Tteok kkochi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 28dd44ef6c428cc44b75c4159b2aa69a, type: 3}

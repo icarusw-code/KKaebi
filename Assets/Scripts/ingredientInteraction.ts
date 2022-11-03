@@ -43,7 +43,7 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
                 }
                 //영어라면
                 else if(LanguageChange.getInstance().LanguageMode == 2){ //영어
-                    Notifications.getIns().UpLoadText("You don't get the quest. Go to the King Goblin!");
+                    Notifications.getIns().UpLoadText("You don't get the quest. Go to the King Kkaebi!");
                 }
             }
             if(QuestManager.getInstance().GetIngreCheckDiction.get(this.myID)==true){
@@ -75,7 +75,7 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
                             Notifications.getIns().UpLoadText(QuestManager.getInstance().QuestAcceptFoodName+"의 재료를 전부 모았다! 대왕깨비에게 가서 요리를 부탁하자");
                         }   
                         else if(LanguageChange.getInstance().LanguageMode == 2){ //영어
-                            Notifications.getIns().UpLoadText("I collected all the ingredients of "+LanguageChange.getInstance().EnlgishPack.get(QuestManager.getInstance().QuestAcceptFoodName)+"! Let's go ask the King Goblin to cook");
+                            Notifications.getIns().UpLoadText("You collected all the ingredients for "+LanguageChange.getInstance().EnlgishPack.get(QuestManager.getInstance().QuestAcceptFoodName)+"! Let's go ask the King Kkaebi to cook");
                         }
                     }
                     this.isingrcheck=true; //레시피에 해당 재료가 있는것이므로
