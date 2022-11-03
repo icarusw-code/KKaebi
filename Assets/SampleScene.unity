@@ -2876,10 +2876,13 @@ MonoBehaviour:
   script:
     keys:
     - info
+    - EnglishName
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uBD80\uB300\uCC0C\uAC1C\"}"
+    - '{"type":"System.String, mscorlib","value":"Budae Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -7684,10 +7687,13 @@ MonoBehaviour:
   script:
     keys:
     - info
+    - EnglishName
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uC18C\uAC08\uBE44\uCC1C\"}"
+    - '{"type":"System.String, mscorlib","value":"Braised Short Ribs Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -8379,7 +8385,7 @@ MonoBehaviour:
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uAE40\uCE58\"}"
-    - '{"type":"System.String, mscorlib","value":""}'
+    - '{"type":"System.String, mscorlib","value":"Kimchi Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -8826,10 +8832,13 @@ MonoBehaviour:
   script:
     keys:
     - info
+    - EnglishName
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uBC14\uC9C0\uB77D\uCE7C\uAD6D\uC218\"}"
+    - '{"type":"System.String, mscorlib","value":"Clam Kalguk Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -9438,10 +9447,13 @@ MonoBehaviour:
   script:
     keys:
     - info
+    - EnglishName
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uC6B0\uB7ED\uB9E4\uC6B4\uD0D5\"}"
+    - '{"type":"System.String, mscorlib","value":"Spicy Stew Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -14703,10 +14715,13 @@ MonoBehaviour:
   script:
     keys:
     - info
+    - EnglishName
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uBD95\uC5B4\uCC1C\"}"
+    - '{"type":"System.String, mscorlib","value":"Steamed Carp Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -15035,10 +15050,13 @@ MonoBehaviour:
   script:
     keys:
     - info
+    - EnglishName
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uBE44\uBE54\uBC25\"}"
+    - '{"type":"System.String, mscorlib","value":"Bibimbap Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -16214,10 +16232,13 @@ MonoBehaviour:
   script:
     keys:
     - info
+    - EnglishName
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uC18C\uBD88\uACE0\uAE30\uCEF5\uBC25\"}"
+    - '{"type":"System.String, mscorlib","value":"Bulgogi Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -23051,7 +23072,7 @@ MonoBehaviour:
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uAE40\uBC25\"}"
-    - '{"type":"System.String, mscorlib","value":""}'
+    - '{"type":"System.String, mscorlib","value":"Gimbap Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -29796,10 +29817,13 @@ MonoBehaviour:
   script:
     keys:
     - info
+    - EnglishName
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uB099\uC9C0\uD638\uB871\uC774\"}"
+    - '{"type":"System.String, mscorlib","value":"Poulp Skewer Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -33106,7 +33130,7 @@ MonoBehaviour:
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uB5A1\uBCF6\uC774\"}"
-    - '{"type":"System.String, mscorlib","value":""}'
+    - '{"type":"System.String, mscorlib","value":"Tteokbo Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -34469,10 +34493,13 @@ MonoBehaviour:
   script:
     keys:
     - info
+    - EnglishName
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uD325\uBE59\uC218\"}"
+    - '{"type":"System.String, mscorlib","value":"Redbean Bing Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -40898,7 +40925,7 @@ MonoBehaviour:
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uB5A1\uAD6D\"}"
-    - '{"type":"System.String, mscorlib","value":""}'
+    - '{"type":"System.String, mscorlib","value":"Tteokguk Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
