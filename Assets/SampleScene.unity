@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.040679544, g: 0.07354141, b: 0.1252535, a: 1}
+  m_IndirectSpecularColor: {r: 0.041091345, g: 0.07253561, b: 0.12543699, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -56643,6 +56643,11 @@ MonoBehaviour:
     - IngreSelectImg
     - BeforeSelectnum
     - IngrdientBookController
+    - completeWindowPrefab
+    - KkaebiImageList
+    - completeWindow
+    - message
+    - contentImg
     unityValues:
     - {fileID: 2852348533980181526}
     - {fileID: 735691264}
@@ -56683,6 +56688,11 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 73736728ae05f444b9920827684cd5ce, type: 3}
     - {fileID: 0}
     - {fileID: 1344408515}
+    - {fileID: 8091953686525176902, guid: b4ee52036511592449665fe40deb7ad0, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
     values:
     - 
     - 
@@ -56731,6 +56741,12 @@ MonoBehaviour:
     - 
     - '{"type":"System.Single, mscorlib","value":"0"}'
     - 
+    - 
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":42,\"length\":1,\"type\":\"UnityEngine.Sprite,
+      UnityEngine.CoreModule\",\"isUnity\":true}"}'
+    - 
+    - 
+    - 
     unityArrayValues:
     - {fileID: 21300000, guid: 7c9c1fe7ae3f7ba478f1324424479014, type: 3}
     - {fileID: 21300000, guid: 70142b55f374c5a4aa824ca7bd3a0dea, type: 3}
@@ -56774,6 +56790,7 @@ MonoBehaviour:
     - {fileID: 2852348533927089760}
     - {fileID: 21300000, guid: 7b148c9a6f4be6349aa23d85ec7eda5a, type: 3}
     - {fileID: 21300000, guid: 67ac8611952a5fc429f286f9ab4c2922, type: 3}
+    - {fileID: 21300000, guid: 7065c84329e7d3647a9efaa0b4accb86, type: 3}
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 5bd9b929c0677d54dba305b629a28418, type: 3}
     isExpaned: 0
