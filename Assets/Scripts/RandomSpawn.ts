@@ -12,6 +12,7 @@ export default class RandomSpawn extends ZepetoScriptBehaviour {
     public IngredientFactory7 : GameObject;
     public IngredientFactory8 : GameObject;
     public IngredientFactory9 : GameObject;
+    public IngredientFactory10 : GameObject;
     public SpawnPoint : GameObject;
     Start() {    
         this.SpawnPoint = GameObject.Find("SpawnPoint");
@@ -29,6 +30,7 @@ export default class RandomSpawn extends ZepetoScriptBehaviour {
         var Ingredient7 : GameObject = GameObject.Instantiate(this.IngredientFactory7)as GameObject;
         var Ingredient8 : GameObject = GameObject.Instantiate(this.IngredientFactory8)as GameObject;
         var Ingredient9 : GameObject = GameObject.Instantiate(this.IngredientFactory9)as GameObject;
+        var Ingredient10 : GameObject = GameObject.Instantiate(this.IngredientFactory10)as GameObject;
         Ingredient.transform.position = this.SpawnPoint.transform.position + new Vector3(1,0,0);
         Ingredient1.transform.position = this.SpawnPoint.transform.position + new Vector3(2,0,0);
         Ingredient2.transform.position = this.SpawnPoint.transform.position + new Vector3(3,0,0);
@@ -39,6 +41,6 @@ export default class RandomSpawn extends ZepetoScriptBehaviour {
         Ingredient7.transform.position = this.SpawnPoint.transform.position + new Vector3(3,0,3);
         Ingredient8.transform.position = this.SpawnPoint.transform.position + new Vector3(4,0,0);
         Ingredient9.transform.position = this.SpawnPoint.transform.position + new Vector3(-4,0,0);
-        Ingredient.transform.position = this.SpawnPoint.transform.position + new Vector3(5,0,0);
+        Ingredient10.transform.position = this.SpawnPoint.transform.position + new Vector3(5,0,0);
     }
 }

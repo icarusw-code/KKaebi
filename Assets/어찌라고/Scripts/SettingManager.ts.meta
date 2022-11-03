@@ -1,0 +1,152 @@
+fileFormatVersion: 2
+guid: 60399de632cd0df479572aef297a81c7
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst
+    UnityEngine_UI_1 = require(\\\"UnityEngine.UI\\\");\\r\\nconst UnityEngine_1
+    = require(\\\"UnityEngine\\\");\\r\\nclass SettingManager extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\\r\\n    constructor() {\\r\\n        super(...arguments);\\r\\n        //
+    \uC5B8\uC5B4 \uBC84\uD2BC ON / OFF \uCCB4\uD06C\\r\\n        this.isClick = true;\\r\\n       
+    this.lcount = 0;\\r\\n        // \uBC30\uACBD\uC74C ON / OFF \uCE74\uC6B4\uD2B8
+    \uCCB4\uD06C\\r\\n        this.bgcount = 0;\\r\\n        // \uD6A8\uACFC\uC74C
+    ON / OFF \uCE74\uC6B4\uD2B8 \uCCB4\uD06C\\r\\n        this.sfxcount = 0;\\r\\n       
+    // \uC5B8\uC5B4 \uD074\uB9AD \uCCB4\uD06C\\r\\n        this.isKorean = false;\\r\\n       
+    this.isEnglish = false;\\r\\n        /*public JapaneseBtn()\\r\\n        {\\r\\n           
+    isJapanese = true;\\r\\n    \\r\\n            // \uB9CC\uC57D isJapanese = true\uB77C\uBA74\\r\\n           
+    if (isJapanese == true)\\r\\n            {\\r\\n                // \uC77C\uBCF8\uC5B4
+    \uBC84\uD2BC \uC0C9\uC744 \uD558\uC580\uC0C9\uC73C\uB85C\\r\\n               
+    japaneseColor.color = new Color(1f, 1f, 1f, 1f);\\r\\n    \\r\\n               
+    // \uB098\uBA38\uC9C0 \uC5B8\uC5B4 \uBC84\uD2BC \uC0C9\uC740 \uC6D0\uB798 \uC0C9(\uD68C\uC0C9)\uC73C\uB85C\\r\\n               
+    koreanColor.color = new Color(0.66f, 0.66f, 0.66f, 1f);\\r\\n               
+    englishColor.color = new Color(0.66f, 0.66f, 0.66f, 1f);\\r\\n               
+    thaiColor.color = new Color(0.66f, 0.66f, 0.66f, 1f);\\r\\n                indonesianColor.color
+    = new Color(0.66f, 0.66f, 0.66f, 1f);\\r\\n            }\\r\\n    \\r\\n           
+    // \uBAA9\uB85D \uD14D\uC2A4\uD2B8\uB97C \uC77C\uBCF8\uC5B4\uB85C \uBC14\uAFD4\uC8FC\uAE30\\r\\n           
+    listText.text = \\\"\uC77C\uBCF8\uC5B4\\\";\\r\\n            // \uBAA9\uB85D
+    \uCC3D \uB044\uAE30\\r\\n            list.SetActive(false);\\r\\n           
+    lcount = 0;\\r\\n        }\\r\\n        public ThaiBtn()\\r\\n        {\\r\\n           
+    isThai = true;\\r\\n    \\r\\n            // \uB9CC\uC57D isThai = true\uB77C\uBA74\\r\\n           
+    if (isThai == true)\\r\\n            {\\r\\n                // \uD0DC\uAD6D\uC5B4
+    \uBC84\uD2BC \uC0C9\uC744 \uD558\uC580\uC0C9\uC73C\uB85C\\r\\n               
+    thaiColor.color = new Color(1f, 1f, 1f, 1f);\\r\\n    \\r\\n                //
+    \uB098\uBA38\uC9C0 \uC5B8\uC5B4 \uBC84\uD2BC \uC0C9\uC740 \uC6D0\uB798 \uC0C9(\uD68C\uC0C9)\uC73C\uB85C\\r\\n               
+    koreanColor.color = new Color(0.66f, 0.66f, 0.66f, 1f);\\r\\n               
+    englishColor.color = new Color(0.66f, 0.66f, 0.66f, 1f);\\r\\n               
+    japaneseColor.color = new Color(0.66f, 0.66f, 0.66f, 1f);\\r\\n               
+    indonesianColor.color = new Color(0.66f, 0.66f, 0.66f, 1f);\\r\\n           
+    }\\r\\n    \\r\\n            // \uBAA9\uB85D \uD14D\uC2A4\uD2B8\uB97C \uD0DC\uAD6D\uC5B4\uB85C
+    \uBC14\uAFD4\uC8FC\uAE30\\r\\n            listText.text = \\\"\uD0DC\uAD6D\uC5B4\\\";\\r\\n           
+    // \uBAA9\uB85D \uCC3D \uB044\uAE30\\r\\n            list.SetActive(false);\\r\\n           
+    lcount = 0;\\r\\n        }\\r\\n    \\r\\n        public indonesianBtn()\\r\\n       
+    {\\r\\n            isindonesian = true;\\r\\n    \\r\\n            // \uB9CC\uC57D
+    isindonesian = true\uB77C\uBA74\\r\\n            if (isindonesian == true)\\r\\n           
+    {\\r\\n                // \uC778\uB3C4\uB124\uC2DC\uC544\uC5B4 \uBC84\uD2BC \uC0C9\uC744
+    \uD558\uC580\uC0C9\uC73C\uB85C\\r\\n                indonesianColor.color = new
+    Color(1f, 1f, 1f, 1f);\\r\\n    \\r\\n                // \uB098\uBA38\uC9C0 \uC5B8\uC5B4
+    \uBC84\uD2BC \uC0C9\uC740 \uC6D0\uB798 \uC0C9(\uD68C\uC0C9)\uC73C\uB85C\\r\\n               
+    koreanColor.color = new Color(0.66f, 0.66f, 0.66f, 1f);\\r\\n               
+    englishColor.color = new Color(0.66f, 0.66f, 0.66f, 1f);\\r\\n               
+    thaiColor.color = new Color(0.66f, 0.66f, 0.66f, 1f);\\r\\n                japaneseColor.color
+    = new Color(0.66f, 0.66f, 0.66f, 1f);\\r\\n            }\\r\\n    \\r\\n           
+    // \uBAA9\uB85D \uD14D\uC2A4\uD2B8\uB97C \uC778\uB3C4\uB124\uC2DC\uC544\uC5B4\uB85C
+    \uBC14\uAFD4\uC8FC\uAE30\\r\\n            listText.text = \\\"\uC778\uB3C4\uB124\uC2DC\uC544\uC5B4\\\";\\r\\n           
+    // \uBAA9\uB85D \uCC3D \uB044\uAE30\\r\\n            list.SetActive(false);\\r\\n           
+    lcount = 0;\\r\\n        }*/\\r\\n    }\\r\\n    // Start is called before the
+    first frame update\\r\\n    Start() {\\r\\n        // \uBC84\uD2BC \uD074\uB9AD
+    \uC2DC \uD568\uC218 \uD638\uCD9C\\r\\n        this.option.onClick.AddListener(()
+    => this.OptiOnClick());\\r\\n        this.closeBtn.onClick.AddListener(() =>
+    this.CloesBtn());\\r\\n        this.listBtn.onClick.AddListener(() => this.ListBtn());\\r\\n       
+    this.bgImg.onClick.AddListener(() => this.bgImgBtn());\\r\\n        this.sfxImg.onClick.AddListener(()
+    => this.sfxImgBtn());\\r\\n        this.listImg.onClick.AddListener(() => this.ListBtn2());\\r\\n       
+    this.korean.onClick.AddListener(() => this.KoreanBtn());\\r\\n        this.english.onClick.AddListener(()
+    => this.EnglishBtn());\\r\\n        /*this.japanese.onClick.AddListener(()=>this.JapaneseBtn());\\r\\n       
+    this.thai.onClick.AddListener(()=>this.ThaiBtn());\\r\\n        this.indonesian.onClick.AddListener(()=>this.indonesianBtn());*/\\r\\n       
+    this.bgBtn.onClick.AddListener(() => this.BGOFF());\\r\\n        this.sfxBtn.onClick.AddListener(()
+    => this.SFXOFF());\\r\\n        // \uC5B8\uC5B4 \uC774\uBBF8\uC9C0 \uBD88\uB7EC\uC624\uAE30\\r\\n       
+    this.koreanColor = this.korean.gameObject.GetComponent($typeof(UnityEngine_UI_1.Image));\\r\\n       
+    this.englishColor = this.english.gameObject.GetComponent($typeof(UnityEngine_UI_1.Image));\\r\\n       
+    //this.japaneseColor = this.japanese.gameObject.GetComponent<Image>();\\r\\n       
+    //this.thaiColor = this.thai.gameObject.GetComponent<Image>();\\r\\n        //this.indonesianColor
+    = this.indonesian.gameObject.GetComponent<Image>();\\r\\n        this.listText.text
+    = \\\"\uD55C\uAD6D\uC5B4\\\";\\r\\n    }\\r\\n    bgImgBtn() {\\r\\n        this.bgcount++;\\r\\n       
+    if (this.bgcount == 1) {\\r\\n            this.bgBtn.transform.position = this.bgOFF.transform.position;\\r\\n       
+    }\\r\\n        if (this.bgcount == 2) {\\r\\n            this.bgBtn.transform.position
+    = this.bgON.transform.position;\\r\\n            this.bgcount = 0;\\r\\n       
+    }\\r\\n    }\\r\\n    sfxImgBtn() {\\r\\n        this.sfxcount++;\\r\\n       
+    if (this.sfxcount == 1) {\\r\\n            this.sfxBtn.transform.position = this.sfxOFF.transform.position;\\r\\n       
+    }\\r\\n        if (this.sfxcount == 2) {\\r\\n            this.sfxBtn.transform.position
+    = this.sfxON.transform.position;\\r\\n            this.sfxcount = 0;\\r\\n       
+    }\\r\\n    }\\r\\n    ListBtn2() {\\r\\n        this.lcount++;\\r\\n        if
+    (this.lcount == 1) {\\r\\n            // \uC5B8\uC5B4 \uBAA9\uB85D \uCC3D \uB098\uC624\uAC8C\\r\\n           
+    this.list.SetActive(true);\\r\\n        }\\r\\n        if (this.lcount == 2)
+    {\\r\\n            this.list.SetActive(false);\\r\\n            this.lcount =
+    0;\\r\\n        }\\r\\n    }\\r\\n    // \uC124\uC815 \uBC84\uD2BC \uD074\uB9AD
+    \uC2DC\\r\\n    OptiOnClick() {\\r\\n        // \uC124\uC815 \uCC3D \uB098\uC624\uAE30\\r\\n       
+    this.optionManu.SetActive(true);\\r\\n    }\\r\\n    // \uC124\uC815 \uCC3D X
+    \uBC84\uD2BC \uD074\uB9AD \uC2DC\\r\\n    CloesBtn() {\\r\\n        // \uC124\uC815
+    \uCC3D \uB044\uAE30\\r\\n        this.optionManu.SetActive(false);\\r\\n    }\\r\\n   
+    // \uC5B8\uC5B4 \uBAA9\uB85D \uBC84\uD2BC \uD074\uB9AD \uC2DC\\r\\n    ListBtn()
+    {\\r\\n        // \uC5B8\uC5B4 \uBAA9\uB85D \uCC3D \uB098\uC624\uAC8C\\r\\n       
+    this.list.SetActive(true);\\r\\n    }\\r\\n    BGOFF() {\\r\\n        this.bgcount++;\\r\\n       
+    // \uB9CC\uC57D \uCE74\uC6B4\uD2B8\uAC00 1\uC774\uB77C\uBA74\\r\\n        if
+    (this.bgcount == 1) {\\r\\n            // \uBC84\uD2BC \uC704\uCE58\uB97C off\uB85C\\r\\n           
+    this.bgBtn.transform.position = this.bgOFF.transform.position;\\r\\n        }\\r\\n       
+    // \uB9CC\uC57D \uCE74\uC6B4\uD2B8\uAC00 2\uB77C\uBA74\\r\\n        if (this.bgcount
+    == 2) {\\r\\n            // \uBC84\uD2BC \uC704\uCE58\uB97C on\uC73C\uB85C\\r\\n           
+    this.bgBtn.transform.position = this.bgON.transform.position;\\r\\n           
+    // \uCE74\uC6B4\uD2B8 \uCD08\uAE30\uD654 \uD574 \uC8FC\uAE30\\r\\n           
+    this.bgcount = 0;\\r\\n        }\\r\\n    }\\r\\n    SFXOFF() {\\r\\n       
+    this.sfxcount++;\\r\\n        // \uB9CC\uC57D \uCE74\uC6B4\uD2B8\uAC00 1\uC774\uBA74
+    \\r\\n        if (this.sfxcount == 1) {\\r\\n            // \uBC84\uD2BC \uC704\uCE58\uB97C
+    on\uC73C\uB85C\\r\\n            this.sfxBtn.transform.position = this.sfxOFF.transform.position;\\r\\n       
+    }\\r\\n        // \uB9CC\uC57D \uCE74\uC6B4\uD2B8\uAC00 2\uB77C\uBA74\\r\\n       
+    if (this.sfxcount == 2) {\\r\\n            // \uBC84\uD2BC \uC704\uCE58\uB97C
+    on\uC73C\uB85C\\r\\n            this.sfxBtn.transform.position = this.sfxON.transform.position;\\r\\n           
+    // \uCE74\uC6B4\uD2B8 \uCD08\uAE30\uD654\\r\\n            this.sfxcount = 0;\\r\\n       
+    }\\r\\n    }\\r\\n    //public isJapanese = false : bool;\\r\\n    //public isThai
+    = false : bool;\\r\\n    //public isindonesian = false : bool;\\r\\n    // \uD55C\uAD6D\uC5B4
+    \uBC84\uD2BC\\r\\n    KoreanBtn() {\\r\\n        this.isKorean = true;\\r\\n       
+    // \uB9CC\uC57D isKorean = true\uB77C\uBA74\\r\\n        if (this.isKorean ==
+    true) {\\r\\n            // \uD55C\uAD6D\uC5B4 \uBC84\uD2BC \uC0C9\uC744 \uD558\uC580\uC0C9\uC73C\uB85C\\r\\n           
+    this.koreanColor.color = new UnityEngine_1.Color(1, 1, 1, 1);\\r\\n           
+    // \uB098\uBA38\uC9C0 \uC5B8\uC5B4 \uBC84\uD2BC \uC0C9\uC740 \uC6D0\uB798 \uC0C9(\uD68C\uC0C9)\uC73C\uB85C\\r\\n           
+    this.englishColor.color = new UnityEngine_1.Color(0.66, 0.66, 0.66, 1);\\r\\n           
+    //this.thaiColor.color = new Color(0.66f, 0.66f, 0.66f, 1f);\\r\\n           
+    //this.japaneseColor.color = new Color(0.66f, 0.66f, 0.66f, 1f);\\r\\n           
+    //this.indonesianColor.color = new Color(0.66f, 0.66f, 0.66f, 1f);\\r\\n       
+    }\\r\\n        // \uBAA9\uB85D \uD14D\uC2A4\uD2B8\uB97C \uD55C\uAD6D\uC5B4\uB85C
+    \uBC14\uAFD4\uC8FC\uAE30\\r\\n        this.listText.text = \\\"\uD55C\uAD6D\uC5B4\\\";\\r\\n       
+    // \uBAA9\uB85D \uCC3D \uB044\uAE30\\r\\n        this.list.SetActive(false);\\r\\n       
+    this.lcount = 0;\\r\\n    }\\r\\n    // \uC601\uC5B4 \uBC84\uD2BC\\r\\n    EnglishBtn()
+    {\\r\\n        this.isEnglish = true;\\r\\n        // \uB9CC\uC57D isEnglish
+    = true\uB77C\uBA74\\r\\n        if (this.isEnglish == true) {\\r\\n           
+    // \uC601\uC5B4 \uBC84\uD2BC \uC0C9\uC744 \uD558\uC580\uC0C9\uC73C\uB85C\\r\\n           
+    this.englishColor.color = new UnityEngine_1.Color(1, 1, 1, 1);\\r\\n           
+    // \uB098\uBA38\uC9C0 \uC5B8\uC5B4 \uBC84\uD2BC \uC0C9\uC740 \uC6D0\uB798 \uC0C9(\uD68C\uC0C9)\uC73C\uB85C\\r\\n           
+    this.koreanColor.color = new UnityEngine_1.Color(0.66, 0.66, 0.66, 1);\\r\\n           
+    //this.thaiColor.color = new Color(0.66, 0.66, 0.66, 1);\\r\\n            //this.japaneseColor.color
+    = new Color(0.66, 0.66, 0.66, 1);\\r\\n            //this.indonesianColor.color
+    = new Color(0.66, 0.66, 0.66, 1);\\r\\n        }\\r\\n        // \uBAA9\uB85D
+    \uD14D\uC2A4\uD2B8\uB97C \uC601\uC5B4\uB85C \uBC14\uAFD4\uC8FC\uAE30\\r\\n       
+    this.listText.text = \\\"\uC601\uC5B4\\\";\\r\\n        // \uBAA9\uB85D \uCC3D
+    \uB044\uAE30\\r\\n        this.list.SetActive(false);\\r\\n        this.lcount
+    = 0;\\r\\n    }\\r\\n}\\r\\nexports.default = SettingManager;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU2V0dGluZ01hbmFnZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJTZXR0aW5nTWFuYWdlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLGlEQUFxRDtBQUNyRCxtREFBbUQ7QUFDbkQsNkNBQXVEO0FBQ3ZELE1BQXFCLGNBQWUsU0FBUSxxQ0FBcUI7SUFBakU7O1FBOENJLG9CQUFvQjtRQUNaLFlBQU8sR0FBVSxJQUFJLENBQUM7UUFxRXZCLFdBQU0sR0FBVyxDQUFDLENBQUM7UUFzQzFCLHNCQUFzQjtRQUNmLFlBQU8sR0FBVSxDQUFDLENBQUM7UUF1QjFCLHNCQUFzQjtRQUNmLGFBQVEsR0FBWSxDQUFDLENBQUM7UUF1QjdCLFdBQVc7UUFDSixhQUFRLEdBQVUsS0FBSyxDQUFBO1FBQ3ZCLGNBQVMsR0FBVSxLQUFLLENBQUE7UUF3RC9COzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7V0FxRUc7SUFDUCxDQUFDO0lBdlJHLGdEQUFnRDtJQUNoRCxLQUFLO1FBRUQsZ0JBQWdCO1FBQ2hCLElBQUksQ0FBQyxNQUFNLENBQUMsT0FBTyxDQUFDLFdBQVcsQ0FBQyxHQUFFLEVBQUUsQ0FBQSxJQUFJLENBQUMsV0FBVyxFQUFFLENBQUMsQ0FBQztRQUN4RCxJQUFJLENBQUMsUUFBUSxDQUFDLE9BQU8sQ0FBQyxXQUFXLENBQUMsR0FBRSxFQUFFLENBQUEsSUFBSSxDQUFDLFFBQVEsRUFBRSxDQUFDLENBQUM7UUFDdkQsSUFBSSxDQUFDLE9BQU8sQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFDLEdBQUUsRUFBRSxDQUFBLElBQUksQ0FBQyxPQUFPLEVBQUUsQ0FBQyxDQUFDO1FBQ3JELElBQUksQ0FBQyxLQUFLLENBQUMsT0FBTyxDQUFDLFdBQVcsQ0FBQyxHQUFFLEVBQUUsQ0FBQSxJQUFJLENBQUMsUUFBUSxFQUFFLENBQUMsQ0FBQztRQUNwRCxJQUFJLENBQUMs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\",\"assetPath\":\"Assets/\uC5B4\uCC0C\uB77C\uACE0/Scripts/SettingManager.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.UI\",\"name\":\"option\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"closeBtn\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"listBtn\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"bgImg\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"sfxImg\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"listImg\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"korean\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"english\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"bgBtn\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"sfxBtn\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"optionManu\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"list\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"bgON\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"bgOFF\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"sfxON\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"sfxOFF\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"listText\",\"type\":\"UnityEngine.UI.Text\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"BtnBackground\",\"type\":\"UnityEngine.Sprite[]\",\"isArray\":true,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"mscorlib\",\"name\":\"lcount\",\"type\":\"System.Single\",\"isArray\":false,\"initValue\":[\"0\"],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"mscorlib\",\"name\":\"bgcount\",\"type\":\"System.Single\",\"isArray\":false,\"initValue\":[\"0\"],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"mscorlib\",\"name\":\"sfxcount\",\"type\":\"System.Single\",\"isArray\":false,\"initValue\":[\"0\"],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"mscorlib\",\"name\":\"isKorean\",\"type\":\"System.Boolean\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"mscorlib\",\"name\":\"isEnglish\",\"type\":\"System.Boolean\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"SettingManager\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: 2cfacf1b631c0be48e95713e4bc4c731
+  onlyWriteTrigger: 0

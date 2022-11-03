@@ -54,6 +54,7 @@ export default class LanguageChange extends ZepetoScriptBehaviour {
 
     //
     /////////////////////////////////////////////////
+    public FinalSettingAcceptBtn : Button;
 
     public IngrdientBookController : GameObject;
     static getInstance(){

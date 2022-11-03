@@ -2876,10 +2876,13 @@ MonoBehaviour:
   script:
     keys:
     - info
+    - EnglishName
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uBD80\uB300\uCC0C\uAC1C\"}"
+    - '{"type":"System.String, mscorlib","value":"Budae Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -7684,10 +7687,13 @@ MonoBehaviour:
   script:
     keys:
     - info
+    - EnglishName
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uC18C\uAC08\uBE44\uCC1C\"}"
+    - '{"type":"System.String, mscorlib","value":"Braised Short Ribs Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -8379,7 +8385,7 @@ MonoBehaviour:
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uAE40\uCE58\"}"
-    - '{"type":"System.String, mscorlib","value":""}'
+    - '{"type":"System.String, mscorlib","value":"Kimchi Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -8826,10 +8832,13 @@ MonoBehaviour:
   script:
     keys:
     - info
+    - EnglishName
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uBC14\uC9C0\uB77D\uCE7C\uAD6D\uC218\"}"
+    - '{"type":"System.String, mscorlib","value":"Clam Kalguk Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -9438,10 +9447,13 @@ MonoBehaviour:
   script:
     keys:
     - info
+    - EnglishName
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uC6B0\uB7ED\uB9E4\uC6B4\uD0D5\"}"
+    - '{"type":"System.String, mscorlib","value":"Spicy Stew Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -12321,6 +12333,7 @@ RectTransform:
   - {fileID: 981338588}
   - {fileID: 1945389952}
   - {fileID: 271284893}
+  - {fileID: 660844184}
   m_Father: {fileID: 1807777}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14703,10 +14716,13 @@ MonoBehaviour:
   script:
     keys:
     - info
+    - EnglishName
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uBD95\uC5B4\uCC1C\"}"
+    - '{"type":"System.String, mscorlib","value":"Steamed Carp Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -15035,10 +15051,13 @@ MonoBehaviour:
   script:
     keys:
     - info
+    - EnglishName
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uBE44\uBE54\uBC25\"}"
+    - '{"type":"System.String, mscorlib","value":"Bibimbap Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -16214,10 +16233,13 @@ MonoBehaviour:
   script:
     keys:
     - info
+    - EnglishName
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uC18C\uBD88\uACE0\uAE30\uCEF5\uBC25\"}"
+    - '{"type":"System.String, mscorlib","value":"Bulgogi Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -17957,6 +17979,127 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 657026561}
+  m_CullTransparentMesh: 1
+--- !u!1 &660844183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 660844184}
+  - component: {fileID: 660844187}
+  - component: {fileID: 660844186}
+  - component: {fileID: 660844185}
+  m_Layer: 5
+  m_Name: "\uD655\uC778\uBC84\uD2BC"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &660844184
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660844183}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.33, z: 0.33}
+  m_Children:
+  - {fileID: 937587903}
+  m_Father: {fileID: 455600401}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -35}
+  m_SizeDelta: {x: 100, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &660844185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660844183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 660844186}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &660844186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660844183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 7f2cdd247318e3b47981d40977a07738, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &660844187
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660844183}
   m_CullTransparentMesh: 1
 --- !u!1 &661161498
 GameObject:
@@ -21709,7 +21852,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 765021665}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
@@ -23056,7 +23199,7 @@ MonoBehaviour:
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uAE40\uBC25\"}"
-    - '{"type":"System.String, mscorlib","value":""}'
+    - '{"type":"System.String, mscorlib","value":"Gimbap Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -25642,6 +25785,85 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 935863820}
+  m_CullTransparentMesh: 1
+--- !u!1 &937587902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 937587903}
+  - component: {fileID: 937587905}
+  - component: {fileID: 937587904}
+  m_Layer: 5
+  m_Name: "\uD655\uC778"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &937587903
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937587902}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 660844184}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &937587904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937587902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 3164ec6ecc4258b43aa74cdc958791f4, type: 3}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\uD655\uC778"
+--- !u!222 &937587905
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 937587902}
   m_CullTransparentMesh: 1
 --- !u!1 &940403606
 GameObject:
@@ -28843,8 +29065,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 44.1, y: 39.9}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 39.8, y: 40.4}
+  m_SizeDelta: {x: 100, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1071797178
 MonoBehaviour:
@@ -28910,8 +29132,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: fd16d61a884325041b3975550b814973, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -29862,10 +30084,13 @@ MonoBehaviour:
   script:
     keys:
     - info
+    - EnglishName
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uB099\uC9C0\uD638\uB871\uC774\"}"
+    - '{"type":"System.String, mscorlib","value":"Poulp Skewer Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -33172,7 +33397,7 @@ MonoBehaviour:
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uB5A1\uBCF6\uC774\"}"
-    - '{"type":"System.String, mscorlib","value":""}'
+    - '{"type":"System.String, mscorlib","value":"Tteokbo Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -34196,6 +34421,7 @@ MonoBehaviour:
     - IngredientFactory7
     - IngredientFactory8
     - IngredientFactory9
+    - IngredientFactory10
     unityValues:
     - {fileID: 3723965545527246433, guid: cf00115c0d28b4a40b486610dbc28ea7, type: 3}
     - {fileID: 272283877}
@@ -34208,7 +34434,9 @@ MonoBehaviour:
     - {fileID: 3723965545527246433, guid: 120c2a1682d766241a079277d86f6680, type: 3}
     - {fileID: 3723965545527246433, guid: 13c20d8625e67f24585d11f2b0245468, type: 3}
     - {fileID: 3723965545527246433, guid: d11f981518b8f6841bec647133fe2806, type: 3}
+    - {fileID: 3723965545527246433, guid: 488de0a79d02a57489e5f17cbc7da4ba, type: 3}
     values:
+    - 
     - 
     - 
     - 
@@ -34535,10 +34763,13 @@ MonoBehaviour:
   script:
     keys:
     - info
+    - EnglishName
     unityValues:
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uD325\uBE59\uC218\"}"
+    - '{"type":"System.String, mscorlib","value":"Redbean Bing Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -40964,7 +41195,7 @@ MonoBehaviour:
     - {fileID: 0}
     values:
     - "{\"type\":\"System.String, mscorlib\",\"value\":\"\uB5A1\uAD6D\"}"
-    - '{"type":"System.String, mscorlib","value":""}'
+    - '{"type":"System.String, mscorlib","value":"Tteokguk Kkaebi"}'
     unityArrayValues: []
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 494c1a8903f9d4a47885332583351f62, type: 3}
@@ -44092,6 +44323,7 @@ MonoBehaviour:
     - NpcQuestContent
     - MyQuestFoodText
     - AllOfStaticTexts
+    - FinalSettingAcceptBtn
     unityValues:
     - {fileID: 0}
     - {fileID: 0}
@@ -44104,6 +44336,7 @@ MonoBehaviour:
     - {fileID: 806472481}
     - {fileID: 735691263}
     - {fileID: 978193842}
+    - {fileID: 0}
     - {fileID: 0}
     values:
     - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":25,\"type\":\"UnityEngine.Object,
@@ -44124,6 +44357,7 @@ MonoBehaviour:
     - 
     - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":193,\"length\":15,\"type\":\"UnityEngine.Object,
       UnityEngine.CoreModule\",\"isUnity\":true}"}'
+    - 
     unityArrayValues:
     - {fileID: 2852348533775741438}
     - {fileID: 2852348533762442863}
@@ -53649,6 +53883,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2076553308}
   - component: {fileID: 2076553309}
+  - component: {fileID: 2076553310}
+  - component: {fileID: 2076553307}
   m_Layer: 0
   m_Name: OptionManager
   m_TagString: Untagged
@@ -53656,6 +53892,279 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2076553307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076553306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - QMFoodButtonsObj
+    - QMIngrePrefabsObj
+    - BookIngreButtonObj
+    - BookFoodButtonObj
+    - BookKkaebiButtonObj
+    - MyQuestContent
+    - MyQuestFoodText
+    - InventoryContent
+    - NpcQuestContent
+    - AllOfStaticTexts
+    - IngrdientBookController
+    - LanguageMode
+    - FinalSettingAcceptBtn
+    unityValues:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 1517657116}
+    - {fileID: 978193842}
+    - {fileID: 806472481}
+    - {fileID: 735691263}
+    - {fileID: 0}
+    - {fileID: 1344408515}
+    - {fileID: 0}
+    - {fileID: 0}
+    values:
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":25,\"type\":\"UnityEngine.Object,
+      UnityEngine.CoreModule\",\"isUnity\":true}"}'
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":25,\"length\":59,\"type\":\"UnityEngine.Object,
+      UnityEngine.CoreModule\",\"isUnity\":true}"}'
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":84,\"length\":59,\"type\":\"UnityEngine.Object,
+      UnityEngine.CoreModule\",\"isUnity\":true}"}'
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":143,\"length\":25,\"type\":\"UnityEngine.Object,
+      UnityEngine.CoreModule\",\"isUnity\":true}"}'
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":168,\"length\":25,\"type\":\"UnityEngine.Object,
+      UnityEngine.CoreModule\",\"isUnity\":true}"}'
+    - 
+    - 
+    - 
+    - 
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":193,\"length\":15,\"type\":\"UnityEngine.Object,
+      UnityEngine.CoreModule\",\"isUnity\":true}"}'
+    - 
+    - '{"type":"System.Single, mscorlib","value":"1"}'
+    - 
+    unityArrayValues:
+    - {fileID: 2852348533775741438}
+    - {fileID: 2852348533762442863}
+    - {fileID: 2852348534523356492}
+    - {fileID: 2852348534919746610}
+    - {fileID: 2852348534098759873}
+    - {fileID: 2852348533797375544}
+    - {fileID: 2852348535480539091}
+    - {fileID: 2852348534164503821}
+    - {fileID: 2852348535270842763}
+    - {fileID: 2852348535652421199}
+    - {fileID: 2852348533807835550}
+    - {fileID: 2852348535257979969}
+    - {fileID: 2852348535354257621}
+    - {fileID: 2852348534999937587}
+    - {fileID: 2852348534080083808}
+    - {fileID: 2852348534365833381}
+    - {fileID: 2852348534986649396}
+    - {fileID: 2852348535062342832}
+    - {fileID: 2852348535480512052}
+    - {fileID: 2852348534945423653}
+    - {fileID: 2852348534060570193}
+    - {fileID: 2852348534718100981}
+    - {fileID: 2852348534483267153}
+    - {fileID: 2852348534375992866}
+    - {fileID: 2852348533927089760}
+    - {fileID: 3723965545527246433, guid: cfdc3eb86790eac4ba77a3c346ce7e0d, type: 3}
+    - {fileID: 3723965545527246433, guid: dbb645daf148bcc45bcd52b723da0f7b, type: 3}
+    - {fileID: 3723965545527246433, guid: b00317594b943e44cadf85853b594995, type: 3}
+    - {fileID: 3723965545527246433, guid: 28ca957a66197224f9343fc81a37ad8c, type: 3}
+    - {fileID: 3723965545527246433, guid: 6eee8db70ab00bf4388431dea2b87c28, type: 3}
+    - {fileID: 3723965545527246433, guid: 120c2a1682d766241a079277d86f6680, type: 3}
+    - {fileID: 3723965545527246433, guid: 13c20d8625e67f24585d11f2b0245468, type: 3}
+    - {fileID: 3723965545527246433, guid: b6d73165634ad2342a0d40bf2d6af13f, type: 3}
+    - {fileID: 3723965545527246433, guid: c1c879aa0ffa5c04894491b75de66b34, type: 3}
+    - {fileID: 3723965545527246433, guid: 664d95bb3b87229448208e25341e0509, type: 3}
+    - {fileID: 3723965545527246433, guid: 9121fcc618736a84da17425bec14dc4a, type: 3}
+    - {fileID: 3723965545527246433, guid: e444fd069fcbc3446bcf77c169e7c441, type: 3}
+    - {fileID: 3723965545527246433, guid: 893f4e0c532cd314891690f2b860ba21, type: 3}
+    - {fileID: 3723965545527246433, guid: 47dc0cf301b2aae45a2172695451b25a, type: 3}
+    - {fileID: 3723965545527246433, guid: ae2f9d443c3d6134cb55ff4f01c99c57, type: 3}
+    - {fileID: 3723965545527246433, guid: 7e157ebd3813e1d478ce140c578600b7, type: 3}
+    - {fileID: 3723965545527246433, guid: 81ea1a7a2d6a09441a5b9a4dbacb726e, type: 3}
+    - {fileID: 3723965545527246433, guid: a7d6d87da73432746bd52759c2b61c23, type: 3}
+    - {fileID: 3723965545527246433, guid: 1092df390ad481e45bbbeeed1955c3c4, type: 3}
+    - {fileID: 3723965545527246433, guid: 23ee20db04fb0d14a906459f07811c84, type: 3}
+    - {fileID: 3723965545527246433, guid: d11f981518b8f6841bec647133fe2806, type: 3}
+    - {fileID: 3723965545527246433, guid: c3ac7ad30a8177a4190b662089c1bcfd, type: 3}
+    - {fileID: 3723965545527246433, guid: 12cf799136f1ab742a53e0250b1111e4, type: 3}
+    - {fileID: 3723965545527246433, guid: 69050757bf8ec774c97e357be774fffc, type: 3}
+    - {fileID: 3723965545527246433, guid: 488de0a79d02a57489e5f17cbc7da4ba, type: 3}
+    - {fileID: 3723965545527246433, guid: 33cd0a672a319d145aceb892f9dfe148, type: 3}
+    - {fileID: 3723965545527246433, guid: cf00115c0d28b4a40b486610dbc28ea7, type: 3}
+    - {fileID: 3723965545527246433, guid: 6a0e38c1f4e15e943bbc2b69a696bbad, type: 3}
+    - {fileID: 3723965545527246433, guid: c7df746ff3574cd47bdd363c8c59ab6d, type: 3}
+    - {fileID: 3723965545527246433, guid: 134d79b6e29448749bde6bb92f8080e5, type: 3}
+    - {fileID: 3723965545527246433, guid: d6259e11f2555714191c69158bc1a9c5, type: 3}
+    - {fileID: 3723965545527246433, guid: 3acc4ddb710afcc4e8cea01e0b31b8c8, type: 3}
+    - {fileID: 3723965545527246433, guid: 7aa711301c05efc4b975a0f0cdf57f00, type: 3}
+    - {fileID: 3723965545527246433, guid: 3c72b46848e248c48a4f77ce5dd6170a, type: 3}
+    - {fileID: 3723965545527246433, guid: d01b5e8600cbe294d916c68d62c5c161, type: 3}
+    - {fileID: 3723965545527246433, guid: 36f14b1afa6b0354595cabfddfa6f518, type: 3}
+    - {fileID: 3723965545527246433, guid: 45b4a2f6dc79ae044ad6c3a10e08d3f2, type: 3}
+    - {fileID: 3723965545527246433, guid: 86dc594b739165349a3af722da45dfc9, type: 3}
+    - {fileID: 3723965545527246433, guid: 336a7e8e1af6ca2479c5dc692db34717, type: 3}
+    - {fileID: 3723965545527246433, guid: aef2c137e4bd0b445b4ee13ba2bd4100, type: 3}
+    - {fileID: 3723965545527246433, guid: 805e7b0cc0fdb554dbe2861dc2864b19, type: 3}
+    - {fileID: 3723965545527246433, guid: 8f3daa5e68b5f86458cbd5ea23e6bcb6, type: 3}
+    - {fileID: 3723965545527246433, guid: b3460ec14a1525643914029febc5949d, type: 3}
+    - {fileID: 3723965545527246433, guid: 8253a45ddc46c7f4693fe951a2bf43f7, type: 3}
+    - {fileID: 3723965545527246433, guid: 86b8bc2927fe512498a141e301f71f64, type: 3}
+    - {fileID: 3723965545527246433, guid: 485f1c2394c25024aba5589fcf770996, type: 3}
+    - {fileID: 3723965545527246433, guid: 2a10b0bbe2196b54bae84b5eaa58a0d4, type: 3}
+    - {fileID: 3723965545527246433, guid: eb646b034b372774ca0d8e1359fca91e, type: 3}
+    - {fileID: 3723965545527246433, guid: 2f8e4db19e667b644baa13fdf0f4b5d6, type: 3}
+    - {fileID: 3723965545527246433, guid: b39f873e9fc128148b39d27c17805f0b, type: 3}
+    - {fileID: 3723965545527246433, guid: 6a4972aa95a4a524e8c67e22dd92e8c8, type: 3}
+    - {fileID: 3723965545527246433, guid: b36190cca7057c24289e259342ed382c, type: 3}
+    - {fileID: 3723965545527246433, guid: e3722d0263e11a24b8ab8b6598842f8a, type: 3}
+    - {fileID: 3723965545527246433, guid: 2eb2ea7488bc9c046a2b940a69c6ef78, type: 3}
+    - {fileID: 3723965545527246433, guid: b23db6b47d6b6c24a99989ab69eedcd3, type: 3}
+    - {fileID: 3723965545527246433, guid: 270801f4c6c774d4e8f523ec5bc95454, type: 3}
+    - {fileID: 3723965545527246433, guid: c28c71d31b964d547ab2c188b1a4b80e, type: 3}
+    - {fileID: 3723965545527246433, guid: 90290d99268a6bf42bef46fc6be9767c, type: 3}
+    - {fileID: 3723965545527246433, guid: 5d3b3d6d4b7ee3b46906742bb1179008, type: 3}
+    - {fileID: 1355591156}
+    - {fileID: 1176052007}
+    - {fileID: 750210103}
+    - {fileID: 1957737973}
+    - {fileID: 1230031915}
+    - {fileID: 1690023594}
+    - {fileID: 1630102777}
+    - {fileID: 1807792412}
+    - {fileID: 1656984439}
+    - {fileID: 450464488}
+    - {fileID: 221599734}
+    - {fileID: 169678040}
+    - {fileID: 1625171789}
+    - {fileID: 1751331385}
+    - {fileID: 1281358937}
+    - {fileID: 941919354}
+    - {fileID: 2036209017}
+    - {fileID: 1567575767}
+    - {fileID: 309084035}
+    - {fileID: 934428713}
+    - {fileID: 1038830243}
+    - {fileID: 269689678}
+    - {fileID: 1586011558}
+    - {fileID: 1829032726}
+    - {fileID: 1105318785}
+    - {fileID: 1193141257}
+    - {fileID: 429770259}
+    - {fileID: 547184882}
+    - {fileID: 566318893}
+    - {fileID: 657026561}
+    - {fileID: 1419169667}
+    - {fileID: 1077575182}
+    - {fileID: 1082580506}
+    - {fileID: 1285224877}
+    - {fileID: 967175988}
+    - {fileID: 271760928}
+    - {fileID: 1405097529}
+    - {fileID: 1225302136}
+    - {fileID: 1382197679}
+    - {fileID: 568626292}
+    - {fileID: 205446128}
+    - {fileID: 202626058}
+    - {fileID: 21254395}
+    - {fileID: 1530065760}
+    - {fileID: 1536046813}
+    - {fileID: 1335507456}
+    - {fileID: 562972643}
+    - {fileID: 2088745147}
+    - {fileID: 1919967195}
+    - {fileID: 1186098776}
+    - {fileID: 279675819}
+    - {fileID: 1592534317}
+    - {fileID: 1516928389}
+    - {fileID: 73353473}
+    - {fileID: 66774109}
+    - {fileID: 491328735}
+    - {fileID: 1919003122}
+    - {fileID: 1562534017}
+    - {fileID: 709856134}
+    - {fileID: 8369927973083084246}
+    - {fileID: 8369927972793889445}
+    - {fileID: 8369927972566202360}
+    - {fileID: 8369927973123963881}
+    - {fileID: 8369927972119619101}
+    - {fileID: 8369927973224721238}
+    - {fileID: 8369927972566109189}
+    - {fileID: 8369927972040713761}
+    - {fileID: 8369927973759781210}
+    - {fileID: 8369927972833211320}
+    - {fileID: 8369927972015993717}
+    - {fileID: 8369927972989633135}
+    - {fileID: 8369927971943693156}
+    - {fileID: 8369927972928431291}
+    - {fileID: 8369927973642687243}
+    - {fileID: 8369927972685292107}
+    - {fileID: 8369927973704911944}
+    - {fileID: 8369927973661907974}
+    - {fileID: 8369927972113409161}
+    - {fileID: 8369927973692737542}
+    - {fileID: 8369927971931353046}
+    - {fileID: 8369927972386448603}
+    - {fileID: 8369927972188585188}
+    - {fileID: 8369927971942842143}
+    - {fileID: 8369927972756312574}
+    - {fileID: 1075247363}
+    - {fileID: 737931310}
+    - {fileID: 1669681302}
+    - {fileID: 766914548}
+    - {fileID: 647887304}
+    - {fileID: 2100718050}
+    - {fileID: 617166503}
+    - {fileID: 1826556079}
+    - {fileID: 1922477223}
+    - {fileID: 1119487227}
+    - {fileID: 2183100}
+    - {fileID: 1467714900}
+    - {fileID: 1206535956}
+    - {fileID: 1493492273}
+    - {fileID: 589342264}
+    - {fileID: 272011548}
+    - {fileID: 1084276401}
+    - {fileID: 306380499}
+    - {fileID: 559893120}
+    - {fileID: 312522804}
+    - {fileID: 335064964}
+    - {fileID: 806100618}
+    - {fileID: 1267282532}
+    - {fileID: 552187381}
+    - {fileID: 88955849}
+    - {fileID: 635254326}
+    - {fileID: 460468973}
+    - {fileID: 130236284}
+    - {fileID: 2852348535273950568}
+    - {fileID: 2852348534802728877}
+    - {fileID: 2852348535508932699}
+    - {fileID: 2309474304824797093}
+    - {fileID: 79526147}
+    - {fileID: 1394420672}
+    - {fileID: 89528482}
+    - {fileID: 200625741}
+    - {fileID: 1130827680}
+    - {fileID: 8369927972410771581}
+    - {fileID: 8369927972944256589}
+    - {fileID: 8369927972263467118}
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 8e38f2629b777a648b192cc3cb4b8400, type: 3}
+    isExpaned: 0
 --- !u!4 &2076553308
 Transform:
   m_ObjectHideFlags: 0
@@ -53677,7 +54186,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2076553306}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 223862ed17e953340a74b22c694a4bc2, type: 3}
   m_Name: 
@@ -53702,6 +54211,96 @@ MonoBehaviour:
   sfxON: {fileID: 477579623}
   sfxOFF: {fileID: 1989139058}
   listText: {fileID: 2115984085}
+--- !u!114 &2076553310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076553306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - option
+    - closeBtn
+    - listBtn
+    - bgImg
+    - sfxImg
+    - listImg
+    - korean
+    - english
+    - bgBtn
+    - sfxBtn
+    - optionManu
+    - list
+    - bgON
+    - bgOFF
+    - sfxON
+    - sfxOFF
+    - listText
+    - lcount
+    - bgcount
+    - sfxcount
+    - isKorean
+    - isEnglish
+    - BtnBackground
+    unityValues:
+    - {fileID: 193266302}
+    - {fileID: 1071797178}
+    - {fileID: 669971601}
+    - {fileID: 981338591}
+    - {fileID: 1945389955}
+    - {fileID: 271284896}
+    - {fileID: 792760500}
+    - {fileID: 872508010}
+    - {fileID: 1579022842}
+    - {fileID: 1754994600}
+    - {fileID: 455600400}
+    - {fileID: 1652859074}
+    - {fileID: 2128225804}
+    - {fileID: 1364852350}
+    - {fileID: 477579623}
+    - {fileID: 1989139058}
+    - {fileID: 2115984085}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    values:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - '{"type":"System.Single, mscorlib","value":"0"}'
+    - '{"type":"System.Single, mscorlib","value":"0"}'
+    - '{"type":"System.Single, mscorlib","value":"0"}'
+    - '{"type":"System.Boolean, mscorlib","value":"False"}'
+    - '{"type":"System.Boolean, mscorlib","value":"False"}'
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":0,\"type\":\"UnityEngine.Object,
+      UnityEngine.CoreModule\",\"isUnity\":true}"}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: 60399de632cd0df479572aef297a81c7, type: 3}
+    isExpaned: 0
 --- !u!1 &2076645058
 GameObject:
   m_ObjectHideFlags: 0
@@ -56044,10 +56643,6 @@ MonoBehaviour:
     - IngreSelectImg
     - BeforeSelectnum
     - IngrdientBookController
-    - contentImg
-    - message
-    - completeWindow
-    - completeWindowPrefab
     unityValues:
     - {fileID: 2852348533980181526}
     - {fileID: 735691264}
@@ -56088,10 +56683,6 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 73736728ae05f444b9920827684cd5ce, type: 3}
     - {fileID: 0}
     - {fileID: 1344408515}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 8091953686525176902, guid: b4ee52036511592449665fe40deb7ad0, type: 3}
     values:
     - 
     - 
@@ -56139,10 +56730,6 @@ MonoBehaviour:
     - 
     - 
     - '{"type":"System.Single, mscorlib","value":"0"}'
-    - 
-    - 
-    - 
-    - 
     - 
     unityArrayValues:
     - {fileID: 21300000, guid: 7c9c1fe7ae3f7ba478f1324424479014, type: 3}
