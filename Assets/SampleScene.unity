@@ -55947,6 +55947,10 @@ MonoBehaviour:
     - IngreSelectImg
     - BeforeSelectnum
     - IngrdientBookController
+    - contentImg
+    - message
+    - completeWindow
+    - completeWindowPrefab
     unityValues:
     - {fileID: 2852348533980181526}
     - {fileID: 735691264}
@@ -55987,6 +55991,10 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 73736728ae05f444b9920827684cd5ce, type: 3}
     - {fileID: 0}
     - {fileID: 1344408515}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 8091953686525176902, guid: b4ee52036511592449665fe40deb7ad0, type: 3}
     values:
     - 
     - 
@@ -56034,6 +56042,10 @@ MonoBehaviour:
     - 
     - 
     - '{"type":"System.Single, mscorlib","value":"0"}'
+    - 
+    - 
+    - 
+    - 
     - 
     unityArrayValues:
     - {fileID: 21300000, guid: 7c9c1fe7ae3f7ba478f1324424479014, type: 3}

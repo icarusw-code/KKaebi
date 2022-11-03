@@ -13,6 +13,7 @@ import { ZepetoPlayers } from 'ZEPETO.Character.Controller';
 import KkaebiManager from './KkaebiManager';
 import Notifications from './Notifications';
 import LanguageChange from './Language/LanguageChange';
+import KkaebiInfo from '../TS/KkaebiInfo';
 export default class QuestManager extends ZepetoScriptBehaviour {
     //플레이어 컨트롤러
     private playerController : GameObject;
@@ -87,6 +88,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
     }
 
     Start() {
+        
         //this.acceptBtn.gameObject.SetActive(false);
         this.LeftPanel.SetActive(false);
         for(let i=0; i<this.btnsGO.Length;i++){
@@ -258,6 +260,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
     }
 
     public completeWindowPrefab : GameObject;
+    public KkaebiImageList : Sprite[];
     completeWindow : GameObject;
     message : Text;
     contentImg : Image;
@@ -289,6 +292,16 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         if(foodCount >= 2){
             this.message.text = "한식깨비 획득!";
             // 한식꺠비 이미지 리스트 삽입
+            this.KkaebiImageList.map((image) => {
+                this.KkkaebiManager.GetComponent<KkaebiManager>().KkaebiBtnObjects.map((d) => {
+                    if(this.QuestAcceptFoodName == d.GetComponent<KkaebiInfo>().info){
+                        if(d.name == image.name){
+                            this.contentImg.sprite = image;
+                        }
+
+                    };
+                });
+            });
         };
 
         // Playerpref에 레시피 음식이름 키값으로 저장, 완료횟수
