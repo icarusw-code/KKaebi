@@ -61,7 +61,6 @@ export default class LanguageChange extends ZepetoScriptBehaviour {
     }
 
 
-
     //1. ingredientInteraction 스크립트의 알림창 텍스트
 
     public LanguageMode : number; //1번: 한국어, 2번: 영어
