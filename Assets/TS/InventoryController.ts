@@ -19,7 +19,8 @@ export default class InventoryController extends ZepetoScriptBehaviour {
 
     Start() 
     {   
-
+        PlayerPrefs.SetInt("김치보유함",0);
+        PlayerPrefs.SetInt("찹쌀떡보유함",0);
         this.ingredientDict = this.UIManger.GetComponent<IngredientBookController>().ingredientDict;
         //김치나 찹쌀떡을 보유했었다면 시작할때 불러올거임
         if(PlayerPrefs.GetInt("김치보유함")==1){
