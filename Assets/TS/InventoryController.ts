@@ -114,10 +114,12 @@ export default class InventoryController extends ZepetoScriptBehaviour {
     public ClearInventory()
     {
         console.log("삭제실행");
+        console.log("1111" + this.content.childCount);
         for(let i = 0; i < this.content.childCount; i++)
         {
+            console.log("2222222222222222222222");
             console.log("삭제중 " + this.content.GetComponentsInChildren<Slot>()[i]);
-
+            
             //2성 음식이 만들어져 있으면 지우지않음
             if(this.content.GetComponentsInChildren<Slot>()[i].gameObject.name=="김치"){
                 if(PlayerPrefs.GetInt("김치보유함")==1){

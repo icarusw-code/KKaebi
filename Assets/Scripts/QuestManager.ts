@@ -293,6 +293,12 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         // 1.5초 기다리기 -> 완료창 띄우기
         this.StartCoroutine(this.WindowCreateAfterTime(foodCount));
 
+        
+    }
+
+    *WindowCreateAfterTime(foodCount : number){
+        yield new WaitForSeconds(4);
+        this.CompleteWindowCreate(foodCount);
         // Playerpref에 레시피 음식이름 키값으로 저장, 완료횟수
         UnityEngine.PlayerPrefs.SetInt(this.QuestAcceptFoodName,foodCount);
 
@@ -357,11 +363,6 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         this.KkkaebiManager.GetComponent<KkaebiManager>().checkKkaebiCanSpawn();
     }
 
-    *WindowCreateAfterTime(foodCount : number){
-        yield new WaitForSeconds(4);
-        this.CompleteWindowCreate(foodCount);
-    }
-
     *DoFoodCreate(){
         yield new WaitForSeconds(2);
         this.FoodCreate();
@@ -374,7 +375,10 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         {
             this.modelList.map((d) => {
                 if(d.name == this.inventoryList[i].name){
-                    GameObject.Destroy(this.tableOnIngres);
+                    for(let i = 0; i < this.tableOnIngres.transform.childCount; i++)
+                    {
+                        GameObject.Destroy(this.tableOnIngres.transform.GetChild(i).gameObject);
+                    }
                 }
             });
         }
@@ -392,7 +396,9 @@ export default class QuestManager extends ZepetoScriptBehaviour {
     public CompleteWindowCreate(foodCount : number){            
 
         // 요리 지우기
-        GameObject.Destroy(this.tableOnFood);
+        for(let i = 0; i < this.tableOnFood.transform.childCount; i++){
+            GameObject.Destroy(this.tableOnFood.transform.GetChild(i).gameObject);
+        }
 
         //완료창 띄우기
         this.completeWindow = GameObject.Instantiate(this.completeWindowPrefab) as GameObject;
