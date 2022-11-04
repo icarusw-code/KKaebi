@@ -54046,6 +54046,8 @@ MonoBehaviour:
     - IngrdientBookController
     - LanguageMode
     - FinalSettingAcceptBtn
+    - Koreanbtn
+    - Enlgishbtn
     unityValues:
     - {fileID: 0}
     - {fileID: 0}
@@ -54060,6 +54062,8 @@ MonoBehaviour:
     - {fileID: 1344408515}
     - {fileID: 0}
     - {fileID: 660844185}
+    - {fileID: 0}
+    - {fileID: 0}
     values:
     - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":25,\"type\":\"UnityEngine.Object,
       UnityEngine.CoreModule\",\"isUnity\":true}"}'
@@ -54079,6 +54083,8 @@ MonoBehaviour:
       UnityEngine.CoreModule\",\"isUnity\":true}"}'
     - 
     - '{"type":"System.Single, mscorlib","value":"1"}'
+    - 
+    - 
     - 
     unityArrayValues:
     - {fileID: 2852348533775741438}
