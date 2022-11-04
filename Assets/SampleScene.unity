@@ -53516,8 +53516,8 @@ MonoBehaviour:
     - 
     - 
     - 
-    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":193,\"length\":21,\"type\":\"UnityEngine.Object,
-      UnityEngine.CoreModule\",\"isUnity\":true}"}'
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":193,\"length\":71,\"type\":\"UnityEngine.UI.Text,
+      UnityEngine.UI\",\"isUnity\":true}"}'
     - 
     - '{"type":"System.Single, mscorlib","value":"1"}'
     - 
@@ -53738,6 +53738,56 @@ MonoBehaviour:
     - {fileID: 935863822}
     - {fileID: 1210254840}
     - {fileID: 937587904}
+    - {fileID: 61994983}
+    - {fileID: 1183510012}
+    - {fileID: 1226976853}
+    - {fileID: 700331464}
+    - {fileID: 762618012}
+    - {fileID: 775880795}
+    - {fileID: 1411467365}
+    - {fileID: 1730937452}
+    - {fileID: 861102540}
+    - {fileID: 1870432172}
+    - {fileID: 1117561419}
+    - {fileID: 1983643931}
+    - {fileID: 892998445}
+    - {fileID: 766956252}
+    - {fileID: 1735363071}
+    - {fileID: 814417884}
+    - {fileID: 1174950074}
+    - {fileID: 2118060681}
+    - {fileID: 764488698}
+    - {fileID: 1371377520}
+    - {fileID: 638670724}
+    - {fileID: 1613762253}
+    - {fileID: 1003119398}
+    - {fileID: 1842562617}
+    - {fileID: 212286358}
+    - {fileID: 1419150444}
+    - {fileID: 983562403}
+    - {fileID: 1449427201}
+    - {fileID: 878636332}
+    - {fileID: 1324420712}
+    - {fileID: 553846612}
+    - {fileID: 1588104919}
+    - {fileID: 642555338}
+    - {fileID: 1605550064}
+    - {fileID: 616934844}
+    - {fileID: 405807390}
+    - {fileID: 828095956}
+    - {fileID: 128432400}
+    - {fileID: 117681639}
+    - {fileID: 1657732502}
+    - {fileID: 1633865124}
+    - {fileID: 1569480962}
+    - {fileID: 56428158}
+    - {fileID: 1669129656}
+    - {fileID: 1445710348}
+    - {fileID: 1318982356}
+    - {fileID: 739285365}
+    - {fileID: 486396038}
+    - {fileID: 1547240041}
+    - {fileID: 746675457}
     arrayValues: []
     script: {fileID: 4458252877524076426, guid: 8e38f2629b777a648b192cc3cb4b8400, type: 3}
     isExpaned: 0
