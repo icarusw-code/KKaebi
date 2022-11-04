@@ -6,7 +6,7 @@ import FoodInfo from './FoodInfo';
 import InventoryController from '../TS/InventoryController';
 import IngredientBookController from '../TS/IngredientBookController';
 import QuestIngre from './QuestIngre';
-import { QuestionDotToken } from 'typescript';
+import { isShorthandPropertyAssignment, QuestionDotToken } from 'typescript';
 import RecipeManager from './RecipeManager';
 import NpcInteraction from './NpcInteraction';
 import { ZepetoPlayers } from 'ZEPETO.Character.Controller';
@@ -14,6 +14,7 @@ import KkaebiManager from './KkaebiManager';
 import Notifications from './Notifications';
 import LanguageChange from './Language/LanguageChange';
 import KkaebiInfo from '../TS/KkaebiInfo';
+import ingerdientInteraction from './ingredientInteraction';
 export default class QuestManager extends ZepetoScriptBehaviour {
     //플레이어 컨트롤러
     private playerController : GameObject;
@@ -465,7 +466,10 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         {
             this.modelList.map((d) => {
                 if(d.name == this.inventoryList[i].name){
-                    GameObject.Instantiate(d, this.positionList[i].transform.position, UnityEngine.Quaternion.identity, this.tableOnIngres.transform);
+                    var ingreObject = GameObject.Instantiate(d) as GameObject;
+                    ingreObject.transform.parent = this.tableOnIngres.transform;
+                    ingreObject.transform.position = this.positionList[i].transform.position;
+                    ingreObject.GetComponent<UnityEngine.BoxCollider>().enabled = false;
                 }
             });
         }
