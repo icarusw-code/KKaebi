@@ -65,8 +65,6 @@ export default class LanguageChange extends ZepetoScriptBehaviour {
         return this.instance||(this.instance = new this());
     }
 
-    public Koreanbtn :Button;
-    public Enlgishbtn : Button;
 
     //1. ingredientInteraction 스크립트의 알림창 텍스트
 
@@ -110,16 +108,6 @@ export default class LanguageChange extends ZepetoScriptBehaviour {
         for(let i=0; i<this.QMFoodButtonsObj.length;i++){
             this.EnglishToKoreanDiction.set(this.QMFoodButtonsObj[i].GetComponent<FoodInfo>().foodEnlgishName,this.QMFoodButtonsObj[i].GetComponent<FoodInfo>().foodname);
         }
-
-
-        this.Koreanbtn.onClick.AddListener(()=>{
-            this.LanguageMode=1;
-            //this.ChangeTxtInStatics(this.LanguageMode);
-        });
-        this.Enlgishbtn.onClick.AddListener(()=>{
-            this.LanguageMode=2;
-            //this.ChangeTxtInStatics(this.LanguageMode);
-        });
     }
 
 
