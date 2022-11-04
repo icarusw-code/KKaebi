@@ -19,9 +19,10 @@ ScriptedImporter:
   WrapperFilters: []
   wrapperOutputDirectory: Generated
   compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
-    \\\"__esModule\\\", { value: true });\\r\\nconst ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nclass
-    QuestIngre extends ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    Start() {\\r\\n       
-    // \uC774\uB984\uC5D0 \uD604\uC7AC \uC74C\uC2DD\uC774\uB984 \uB123\uC5B4\uC8FC\uAE30\\r\\n   
-    }\\r\\n}\\r\\nexports.default = QuestIngre;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUXVlc3RJbmdyZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlF1ZXN0SW5ncmUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFDQSxpREFBcUQ7QUFFckQsTUFBcUIsVUFBVyxTQUFRLHFDQUFxQjtJQU96RCxLQUFLO1FBQ0QsbUJBQW1CO0lBR3ZCLENBQUM7Q0FFSjtBQWJELDZCQWFDIn0=\",\"assetPath\":\"Assets/Scripts/QuestIngre.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.UI\",\"name\":\"ingredientName\",\"type\":\"UnityEngine.UI.Text\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"ingredientImage\",\"type\":\"UnityEngine.UI.Image\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"QuestIngre\",\"description\":\"\"},\"isCompiled\":true}"
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_UI_1 = require(\\\"UnityEngine.UI\\\");\\r\\nconst
+    ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nclass QuestIngre extends
+    ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    Start() {\\r\\n        // \uC774\uB984\uC5D0
+    \uD604\uC7AC \uC74C\uC2DD\uC774\uB984 \uB123\uC5B4\uC8FC\uAE30\\r\\n    }\\r\\n}\\r\\nexports.default
+    = QuestIngre;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUXVlc3RJbmdyZS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlF1ZXN0SW5ncmUudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSxtREFBNEM7QUFDNUMsaURBQXFEO0FBRXJELE1BQXFCLFVBQVcsU0FBUSxxQ0FBcUI7SUFPekQsS0FBSztRQUNELG1CQUFtQjtJQUd2QixDQUFDO0NBRUo7QUFiRCw2QkFhQyJ9\",\"assetPath\":\"Assets/Scripts/QuestIngre.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.UI\",\"name\":\"ingredientName\",\"type\":\"UnityEngine.UI.Text\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"ingredientImage\",\"type\":\"UnityEngine.UI.Image\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"QuestIngre\",\"description\":\"\"},\"isCompiled\":true}"
   typescriptHash: d170dd525bfa7e1e1936ab707647f694
   onlyWriteTrigger: 0

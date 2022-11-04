@@ -6,7 +6,7 @@ import FoodInfo from './FoodInfo';
 import InventoryController from '../TS/InventoryController';
 import IngredientBookController from '../TS/IngredientBookController';
 import QuestIngre from './QuestIngre';
-import { QuestionDotToken } from 'typescript';
+import { isShorthandPropertyAssignment, QuestionDotToken } from 'typescript';
 import RecipeManager from './RecipeManager';
 import NpcInteraction from './NpcInteraction';
 import { ZepetoPlayers } from 'ZEPETO.Character.Controller';
@@ -14,6 +14,7 @@ import KkaebiManager from './KkaebiManager';
 import Notifications from './Notifications';
 import LanguageChange from './Language/LanguageChange';
 import KkaebiInfo from '../TS/KkaebiInfo';
+import ingerdientInteraction from './ingredientInteraction';
 export default class QuestManager extends ZepetoScriptBehaviour {
     //플레이어 컨트롤러
     private playerController : GameObject;
@@ -78,6 +79,9 @@ export default class QuestManager extends ZepetoScriptBehaviour {
     public NotificationUI: GameObject;
 
     public IngrdientBookController : GameObject;
+
+    // 인벤토리 리스트 가져오기
+    public inventoryList : GameObject[];
 
     public static instance:QuestManager;
     static getInstance(){
@@ -261,6 +265,13 @@ export default class QuestManager extends ZepetoScriptBehaviour {
 
     public completeWindowPrefab : GameObject;
     public KkaebiImageList : Sprite[];
+    public positionList : GameObject[];
+    public modelList : GameObject[];
+    public foodModelList : GameObject[];
+    public tableOnIngres : GameObject;
+    public tableOnFood : GameObject;
+
+    isComplete : bool = false;
     completeWindow : GameObject;
     message : Text;
     contentImg : Image;
@@ -274,56 +285,21 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         var foodCount : number = UnityEngine.PlayerPrefs.GetInt(this.QuestAcceptFoodName);
         foodCount++;
 
-        //완료창 띄우기
-        this.completeWindow = GameObject.Instantiate(this.completeWindowPrefab) as GameObject;
-        this.message = this.completeWindow.transform.GetChild(4).GetComponent<Text>();
-        this.contentImg = this.completeWindow.transform.GetChild(2).GetChild(0).GetComponent<Image>();
-        this.okButton = this.completeWindow.transform.GetChild(3).GetComponent<Button>();
+        //  완료했을때 요리 애니메이션
+        this.CompleteAni();
 
-        this.okButton.onClick.AddListener(() => {
-            GameObject.Destroy(this.completeWindow);
-        });
+        // 2초 기다리기 -> 요리 생성!
+        this.StartCoroutine(this.DoFoodCreate());
 
-        // console.log(this.QuestAcceptFoodName + " : " + foodCount);
-        // foodCount 1번이면 => 음식완료 메시지
-        if(foodCount == 1){
-            if(LanguageChange.getInstance().LanguageMode == 1){
-                this.message.text = "한식 획득!";
+        // 1.5초 기다리기 -> 완료창 띄우기
+        this.StartCoroutine(this.WindowCreateAfterTime(foodCount));
 
-            }
-            else if(LanguageChange.getInstance().LanguageMode == 2){
-                this.message.text = "Hansik Acheive!";
-            }
+        
+    }
 
-            this.FoodImageList.map((image) => {
-                if(this.QuestAcceptFoodName == image.name){
-                    this.contentImg.sprite = image;
-                }
-            });
-        };
-        // foodCount 2번이면 => 깨비 완료 메시지
-        if(foodCount >= 2){
-            if(LanguageChange.getInstance().LanguageMode == 1){
-
-                this.message.text = "한식깨비 획득!";
-            }
-            else if(LanguageChange.getInstance().LanguageMode == 2){
-                this.message.text = "Hansik Kkaebi Acheive!"    
-            }
-
-            // 한식꺠비 이미지 리스트 삽입
-            this.KkaebiImageList.map((image) => {
-                this.KkkaebiManager.GetComponent<KkaebiManager>().KkaebiBtnObjects.map((d) => {
-                    if(this.QuestAcceptFoodName == d.GetComponent<KkaebiInfo>().info){
-                        if(d.name == image.name){
-                            this.contentImg.sprite = image;
-                        }
-
-                    };
-                });
-            });
-        };
-
+    *WindowCreateAfterTime(foodCount : number){
+        yield new WaitForSeconds(4);
+        this.CompleteWindowCreate(foodCount);
         // Playerpref에 레시피 음식이름 키값으로 저장, 완료횟수
         UnityEngine.PlayerPrefs.SetInt(this.QuestAcceptFoodName,foodCount);
 
@@ -388,6 +364,119 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         this.KkkaebiManager.GetComponent<KkaebiManager>().checkKkaebiCanSpawn();
     }
 
+    *DoFoodCreate(){
+        yield new WaitForSeconds(2);
+        this.FoodCreate();
+    }
+
+    public FoodCreate()
+    {
+        // 재료 리스트 삭제
+        for(let i = 0; i < this.inventoryList.length; i++)
+        {
+            this.modelList.map((d) => {
+                if(d.name == this.inventoryList[i].name){
+                    for(let i = 0; i < this.tableOnIngres.transform.childCount; i++)
+                    {
+                        GameObject.Destroy(this.tableOnIngres.transform.GetChild(i).gameObject);
+                    }
+                }
+            });
+        }
+
+        // 이펙트 생성 : 펑!
+        // 요리 프리팹 생성
+        this.foodModelList.map((d) => {
+            if(d.name == this.QuestFoodName){
+                GameObject.Instantiate(d, this.positionList[7].transform.position, UnityEngine.Quaternion.identity, this.tableOnFood.transform);
+            }
+        });
+    }
+
+
+    public CompleteWindowCreate(foodCount : number){            
+
+        // 요리 지우기
+        for(let i = 0; i < this.tableOnFood.transform.childCount; i++){
+            GameObject.Destroy(this.tableOnFood.transform.GetChild(i).gameObject);
+        }
+
+        //완료창 띄우기
+        this.completeWindow = GameObject.Instantiate(this.completeWindowPrefab) as GameObject;
+        this.message = this.completeWindow.transform.GetChild(4).GetComponent<Text>();
+        this.contentImg = this.completeWindow.transform.GetChild(2).GetChild(0).GetComponent<Image>();
+        this.okButton = this.completeWindow.transform.GetChild(3).GetComponent<Button>();
+
+        this.okButton.onClick.AddListener(() => {
+            GameObject.Destroy(this.completeWindow);
+        });
+
+        // console.log(this.QuestAcceptFoodName + " : " + foodCount);
+        // foodCount 1번이면 => 음식완료 메시지
+        if(foodCount == 1){
+            if(LanguageChange.getInstance().LanguageMode == 1){
+                this.message.text = "한식 획득!";
+
+            }
+            else if(LanguageChange.getInstance().LanguageMode == 2){
+                this.message.text = "Hansik Acheive!";
+            }
+
+            this.FoodImageList.map((image) => {
+                if(this.QuestAcceptFoodName == image.name){
+                    this.contentImg.sprite = image;
+                }
+            });
+        };
+        // foodCount 2번이면 => 깨비 완료 메시지
+        if(foodCount >= 2){
+            if(LanguageChange.getInstance().LanguageMode == 1){
+
+                this.message.text = "한식깨비 획득!";
+            }
+            else if(LanguageChange.getInstance().LanguageMode == 2){
+                this.message.text = "Hansik Kkaebi Acheive!"    
+            }
+
+            // 한식꺠비 이미지 리스트 삽입
+            this.KkaebiImageList.map((image) => {
+                this.KkkaebiManager.GetComponent<KkaebiManager>().KkaebiBtnObjects.map((d) => {
+                    if(this.QuestAcceptFoodName == d.GetComponent<KkaebiInfo>().info){
+                        if(d.name == image.name){
+                            this.contentImg.sprite = image;
+                        }
+
+                    };
+                });
+            });
+        };
+
+    }
+
+
+    public CompleteAni()
+    {
+        this.inventoryList = new Array();
+        // 오브젝트 넣어주기
+        for(let i = 0; i < this.myQuestContentTransform.childCount; i++){
+            this.inventoryList[i] = this.myQuestContentTransform.GetChild(i).gameObject;
+        }
+
+        for(let i = 0; i < this.inventoryList.length; i++)
+        {
+            this.modelList.map((d) => {
+                if(d.name == this.inventoryList[i].name){
+                    var ingreObject = GameObject.Instantiate(d) as GameObject;
+                    ingreObject.transform.parent = this.tableOnIngres.transform;
+                    ingreObject.transform.position = this.positionList[i].transform.position;
+                    ingreObject.GetComponent<UnityEngine.BoxCollider>().enabled = false;
+                }
+            });
+        }
+
+        this.isComplete = true;
+
+    }
 
     //현재 유저가 퀘스트 진행중일때 퀘스트에 해당하는 재료를 먹었는지 안먹었는지 체크
     public GetIngreCheck(getIngreId: number){

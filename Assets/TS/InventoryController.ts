@@ -19,6 +19,8 @@ export default class InventoryController extends ZepetoScriptBehaviour {
 
     Start() 
     {   
+        PlayerPrefs.SetInt("김치보유함",0);
+        PlayerPrefs.SetInt("김치보유함",0);
 
         this.ingredientDict = this.UIManger.GetComponent<IngredientBookController>().ingredientDict;
         //김치나 찹쌀떡을 보유했었다면 시작할때 불러올거임
@@ -114,10 +116,12 @@ export default class InventoryController extends ZepetoScriptBehaviour {
     public ClearInventory()
     {
         console.log("삭제실행");
+        console.log("1111" + this.content.childCount);
         for(let i = 0; i < this.content.childCount; i++)
         {
+            console.log("2222222222222222222222");
             console.log("삭제중 " + this.content.GetComponentsInChildren<Slot>()[i]);
-
+            
             //2성 음식이 만들어져 있으면 지우지않음
             if(this.content.GetComponentsInChildren<Slot>()[i].gameObject.name=="김치"){
                 if(PlayerPrefs.GetInt("김치보유함")==1){
