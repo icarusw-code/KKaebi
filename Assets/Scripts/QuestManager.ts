@@ -287,7 +287,14 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         // console.log(this.QuestAcceptFoodName + " : " + foodCount);
         // foodCount 1번이면 => 음식완료 메시지
         if(foodCount == 1){
-            this.message.text = "한식 획득!";
+            if(LanguageChange.getInstance().LanguageMode == 1){
+                this.message.text = "한식 획득!";
+
+            }
+            else if(LanguageChange.getInstance().LanguageMode == 2){
+                this.message.text = "Hansik Acheive!";
+            }
+
             this.FoodImageList.map((image) => {
                 if(this.QuestAcceptFoodName == image.name){
                     this.contentImg.sprite = image;
@@ -296,7 +303,14 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         };
         // foodCount 2번이면 => 깨비 완료 메시지
         if(foodCount >= 2){
-            this.message.text = "한식깨비 획득!";
+            if(LanguageChange.getInstance().LanguageMode == 1){
+
+                this.message.text = "한식깨비 획득!";
+            }
+            else if(LanguageChange.getInstance().LanguageMode == 2){
+                this.message.text = "Hansik Kkaebi Acheive!"    
+            }
+
             // 한식꺠비 이미지 리스트 삽입
             this.KkaebiImageList.map((image) => {
                 this.KkkaebiManager.GetComponent<KkaebiManager>().KkaebiBtnObjects.map((d) => {
