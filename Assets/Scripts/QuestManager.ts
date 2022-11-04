@@ -264,6 +264,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
     completeWindow : GameObject;
     message : Text;
     contentImg : Image;
+    okButton : Button;
 
     //퀘스트 완료
     public QuestComplete(){
@@ -277,11 +278,23 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         this.completeWindow = GameObject.Instantiate(this.completeWindowPrefab) as GameObject;
         this.message = this.completeWindow.transform.GetChild(4).GetComponent<Text>();
         this.contentImg = this.completeWindow.transform.GetChild(2).GetChild(0).GetComponent<Image>();
+        this.okButton = this.completeWindow.transform.GetChild(3).GetComponent<Button>();
+
+        this.okButton.onClick.AddListener(() => {
+            GameObject.Destroy(this.completeWindow);
+        });
 
         // console.log(this.QuestAcceptFoodName + " : " + foodCount);
         // foodCount 1번이면 => 음식완료 메시지
         if(foodCount == 1){
-            this.message.text = "한식 획득!";
+            if(LanguageChange.getInstance().LanguageMode == 1){
+                this.message.text = "한식 획득!";
+
+            }
+            else if(LanguageChange.getInstance().LanguageMode == 2){
+                this.message.text = "Hansik Acheive!";
+            }
+
             this.FoodImageList.map((image) => {
                 if(this.QuestAcceptFoodName == image.name){
                     this.contentImg.sprite = image;
@@ -290,7 +303,14 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         };
         // foodCount 2번이면 => 깨비 완료 메시지
         if(foodCount >= 2){
-            this.message.text = "한식깨비 획득!";
+            if(LanguageChange.getInstance().LanguageMode == 1){
+
+                this.message.text = "한식깨비 획득!";
+            }
+            else if(LanguageChange.getInstance().LanguageMode == 2){
+                this.message.text = "Hansik Kkaebi Acheive!"    
+            }
+
             // 한식꺠비 이미지 리스트 삽입
             this.KkaebiImageList.map((image) => {
                 this.KkkaebiManager.GetComponent<KkaebiManager>().KkaebiBtnObjects.map((d) => {
@@ -416,7 +436,10 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         if(foodName=="팥빙수"){
             ingreFood = GameObject.Instantiate(this.myQuestIngreFactory, this.MainQuestContentTransform) as GameObject;
             ingreFood.name = this.myQuestFoodImgIngre[1].name;
-
+            let colorTemp : UnityEngine.Color;
+            colorTemp = ingreFood.transform.GetChild(0).GetComponent<Image>().color;
+            colorTemp.a = 255;
+            ingreFood.transform.GetChild(0).GetComponent<Image>().color = colorTemp;
             if (LanguageChange.getInstance().LanguageMode == 1) {
                 ingreFood.GetComponent<QuestIngre>().ingredientName.text = this.myQuestFoodImgIngre[1].name; //한글화문제
             }
@@ -428,7 +451,10 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         else if(foodName=="붕어찜"||foodName=="부대찌개"){
             ingreFood = GameObject.Instantiate(this.myQuestIngreFactory, this.MainQuestContentTransform) as GameObject;
             ingreFood.name = this.myQuestFoodImgIngre[0].name;
-
+            let colorTemp : UnityEngine.Color;
+            colorTemp = ingreFood.transform.GetChild(0).GetComponent<Image>().color;
+            colorTemp.a = 255;
+            ingreFood.transform.GetChild(0).GetComponent<Image>().color = colorTemp;
             if (LanguageChange.getInstance().LanguageMode == 1) {
                 ingreFood.GetComponent<QuestIngre>().ingredientName.text = this.myQuestFoodImgIngre[0].name; //한글화문제
             }

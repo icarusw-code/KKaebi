@@ -54,18 +54,25 @@ export default class LanguageChange extends ZepetoScriptBehaviour {
 
     //
     /////////////////////////////////////////////////
+    public FinalSettingAcceptBtn : Button;
 
     public IngrdientBookController : GameObject;
+    Awake(){
+        LanguageChange.instance = this;
+    }
+
     static getInstance(){
         return this.instance||(this.instance = new this());
     }
 
+    public Koreanbtn :Button;
+    public Enlgishbtn : Button;
 
     //1. ingredientInteraction 스크립트의 알림창 텍스트
 
     public LanguageMode : number; //1번: 한국어, 2번: 영어
     Start() {    
-        LanguageChange.instance = this;
+        
         //동적
         for(let i=0; i<this.QMFoodButtonsObj.length;i++){ //음식이름 영어데이터 저장
             this.KoreanPack.set(this.QMFoodButtonsObj[i].GetComponent<FoodInfo>().foodname,this.QMFoodButtonsObj[i].GetComponent<FoodInfo>().foodname);
@@ -105,15 +112,13 @@ export default class LanguageChange extends ZepetoScriptBehaviour {
         }
 
 
-        var Koreanbtn =  GameObject.Find("Btn11").GetComponent<Button>();
-        var Englishbtn =  GameObject.Find("Btn22").GetComponent<Button>();
-        Koreanbtn.onClick.AddListener(()=>{
+        this.Koreanbtn.onClick.AddListener(()=>{
             this.LanguageMode=1;
-            this.ChangeTxtInStatics(this.LanguageMode);
+            //this.ChangeTxtInStatics(this.LanguageMode);
         });
-        Englishbtn.onClick.AddListener(()=>{
+        this.Enlgishbtn.onClick.AddListener(()=>{
             this.LanguageMode=2;
-            this.ChangeTxtInStatics(this.LanguageMode);
+            //this.ChangeTxtInStatics(this.LanguageMode);
         });
     }
 

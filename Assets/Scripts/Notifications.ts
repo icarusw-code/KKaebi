@@ -54,7 +54,7 @@ export default class Notifications extends ZepetoScriptBehaviour {
 
     public imsiy = 45;
     public GoDownText(){
-        this.imsiy -= 100*Time.deltaTime;
+        this.imsiy -= 200*Time.deltaTime;
         this.thisTrans.anchoredPosition = new Vector2(this.thisTrans.anchoredPosition.x,this.imsiy); //계속 내려간다
         if(this.thisTrans.anchoredPosition.y<=this.gotoPos.y){ //정해진 위치까지 내려오면
             this.thisTrans.anchoredPosition = this.gotoPos;
@@ -70,7 +70,7 @@ export default class Notifications extends ZepetoScriptBehaviour {
     }
     //public imsix = -45;
     public GoUpText(){
-        this.imsiy += 60*Time.deltaTime; //계속올라간다
+        this.imsiy += 200*Time.deltaTime; //계속올라간다
         this.thisTrans.anchoredPosition = new Vector2(this.thisTrans.anchoredPosition.x,this.imsiy);
         if(this.thisTrans.anchoredPosition.y>=this.originPos.y){ //초기 위치까지 올라가면
             this.thisTrans.anchoredPosition = this.originPos; //위치 고정
