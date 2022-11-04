@@ -264,6 +264,13 @@ export default class QuestManager extends ZepetoScriptBehaviour {
 
     public completeWindowPrefab : GameObject;
     public KkaebiImageList : Sprite[];
+    public positionList : GameObject[];
+    public modelList : GameObject[];
+    public foodModelList : GameObject[];
+    public tableOnIngres : GameObject;
+    public tableOnFood : GameObject;
+
+    isComplete : bool = false;
     completeWindow : GameObject;
     message : Text;
     contentImg : Image;
@@ -280,7 +287,10 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         //  완료했을때 요리 애니메이션
         this.CompleteAni();
 
-        // 2초 기다리기
+        // 2초 기다리기 -> 요리 생성!
+        this.StartCoroutine(this.DoFoodCreate());
+
+        // 1.5초 기다리기 -> 완료창 띄우기
         this.StartCoroutine(this.WindowCreateAfterTime(foodCount));
 
         // Playerpref에 레시피 음식이름 키값으로 저장, 완료횟수
@@ -348,15 +358,41 @@ export default class QuestManager extends ZepetoScriptBehaviour {
     }
 
     *WindowCreateAfterTime(foodCount : number){
-        yield new WaitForSeconds(2);
+        yield new WaitForSeconds(4);
         this.CompleteWindowCreate(foodCount);
     }
 
-    public positionList : GameObject[];
-    public modelList : GameObject[];
-    isComplete : bool = false;
+    *DoFoodCreate(){
+        yield new WaitForSeconds(2);
+        this.FoodCreate();
+    }
+
+    public FoodCreate()
+    {
+        // 재료 리스트 삭제
+        for(let i = 0; i < this.inventoryList.length; i++)
+        {
+            this.modelList.map((d) => {
+                if(d.name == this.inventoryList[i].name){
+                    GameObject.Destroy(this.tableOnIngres);
+                }
+            });
+        }
+
+        // 이펙트 생성 : 펑!
+        // 요리 프리팹 생성
+        this.foodModelList.map((d) => {
+            if(d.name == this.QuestFoodName){
+                GameObject.Instantiate(d, this.positionList[7].transform.position, UnityEngine.Quaternion.identity, this.tableOnFood.transform);
+            }
+        });
+    }
+
 
     public CompleteWindowCreate(foodCount : number){            
+
+        // 요리 지우기
+        GameObject.Destroy(this.tableOnFood);
 
         //완료창 띄우기
         this.completeWindow = GameObject.Instantiate(this.completeWindowPrefab) as GameObject;
@@ -410,6 +446,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
 
     }
 
+
     public CompleteAni()
     {
         this.inventoryList = new Array();
@@ -422,7 +459,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         {
             this.modelList.map((d) => {
                 if(d.name == this.inventoryList[i].name){
-                    GameObject.Instantiate(d, this.positionList[i].transform.position, UnityEngine.Quaternion.identity);
+                    GameObject.Instantiate(d, this.positionList[i].transform.position, UnityEngine.Quaternion.identity, this.tableOnIngres.transform);
                 }
             });
         }
