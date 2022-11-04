@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Art_TEST/Models/Ingredients/Apple.fbx.meta
 guid: ac19e034efb20f042a12d6f661537ad5
+========
+guid: cad4298a0c529534cac8622f8e47ab34
+>>>>>>>> Origin/Team_Art:Assets/Art_TEST/Models/Foods/Tteok Kkochi.fbx.meta
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []

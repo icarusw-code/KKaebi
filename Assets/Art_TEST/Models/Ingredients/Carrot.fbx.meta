@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Art_TEST/Models/Ingredients/Carrot.fbx.meta
 guid: 75966e2f400f7db4f8fc7822a041336b
+========
+guid: af6490f61e2da534dae082a382bfe218
+>>>>>>>> Origin/Team_Art:Assets/Art_TEST/Models/Ingredients/Almond.fbx.meta
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
