@@ -54009,7 +54009,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2076553308}
-  - component: {fileID: 2076553309}
   - component: {fileID: 2076553310}
   - component: {fileID: 2076553307}
   m_Layer: 0
@@ -54046,8 +54045,6 @@ MonoBehaviour:
     - IngrdientBookController
     - LanguageMode
     - FinalSettingAcceptBtn
-    - Koreanbtn
-    - Enlgishbtn
     unityValues:
     - {fileID: 0}
     - {fileID: 0}
@@ -54062,8 +54059,6 @@ MonoBehaviour:
     - {fileID: 1344408515}
     - {fileID: 0}
     - {fileID: 660844185}
-    - {fileID: 0}
-    - {fileID: 0}
     values:
     - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":25,\"type\":\"UnityEngine.Object,
       UnityEngine.CoreModule\",\"isUnity\":true}"}'
@@ -54083,8 +54078,6 @@ MonoBehaviour:
       UnityEngine.CoreModule\",\"isUnity\":true}"}'
     - 
     - '{"type":"System.Single, mscorlib","value":"1"}'
-    - 
-    - 
     - 
     unityArrayValues:
     - {fileID: 2852348533775741438}
@@ -54368,38 +54361,6 @@ Transform:
   m_Father: {fileID: 1348218651}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2076553309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2076553306}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 223862ed17e953340a74b22c694a4bc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  option: {fileID: 193266302}
-  closeBtn: {fileID: 1071797178}
-  listBtn: {fileID: 669971601}
-  bgImg: {fileID: 981338591}
-  sfxImg: {fileID: 1945389955}
-  listImg: {fileID: 271284896}
-  korean: {fileID: 792760500}
-  english: {fileID: 872508010}
-  japanese: {fileID: 51083948}
-  thai: {fileID: 572246206}
-  indonesian: {fileID: 19647323}
-  bgBtn: {fileID: 1579022842}
-  sfxBtn: {fileID: 1754994600}
-  optionManu: {fileID: 455600400}
-  list: {fileID: 1652859074}
-  bgON: {fileID: 2128225804}
-  bgOFF: {fileID: 1364852350}
-  sfxON: {fileID: 477579623}
-  sfxOFF: {fileID: 1989139058}
-  listText: {fileID: 2115984085}
 --- !u!114 &2076553310
 MonoBehaviour:
   m_ObjectHideFlags: 0
