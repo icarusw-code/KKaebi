@@ -52,7 +52,7 @@ export default class Notifications extends ZepetoScriptBehaviour {
     }
     
 
-    public imsiy = 45;
+    public imsiy = 35;
     public GoDownText(){
         this.imsiy -= 200*Time.deltaTime;
         this.thisTrans.anchoredPosition = new Vector2(this.thisTrans.anchoredPosition.x,this.imsiy); //계속 내려간다
