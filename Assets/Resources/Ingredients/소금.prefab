@@ -8,6 +8,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8409507580568973625, guid: 1e9cfff18c4fcf5409f238642e6e0487, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8409507580568973625, guid: 1e9cfff18c4fcf5409f238642e6e0487, type: 3}
       propertyPath: script.unityValues.Array.data[2]
       value: 
       objectReference: {fileID: 0}
@@ -57,11 +61,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1977427983499493909, guid: 1e9cfff18c4fcf5409f238642e6e0487, type: 3}
       propertyPath: script.keys.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1977427983499493909, guid: 1e9cfff18c4fcf5409f238642e6e0487, type: 3}
       propertyPath: script.values.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1977427983499493909, guid: 1e9cfff18c4fcf5409f238642e6e0487, type: 3}
       propertyPath: script.keys.Array.data[0]
@@ -73,11 +77,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1977427983499493909, guid: 1e9cfff18c4fcf5409f238642e6e0487, type: 3}
       propertyPath: script.values.Array.data[1]
-      value: '{"type":"System.Single, mscorlib","value":"1006"}'
+      value: '{"type":"System.String, mscorlib","value":""}'
       objectReference: {fileID: 0}
     - target: {fileID: 1977427983499493909, guid: 1e9cfff18c4fcf5409f238642e6e0487, type: 3}
       propertyPath: script.unityValues.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1977427983499493914, guid: 1e9cfff18c4fcf5409f238642e6e0487, type: 3}
       propertyPath: m_Name
