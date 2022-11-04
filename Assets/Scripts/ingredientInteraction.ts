@@ -43,7 +43,7 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
                 }
                 //영어라면
                 else if(LanguageChange.getInstance().LanguageMode == 2){ //영어
-                    Notifications.getIns().UpLoadText("You don't get the quest. Go to the King Kkaebi!");
+                    Notifications.getIns().UpLoadText("There are no dishes in progress. Go to the King Kkaebi!");
                 }
             }
             if(QuestManager.getInstance().GetIngreCheckDiction.get(this.myID)==true){
