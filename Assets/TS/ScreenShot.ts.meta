@@ -1,0 +1,39 @@
+fileFormatVersion: 2
+guid: b4c4d2ddc3ad3044589331eea3b17a46
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst ZEPETO_Character_Controller_1 = require(\"ZEPETO.Character.Controller\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst ZEPETO_World_1 = require(\"ZEPETO.World\");\r\nclass
+    ZepetoWorldContentExample extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n   
+    Start() {\r\n        ZEPETO_Character_Controller_1.ZepetoPlayers.instance.OnAddedLocalPlayer.AddListener(()
+    => {\r\n            this.camera = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoCamera.camera;\r\n       
+    });\r\n        this.cameraRenderButton.onClick.AddListener(() => {\r\n           
+    this.camera.targetTexture = this.renderTexture;\r\n            this.camera.Render();\r\n           
+    this.camera.targetTexture = null;\r\n        });\r\n        this.saveToCameraRollButton.onClick.AddListener(()
+    => {\r\n            ZEPETO_World_1.ZepetoWorldContent.SaveToCameraRoll(this.renderTexture,
+    (result) => { this.logText.text = `Save Result : ${result}`; });\r\n        });\r\n       
+    this.shareButton.onClick.AddListener(() => {\r\n            ZEPETO_World_1.ZepetoWorldContent.Share(this.renderTexture,
+    (result) => { this.logText.text = `Share Result : ${result}`; });\r\n       
+    });\r\n        this.createFeedButton.onClick.AddListener(() => {\r\n           
+    ZEPETO_World_1.ZepetoWorldContent.CreateFeed(this.renderTexture, \"[CONTENT]\",
+    (result) => { this.logText.text = `CreateFeed Result : ${result}`; });\r\n       
+    });\r\n    }\r\n}\r\nexports.default = ZepetoWorldContentExample;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU2NyZWVuU2hvdC5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlNjcmVlblNob3QudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFFQSw2RUFBdUU7QUFDdkUsaURBQXFEO0FBQ3JELCtDQUFnRTtBQUVoRSxNQUFxQix5QkFBMEIsU0FBUSxxQ0FBcUI7SUFleEUsS0FBSztRQUVELDJDQUFhLENBQUMsUUFBUSxDQUFDLGtCQUFrQixDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUU7WUFDdkQsSUFBSSxDQUFDLE1BQU0sR0FBRywyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLE1BQU0sQ0FBQztRQUN6RSxDQUFDLENBQUMsQ0FBQztRQUVILElBQUksQ0FBQyxrQkFBa0IsQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFDLEdBQUcsRUFBRTtZQUM3QyxJQUFJLENBQUMsTUFBTSxDQUFDLGFBQWEsR0FBRyxJQUFJLENBQUMsYUFBYSxDQUFDO1lBQy9DLElBQUksQ0FBQyxNQUFNLENBQUMsTUFBTSxFQUFFLENBQUM7WUFDckIsSUFBSSxDQUFDLE1BQU0sQ0FBQyxhQUFhLEdBQUcsSUFBSSxDQUFDO1FBQ3JDLENBQUMsQ0FBQyxDQUFDO1FBRUgsSUFBSSxDQUFDLHNCQUFzQixDQUFDLE9BQU8sQ0FBQyxXQUFXLENBQUMsR0FBRyxFQUFFO1lBQ2pELGlDQUFrQixDQUFDLGdCQUFnQixDQUFDLElBQUksQ0FBQyxhQUFhLEVBQUUsQ0FBQyxNQUFlLEVBQUUsRUFBRSxHQUN0RixJQUFJLENBQUMsT0FBTyxDQUFDLElBQUksR0FBRyxpQkFBaUIsTUFBTSxFQUFFLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQztRQUM1QyxDQUFDLENBQUMsQ0FBQztRQUVILElBQUksQ0FBQyxXQUFXLENBQUMsT0FBTyxDQUFDLFdBQVcsQ0FBQyxHQUFHLEVBQUU7WUFDdEMsaUNBQWtCLENBQUMsS0FBSyxDQUFDLElBQUksQ0FBQyxhQUFhLEVBQUUsQ0FBQyxNQUFlLEVBQUUsRUFBRSxHQUMzRSxJQUFJLENBQUMsT0FBTyxDQUFDLElBQUksR0FBRyxrQkFBa0IsTUFBTSxFQUFFLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQztRQUM3QyxDQUFDLENBQUMsQ0FBQztRQUVILElBQUksQ0FBQyxnQkFBZ0IsQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFDLEdBQUcsRUFBRTtZQUMzQyxpQ0FBa0IsQ0FBQyxVQUFVLENBQUMsSUFBSSxDQUFDLGFBQWEsRUFBRSxXQUFXLEVBQUUsQ0FBQyxNQUFlLEVBQUUsRUFBRSxHQUM3RixJQUFJLENBQUMsT0FBTyxDQUFDLElBQUksR0FBRyx1QkFBdUIsTUFBTSxFQUFFLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQztRQUNsRCxDQUFDLENBQUMsQ0FBQTtJQUNOLENBQUM7Q0FFSjtBQTNDRCw0Q0EyQ0MifQ==","assetPath":"Assets/TS/ScreenShot.ts","manifest":{"properties":[{"assembly":"UnityEngine.UI","name":"cameraRenderButton","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"saveToCameraRollButton","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"shareButton","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"createFeedButton","type":"UnityEngine.UI.Button","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.UI","name":"logText","type":"UnityEngine.UI.Text","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"renderTexture","type":"UnityEngine.RenderTexture","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"ZepetoWorldContentExample","description":""},"isCompiled":true}'
+  typescriptHash: 13266e10ede105a80c4039b755fd8611
+  onlyWriteTrigger: 0
