@@ -19,10 +19,11 @@ export default class NpcInteraction extends ZepetoScriptBehaviour {
     Start() {    
         
         this.btn = GameObject.Instantiate(this.btnFactory) as GameObject; //재료 생성될때 버튼도 함께 생성
-        this.btn.transform.parent = GameObject.Find("Canvas_UI").transform; //캔버스 자식으로 생성
+        this.btn.transform.parent = GameObject.Find("Canvas_ICON").transform; //캔버스 자식으로 생성
         this.btn.GetComponent<ButtonClick>().TurnOffButton(); //버튼일단 꺼주고
         
         this.NpcTalkUI.GetComponent<Button>().onClick.AddListener(()=>{ //어떤요리가 만들고싶나 다음에 뜰창
+            this.btn.GetComponent<ButtonClick>().TurnOffButton();
             this.NpcTalkUI.SetActive(false);
             this.TurnOnQuestUI();
             
@@ -33,6 +34,7 @@ export default class NpcInteraction extends ZepetoScriptBehaviour {
             if(QuestManager.getInstance().isNowAccept==false){ //지금 퀘스트 받은 상태가 아닐때만
 
                 this.NpcTalkUI.SetActive(true);
+                this.turnCheck2=true;
                 this.btn.GetComponent<ButtonClick>().TurnOffButton();
                 if(LanguageChange.getInstance().LanguageMode==1){
                 //허허 어떤요리가 만들고싶나
