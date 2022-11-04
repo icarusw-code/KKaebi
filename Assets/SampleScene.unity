@@ -48866,8 +48866,10 @@ GameObject:
   - component: {fileID: 1854130086}
   - component: {fileID: 1854130088}
   - component: {fileID: 1854130087}
+  - component: {fileID: 1854130089}
   m_Layer: 5
-  m_Name: Text
+  m_Name: "\uC7AC\uB8CC\uB97C \uB2E4 \uBAA8\uC544\uC11C \uC624\uBA74 \uC694\uB9AC\uB97C
+    \uD574\uC8FC\uACA0\uB2E4."
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48889,8 +48891,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 300, y: -125}
-  m_SizeDelta: {x: 500, y: 150}
+  m_AnchoredPosition: {x: 313.55252, y: -104.96579}
+  m_SizeDelta: {x: 531.8192, y: 109.9316}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1854130087
 MonoBehaviour:
@@ -48926,7 +48928,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\uC7AC\uB8CC\uB97C \uB2E4 \uBAA8\uC544\uC11C \uC624\uBA74 \uC694\uB9AC\uB97C
-    \uD574\uC8FC\uACA0\uB2E4"
+    \uD574\uC8FC\uACA0\uB2E4."
 --- !u!222 &1854130088
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -48935,6 +48937,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854130085}
   m_CullTransparentMesh: 1
+--- !u!114 &1854130089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854130085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - EnglishName
+    unityValues:
+    - {fileID: 0}
+    values:
+    - '{"type":"System.String, mscorlib","value":" I''ll cook for you when you come
+      with all the ingredients collected."}'
+    unityArrayValues: []
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: d0c2013c9f080464ca835711bb4de3d1, type: 3}
+    isExpaned: 0
 --- !u!1 &1857483855
 GameObject:
   m_ObjectHideFlags: 0
@@ -52097,7 +52123,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1984844409
 RectTransform:
   m_ObjectHideFlags: 0
@@ -52131,7 +52157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.36862746}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -68377,11 +68403,14 @@ MonoBehaviour:
     - btnFactory
     - InteractBtn
     - QuestUI
+    - NpcTalkUI
     unityValues:
     - {fileID: 9066837695725315944, guid: cabbcb3b2c7be6d4583166161b9441ad, type: 3}
     - {fileID: 0}
     - {fileID: 2852348533980181526}
+    - {fileID: 1984844408}
     values:
+    - 
     - 
     - 
     - 
