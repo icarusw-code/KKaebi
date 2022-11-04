@@ -1,10 +1,11 @@
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 import { Collider, GameObject, Object,Vector3,Camera} from 'UnityEngine';
 import { ZepetoPlayers } from 'ZEPETO.Character.Controller';
-import { Button } from 'UnityEngine.UI';
+import { Button,Text } from 'UnityEngine.UI';
 import ButtonClick from './ButtonClick';
 import QuestManager from './QuestManager';
 import GameManager from '../TS/GameManager';
+import LanguageChange from './Language/LanguageChange';
 export default class NpcInteraction extends ZepetoScriptBehaviour {
     public btnFactory : GameObject;
     private btn : GameObject;
@@ -12,7 +13,7 @@ export default class NpcInteraction extends ZepetoScriptBehaviour {
     private turnCheck2 : bool = false;
     public InteractBtn: Button;
     public QuestUI: GameObject;
-
+    public NpcTalkUI: GameObject;
     private playerController : GameObject;
 
     Start() {    
@@ -24,6 +25,10 @@ export default class NpcInteraction extends ZepetoScriptBehaviour {
         this.InteractBtn = this.btn.GetComponent<Button>(); 
         this.InteractBtn.onClick.AddListener(() => { //버튼누르면 퀘스트창뜸
             if(QuestManager.getInstance().isNowAccept==false){ //지금 퀘스트 받은 상태가 아닐때만
+                if(LanguageChange.getInstance().LanguageMode==1){
+                //허허 어떤요리가 만들고싶나
+                this.NpcTalkUI.transform.GetChild(0).GetComponent<Text>().text = "허허 어떤요리가 만들고 싶나?";
+                }
                 this.TurnOnQuestUI();
                 this.playerController = ZepetoPlayers.instance.transform.GetChild(4).gameObject;
                 this.playerController.SetActive(false);
