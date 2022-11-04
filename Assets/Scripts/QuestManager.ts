@@ -79,6 +79,9 @@ export default class QuestManager extends ZepetoScriptBehaviour {
 
     public IngrdientBookController : GameObject;
 
+    // 인벤토리 리스트 가져오기
+    public inventoryList : GameObject[];
+
     public static instance:QuestManager;
     static getInstance(){
         return this.instance||(this.instance = new this());
@@ -274,6 +277,9 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         var foodCount : number = UnityEngine.PlayerPrefs.GetInt(this.QuestAcceptFoodName);
         foodCount++;
 
+        //  완료했을때 요리 애니메이션
+        this.CompleteAni();
+        
         //완료창 띄우기
         this.completeWindow = GameObject.Instantiate(this.completeWindowPrefab) as GameObject;
         this.message = this.completeWindow.transform.GetChild(4).GetComponent<Text>();
@@ -388,6 +394,15 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         this.KkkaebiManager.GetComponent<KkaebiManager>().checkKkaebiCanSpawn();
     }
 
+
+    public CompleteAni()
+    {
+        this.inventoryList = new Array();
+        // 오브젝트 넣어주기
+        for(let i = 0; i < this.myQuestContentTransform.childCount; i++){
+            this.inventoryList[i] = this.myQuestContentTransform.GetChild(i).gameObject;
+        }
+    }
 
     //현재 유저가 퀘스트 진행중일때 퀘스트에 해당하는 재료를 먹었는지 안먹었는지 체크
     public GetIngreCheck(getIngreId: number){
