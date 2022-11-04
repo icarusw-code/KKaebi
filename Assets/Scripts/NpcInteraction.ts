@@ -25,8 +25,7 @@ export default class NpcInteraction extends ZepetoScriptBehaviour {
         this.NpcTalkUI.GetComponent<Button>().onClick.AddListener(()=>{ //어떤요리가 만들고싶나 다음에 뜰창
             this.NpcTalkUI.SetActive(false);
             this.TurnOnQuestUI();
-            this.playerController = ZepetoPlayers.instance.transform.GetChild(4).gameObject;
-            this.playerController.SetActive(false);
+            
         });
 
         this.InteractBtn = this.btn.GetComponent<Button>(); 
@@ -34,10 +33,18 @@ export default class NpcInteraction extends ZepetoScriptBehaviour {
             if(QuestManager.getInstance().isNowAccept==false){ //지금 퀘스트 받은 상태가 아닐때만
 
                 this.NpcTalkUI.SetActive(true);
+                this.btn.GetComponent<ButtonClick>().TurnOffButton();
                 if(LanguageChange.getInstance().LanguageMode==1){
                 //허허 어떤요리가 만들고싶나
-                    this.NpcTalkUI.transform.GetChild(0).GetComponent<Text>().text = "허허 어떤요리가 만들고 싶나?";
+                    this.NpcTalkUI.transform.GetChild(1).GetComponent<Text>().text = "허허 어떤요리가 만들고 싶나?"; 
                 }
+                else if (LanguageChange.getInstance().LanguageMode == 1) {
+                    //허허 어떤요리가 만들고싶나
+                    this.NpcTalkUI.transform.GetChild(1).GetComponent<Text>().text = "Have you collected all the ingredients?";
+                }
+
+                this.playerController = ZepetoPlayers.instance.transform.GetChild(4).gameObject;
+                this.playerController.SetActive(false);
 
                 //this.TurnOnQuestUI();
                 //this.playerController = ZepetoPlayers.instance.transform.GetChild(4).gameObject;
