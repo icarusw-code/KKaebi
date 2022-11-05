@@ -388,7 +388,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         // 요리 프리팹 생성
         this.foodModelList.map((d) => {
             if(d.name == this.QuestFoodName){
-                GameObject.Instantiate(d, this.positionList[7].transform.position, UnityEngine.Quaternion.identity, this.tableOnFood.transform);
+                GameObject.Instantiate(d, this.positionList[0].transform.position, UnityEngine.Quaternion.identity, this.tableOnFood.transform);
             }
         });
     }
