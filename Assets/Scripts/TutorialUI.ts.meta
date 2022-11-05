@@ -1,0 +1,57 @@
+fileFormatVersion: 2
+guid: f3cfb0a83c1957b4e9ffc70825a38cdd
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nclass
+    TutorialUI extends ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    constructor()
+    {\\r\\n        super(...arguments);\\r\\n        this.CurrentPageNuM = 0;\\r\\n   
+    }\\r\\n    Start() {\\r\\n        this.TutorialButton.onClick.AddListener(()
+    => {\\r\\n            this.TutorialUIObj.SetActive(true);\\r\\n        });\\r\\n       
+    this.NextBtn.onClick.AddListener(() => {\\r\\n            this.GoNext();\\r\\n       
+    });\\r\\n        this.BeforeBtn.onClick.AddListener(() => {\\r\\n           
+    this.GoBefore();\\r\\n        });\\r\\n        this.TutorialStory[0] = \\\"\uC73C\uC5D0\uC5D11\\\";\\r\\n       
+    this.TutorialStory[1] = \\\"\uC73C\uC5D0\uC5D12!\\\";\\r\\n        this.TutorialStory[2]
+    = \\\"\uC73C\uC5D0\uC5D13!!\\\";\\r\\n        this.TutorialStory[3] = \\\"\uC73C\uC5D0\uC5D14!!!\\\";\\r\\n       
+    this.TutorialStory[4] = \\\"\uC73C\uC5D0\uC5D15!!!!\\\";\\r\\n        this.TutorialStory[5]
+    = \\\"\uC73C\uC5D0\uC5D16!!!!!\\\";\\r\\n        this.TutorialStory[6] = \\\"\uC73C\uC5D0\uC5D17!!!!!!\\\";\\r\\n       
+    this.TutorialText.text = this.TutorialStory[0];\\r\\n        this.BeforeBtn.gameObject.SetActive(false);\\r\\n   
+    }\\r\\n    GoNext() {\\r\\n        //\uD398\uC774\uC9C0 \uC22B\uC790 \uC62C\uB9AC\uACE0
+    \uD14D\uC2A4\uD2B8\uB97C \uD574\uB2F9 \uD398\uC774\uC9C0\uC5D0 \uB9DE\uAC8C \uBC14\uAFD4\uC90C\\r\\n       
+    this.txtNum++;\\r\\n        this.TutorialText.text = this.TutorialStory[this.txtNum];\\r\\n       
+    //\uB354\uD588\uC744\uB54C \uACB0\uACFC\uAC00 \uB05D\uD398\uC774\uC9C0\uB77C\uBA74\\r\\n       
+    if (this.txtNum == this.TutorialStory.length - 1) {\\r\\n            //\uB2E4\uC74C\uD398\uC774\uC9C0\uB85C
+    \uB118\uC5B4\uAC00\uB294 \uBC84\uD2BC \uAEBC\uC900\uB2E4.\\r\\n            this.NextBtn.gameObject.SetActive(false);\\r\\n       
+    }\\r\\n        //\uADF8\uB9AC\uACE0 \uB354\uD588\uC744\uB54C \uCCAB\uD398\uC774\uC9C0\uBCF4\uB2E4
+    \uB4A4\uB77C\uBA74 \uC774\uC804\uD398\uC774\uC9C0\uB85C \uB118\uC5B4\uAC00\uB294
+    \uBC84\uD2BC\uC744 \uCF1C\uC900\uB2E4\\r\\n        else if (this.txtNum != 0)
+    {\\r\\n            this.BeforeBtn.gameObject.SetActive(true);\\r\\n        }\\r\\n   
+    }\\r\\n    GoBefore() {\\r\\n        //\uD398\uC774\uC9C0 \uC22B\uC790 \uB0B4\uB9AC\uACE0
+    \uD14D\uC2A4\uD2B8\uB97C \uD574\uB2F9 \uD398\uC774\uC9C0\uC5D0 \uB9DE\uAC8C \uBC14\uAFD4\uC90C\\r\\n       
+    this.txtNum--;\\r\\n        this.TutorialText.text = this.TutorialStory[this.txtNum];\\r\\n       
+    //\uBE8F\uC744\uB54C \uACB0\uACFC\uAC00 \uCC98\uC74C\uD398\uC774\uC9C0\uB77C\uBA74\\r\\n       
+    if (this.txtNum == 0) {\\r\\n            //\uC774\uC804\uD398\uC774\uC9C0\uB85C
+    \uB118\uC5B4\uAC00\uB294 \uBC84\uD2BC \uAEBC\uC900\uB2E4.\\r\\n            this.BeforeBtn.gameObject.SetActive(false);\\r\\n       
+    }\\r\\n        //\uADF8\uB9AC\uACE0 \uB354\uD588\uC744\uB54C \uB05D\uD398\uC774\uC9C0\uBCF4\uB2E4
+    \uC55E\uC774\uB77C\uBA74 \uB2E4\uC74C\uD398\uC774\uC9C0\uB85C \uB118\uC5B4\uAC00\uB294
+    \uBC84\uD2BC\uC744 \uCF1C\uC900\uB2E4\\r\\n        else if (this.txtNum != this.TutorialStory.length)
+    {\\r\\n            this.NextBtn.gameObject.SetActive(true);\\r\\n        }\\r\\n   
+    }\\r\\n}\\r\\nexports.default = TutorialUI;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiVHV0b3JpYWxVSS5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIlR1dG9yaWFsVUkudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFFQSxpREFBcUQ7QUFFckQsTUFBcUIsVUFBVyxTQUFRLHFDQUFxQjtJQUE3RDs7UUFPVyxtQkFBYyxHQUFVLENBQUMsQ0FBQztJQXNEckMsQ0FBQztJQXBERyxLQUFLO1FBQ0QsSUFBSSxDQUFDLGNBQWMsQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFDLEdBQUUsRUFBRTtZQUN4QyxJQUFJLENBQUMsYUFBYSxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsQ0FBQztRQUN2QyxDQUFDLENBQUMsQ0FBQztRQUNILElBQUksQ0FBQyxPQUFPLENBQUMsT0FBTyxDQUFDLFdBQVcsQ0FBQyxHQUFFLEVBQUU7WUFDakMsSUFBSSxDQUFDLE1BQU0sRUFBRSxDQUFDO1FBQ2xCLENBQUMsQ0FBQyxDQUFDO1FBQ0gsSUFBSSxDQUFDLFNBQVMsQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFDLEdBQUUsRUFBRTtZQUNuQyxJQUFJLENBQUMsUUFBUSxFQUFFLENBQUM7UUFDcEIsQ0FBQyxDQUFDLENBQUM7UUFFSCxJQUFJLENBQUMsYUFBYSxDQUFDLENBQUMsQ0FBQyxHQUFHLE1BQU0sQ0FBQztRQUMvQixJQUFJLENBQUMsYUFBYSxDQUFDLENBQUMsQ0FBQyxHQUFHLE9BQU8sQ0FBQztRQUNoQyxJQUFJLENBQUMsYUFBYSxDQUFDLENBQUMsQ0FBQyxHQUFHLFFBQVEsQ0FBQztRQUNqQyxJQUFJLENBQUMsYUFBYSxDQUFDLENBQUMsQ0FBQyxHQUFHLFNBQVMsQ0FBQztRQUNsQyxJQUFJLENBQUMsYUFBYSxDQUFDLENBQUMsQ0FBQyxHQUFHLFVBQVUsQ0FBQztRQUNuQyxJQUFJLENBQUMsYUFBYSxDQUFDLENBQUMsQ0FBQyxHQUFHLFdBQVcsQ0FBQztRQUNwQyxJQUFJLENBQUMsYUFBYSxDQUFDLENBQUMsQ0FBQyxHQUFHLFlBQVksQ0FBQztRQUVyQyxJQUFJLENBQUMsWUFBWSxDQUFDLElBQUksR0FBRyxJQUFJLENBQUMsYUFBYSxDQUFDLENBQUMsQ0FBQyxDQUFDO1FBQy9DLElBQUksQ0FBQyxTQUFTLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQztJQUMvQyxDQUFDO0lBR00sTUFBTTtRQUNULGdDQUFnQztRQUNoQyxJQUFJLENBQUMsTUFBTSxFQUFFLENBQUM7UUFDZCxJQUFJLENBQUMsWUFBWSxDQUFDLElBQUksR0FBRyxJQUFJLENBQUMsYUFBYSxDQUFDLElBQUksQ0FBQyxNQUFNLENBQUMsQ0FBQztRQUN6RCxpQkFBaUI7UUFDakIsSUFBRyxJQUFJLENBQUMsTUFBTSxJQUFFLElBQUksQ0FBQyxhQUFhLENBQUMsTUFBTSxHQUFDLENBQUMsRUFBQztZQUN4QyxxQkFBcUI7WUFDckIsSUFBSSxDQUFDLE9BQU8sQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO1NBQzVDO1FBQ0QseUNBQXlDO2FBQ3BDLElBQUcsSUFBSSxDQUFDLE1BQU0sSUFBRSxDQUFDLEVBQUM7WUFDbkIsSUFBSSxDQUFDLFNBQVMsQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLElBQUksQ0FBQyxDQUFDO1NBQzdDO0lBQ0wsQ0FBQztJQUNNLFFBQVE7UUFDWCxnQ0FBZ0M7UUFDaEMsSUFBSSxDQUFDLE1BQU0sRUFBRSxDQUFDO1FBQ2QsSUFBSSxDQUFDLFlBQVksQ0FBQyxJQUFJLEdBQUcsSUFBSSxDQUFDLGFBQWEsQ0FBQyxJQUFJLENBQUMsTUFBTSxDQUFDLENBQUM7UUFDekQsaUJBQWlCO1FBQ2pCLElBQUcsSUFBSSxDQUFDLE1BQU0sSUFBRSxDQUFDLEVBQUM7WUFDZCxxQkFBcUI7WUFDckIsSUFBSSxDQUFDLFNBQVMsQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLEtBQUssQ0FBQyxDQUFDO1NBQzlDO1FBQ0QsMENBQTBDO2FBQ3JDLElBQUcsSUFBSSxDQUFDLE1BQU0sSUFBRSxJQUFJLENBQUMsYUFBYSxDQUFDLE1BQU0sRUFBQztZQUMzQyxJQUFJLENBQUMsT0FBTyxDQUFDLFVBQVUsQ0FBQyxTQUFTLENBQUMsSUFBSSxDQUFDLENBQUM7U0FDM0M7SUFDTCxDQUFDO0NBQ0o7QUE3REQsNkJBNkRDIn0=\",\"assetPath\":\"Assets/Scripts/TutorialUI.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.UI\",\"name\":\"TutorialButton\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"TutorialUIObj\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"mscorlib\",\"name\":\"txtNum\",\"type\":\"System.Single\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"mscorlib\",\"name\":\"TutorialStory\",\"type\":\"System.String[]\",\"isArray\":true,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"NextBtn\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"BeforeBtn\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"mscorlib\",\"name\":\"CurrentPageNuM\",\"type\":\"System.Single\",\"isArray\":false,\"initValue\":[\"0\"],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"TutorialText\",\"type\":\"UnityEngine.UI.Text\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"TutorialUI\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: 345c55c5ac228ff41dd198b94f16b5a7
+  onlyWriteTrigger: 0
