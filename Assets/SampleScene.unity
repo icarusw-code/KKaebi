@@ -46022,8 +46022,9 @@ GameObject:
   - component: {fileID: 1632138190}
   - component: {fileID: 1632138189}
   - component: {fileID: 1632138188}
+  - component: {fileID: 1632138192}
   m_Layer: 0
-  m_Name: Testt
+  m_Name: "\uD3EC\uCC28"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46037,7 +46038,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1632138187}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -46099,12 +46100,54 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1632138187}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 159.82986, y: 403.64185, z: -13.839676}
+  m_LocalPosition: {x: -4.93, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1632138192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632138187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1673316429, guid: 921f0445823004a16a499d629dd566a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script:
+    keys:
+    - btnFactory
+    - DestroyBtn
+    - foodItems
+    - foodItem
+    - isOnHand
+    - randomNumber
+    unityValues:
+    - {fileID: 2231140363182708993, guid: 0d25589be16fe8c428f793b1d1a16457, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    values:
+    - 
+    - 
+    - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":3,\"type\":\"UnityEngine.Object,
+      UnityEngine.CoreModule\",\"isUnity\":true}"}'
+    - 
+    - '{"type":"System.Boolean, mscorlib","value":"False"}'
+    - '{"type":"System.Single, mscorlib","value":"0"}'
+    unityArrayValues:
+    - {fileID: -927199367670048503, guid: cad4298a0c529534cac8622f8e47ab34, type: 3}
+    - {fileID: -927199367670048503, guid: 74928953b4ab410448293c8f1cbed80e, type: 3}
+    - {fileID: -927199367670048503, guid: f39392c9315fbb643ba9767de066dc3f, type: 3}
+    arrayValues: []
+    script: {fileID: 4458252877524076426, guid: c96e2dff182ed974a827a10dc702998c, type: 3}
+    isExpaned: 0
 --- !u!1 &1633865122
 GameObject:
   m_ObjectHideFlags: 0
