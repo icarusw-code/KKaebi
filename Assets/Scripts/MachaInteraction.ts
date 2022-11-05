@@ -41,12 +41,12 @@ export default class MachatInteraction extends ZepetoScriptBehaviour {
             var localPlayer: GameObject = ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.gameObject;
             var handPosition = localPlayer.transform.GetChild(0).GetChild(1).GetChild(2).GetChild(0).GetChild(1).GetChild(2).GetChild(1).GetChild(1).GetChild(0).GetChild(1).GetChild(0);
             
-            this.randomNumber = UnityEngine.Random.Range(0, this.foodItems.length);
-            console.log(Math.floor(this.randomNumber));
+            this.randomNumber = Math.floor(UnityEngine.Random.Range(0, this.foodItems.length));
+            console.log(this.randomNumber);
 
             if(this.foodItem != null) GameObject.Destroy(this.foodItem);
-            this.foodItem = GameObject.Instantiate(this.foodItems[Math.floor(this.randomNumber)], handPosition) as GameObject;
-            this.foodItem.transform.localScale = new Vector3(0.01, 0.01, 0.01);
+            this.foodItem = GameObject.Instantiate(this.foodItems[this.randomNumber], handPosition) as GameObject;
+            // this.foodItem.transform.localScale = new Vector3(0.01, 0.01, 0.01);
             this.foodItem.transform.localPosition = new Vector3(-0.075000003,-0.00300000003,0.00200000009);
             this.foodItem.transform.localEulerAngles = Vector3.zero;
             this.isOnHand = true;
