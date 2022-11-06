@@ -420,20 +420,21 @@ export default class QuestManager extends ZepetoScriptBehaviour {
             GameObject.Destroy(this.tableOnFood.transform.GetChild(i).gameObject);
         }
 
-        //완료창 띄우기
-        this.completeWindow = GameObject.Instantiate(this.completeWindowPrefab) as GameObject;
-        this.message = this.completeWindow.transform.GetChild(4).GetComponent<Text>();
-        this.contentImg = this.completeWindow.transform.GetChild(2).GetChild(0).GetComponent<Image>();
-        this.okButton = this.completeWindow.transform.GetChild(3).GetComponent<Button>();
-
-        this.okButton.onClick.AddListener(() => {
-            GameObject.Destroy(this.completeWindow);
-        });
+        
 
         // console.log(this.QuestAcceptFoodName + " : " + foodCount);
         // foodCount 1번이면 => 음식완료 메시지
         if(foodCount == 1){
             SoundManager.getInstance().PlayBgm("KkaebiGetBgm");
+            //완료창 띄우기
+            this.completeWindow = GameObject.Instantiate(this.completeWindowPrefab) as GameObject;
+            this.message = this.completeWindow.transform.GetChild(4).GetComponent<Text>();
+            this.contentImg = this.completeWindow.transform.GetChild(2).GetChild(0).GetComponent<Image>();
+            this.okButton = this.completeWindow.transform.GetChild(3).GetComponent<Button>();
+
+            this.okButton.onClick.AddListener(() => {
+                GameObject.Destroy(this.completeWindow);
+            });
             if(LanguageChange.getInstance().LanguageMode == 1){
                 this.message.text = "한식 획득!";
 
@@ -450,8 +451,15 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         };
         // foodCount 2번이면 => 깨비 완료 메시지
         if(foodCount == 2){
-            console.log("현재 프레프회수 : " + UnityEngine.PlayerPrefs.GetInt("군밤"));
-            console.log("현재 로컬회수 : " +foodCount);
+            //완료창 띄우기
+            this.completeWindow = GameObject.Instantiate(this.completeWindowPrefab) as GameObject;
+            this.message = this.completeWindow.transform.GetChild(4).GetComponent<Text>();
+            this.contentImg = this.completeWindow.transform.GetChild(2).GetChild(0).GetComponent<Image>();
+            this.okButton = this.completeWindow.transform.GetChild(3).GetComponent<Button>();
+
+            this.okButton.onClick.AddListener(() => {
+                GameObject.Destroy(this.completeWindow);
+            });
             SoundManager.getInstance().PlayBgm("KkaebiGetBgm");
             if(LanguageChange.getInstance().LanguageMode == 1){
 
