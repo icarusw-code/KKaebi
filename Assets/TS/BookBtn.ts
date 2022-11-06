@@ -3,7 +3,7 @@ import { Button, Image} from "UnityEngine.UI";
 import { GameObject, Sprite } from 'UnityEngine';
 import { UIZepetoPlayerControl, ZepetoPlayers } from 'ZEPETO.Character.Controller';
 import { Background, ScrollView } from 'UnityEngine.UIElements';
-
+import SoundManager from '../Scripts/SoundManager';
 export default class BookBtn extends ZepetoScriptBehaviour {
 
     public bookIconBtn : Button;
@@ -28,6 +28,7 @@ export default class BookBtn extends ZepetoScriptBehaviour {
         
         // 도감 아이콘 눌렀을 떄
         this.bookIconBtn.onClick.AddListener(() => {
+            SoundManager.getInstance().PlayBgm("UIbuttonBgm");
             this.backGroundImg = this.book.transform.GetChild(0).GetComponent<Image>();
 
             this.playerController = ZepetoPlayers.instance.transform.GetChild(4).gameObject;
@@ -45,6 +46,7 @@ export default class BookBtn extends ZepetoScriptBehaviour {
 
         // 재료 탭 눌렀을 때
         this.ingredientTab.onClick.AddListener(() => {
+            SoundManager.getInstance().PlayBgm("UIbuttonBgm");
             // 재료 창만 띄우고 싶다.
             this.ingredientBook.SetActive(true);
             this.recipeBook.SetActive(false);
@@ -54,6 +56,7 @@ export default class BookBtn extends ZepetoScriptBehaviour {
 
         // 레시피 탭 눌렀을 때
         this.recipeTab.onClick.AddListener(() => {
+            SoundManager.getInstance().PlayBgm("UIbuttonBgm");
             // 레시피 창만 띄우고 싶다.
             this.ingredientBook.SetActive(false);
             this.recipeBook.SetActive(true);
@@ -63,6 +66,7 @@ export default class BookBtn extends ZepetoScriptBehaviour {
 
         // 깨비 탭 눌렀을 때
         this.kkaebiTab.onClick.AddListener(() => {
+            SoundManager.getInstance().PlayBgm("UIbuttonBgm");
             // 깨비 창만 띄우고 싶다.
             this.ingredientBook.SetActive(false);
             this.recipeBook.SetActive(false);
@@ -71,6 +75,7 @@ export default class BookBtn extends ZepetoScriptBehaviour {
         });
 
         this.exitBtn.onClick.AddListener(() => {
+            SoundManager.getInstance().PlayBgm("UIbuttonBgm");
             // 도감 켜주기
             this.isActive ? this.book.SetActive(false) : this.book.SetActive(true);
 

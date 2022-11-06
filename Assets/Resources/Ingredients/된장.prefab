@@ -9,19 +9,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8409507580568973625, guid: 1e9cfff18c4fcf5409f238642e6e0487, type: 3}
       propertyPath: script.keys.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -8409507580568973625, guid: 1e9cfff18c4fcf5409f238642e6e0487, type: 3}
       propertyPath: script.values.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -8409507580568973625, guid: 1e9cfff18c4fcf5409f238642e6e0487, type: 3}
       propertyPath: script.keys.Array.data[4]
       value: IngredientController
       objectReference: {fileID: 0}
     - target: {fileID: -8409507580568973625, guid: 1e9cfff18c4fcf5409f238642e6e0487, type: 3}
+      propertyPath: script.keys.Array.data[5]
+      value: spawnmanager
+      objectReference: {fileID: 0}
+    - target: {fileID: -8409507580568973625, guid: 1e9cfff18c4fcf5409f238642e6e0487, type: 3}
       propertyPath: script.unityValues.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -8409507580568973625, guid: 1e9cfff18c4fcf5409f238642e6e0487, type: 3}
       propertyPath: script.unityValues.Array.data[2]
@@ -110,6 +114,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1977427983499493905, guid: 1e9cfff18c4fcf5409f238642e6e0487, type: 3}
   m_PrefabInstance: {fileID: 2945093197402373243}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3507619723702102285
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3723965545527246442}
+    m_Modifications:
+    - target: {fileID: 2784355763575536937, guid: db766e999d3a83b44a362bb904508a0e, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2784355763575536937, guid: db766e999d3a83b44a362bb904508a0e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2784355763575536937, guid: db766e999d3a83b44a362bb904508a0e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2784355763575536937, guid: db766e999d3a83b44a362bb904508a0e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2784355763575536937, guid: db766e999d3a83b44a362bb904508a0e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2784355763575536937, guid: db766e999d3a83b44a362bb904508a0e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2784355763575536937, guid: db766e999d3a83b44a362bb904508a0e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2784355763575536937, guid: db766e999d3a83b44a362bb904508a0e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2784355763575536937, guid: db766e999d3a83b44a362bb904508a0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2784355763575536937, guid: db766e999d3a83b44a362bb904508a0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2784355763575536937, guid: db766e999d3a83b44a362bb904508a0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2784355763575537111, guid: db766e999d3a83b44a362bb904508a0e, type: 3}
+      propertyPath: m_Name
+      value: I_Hangari Doenjang
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: db766e999d3a83b44a362bb904508a0e, type: 3}
 --- !u!1001 &3724821884012917119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -164,6 +225,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 153ecfaf1d6cbb446a1b1488d0fff318, type: 3}
       propertyPath: m_Name
       value: Hangari
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 153ecfaf1d6cbb446a1b1488d0fff318, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 153ecfaf1d6cbb446a1b1488d0fff318, type: 3}

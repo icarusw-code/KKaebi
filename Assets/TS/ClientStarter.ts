@@ -139,7 +139,7 @@ export default class ClientStarter extends ZepetoScriptBehaviour {
         this.currentPlayers.set(sessionId, player);
 
         const spawnInfo = new SpawnInfo();
-        const position = new UnityEngine.Vector3(0, 0, 0);
+        const position = new UnityEngine.Vector3(-15, 1.5, 30);
         const rotation = new UnityEngine.Vector3(0, 0, 0);
 
         spawnInfo.position = position;

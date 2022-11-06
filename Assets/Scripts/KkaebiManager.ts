@@ -6,7 +6,7 @@ import * as UnityEngine from 'UnityEngine';
 import KkaebiInfo from '../TS/KkaebiInfo';
 import { ZepetoWorldMultiplay } from 'ZEPETO.World';
 import { ZepetoPlayers } from 'ZEPETO.Character.Controller';
-
+import SoundManager from './SoundManager';
 export default class KkaebiManager extends ZepetoScriptBehaviour {
 
     public multiplay : ZepetoWorldMultiplay;
@@ -51,6 +51,7 @@ export default class KkaebiManager extends ZepetoScriptBehaviour {
 
         for(let i=0; i<this.KkaebiButtons.Length;i++){
             this.KkaebiButtons[i].onClick.AddListener(()=>{
+                SoundManager.getInstance().PlayBgm("UIbuttonBgm");
                 //이전에 누른버튼의 소환버튼 비활성화 시키기
                 if(this.beforeNumber>=0){//초기상태가-1 이므로 한번이라도 누르면 양수로 바뀜
                     this.SummonBtns[this.beforeNumber].gameObject.SetActive(false);
@@ -69,6 +70,7 @@ export default class KkaebiManager extends ZepetoScriptBehaviour {
 
             //소환버튼을 누르면
             this.SummonBtns[i].onClick.AddListener(()=>{
+                SoundManager.getInstance().PlayBgm("UIbuttonBgm");
                 var go : GameObject = GameObject.FindGameObjectWithTag("KKaebi");
                 if(go != null && this.selectNumber != i)
                 {
@@ -83,6 +85,7 @@ export default class KkaebiManager extends ZepetoScriptBehaviour {
             });
             //비소환 버튼을 누르면
             this.UnsummonBtns[i].onClick.AddListener(()=>{
+                SoundManager.getInstance().PlayBgm("UIbuttonBgm");
                 var go : GameObject = GameObject.FindGameObjectWithTag("KKaebi");
                 if(go != null && this.selectNumber == i)
                 {

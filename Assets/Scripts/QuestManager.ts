@@ -15,6 +15,7 @@ import Notifications from './Notifications';
 import LanguageChange from './Language/LanguageChange';
 import KkaebiInfo from '../TS/KkaebiInfo';
 import ingerdientInteraction from './ingredientInteraction';
+import SoundManager from './SoundManager';
 export default class QuestManager extends ZepetoScriptBehaviour {
     //플레이어 컨트롤러
     private playerController : GameObject;
@@ -103,6 +104,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
             this.btns[i].onClick.AddListener(() => { //버튼 누를때 마다 해당 음식에 따른 재료 아이디 퀘스트매니저 함수에 전송 (두번째 인자는 재료 종류수)
                 //console.log("현재 누르고있는 버튼 이름:"+ this.btns[i]);
                 //this.acceptBtn.gameObject.SetActive(true);
+                SoundManager.getInstance().PlayBgm("UIbuttonBgm");
                 this.LeftPanel.SetActive(true);
                 //누를때마다 이미지 황금색테두리로 바꿈
                 if(this.BeforeSelectnum!=-1){
@@ -115,16 +117,19 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         }
         this.acceptBtn.onClick.AddListener(()=>{
             //console.log("수락완료");
+            SoundManager.getInstance().PlayBgm("UIbuttonBgm");
             this.QuestAccept();
             this.playerController = ZepetoPlayers.instance.transform.GetChild(4).gameObject;
             this.playerController.SetActive(true);
         });
         this.giveUpBtn.onClick.AddListener(()=>{
+            SoundManager.getInstance().PlayBgm("UIbuttonBgm");
             //console.log("퀘스트 포기");
             this.QuestGiveUp();
         });
 
         this.myQuestBtn.onClick.AddListener(()=>{
+            SoundManager.getInstance().PlayBgm("UIbuttonBgm");
             //console.log("내 퀘스트 열기");
             this.myQuestUI.SetActive(true);
             this.playerController = ZepetoPlayers.instance.transform.GetChild(4).gameObject;
@@ -139,6 +144,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
             }
         });
         this.MyQuestExitBtn.onClick.AddListener(()=>{
+            SoundManager.getInstance().PlayBgm("UIbuttonBgm");
             //console.log("내 퀘스트 끄기");
             this.myQuestUI.SetActive(false);
             this.playerController = ZepetoPlayers.instance.transform.GetChild(4).gameObject;
@@ -146,6 +152,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         });
 
         this.exitBtn.onClick.AddListener(()=>{
+            SoundManager.getInstance().PlayBgm("UIbuttonBgm");
             //퀘스트창 끄기
             this.QuestUI.SetActive(false);
             this.LeftPanel.SetActive(false);
@@ -176,6 +183,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         //3성 음식인데 해당 재료인 2성음식 만든적 없다면 수락할수 없음
         if(this.QuestFoodName=="팥빙수"){
             if(UnityEngine.PlayerPrefs.GetInt("찹쌀떡보유함")!=1){
+                SoundManager.getInstance().PlayBgm("NotificationBgm");
                 if(LanguageChange.getInstance().LanguageMode==1){
                     this.NotificationUI.GetComponent<Notifications>().UpLoadText("찹쌀떡을 요리할 수 있어야 팥빙수 요리법을 알 수 있습니다.");
                 }
@@ -188,6 +196,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         else if(this.QuestFoodName=="부대찌개"||this.QuestFoodName=="붕어찜"){
             if(UnityEngine.PlayerPrefs.GetInt("김치보유함")!=1){
                 if (this.QuestFoodName == "부대찌개") {
+                    SoundManager.getInstance().PlayBgm("NotificationBgm");
                     if (LanguageChange.getInstance().LanguageMode == 1) {
                         this.NotificationUI.GetComponent<Notifications>().UpLoadText("김치를 요리할 수 있어야 부대찌개 요리법을 알 수 있습니다.");
                     }
@@ -197,6 +206,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
                 }
                 if(this.QuestFoodName=="붕어찜"){
                     if (LanguageChange.getInstance().LanguageMode == 1) {
+                        SoundManager.getInstance().PlayBgm("NotificationBgm");
                         this.NotificationUI.GetComponent<Notifications>().UpLoadText("김치를 요리할 수 있어야 붕어찜 요리법을 알 수 있습니다.");
                     }
                     else if(LanguageChange.getInstance().LanguageMode==2){
@@ -225,6 +235,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         this.SetMyQuest(this.QuestAcceptIngreNum,this.QuestAcceptIngreIDArr,this.QuestAcceptFoodName); //재료 아이디 배열넘김
         this.SetMYQuestFoodImage(this.QuestAcceptFoodName);
         this.isGetIngre = new Array(this.QuestAcceptIngreNum);
+        SoundManager.getInstance().PlayBgm("NotificationBgm");
         if (LanguageChange.getInstance().LanguageMode == 1) {
             this.NotificationUI.GetComponent<Notifications>().UpLoadText(this.QuestAcceptFoodName + "의 재료를 모아오자");
         }
@@ -255,6 +266,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         //부여된 퀘스트 재료 id배열이랑 크기도 초기화
         this.QuestAcceptIngreIDArr = new Array();
         this.QuestAcceptIngreNum = 0;
+        SoundManager.getInstance().PlayBgm("NotificationBgm");
         if (LanguageChange.getInstance().LanguageMode == 1) {
             this.NotificationUI.GetComponent<Notifications>().UpLoadText(this.QuestAcceptFoodName + "요리를 그만 할래");
         }
@@ -263,6 +275,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         }
     }
 
+    //<---------------------테이블 세팅---------------------------->//
     public completeWindowPrefab : GameObject;
     public KkaebiImageList : Sprite[];
     public positionList : GameObject[];
@@ -270,12 +283,16 @@ export default class QuestManager extends ZepetoScriptBehaviour {
     public foodModelList : GameObject[];
     public tableOnIngres : GameObject;
     public tableOnFood : GameObject;
+    public effectFactory : GameObject;
 
     isComplete : bool = false;
     completeWindow : GameObject;
     message : Text;
     contentImg : Image;
     okButton : Button;
+
+    //<------------------------------------------------------->//
+
 
     //퀘스트 완료
     public QuestComplete(){
@@ -291,7 +308,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         // 2초 기다리기 -> 요리 생성!
         this.StartCoroutine(this.DoFoodCreate());
 
-        // 1.5초 기다리기 -> 완료창 띄우기
+        // 2초 기다리기 -> 완료창 띄우기
         this.StartCoroutine(this.WindowCreateAfterTime(foodCount));
 
         
@@ -385,6 +402,8 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         }
 
         // 이펙트 생성 : 펑!
+        var effect = GameObject.Instantiate(this.effectFactory, this.positionList[0].transform.position, UnityEngine.Quaternion.identity, this.tableOnFood.transform);
+        SoundManager.getInstance().PlayBgm("CookingBgm");
         // 요리 프리팹 생성
         this.foodModelList.map((d) => {
             if(d.name == this.QuestFoodName){
@@ -401,19 +420,21 @@ export default class QuestManager extends ZepetoScriptBehaviour {
             GameObject.Destroy(this.tableOnFood.transform.GetChild(i).gameObject);
         }
 
-        //완료창 띄우기
-        this.completeWindow = GameObject.Instantiate(this.completeWindowPrefab) as GameObject;
-        this.message = this.completeWindow.transform.GetChild(4).GetComponent<Text>();
-        this.contentImg = this.completeWindow.transform.GetChild(2).GetChild(0).GetComponent<Image>();
-        this.okButton = this.completeWindow.transform.GetChild(3).GetComponent<Button>();
-
-        this.okButton.onClick.AddListener(() => {
-            GameObject.Destroy(this.completeWindow);
-        });
+        
 
         // console.log(this.QuestAcceptFoodName + " : " + foodCount);
         // foodCount 1번이면 => 음식완료 메시지
         if(foodCount == 1){
+            SoundManager.getInstance().PlayBgm("KkaebiGetBgm");
+            //완료창 띄우기
+            this.completeWindow = GameObject.Instantiate(this.completeWindowPrefab) as GameObject;
+            this.message = this.completeWindow.transform.GetChild(4).GetComponent<Text>();
+            this.contentImg = this.completeWindow.transform.GetChild(2).GetChild(0).GetComponent<Image>();
+            this.okButton = this.completeWindow.transform.GetChild(3).GetComponent<Button>();
+
+            this.okButton.onClick.AddListener(() => {
+                GameObject.Destroy(this.completeWindow);
+            });
             if(LanguageChange.getInstance().LanguageMode == 1){
                 this.message.text = "한식 획득!";
 
@@ -429,7 +450,17 @@ export default class QuestManager extends ZepetoScriptBehaviour {
             });
         };
         // foodCount 2번이면 => 깨비 완료 메시지
-        if(foodCount >= 2){
+        if(foodCount == 2){
+            //완료창 띄우기
+            this.completeWindow = GameObject.Instantiate(this.completeWindowPrefab) as GameObject;
+            this.message = this.completeWindow.transform.GetChild(4).GetComponent<Text>();
+            this.contentImg = this.completeWindow.transform.GetChild(2).GetChild(0).GetComponent<Image>();
+            this.okButton = this.completeWindow.transform.GetChild(3).GetComponent<Button>();
+
+            this.okButton.onClick.AddListener(() => {
+                GameObject.Destroy(this.completeWindow);
+            });
+            SoundManager.getInstance().PlayBgm("KkaebiGetBgm");
             if(LanguageChange.getInstance().LanguageMode == 1){
 
                 this.message.text = "한식깨비 획득!";

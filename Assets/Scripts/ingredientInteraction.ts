@@ -11,6 +11,8 @@ import * as UnityEngine from 'UnityEngine';
 import IngredientBookController from '../TS/IngredientBookController';
 import Notifications from './Notifications';
 import LanguageChange from './Language/LanguageChange';
+import SpawnManager from './SpawnManager';
+import SoundManager from './SoundManager';
 export default class ingerdientInteraction extends ZepetoScriptBehaviour {
 
     public btnFactory : GameObject;
@@ -24,8 +26,11 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
     private color : UnityEngine.Color;
     private isingrcheck: bool = false;
     public IngredientController : GameObject;
+    public spawnmanager : GameObject;
+    private alreadyCheck : bool = false;
     //
     Start() {    
+        this.spawnmanager = GameObject.Find("SpawnManager");
         this.IngredientController= GameObject.Find("UI_Manager");
         this.content = GameObject.Find("Canvas_UI").transform.GetChild(3).GetChild(0).GetChild(0).GetChild(0).gameObject;
 
@@ -38,6 +43,7 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
         this.DestroyBtn = this.btn.GetComponent<Button>(); 
         this.DestroyBtn.onClick.AddListener(() => { //먹는 버튼 누르면 먹어지는 동작
             if(QuestManager.getInstance().isNowAccept==false){
+                SoundManager.getInstance().PlayBgm("NotificationBgm");
                 if(LanguageChange.getInstance().LanguageMode == 1){ //한국어
                     Notifications.getIns().UpLoadText("진행중인 요리가 없습니다. 대왕깨비에게 가보세요!");
                 }
@@ -47,7 +53,9 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
                 }
             }
             if(QuestManager.getInstance().GetIngreCheckDiction.get(this.myID)==true){
+                SoundManager.getInstance().PlayBgm("NotificationBgm");
                 //한글이라면
+                this.alreadyCheck=true;
                 if(LanguageChange.getInstance().LanguageMode == 1){ //한국어
                     Notifications.getIns().UpLoadText("이미 획득한 재료입니다");
                 }
@@ -62,15 +70,18 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
             //재료(지금 현재 오브젝트)가 지금 퀘스트로 받은 재료들일때만, 그리고 한번도 먹지 않았을경우에만 먹기동작 수행
             for(let i=0; i<QuestManager.getInstance().QuestAcceptIngreNum;i++){
                 if(QuestManager.getInstance().QuestAcceptIngreIDArr[i]==this.myID&&QuestManager.getInstance().GetIngreCheckDiction.get(this.myID)==false){
+                    //spawnmanager의 리스트에 체크배열에 해당재료의 스폰 넘버값 원소에 먹었다고 전달
+                    this.spawnmanager.GetComponent<SpawnManager>().IsSpawnCheckList[this.gameObject.GetComponent<IngredientInfo>().spawnNum]=false;
                     this.DoDestroy();
                     QuestManager.getInstance().GetIngreCheck(this.myID);//먹었음
                     //먹었으니 myquest의 해당 재료 이미지의 투명값을 높여주자
                     //지금 먹은 현재 id에 해당하는 재료 이름을 ingredient book controller 딕셔너리에서 id키값=>음식이름 으로 전환하고 그걸 현재 inventory에서 반복해서 찾아서 투명도
-                    
+                    SoundManager.getInstance().PlayBgm("IngreGetBgm");
                     this.AddIngredientCount();
                     this.AddIngredientImage();
                     this.IngredientController.GetComponent<IngredientBookController>().IngreBookImageColor();
                     if(QuestManager.getInstance().QuestCompleteCheck()==true){
+                        SoundManager.getInstance().PlayBgm("NotificationBgm");
                         if(LanguageChange.getInstance().LanguageMode == 1){ //한국어
                             Notifications.getIns().UpLoadText(QuestManager.getInstance().QuestAcceptFoodName+"의 재료를 전부 모았다! 대왕깨비에게 가서 요리를 부탁하자");
                         }   
@@ -80,7 +91,8 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
                     }
                     this.isingrcheck=true; //레시피에 해당 재료가 있는것이므로
                 }
-                else if(QuestManager.getInstance().QuestAcceptIngreIDArr[i]!=this.myID&&i==QuestManager.getInstance().QuestAcceptIngreNum-1&&this.isingrcheck==false){
+                if(QuestManager.getInstance().QuestAcceptIngreIDArr[i]!=this.myID&&i==QuestManager.getInstance().QuestAcceptIngreNum-1&&this.isingrcheck==false&&this.alreadyCheck==false){
+                    SoundManager.getInstance().PlayBgm("NotificationBgm");
                     if(LanguageChange.getInstance().LanguageMode == 1){ //한국어
                         Notifications.getIns().UpLoadText(QuestManager.getInstance().QuestAcceptFoodName+"에 필요한 재료가 아닙니다");
                     }

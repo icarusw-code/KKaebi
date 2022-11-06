@@ -4,7 +4,7 @@ import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 import IngreInfoData from '../Scripts/IngreInfoData';
 import LanguageChange from '../Scripts/Language/LanguageChange';
 import IngredientInfo from './IngredientInfo';
-
+import SoundManager from '../Scripts/SoundManager';
 export default class IngredientBookController extends ZepetoScriptBehaviour {
 
     // =========상세정보============== // 
@@ -40,6 +40,7 @@ export default class IngredientBookController extends ZepetoScriptBehaviour {
         for(let i = 0; i < this.ingredientList.Length; i++)
         {
             this.ingreBtn[i].onClick.AddListener(() =>{
+                SoundManager.getInstance().PlayBgm("UIbuttonBgm");
                 console.log("이 버튼 이름은 : " + this.ingreBtn[i].name);
                 if(PlayerPrefs.GetInt(this.ingredientList[i].GetComponent<IngredientInfo>().id.toString()) >= 1)
                 {
@@ -79,6 +80,7 @@ export default class IngredientBookController extends ZepetoScriptBehaviour {
 
                     // 창 종료 버튼 활성화
                     this.ingreInfoExtBtn.onClick.AddListener(()=>{
+                        SoundManager.getInstance().PlayBgm("UIbuttonBgm");
                         console.log("상세정보 끄기");
                         GameObject.Destroy(this.ingreInfo);
                     });

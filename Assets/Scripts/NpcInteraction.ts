@@ -6,6 +6,7 @@ import ButtonClick from './ButtonClick';
 import QuestManager from './QuestManager';
 import GameManager from '../TS/GameManager';
 import LanguageChange from './Language/LanguageChange';
+import SoundManager from './SoundManager';
 export default class NpcInteraction extends ZepetoScriptBehaviour {
     public btnFactory : GameObject;
     private btn : GameObject;
@@ -23,6 +24,7 @@ export default class NpcInteraction extends ZepetoScriptBehaviour {
         this.btn.GetComponent<ButtonClick>().TurnOffButton(); //버튼일단 꺼주고
         
         this.NpcTalkUI.GetComponent<Button>().onClick.AddListener(()=>{ //어떤요리가 만들고싶나 다음에 뜰창
+            SoundManager.getInstance().PlayBgm("UIbuttonBgm");
             this.btn.GetComponent<ButtonClick>().TurnOffButton();
             this.NpcTalkUI.SetActive(false);
             this.TurnOnQuestUI();
@@ -31,6 +33,7 @@ export default class NpcInteraction extends ZepetoScriptBehaviour {
 
         this.InteractBtn = this.btn.GetComponent<Button>(); 
         this.InteractBtn.onClick.AddListener(() => { //버튼누르면 퀘스트창뜸
+            SoundManager.getInstance().PlayBgm("UIbuttonBgm");
             if(QuestManager.getInstance().isNowAccept==false){ //지금 퀘스트 받은 상태가 아닐때만
 
                 this.NpcTalkUI.SetActive(true);
@@ -38,11 +41,11 @@ export default class NpcInteraction extends ZepetoScriptBehaviour {
                 this.btn.GetComponent<ButtonClick>().TurnOffButton();
                 if(LanguageChange.getInstance().LanguageMode==1){
                 //허허 어떤요리가 만들고싶나
-                    this.NpcTalkUI.transform.GetChild(1).GetComponent<Text>().text = "허허 어떤 요리가 만들고 싶나?"; 
+                    this.NpcTalkUI.transform.GetChild(1).GetComponent<Text>().text = "허허, 어떤 요리가 만들고 싶나?"; 
                 }
-                else if (LanguageChange.getInstance().LanguageMode == 1) {
+                else if (LanguageChange.getInstance().LanguageMode == 2) {
                     //허허 어떤요리가 만들고싶나
-                    this.NpcTalkUI.transform.GetChild(1).GetComponent<Text>().text = "Have you collected all the ingredients?";
+                    this.NpcTalkUI.transform.GetChild(1).GetComponent<Text>().text = "What kind of Korean food do you wish to have?";
                 }
 
                 this.playerController = ZepetoPlayers.instance.transform.GetChild(4).gameObject;

@@ -18,13 +18,14 @@ ScriptedImporter:
   wrapperTypes: []
   WrapperFilters: []
   wrapperOutputDirectory: Generated
-  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
-    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
-    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nclass RandomSpawn extends ZEPETO_Script_1.ZepetoScriptBehaviour
-    {\r\n    Start() {\r\n        this.SpawnPoint = UnityEngine_1.GameObject.Find(\"SpawnPoint\");\r\n       
-    this.Spawn(this.SpawnPoint.transform.position);\r\n    }\r\n    Spawn(summonPoint)
-    {\r\n        var Ingredient = UnityEngine_1.GameObject.Instantiate(this.IngredientFactory);\r\n       
-    Ingredient.transform.position = summonPoint;\r\n    }\r\n}\r\nexports.default
-    = RandomSpawn;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUmFuZG9tU3Bhd24uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJSYW5kb21TcGF3bi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUFrRDtBQUNsRCxpREFBcUQ7QUFFckQsTUFBcUIsV0FBWSxTQUFRLHFDQUFxQjtJQUcxRCxLQUFLO1FBQ0QsSUFBSSxDQUFDLFVBQVUsR0FBRyx3QkFBVSxDQUFDLElBQUksQ0FBQyxZQUFZLENBQUMsQ0FBQztRQUNoRCxJQUFJLENBQUMsS0FBSyxDQUFDLElBQUksQ0FBQyxVQUFVLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQyxDQUFDO0lBQ25ELENBQUM7SUFFRCxLQUFLLENBQUMsV0FBcUI7UUFDdkIsSUFBSSxVQUFVLEdBQWdCLHdCQUFVLENBQUMsV0FBVyxDQUFDLElBQUksQ0FBQyxpQkFBaUIsQ0FBYyxDQUFDO1FBRTFGLFVBQVUsQ0FBQyxTQUFTLENBQUMsUUFBUSxHQUFHLFdBQVcsQ0FBQztJQUNoRCxDQUFDO0NBQ0o7QUFiRCw4QkFhQyJ9","assetPath":"Assets/Scripts/RandomSpawn.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"IngredientFactory","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]},{"assembly":"UnityEngine.CoreModule","name":"SpawnPoint","type":"UnityEngine.GameObject","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"RandomSpawn","description":""},"isCompiled":true}'
-  typescriptHash: 7dc2a218ae90431a8b177db4d40136fe
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst IngredientInfo_1
+    = require(\\\"../TS/IngredientInfo\\\");\\r\\nclass RandomSpawn extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\\r\\n    Start() {\\r\\n    }\\r\\n    //\uC790\uAE30 \uC790\uB9AC\uC5D0 \uC18C\uD658\uD558\uB294\uD568\uC218\\r\\n   
+    Spawn(Spawningnum) {\\r\\n        var Ingredient = UnityEngine_1.GameObject.Instantiate(this.IngredientFactory);\\r\\n       
+    Ingredient.transform.position = this.transform.position;\\r\\n        Ingredient.GetComponent($typeof(IngredientInfo_1.default)).spawnNum
+    = Spawningnum;\\r\\n    }\\r\\n}\\r\\nexports.default = RandomSpawn;\\r\\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUmFuZG9tU3Bhd24uanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJSYW5kb21TcGF3bi50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUFrRDtBQUNsRCxpREFBcUQ7QUFDckQseURBQWtEO0FBRWxELE1BQXFCLFdBQVksU0FBUSxxQ0FBcUI7SUFFMUQsS0FBSztJQUNMLENBQUM7SUFFRCxlQUFlO0lBQ2YsS0FBSyxDQUFDLFdBQW1CO1FBQ3JCLElBQUksVUFBVSxHQUFnQix3QkFBVSxDQUFDLFdBQVcsQ0FBQyxJQUFJLENBQUMsaUJBQWlCLENBQWMsQ0FBQztRQUMxRixVQUFVLENBQUMsU0FBUyxDQUFDLFFBQVEsR0FBRyxJQUFJLENBQUMsU0FBUyxDQUFDLFFBQVEsQ0FBQztRQUN4RCxVQUFVLENBQUMsWUFBWSxTQUFDLHdCQUFjLEdBQUksUUFBUSxHQUFHLFdBQVcsQ0FBQztJQUNyRSxDQUFDO0NBQ0o7QUFYRCw4QkFXQyJ9\",\"assetPath\":\"Assets/Scripts/RandomSpawn.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"IngredientFactory\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"RandomSpawn\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: 010b955fb9d536bf8d8b493b3306cc4e
   onlyWriteTrigger: 0

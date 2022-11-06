@@ -1,0 +1,58 @@
+fileFormatVersion: 2
+guid: 87e608d8decca8c45b6a11ed81907b52
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst RandomSpawn_1 =
+    require(\\\"./RandomSpawn\\\");\\r\\nclass SpawnManager extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\\r\\n    Start() {\\r\\n        for (let i = 0; i < this.SpawnList.Length;
+    i++) {\\r\\n            this.IsSpawnCheckList[i] = false; //\uCC98\uC74C\uC5D4
+    false\uB85C \uD574\uB194\uC57C \uC2DC\uC791\uD560\uB54C \uD55C\uBC88\uC529 \uB2E4
+    \uC18C\uD658\\r\\n        }\\r\\n    }\\r\\n    //\uC18C\uD658 \uC790\uCCB4\uC2A4\uD06C\uB9BD\uD2B8\uAC00
+    \uB2EC\uB9B0 \uBE48\uC624\uBE0C\uC81D\uD2B8:\\r\\n    //1. \uC18C\uD658\uD560\uB54C
+    \uADF8 \uC18C\uD658\uD55C \uC7AC\uB8CC\uC758 \uC2A4\uD06C\uB9BD\uD2B8\uC758 number\uBCC0\uC218\uAC12\uC5D0
+    \uD574\uB2F9\uB9AC\uC2A4\uD2B8 \uC21C\uC11C\uAC12 \uBD80\uC5EC ex) 1, 2\uBC88
+    \uBE48\uC624\uBE0C\uC81D\uD2B8\uAC00 \uC0DD\uC131\uD55C \uC7AC\uB8CC\uB4E4\uC5D0\uAC8C
+    1\uBC88,2\uBC88 \uAC01\uAC01\uBD80\uC5EC\\r\\n    //2. \uD50C\uB808\uC774\uC5B4\uAC00
+    \uD574\uB2F9 \uC7AC\uB8CC \uBA39\uC744\uB54C \uC790\uAE30 \uBC88\uD638\uC5D0
+    \uD574\uB2F9\uD558\uB294 \uAC12\uC744 \uC18C\uD658\uB9E4\uB2C8\uC800\uC758 \uCCB4\uD06C\uBC30\uC5F4[i]\uBC88\uC9F8\uC5D0\uAC8C
+    \uBA39\uC5C8\uB2E4\uB294 \uD45C\uC2DC\uB85C \uC804\uB2EC\\r\\n    //3. \uC18C\uD658\uB9E4\uB2C8\uC800\uC5D0\uC11C\uB294
+    \uACC4\uC18D \uB9AC\uC2A4\uD2B8\uC758 \uCCB4\uD06C\uBC30\uC5F4\uC744 \uAC80\uC0AC\uD558\uACE0\uC788\uB294\uB370,
+    \uC5EC\uAE30\uC11C \uBA39\uC5C8\uB2E4\uB294 \uD45C\uC2DC\uB85C \uBC14\uB010\uB140\uC11D\uC5D0\uC11C\uB294
+    \uBC14\uB85C \uC774\uAC12\uC744 \uC548\uBA39\uC5C8\uB2E4\uB294 \uD45C\uC2DC\uB85C
+    \uBC14\uAFD4\uC900\uD6C4\\r\\n    //4. 5\uCD08\uD6C4\uC5D0 spawn\uC744 \uC2DC\uD0A4\uB294
+    \uCF54\uB8E8\uD2F4\uD568\uC218 \uC2E4\uD589\\r\\n    Update() {\\r\\n       
+    this.Spawning();\\r\\n    }\\r\\n    Spawning() {\\r\\n        for (let i = 0;
+    i < this.SpawnList.Length; i++) {\\r\\n            if (this.IsSpawnCheckList[i]
+    == false) {\\r\\n                this.IsSpawnCheckList[i] = true;\\r\\n               
+    //1. \uC18C\uD658\uD560\uB54C \uADF8 \uC18C\uD658\uD55C \uC7AC\uB8CC\uC758 \uC2A4\uD06C\uB9BD\uD2B8\uC758
+    number\uBCC0\uC218\uAC12\uC5D0 \uD574\uB2F9\uB9AC\uC2A4\uD2B8 \uC21C\uC11C\uAC12
+    \uBD80\uC5EC ex) 1, 2\uBC88 \uBE48\uC624\uBE0C\uC81D\uD2B8\uAC00 \uC0DD\uC131\uD55C
+    \uC7AC\uB8CC\uB4E4\uC5D0\uAC8C 1\uBC88,2\uBC88 \uAC01\uAC01\uBD80\uC5EC\\r\\n               
+    this.StartCoroutine(this.DoSpawning(i));\\r\\n            }\\r\\n        }\\r\\n   
+    }\\r\\n    *DoSpawning(Spawningnum) {\\r\\n        //1. \uC18C\uD658\uD560\uB54C
+    \uADF8 \uC18C\uD658\uD55C \uC7AC\uB8CC\uC758 \uC2A4\uD06C\uB9BD\uD2B8\uC758 number\uBCC0\uC218\uAC12\uC5D0
+    \uD574\uB2F9\uB9AC\uC2A4\uD2B8 \uC21C\uC11C\uAC12 \uBD80\uC5EC ex) 1, 2\uBC88
+    \uBE48\uC624\uBE0C\uC81D\uD2B8\uAC00 \uC0DD\uC131\uD55C \uC7AC\uB8CC\uB4E4\uC5D0\uAC8C
+    1\uBC88,2\uBC88 \uAC01\uAC01\uBD80\uC5EC\\r\\n        yield new UnityEngine_1.WaitForSeconds(5);\\r\\n       
+    this.SpawnList[Spawningnum].GetComponent($typeof(RandomSpawn_1.default)).Spawn(Spawningnum);\\r\\n   
+    }\\r\\n}\\r\\nexports.default = SpawnManager;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU3Bhd25NYW5hZ2VyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiU3Bhd25NYW5hZ2VyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsNkNBQXVEO0FBQ3ZELGlEQUFxRDtBQUNyRCwrQ0FBd0M7QUFFeEMsTUFBcUIsWUFBYSxTQUFRLHFDQUFxQjtJQUkzRCxLQUFLO1FBQ0QsS0FBSSxJQUFJLENBQUMsR0FBQyxDQUFDLEVBQUUsQ0FBQyxHQUFDLElBQUksQ0FBQyxTQUFTLENBQUMsTUFBTSxFQUFDLENBQUMsRUFBRSxFQUFDO1lBQ3JDLElBQUksQ0FBQyxnQkFBZ0IsQ0FBQyxDQUFDLENBQUMsR0FBQyxLQUFLLENBQUMsQ0FBQyw4QkFBOEI7U0FDakU7SUFDTCxDQUFDO0lBQ0Qsc0JBQXNCO0lBQzFCLHVGQUF1RjtJQUN2RixrRUFBa0U7SUFDbEUsK0VBQStFO0lBQy9FLDZCQUE2QjtJQUV6QixNQUFNO1FBQ0YsSUFBSSxDQUFDLFFBQVEsRUFBRSxDQUFDO0lBQ3BCLENBQUM7SUFFTSxRQUFRO1FBQ1gsS0FBSSxJQUFJLENBQUMsR0FBQyxDQUFDLEVBQUUsQ0FBQyxHQUFDLElBQUksQ0FBQyxTQUFTLENBQUMsTUFBTSxFQUFDLENBQUMsRUFBRSxFQUFDO1lBQ3JDLElBQUcsSUFBSSxDQUFDLGdCQUFnQixDQUFDLENBQUMsQ0FBQyxJQUFFLEtBQUssRUFBQztnQkFDL0IsSUFBSSxDQUFDLGdCQUFnQixDQUFDLENBQUMsQ0FBQyxHQUFDLElBQUksQ0FBQztnQkFDOUIsdUZBQXVGO2dCQUN2RixJQUFJLENBQUMsY0FBYyxDQUFDLElBQUksQ0FBQyxVQUFVLENBQUMsQ0FBQyxDQUFDLENBQUMsQ0FBQzthQUMzQztTQUNKO0lBQ0wsQ0FBQztJQUVELENBQUMsVUFBVSxDQUFDLFdBQW1CO1FBQzNCLHVGQUF1RjtRQUN2RixNQUFNLElBQUksNEJBQWMsQ0FBQyxDQUFDLENBQUMsQ0FBQztRQUM1QixJQUFJLENBQUMsU0FBUyxDQUFDLFdBQVcsQ0FBQyxDQUFDLFlBQVksU0FBQyxxQkFBVyxHQUFJLEtBQUssQ0FBQyxXQUFXLENBQUMsQ0FBQztJQUMvRSxDQUFDO0NBQ0o7QUFsQ0QsK0JBa0NDIn0=\",\"assetPath\":\"Assets/Scripts/SpawnManager.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"SpawnList\",\"type\":\"UnityEngine.GameObject[]\",\"isArray\":true,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"mscorlib\",\"name\":\"IsSpawnCheckList\",\"type\":\"System.Boolean[]\",\"isArray\":true,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"SpawnManager\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: 81959f91bf615d318e9230c89bda074f
+  onlyWriteTrigger: 0

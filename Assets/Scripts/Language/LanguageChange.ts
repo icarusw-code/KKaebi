@@ -6,8 +6,8 @@ import IngredientInfo from '../../TS/IngredientInfo';
 import KkaebiInfo from '../../TS/KkaebiInfo';
 import FoodInfo from '../FoodInfo';
 import QuestManager from '../QuestManager';
+import TutorialManager from '../TutorialManager';
 import TxtEnglishName from './TxtEnglishName';
-
 export default class LanguageChange extends ZepetoScriptBehaviour {
 
     public static instance: LanguageChange;
@@ -39,6 +39,7 @@ export default class LanguageChange extends ZepetoScriptBehaviour {
     //NPC도 이미 띄워진 퀘스트 재료들
     public NpcQuestContent : GameObject;
     
+    public TutorialManagerObject:GameObject;
     //고정된 UI들
     //1. 도감 메뉴 바꾸는 버튼 텍스트
     public AllOfStaticTexts : Text[];
@@ -140,7 +141,7 @@ export default class LanguageChange extends ZepetoScriptBehaviour {
             for(let i =0; i<this.AllOfStaticTexts.length;i++){
                 this.AllOfStaticTexts[i].text = this.AllOfStaticTexts[i].gameObject.name;
             }
-            
+            this.TutorialManagerObject.GetComponent<TutorialManager>().DoTextUpdate();
         }
         if (languageType == 2) {
             for (let i = 0; i < this.BookIngreButtonObj.length; i++) { //재료도감 영어로 교체
@@ -169,6 +170,7 @@ export default class LanguageChange extends ZepetoScriptBehaviour {
             for(let i =0; i<this.AllOfStaticTexts.length;i++){
                 this.AllOfStaticTexts[i].text = this.EnlgishPack.get(this.AllOfStaticTexts[i].gameObject.name);
             }
+            this.TutorialManagerObject.GetComponent<TutorialManager>().DoTextUpdate();
         }
         
 
