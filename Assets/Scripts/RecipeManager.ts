@@ -5,6 +5,7 @@ import QuestManager from './QuestManager';
 import * as UnityEngine from 'UnityEngine';
 import FoodInfoData from './FoodInfoData';
 import LanguageChange from './Language/LanguageChange';
+import SoundManager from './SoundManager';
 export default class RecipeManager extends ZepetoScriptBehaviour {
 
     // =========상세정보============== // 
@@ -31,6 +32,7 @@ export default class RecipeManager extends ZepetoScriptBehaviour {
             this.recipeBtn[i].onClick.AddListener(() => { //버튼 누를때 마다 해당 레시피 뜨게할거임)
                 //그렇다면 해방 버튼오브젝트의 이름을 가져오고
                 //그 이름에 맞는 
+                SoundManager.getInstance().PlayBgm("UIbuttonBgm");
                 console.log("이 버튼 이름은:"+this.recipeBtn[i].name);
 
                 if(UnityEngine.PlayerPrefs.GetInt(this.recipeBtn[i].name)>=1){
@@ -83,7 +85,8 @@ export default class RecipeManager extends ZepetoScriptBehaviour {
                     }
 
                     // 창 종료 버튼 활성화
-                    this.foodInfoExtBtn.onClick.AddListener(()=>{
+                    this.foodInfoExtBtn.onClick.AddListener(() => {
+                        SoundManager.getInstance().PlayBgm("UIbuttonBgm");
                         console.log("상세정보 끄기");
                         GameObject.Destroy(this.foodInfo);
                     });

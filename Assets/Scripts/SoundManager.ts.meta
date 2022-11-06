@@ -1,0 +1,50 @@
+fileFormatVersion: 2
+guid: 59e4cfb9564e99d448b60ba4bfdc744d
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst
+    UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst SettingManager_1 = require(\\\"../OptionManager/Scripts/SettingManager\\\");\\r\\nclass
+    SoundManager extends ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    Awake()
+    {\\r\\n        SoundManager.instance = this;\\r\\n    }\\r\\n    static getInstance()
+    {\\r\\n        return this.instance || (this.instance = new this());\\r\\n   
+    }\\r\\n    Start() {\\r\\n        //this.BackgroundMusic = this.GetComponent<AudioSource>();\\r\\n       
+    //this.AudioPlay = this.GetComponent<AudioSource>();\\r\\n        this.BackgroundMusic.clip
+    = this.BackGroundBgm;\\r\\n        this.BackgroundMusic.loop = true;\\r\\n       
+    this.BackgroundMusic.Play();\\r\\n    }\\r\\n    BackGroundMusicControll(on_off)
+    {\\r\\n        //0\uC774\uBA74 \uCF1C\uC9C0\uACE0 \uC544\uB2C8\uBA74 \uB054\\r\\n       
+    if (on_off == 0) {\\r\\n            this.BackgroundMusic.loop = true;\\r\\n           
+    this.BackgroundMusic.Play();\\r\\n        }\\r\\n        else {\\r\\n           
+    this.BackgroundMusic.loop = false;\\r\\n            this.BackgroundMusic.Stop();\\r\\n       
+    }\\r\\n    }\\r\\n    PlayBgm(bgmname) {\\r\\n        this.AudioPlay.loop = false;\\r\\n       
+    this.CookingAudioSource.loop = false;\\r\\n        if (this.OptionManager.GetComponent($typeof(SettingManager_1.default)).sfxcount
+    == 0) {\\r\\n            switch (bgmname) {\\r\\n                case \\\"NotificationBgm\\\":\\r\\n                   
+    this.AudioPlay.clip = this.NotificationBgm;\\r\\n                    this.AudioPlay.Play();\\r\\n                   
+    break;\\r\\n                case \\\"UIbuttonBgm\\\":\\r\\n                   
+    this.AudioPlay.clip = this.UIbuttonBgm;\\r\\n                    this.AudioPlay.Play();\\r\\n                   
+    break;\\r\\n                case \\\"IngreGetBgm\\\":\\r\\n                   
+    this.AudioPlay.clip = this.IngreGetBgm;\\r\\n                    this.AudioPlay.Play();\\r\\n                   
+    break;\\r\\n                case \\\"CookingBgm\\\":\\r\\n                   
+    this.CookingAudioSource.clip = this.CookingBgm;\\r\\n                    this.CookingAudioSource.Play();\\r\\n                   
+    break;\\r\\n                case \\\"KkaebiGetBgm\\\":\\r\\n                   
+    this.AudioPlay.clip = this.KkaebiGetBgm;\\r\\n                    this.AudioPlay.Play();\\r\\n                   
+    break;\\r\\n            }\\r\\n        }\\r\\n    }\\r\\n}\\r\\nexports.default
+    = SoundManager;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiU291bmRNYW5hZ2VyLmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiU291bmRNYW5hZ2VyLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBQUEsaURBQXFEO0FBQ3JELDZDQUErRDtBQUMvRCw0RUFBcUU7QUFDckUsTUFBcUIsWUFBYSxTQUFRLHFDQUFxQjtJQWEzRCxLQUFLO1FBQ0QsWUFBWSxDQUFDLFFBQVEsR0FBRyxJQUFJLENBQUM7SUFDakMsQ0FBQztJQUVELE1BQU0sQ0FBQyxXQUFXO1FBQ2QsT0FBTyxJQUFJLENBQUMsUUFBUSxJQUFFLENBQUMsSUFBSSxDQUFDLFFBQVEsR0FBRyxJQUFJLElBQUksRUFBRSxDQUFDLENBQUM7SUFFdkQsQ0FBQztJQUVELEtBQUs7UUFDRCwwREFBMEQ7UUFDMUQsb0RBQW9EO1FBQ3BELElBQUksQ0FBQyxlQUFlLENBQUMsSUFBSSxHQUFHLElBQUksQ0FBQyxhQUFhLENBQUM7UUFDL0MsSUFBSSxDQUFDLGVBQWUsQ0FBQyxJQUFJLEdBQUMsSUFBSSxDQUFDO1FBQy9CLElBQUksQ0FBQyxlQUFlLENBQUMsSUFBSSxFQUFFLENBQUM7SUFDaEMsQ0FBQztJQUNNLHVCQUF1QixDQUFDLE1BQWE7UUFFeEMsZUFBZTtRQUNmLElBQUcsTUFBTSxJQUFFLENBQUMsRUFBQztZQUNULElBQUksQ0FBQyxlQUFlLENBQUMsSUFBSSxHQUFDLElBQUksQ0FBQztZQUMvQixJQUFJLENBQUMsZUFBZSxDQUFDLElBQUksRUFBRSxDQUFDO1NBQy9CO2FBQ0c7WUFDQSxJQUFJLENBQUMsZUFBZSxDQUFDLElBQUksR0FBQyxLQUFLLENBQUM7WUFDaEMsSUFBSSxDQUFDLGVBQWUsQ0FBQyxJQUFJLEVBQUUsQ0FBQztTQUMvQjtJQUNMLENBQUM7SUFFTSxPQUFPLENBQUMsT0FBZTtRQUMxQixJQUFJLENBQUMsU0FBUyxDQUFDLElBQUksR0FBQyxLQUFLLENBQUM7UUFDMUIsSUFBSSxDQUFDLGtCQUFrQixDQUFDLElBQUksR0FBQyxLQUFLLENBQUM7UUFDbkMsSUFBSSxJQUFJLENBQUMsYUFBYSxDQUFDLFlBQVksU0FBQyx3QkFBYyxHQUFJLFFBQVEsSUFBSSxDQUFDLEVBQUU7WUFDakUsUUFBUSxPQUFPLEVBQUU7Z0JBQ2IsS0FBSyxpQkFBaUI7b0JBQ2xCLElBQUksQ0FBQyxTQUFTLENBQUMsSUFBSSxHQUFHLElBQUksQ0FBQyxlQUFlLENBQUM7b0JBQzNDLElBQUksQ0FBQyxTQUFTLENBQUMsSUFBSSxFQUFFLENBQUM7b0JBQ3RCLE1BQU07Z0JBQ1YsS0FBSyxhQUFhO29CQUNkLElBQUksQ0FBQyxTQUFTLENBQUMsSUFBSSxHQUFHLElBQUksQ0FBQyxXQUFXLENBQUM7b0JBQ3ZDLElBQUksQ0FBQyxTQUFTLENBQUMsSUFBSSxFQUFFLENBQUM7b0JBQ3RCLE1BQU07Z0JBQ1YsS0FBSyxhQUFhO29CQUNkLElBQUksQ0FBQyxTQUFTLENBQUMsSUFBSSxHQUFHLElBQUksQ0FBQyxXQUFXLENBQUM7b0JBQ3ZDLElBQUksQ0FBQyxTQUFTLENBQUMsSUFBSSxFQUFFLENBQUM7b0JBQ3RCLE1BQU07Z0JBQ1YsS0FBSyxZQUFZO29CQUNiLElBQUksQ0FBQyxrQkFBa0IsQ0FBQyxJQUFJLEdBQUcsSUFBSSxDQUFDLFVBQVUsQ0FBQztvQkFDL0MsSUFBSSxDQUFDLGtCQUFrQixDQUFDLElBQUksRUFBRSxDQUFDO29CQUMvQixNQUFNO2dCQUNWLEtBQUssY0FBYztvQkFDZixJQUFJLENBQUMsU0FBUyxDQUFDLElBQUksR0FBRyxJQUFJLENBQUMsWUFBWSxDQUFDO29CQUN4QyxJQUFJLENBQUMsU0FBUyxDQUFDLElBQUksRUFBRSxDQUFDO29CQUN0QixNQUFNO2FBQ2I7U0FFSjtJQUNMLENBQUM7Q0FHSjtBQXpFRCwrQkF5RUMifQ==\",\"assetPath\":\"Assets/Scripts/SoundManager.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"UnityEngine.AudioModule\",\"name\":\"AudioPlay\",\"type\":\"UnityEngine.AudioSource\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.AudioModule\",\"name\":\"BackgroundMusic\",\"type\":\"UnityEngine.AudioSource\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.AudioModule\",\"name\":\"BackGroundBgm\",\"type\":\"UnityEngine.AudioClip\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.AudioModule\",\"name\":\"NotificationBgm\",\"type\":\"UnityEngine.AudioClip\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.AudioModule\",\"name\":\"UIbuttonBgm\",\"type\":\"UnityEngine.AudioClip\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.AudioModule\",\"name\":\"IngreGetBgm\",\"type\":\"UnityEngine.AudioClip\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.AudioModule\",\"name\":\"CookingAudioSource\",\"type\":\"UnityEngine.AudioSource\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.AudioModule\",\"name\":\"CookingBgm\",\"type\":\"UnityEngine.AudioClip\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.AudioModule\",\"name\":\"KkaebiGetBgm\",\"type\":\"UnityEngine.AudioClip\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.CoreModule\",\"name\":\"OptionManager\",\"type\":\"UnityEngine.GameObject\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"SoundManager\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: eeb4e9fcb690df63979f6686260d4a0d
+  onlyWriteTrigger: 0

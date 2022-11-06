@@ -3,6 +3,7 @@ import { Button,Text } from 'UnityEngine.UI';
 import { ZepetoScriptBehaviour } from 'ZEPETO.Script'
 import * as UnityEngine from 'UnityEngine'
 import LanguageChange from './Language/LanguageChange';
+import SoundManager from './SoundManager';
 export default class TutorialManager extends ZepetoScriptBehaviour {
     public TutorialButton:Button;
     public TutorialUIObj:GameObject;
@@ -21,15 +22,19 @@ export default class TutorialManager extends ZepetoScriptBehaviour {
         }
         UnityEngine.PlayerPrefs.SetInt("방문횟수",UnityEngine.PlayerPrefs.GetInt("방문횟수")+1);
         this.TutorialButton.onClick.AddListener(()=>{
+            SoundManager.getInstance().PlayBgm("UIbuttonBgm");
             this.TutorialUIObj.SetActive(true);
         });
         this.NextBtn.onClick.AddListener(()=>{
+            SoundManager.getInstance().PlayBgm("UIbuttonBgm");
             this.GoNext();
         });
         this.BeforeBtn.onClick.AddListener(()=>{
+            SoundManager.getInstance().PlayBgm("UIbuttonBgm");
             this.GoBefore();
         });
         this.TutorialExitBtn.onClick.AddListener(()=>{
+            SoundManager.getInstance().PlayBgm("UIbuttonBgm");
             this.TutorialUIObj.SetActive(false);
         });
         this.DoTextUpdate();

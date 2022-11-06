@@ -6,6 +6,7 @@ import ButtonClick from './ButtonClick';
 import QuestManager from './QuestManager';
 import GameManager from '../TS/GameManager';
 import LanguageChange from './Language/LanguageChange';
+import SoundManager from './SoundManager';
 export default class NpcInteraction extends ZepetoScriptBehaviour {
     public btnFactory : GameObject;
     private btn : GameObject;
@@ -23,6 +24,7 @@ export default class NpcInteraction extends ZepetoScriptBehaviour {
         this.btn.GetComponent<ButtonClick>().TurnOffButton(); //버튼일단 꺼주고
         
         this.NpcTalkUI.GetComponent<Button>().onClick.AddListener(()=>{ //어떤요리가 만들고싶나 다음에 뜰창
+            SoundManager.getInstance().PlayBgm("UIbuttonBgm");
             this.btn.GetComponent<ButtonClick>().TurnOffButton();
             this.NpcTalkUI.SetActive(false);
             this.TurnOnQuestUI();
@@ -31,6 +33,7 @@ export default class NpcInteraction extends ZepetoScriptBehaviour {
 
         this.InteractBtn = this.btn.GetComponent<Button>(); 
         this.InteractBtn.onClick.AddListener(() => { //버튼누르면 퀘스트창뜸
+            SoundManager.getInstance().PlayBgm("UIbuttonBgm");
             if(QuestManager.getInstance().isNowAccept==false){ //지금 퀘스트 받은 상태가 아닐때만
 
                 this.NpcTalkUI.SetActive(true);
