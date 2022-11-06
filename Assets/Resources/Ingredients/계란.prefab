@@ -134,15 +134,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1977427983499493909, guid: 1e9cfff18c4fcf5409f238642e6e0487, type: 3}
       propertyPath: script.keys.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1977427983499493909, guid: 1e9cfff18c4fcf5409f238642e6e0487, type: 3}
       propertyPath: script.values.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1977427983499493909, guid: 1e9cfff18c4fcf5409f238642e6e0487, type: 3}
       propertyPath: script.keys.Array.data[0]
       value: id
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977427983499493909, guid: 1e9cfff18c4fcf5409f238642e6e0487, type: 3}
+      propertyPath: script.keys.Array.data[2]
+      value: spawnNum
       objectReference: {fileID: 0}
     - target: {fileID: 1977427983499493909, guid: 1e9cfff18c4fcf5409f238642e6e0487, type: 3}
       propertyPath: script.values.Array.data[0]
@@ -153,8 +157,12 @@ PrefabInstance:
       value: '{"type":"System.String, mscorlib","value":""}'
       objectReference: {fileID: 0}
     - target: {fileID: 1977427983499493909, guid: 1e9cfff18c4fcf5409f238642e6e0487, type: 3}
+      propertyPath: script.values.Array.data[2]
+      value: '{"type":"System.Single, mscorlib","value":"0"}'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1977427983499493909, guid: 1e9cfff18c4fcf5409f238642e6e0487, type: 3}
       propertyPath: script.unityValues.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1977427983499493911, guid: 1e9cfff18c4fcf5409f238642e6e0487, type: 3}
       propertyPath: m_Enabled

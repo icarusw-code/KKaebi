@@ -11,6 +11,7 @@ import * as UnityEngine from 'UnityEngine';
 import IngredientBookController from '../TS/IngredientBookController';
 import Notifications from './Notifications';
 import LanguageChange from './Language/LanguageChange';
+import SpawnManager from './SpawnManager';
 export default class ingerdientInteraction extends ZepetoScriptBehaviour {
 
     public btnFactory : GameObject;
@@ -24,8 +25,10 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
     private color : UnityEngine.Color;
     private isingrcheck: bool = false;
     public IngredientController : GameObject;
+    public spawnmanager : GameObject;
     //
     Start() {    
+        this.spawnmanager = GameObject.Find("SpawnManager");
         this.IngredientController= GameObject.Find("UI_Manager");
         this.content = GameObject.Find("Canvas_UI").transform.GetChild(3).GetChild(0).GetChild(0).GetChild(0).gameObject;
 
@@ -62,6 +65,8 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
             //재료(지금 현재 오브젝트)가 지금 퀘스트로 받은 재료들일때만, 그리고 한번도 먹지 않았을경우에만 먹기동작 수행
             for(let i=0; i<QuestManager.getInstance().QuestAcceptIngreNum;i++){
                 if(QuestManager.getInstance().QuestAcceptIngreIDArr[i]==this.myID&&QuestManager.getInstance().GetIngreCheckDiction.get(this.myID)==false){
+                    //spawnmanager의 리스트에 체크배열에 해당재료의 스폰 넘버값 원소에 먹었다고 전달
+                    this.spawnmanager.GetComponent<SpawnManager>().IsSpawnCheckList[this.gameObject.GetComponent<IngredientInfo>().spawnNum]=false;
                     this.DoDestroy();
                     QuestManager.getInstance().GetIngreCheck(this.myID);//먹었음
                     //먹었으니 myquest의 해당 재료 이미지의 투명값을 높여주자
