@@ -263,6 +263,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         }
     }
 
+    //<---------------------테이블 세팅---------------------------->//
     public completeWindowPrefab : GameObject;
     public KkaebiImageList : Sprite[];
     public positionList : GameObject[];
@@ -270,12 +271,16 @@ export default class QuestManager extends ZepetoScriptBehaviour {
     public foodModelList : GameObject[];
     public tableOnIngres : GameObject;
     public tableOnFood : GameObject;
+    public effectFactory : GameObject;
 
     isComplete : bool = false;
     completeWindow : GameObject;
     message : Text;
     contentImg : Image;
     okButton : Button;
+
+    //<------------------------------------------------------->//
+
 
     //퀘스트 완료
     public QuestComplete(){
@@ -291,7 +296,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         // 2초 기다리기 -> 요리 생성!
         this.StartCoroutine(this.DoFoodCreate());
 
-        // 1.5초 기다리기 -> 완료창 띄우기
+        // 2초 기다리기 -> 완료창 띄우기
         this.StartCoroutine(this.WindowCreateAfterTime(foodCount));
 
         
@@ -385,6 +390,8 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         }
 
         // 이펙트 생성 : 펑!
+        var effect = GameObject.Instantiate(this.effectFactory, this.positionList[0].transform.position, UnityEngine.Quaternion.identity, this.tableOnFood.transform);
+
         // 요리 프리팹 생성
         this.foodModelList.map((d) => {
             if(d.name == this.QuestFoodName){
