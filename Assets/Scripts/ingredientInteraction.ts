@@ -26,6 +26,7 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
     private isingrcheck: bool = false;
     public IngredientController : GameObject;
     public spawnmanager : GameObject;
+    private alreadyCheck : bool = false;
     //
     Start() {    
         this.spawnmanager = GameObject.Find("SpawnManager");
@@ -51,6 +52,7 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
             }
             if(QuestManager.getInstance().GetIngreCheckDiction.get(this.myID)==true){
                 //한글이라면
+                this.alreadyCheck=true;
                 if(LanguageChange.getInstance().LanguageMode == 1){ //한국어
                     Notifications.getIns().UpLoadText("이미 획득한 재료입니다");
                 }
@@ -85,7 +87,7 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
                     }
                     this.isingrcheck=true; //레시피에 해당 재료가 있는것이므로
                 }
-                else if(QuestManager.getInstance().QuestAcceptIngreIDArr[i]!=this.myID&&i==QuestManager.getInstance().QuestAcceptIngreNum-1&&this.isingrcheck==false){
+                if(QuestManager.getInstance().QuestAcceptIngreIDArr[i]!=this.myID&&i==QuestManager.getInstance().QuestAcceptIngreNum-1&&this.isingrcheck==false&&this.alreadyCheck==false){
                     if(LanguageChange.getInstance().LanguageMode == 1){ //한국어
                         Notifications.getIns().UpLoadText(QuestManager.getInstance().QuestAcceptFoodName+"에 필요한 재료가 아닙니다");
                     }

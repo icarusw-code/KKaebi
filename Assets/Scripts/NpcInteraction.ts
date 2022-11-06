@@ -38,11 +38,11 @@ export default class NpcInteraction extends ZepetoScriptBehaviour {
                 this.btn.GetComponent<ButtonClick>().TurnOffButton();
                 if(LanguageChange.getInstance().LanguageMode==1){
                 //허허 어떤요리가 만들고싶나
-                    this.NpcTalkUI.transform.GetChild(1).GetComponent<Text>().text = "허허 어떤 요리가 만들고 싶나?"; 
+                    this.NpcTalkUI.transform.GetChild(1).GetComponent<Text>().text = "허허, 어떤 요리가 만들고 싶나?"; 
                 }
-                else if (LanguageChange.getInstance().LanguageMode == 1) {
+                else if (LanguageChange.getInstance().LanguageMode == 2) {
                     //허허 어떤요리가 만들고싶나
-                    this.NpcTalkUI.transform.GetChild(1).GetComponent<Text>().text = "Have you collected all the ingredients?";
+                    this.NpcTalkUI.transform.GetChild(1).GetComponent<Text>().text = "What kind of Korean food do you wish to have?";
                 }
 
                 this.playerController = ZepetoPlayers.instance.transform.GetChild(4).gameObject;

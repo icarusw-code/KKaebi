@@ -176,7 +176,7 @@ export default class IngreInfoData extends ZepetoScriptBehaviour {
         this.ingreDetailInfo_EN.set("Carp", ["It is a freshwater fish from Cyprinidae of Cypriniformes. It can be replaced by fish, especially freshwater fish."]);
         this.ingreDetailInfo_EN.set("Rockfish", ["It is a marine fish from Sebastidae of Scorpaeniformes. It can be replaced by hard-flesh fish or sea fish."]);
         this.ingreDetailInfo_EN.set("Manila clam", ["It is a shellfish in the clam family. It is often used to make savory seafood broth."]);
-        this.ingreDetailInfo_EN.set("Poulp", ["It is a species belonging to Octopodidaeof Octopus family and its appearance is similar to octopuses, but much smaller."]);
+        this.ingreDetailInfo_EN.set("Poulp", ["It is a species belonging to Octopodidae of Octopus family and its appearance is similar to octopuses, but much smaller."]);
         this.ingreDetailInfo_EN.set("Bar rice cake", ["It is a thin cylindrical white rice cake that is shaped long and cut into a certain length."]);
         this.ingreDetailInfo_EN.set("Fish cake", ["It is a food that is cooked and solidified by crushing fish flesh, adding salt, etc. and kneading it. It is also made by steaming on a wooden board or frying it in oil."]);
         this.ingreDetailInfo_EN.set("Sausage", ["It is a meat processed product that is finely ground pork or beef and filled in animal intestines or artificial casing."]);
