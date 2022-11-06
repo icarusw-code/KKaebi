@@ -7,7 +7,6 @@ import KkaebiInfo from '../../TS/KkaebiInfo';
 import FoodInfo from '../FoodInfo';
 import QuestManager from '../QuestManager';
 import TutorialManager from '../TutorialManager';
-import TutorialUI from '../TutorialManager';
 import TxtEnglishName from './TxtEnglishName';
 export default class LanguageChange extends ZepetoScriptBehaviour {
 
