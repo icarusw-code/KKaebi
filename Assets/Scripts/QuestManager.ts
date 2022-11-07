@@ -93,7 +93,6 @@ export default class QuestManager extends ZepetoScriptBehaviour {
     }
 
     Start() {
-        
         //this.acceptBtn.gameObject.SetActive(false);
         this.LeftPanel.SetActive(false);
         for(let i=0; i<this.btnsGO.Length;i++){
