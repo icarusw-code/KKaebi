@@ -278,7 +278,7 @@ export default class SettingManager extends ZepetoScriptBehaviour {
         }
 
         // 목록 텍스트를 영어로 바꿔주기
-        this.listText.text = "영어";
+        this.listText.text = "English";
         // 목록 창 끄기
         this.list.SetActive(false);
         this.lcount = 0;
