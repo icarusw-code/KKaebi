@@ -135,11 +135,45 @@
       }
     },
     "zepeto.asset": {
-      "version": "1.0.11",
-      "depth": 2,
+      "version": "1.0.12",
+      "depth": 1,
       "source": "registry",
       "dependencies": {
         "com.unity.scriptablebuildpipeline": "1.7.3"
+      },
+      "url": "https://upm.zepeto.run"
+    },
+    "zepeto.asset.protector": {
+      "version": "0.0.2",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://upm.zepeto.run"
+    },
+    "zepeto.buildit.city": {
+      "version": "1.0.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "zepeto.buildit.common": "1.0.2"
+      },
+      "url": "https://upm.zepeto.run"
+    },
+    "zepeto.buildit.classroom": {
+      "version": "1.0.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "zepeto.buildit.common": "1.0.1"
+      },
+      "url": "https://upm.zepeto.run"
+    },
+    "zepeto.buildit.common": {
+      "version": "1.0.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "zepeto.character": "3.1.4"
       },
       "url": "https://upm.zepeto.run"
     },
@@ -150,8 +184,26 @@
       "dependencies": {},
       "url": "https://upm.zepeto.run"
     },
+    "zepeto.buildit.themepark": {
+      "version": "1.0.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "zepeto.buildit.common": "1.0.2"
+      },
+      "url": "https://upm.zepeto.run"
+    },
+    "zepeto.buildit.wedding": {
+      "version": "1.0.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "zepeto.buildit.common": "1.0.2"
+      },
+      "url": "https://upm.zepeto.run"
+    },
     "zepeto.character": {
-      "version": "3.1.13",
+      "version": "3.1.15",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -212,6 +264,17 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {},
+      "url": "https://upm.zepeto.run"
+    },
+    "zepeto.studio": {
+      "version": "3.2.4",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "zepeto.asset": "1.0.12",
+        "zepeto.asset.protector": "0.0.2",
+        "zepeto.character": "3.1.15"
+      },
       "url": "https://upm.zepeto.run"
     },
     "zepeto.world": {

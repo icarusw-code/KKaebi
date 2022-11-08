@@ -45,21 +45,21 @@ export default class TutorialManager extends ZepetoScriptBehaviour {
 
     public DoTextUpdate(){
         if (LanguageChange.getInstance().LanguageMode == 1) {
-            this.TutorialStory[0] = "'한식깨비 야시장'에 온 걸 환영한다! 난 야시장의 대부, 대왕깨비란다.";
-            this.TutorialStory[1] = "야시장에 손님이 너무 많이 오는 바람에 음식이 다 떨어졌단다.";
+            this.TutorialStory[0] = "'한식깨비 야시장'에 온 걸 환영한다!"+"\n"+"난 야시장의 대부, 대왕깨비란다.";
+            this.TutorialStory[1] = "야시장에 손님이 너무 많이 오는 바람에"+"\n"+"음식이 다 떨어졌단다.";
             this.TutorialStory[2] = "야시장과 숲을 돌아보면서 한식에 필요한 재료를 구해서 나를 찾아오면 요리를 만들어주마.";
-            this.TutorialStory[3] = "도깨비불이 있는 곳에서 아래로 뛰어내려 나를 찾아와보렴!";
+            this.TutorialStory[3] = "도깨비불이 있는 곳에서 아래로 뛰어내려"+"\n"+"나를 찾아와보렴!";
             if(this.TutorialText.text=="Welcome to the 'Hansik Kkebi Night Market'! I'm the godfather of the Night Market, the King Kkebi."){
-                this.TutorialText.text="'한식깨비 야시장'에 온 걸 환영한다! 난 야시장의 대부, 대왕깨비란다.";
+                this.TutorialText.text="'한식깨비 야시장'에 온 걸 환영한다!"+"\n"+"난 야시장의 대부, 대왕깨비란다.";
             }
             else if(this.TutorialText.text=="We ran out of food because we had so many guests!"){
-                this.TutorialText.text="야시장에 손님이 너무 많이 오는 바람에 음식이 다 떨어졌단다.";
+                this.TutorialText.text="야시장에 손님이 너무 많이 오는 바람에"+"\n"+"음식이 다 떨어졌단다.";
             }
             else if(this.TutorialText.text=="Around the Night Market and forest, get ingredients for Korean food, and I'll make you a dish for you."){
                 this.TutorialText.text="야시장과 숲을 돌아보면서 한식에 필요한 재료를 구해서 나를 찾아오면 요리를 만들어주마.";
             }
             else if(this.TutorialText.text=="Jump down where the Dokkebi light is and find me!"){
-                this.TutorialText.text="도깨비불이 있는 곳에서 아래로 뛰어내려 나를 찾아와보렴!";
+                this.TutorialText.text="도깨비불이 있는 곳에서 아래로 뛰어내려"+"\n"+"나를 찾아와보렴!";
             }
         }
         else if (LanguageChange.getInstance().LanguageMode == 2) {
@@ -67,16 +67,16 @@ export default class TutorialManager extends ZepetoScriptBehaviour {
             this.TutorialStory[1] = "We ran out of food because we had so many guests!";
             this.TutorialStory[2] = "Around the Night Market and forest, get ingredients for Korean food, and I'll make you a dish for you.";
             this.TutorialStory[3] = "Jump down where the Dokkebi light is and find me!";
-            if(this.TutorialText.text=="'한식깨비 야시장'에 온 걸 환영한다! 난 야시장의 대부, 대왕깨비란다."){
+            if(this.TutorialText.text=="'한식깨비 야시장'에 온 걸 환영한다!"+"\n"+"난 야시장의 대부, 대왕깨비란다."){
                 this.TutorialText.text="Welcome to the 'Hansik Kkebi Night Market'! I'm the godfather of the Night Market, the King Kkebi.";
             }
-            else if(this.TutorialText.text=="야시장에 손님이 너무 많이 오는 바람에 음식이 다 떨어졌단다."){
+            else if(this.TutorialText.text=="야시장에 손님이 너무 많이 오는 바람에"+"\n"+"음식이 다 떨어졌단다."){
                 this.TutorialText.text="We ran out of food because we had so many guests!";
             }
             else if(this.TutorialText.text=="야시장과 숲을 돌아보면서 한식에 필요한 재료를 구해서 나를 찾아오면 요리를 만들어주마."){
                 this.TutorialText.text="Around the Night Market and forest, get ingredients for Korean food, and I'll make you a dish for you.";
             }
-            else if(this.TutorialText.text=="도깨비불이 있는 곳에서 아래로 뛰어내려 나를 찾아와보렴!"){
+            else if(this.TutorialText.text=="도깨비불이 있는 곳에서 아래로 뛰어내려"+"\n"+"나를 찾아와보렴!"){
                 this.TutorialText.text="Jump down where the Dokkebi light is and find me!";
             }
         }
