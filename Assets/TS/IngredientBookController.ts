@@ -31,13 +31,13 @@ export default class IngredientBookController extends ZepetoScriptBehaviour {
         });
 
         // 버튼 넣어주기
-        for(let i = 0; i <this.ingredientList.Length; i++){
+        for(let i = 0; i <this.ingredientList.length; i++){
             this.ingreBtn[i] = this.ingredientList[i].GetComponent<Button>();
             this.IngreBookImageColor();
         }
 
         // 버튼 클릭시
-        for(let i = 0; i < this.ingredientList.Length; i++)
+        for(let i = 0; i < this.ingredientList.length; i++)
         {
             this.ingreBtn[i].onClick.AddListener(() =>{
                 SoundManager.getInstance().PlayBgm("UIbuttonBgm");
@@ -102,7 +102,7 @@ export default class IngredientBookController extends ZepetoScriptBehaviour {
     }
 
     public IngreBookImageColor(){
-        for(let i = 0; i <this.ingredientList.Length; i++){
+        for(let i = 0; i <this.ingredientList.length; i++){
             //재료 먹은거 1개이상있으면
             if(PlayerPrefs.GetInt(this.ingredientList[i].GetComponent<IngredientInfo>().id.toString())>=1){
                 let colors : Color;

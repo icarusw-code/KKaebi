@@ -26,7 +26,7 @@ export default class KkaebiManager extends ZepetoScriptBehaviour {
     private color : UnityEngine.Color;
     Start() {    
 
-        for(let i=0; i<this.KkaebiBtnObjects.Length;i++){
+        for(let i=0; i<this.KkaebiBtnObjects.length;i++){
             this.KkaebiButtons[i] = this.KkaebiBtnObjects[i].GetComponent<Button>();
             //버튼별 소환/비소환 버튼할당
             this.SummonBtns[i] = this.KkaebiBtnObjects[i].transform.GetChild(2).gameObject.GetComponent<Button>();
@@ -49,7 +49,7 @@ export default class KkaebiManager extends ZepetoScriptBehaviour {
         }
 
 
-        for(let i=0; i<this.KkaebiButtons.Length;i++){
+        for(let i=0; i<this.KkaebiButtons.length;i++){
             this.KkaebiButtons[i].onClick.AddListener(()=>{
                 SoundManager.getInstance().PlayBgm("UIbuttonBgm");
                 //이전에 누른버튼의 소환버튼 비활성화 시키기
@@ -97,7 +97,7 @@ export default class KkaebiManager extends ZepetoScriptBehaviour {
     }
 
     public checkKkaebiCanSpawn(){
-        for (let i = 0; i < this.KkaebiBtnObjects.Length; i++) {
+        for (let i = 0; i < this.KkaebiBtnObjects.length; i++) {
             if (UnityEngine.PlayerPrefs.GetInt(this.foodName) >= 2) {
                 this.color = this.KkaebiBtnObjects[i].transform.GetChild(0).gameObject.GetComponent<Image>().color;
                 this.color.a = 255;

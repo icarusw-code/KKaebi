@@ -25,10 +25,10 @@ export default class RecipeManager extends ZepetoScriptBehaviour {
     foodInfo : GameObject;
 
     Start() {
-        for (let i = 0; i < this.recipeBtnObject.Length; i++) {
+        for (let i = 0; i < this.recipeBtnObject.length; i++) {
             this.recipeBtn[i] = this.recipeBtnObject[i].GetComponent<Button>();
         }
-        for (let i = 0; i < this.recipeBtn.Length; i++) {
+        for (let i = 0; i < this.recipeBtn.length; i++) {
             this.recipeBtn[i].onClick.AddListener(() => { //버튼 누를때 마다 해당 레시피 뜨게할거임)
                 //그렇다면 해방 버튼오브젝트의 이름을 가져오고
                 //그 이름에 맞는 
@@ -97,7 +97,7 @@ export default class RecipeManager extends ZepetoScriptBehaviour {
     }
 
     public ReplaceAllRecipeImage(){
-        for (let i = 0; i < this.recipeBtnObject.Length; i++) {
+        for (let i = 0; i < this.recipeBtnObject.length; i++) {
             this.TurnOnRecipeImage(this.recipeBtnObject[i]);
         }
     }

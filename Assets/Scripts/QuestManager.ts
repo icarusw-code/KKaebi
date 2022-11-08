@@ -95,11 +95,11 @@ export default class QuestManager extends ZepetoScriptBehaviour {
     Start() {
         //this.acceptBtn.gameObject.SetActive(false);
         this.LeftPanel.SetActive(false);
-        for(let i=0; i<this.btnsGO.Length;i++){
+        for(let i=0; i<this.btnsGO.length;i++){
             this.btns[i] = this.btnsGO[i].GetComponent<Button>();
         }
         //버튼 이벤트
-        for(let i=0; i<this.btns.Length;i++){
+        for(let i=0; i<this.btns.length;i++){
             this.btns[i].onClick.AddListener(() => { //버튼 누를때 마다 해당 음식에 따른 재료 아이디 퀘스트매니저 함수에 전송 (두번째 인자는 재료 종류수)
                 //console.log("현재 누르고있는 버튼 이름:"+ this.btns[i]);
                 //this.acceptBtn.gameObject.SetActive(true);
