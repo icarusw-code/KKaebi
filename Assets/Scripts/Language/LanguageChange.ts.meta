@@ -82,7 +82,7 @@ ScriptedImporter:
     \uD55C\uAE00\uB85C \uAD50\uCCB4\\r\\n                this.BookKkaebiButtonObj[i].transform.GetChild(1).GetComponent($typeof(UnityEngine_UI_1.Text)).text
     = this.BookKkaebiButtonObj[i].name;\\r\\n            }\\r\\n            for (let
     i = 0; i < this.QMFoodButtonsObj.length; i++) { //\uD018\uC2A4\uD2B8 \uC74C\uC2DD\uC774\uB984
-    \uC601\uC5B4\uB85C \uAD50\uCCB4\\r\\n                this.QMFoodButtonsObj[i].transform.GetChild(0).GetComponent($typeof(UnityEngine_UI_1.Text)).text
+    \uC601\uC5B4\uB85C \uAD50\uCCB4\\r\\n                this.QMFoodButtonsObj[i].transform.GetChild(1).GetComponent($typeof(UnityEngine_UI_1.Text)).text
     = this.QMFoodButtonsObj[i].name;\\r\\n            }\\r\\n            for (let
     i = 0; i < this.InventoryContent.transform.childCount; i++) { //\uC778\uBCA4\uD1A0\uB9AC\uC5D0
     \uC774\uBBF8 \uB4E4\uC5B4\uAC04 \uC7AC\uB8CC\uB4E4 \uD55C\uAE00\uB85C \uAD50\uCCB4\\r\\n               
@@ -113,7 +113,7 @@ ScriptedImporter:
     = this.EnlgishPack.get(this.BookKkaebiButtonObj[i].name);\\r\\n            }\\r\\n           
     for (let i = 0; i < this.QMFoodButtonsObj.length; i++) { //\uD018\uC2A4\uD2B8
     \uC74C\uC2DD\uC774\uB984 \uC601\uC5B4\uB85C \uAD50\uCCB4\\r\\n               
-    this.QMFoodButtonsObj[i].transform.GetChild(0).GetComponent($typeof(UnityEngine_UI_1.Text)).text
+    this.QMFoodButtonsObj[i].transform.GetChild(1).GetComponent($typeof(UnityEngine_UI_1.Text)).text
     = this.EnlgishPack.get(this.QMFoodButtonsObj[i].name);\\r\\n            }\\r\\n           
     for (let i = 0; i < this.InventoryContent.transform.childCount; i++) { //\uC778\uBCA4\uD1A0\uB9AC\uC5D0
     \uC774\uBBF8 \uB4E4\uC5B4\uAC04 \uC7AC\uB8CC\uB4E4 \uC601\uC5B4\uB85C \uAD50\uCCB4\\r\\n               

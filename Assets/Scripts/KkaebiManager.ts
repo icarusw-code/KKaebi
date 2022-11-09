@@ -44,12 +44,12 @@ export default class KkaebiManager extends ZepetoScriptBehaviour {
                 this.color.a = 255;
                 this.KkaebiBtnObjects[i].transform.GetChild(0).gameObject.GetComponent<Image>().color = this.color;
             }
-            else{
+            /*else{
                 this.color = this.KkaebiBtnObjects[i].transform.GetChild(0).gameObject.GetComponent<Image>().color;
                 this.color.a = 0;
                 this.KkaebiBtnObjects[i].transform.GetChild(0).gameObject.GetComponent<Image>().color = this.color;
 
-            }
+            }*/
 
         }
 
@@ -101,12 +101,14 @@ export default class KkaebiManager extends ZepetoScriptBehaviour {
         }
     }
 
-    public checkKkaebiCanSpawn(){
+    public checkKkaebiCanSpawn(complFoodname: string){
         for (let i = 0; i < this.KkaebiBtnObjects.length; i++) {
-            if (UnityEngine.PlayerPrefs.GetInt(this.foodName) >= 2) {
-                this.color = this.KkaebiBtnObjects[i].transform.GetChild(0).gameObject.GetComponent<Image>().color;
-                this.color.a = 255;
-                this.KkaebiBtnObjects[i].transform.GetChild(0).gameObject.GetComponent<Image>().color = this.color;
+            if (UnityEngine.PlayerPrefs.GetInt(complFoodname) >= 2) {
+                if (this.KkaebiBtnObjects[i].GetComponent<KkaebiInfo>().info == complFoodname) {
+                    this.color = this.KkaebiBtnObjects[i].transform.GetChild(0).gameObject.GetComponent<Image>().color;
+                    this.color.a = 255;
+                    this.KkaebiBtnObjects[i].transform.GetChild(0).gameObject.GetComponent<Image>().color = this.color;
+                }
             }
         }
     }

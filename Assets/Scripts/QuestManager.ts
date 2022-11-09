@@ -97,7 +97,6 @@ export default class QuestManager extends ZepetoScriptBehaviour {
 
     Start() {
 
-
         //this.acceptBtn.gameObject.SetActive(false);
         this.LeftPanel.SetActive(false);
         for(let i=0; i<this.btnsGO.length;i++){
@@ -389,7 +388,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         //레시피 숙련도 갱신
         this.RecipeManager.GetComponent<RecipeManager>().ReplaceAllRecipeImage();
         //깨비매니저갱신
-        this.KkkaebiManager.GetComponent<KkaebiManager>().checkKkaebiCanSpawn();
+        this.KkkaebiManager.GetComponent<KkaebiManager>().checkKkaebiCanSpawn(this.QuestAcceptFoodName);
     }
 
     *DoFoodCreate(){
