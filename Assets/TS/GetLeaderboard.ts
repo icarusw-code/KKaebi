@@ -32,7 +32,7 @@ export default class GetLeaderboard extends ZepetoScriptBehaviour {
         {
             for (let i = 0; i < result.rankInfo.rankList.length; ++i) 
             {
-                var rank = result.rankInfo.rankList.get_Item(i);
+                var rank = result.rankInfo.rankList[i];
                 console.log(`
                 i: ${i},
                 member: ${rank.member},
