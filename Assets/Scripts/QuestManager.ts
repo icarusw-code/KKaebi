@@ -497,7 +497,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
             this.modelList.map((d) => {
                 if(d.name == this.inventoryList[i].name){
                     var ingreObject = GameObject.Instantiate(d) as GameObject;
-                    ingreObject.transform.parent = this.tableOnIngres.transform;
+                    ingreObject.transform.SetParent(this.tableOnIngres.transform);
                     ingreObject.transform.position = this.positionList[i].transform.position;
                     ingreObject.GetComponent<UnityEngine.BoxCollider>().enabled = false;
                 }

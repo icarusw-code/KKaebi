@@ -37,7 +37,7 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
         this.myID = this.gameObject.GetComponent<IngredientInfo>().id;
 
         this.btn = GameObject.Instantiate(this.btnFactory) as GameObject; //재료 생성될때 버튼도 함께 생성
-        this.btn.transform.parent = GameObject.Find("Canvas_ICON").transform; //캔버스 자식으로 생성
+        this.btn.transform.SetParent(GameObject.Find("Canvas_ICON").transform); //캔버스 자식으로 생성
         this.btn.GetComponent<ButtonClick>().TurnOffButton(); //버튼일단 꺼주고
 
         this.DestroyBtn = this.btn.GetComponent<Button>(); 

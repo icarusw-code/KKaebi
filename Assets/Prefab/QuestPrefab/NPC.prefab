@@ -101,11 +101,14 @@ MonoBehaviour:
     - btnFactory
     - InteractBtn
     - QuestUI
+    - NpcTalkUI
     unityValues:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
+    - {fileID: 0}
     values:
+    - 
     - 
     - 
     - 
@@ -130,11 +133,14 @@ MonoBehaviour:
     - btnFactory
     - InteractBtn
     - QuestUI
+    - NpcTalkUI
     unityValues:
     - {fileID: 9066837695725315944, guid: cabbcb3b2c7be6d4583166161b9441ad, type: 3}
     - {fileID: 0}
     - {fileID: 0}
+    - {fileID: 0}
     values:
+    - 
     - 
     - 
     - 

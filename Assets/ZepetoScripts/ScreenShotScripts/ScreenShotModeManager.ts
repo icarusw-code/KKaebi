@@ -61,7 +61,7 @@ export default class ScreenShotModeManager extends ZepetoScriptBehaviour {
         this.selfieStick = GameObject.Instantiate<GameObject>(this.selfieStickPrefab);
         this.localPlayer.character.GetComponentsInChildren<Transform>().forEach((characterObj) => {
             if(characterObj.name == this.rightHandBone) {
-                this.selfieStick.transform.parent = characterObj;
+                this.selfieStick.transform.SetParent(characterObj);
                 this.selfieStick.transform.localPosition = Vector3.zero;
                 this.selfieStick.transform.localRotation = Quaternion.Euler(Vector3.zero);
                 this.selfieStick.GetComponentInChildren<Renderer>().gameObject.layer = this.playerLayer;
