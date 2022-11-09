@@ -44,7 +44,13 @@ export default class MachatInteraction extends ZepetoScriptBehaviour {
             this.randomNumber = Math.floor(UnityEngine.Random.Range(0, this.foodItems.length));
             console.log(this.randomNumber);
 
-            if(this.foodItem != null) GameObject.Destroy(this.foodItem);
+            for(let i = 0; i < handPosition.childCount; i++){
+                if(i >= 5){
+                    GameObject.Destroy(handPosition.GetChild(i).gameObject);
+
+                    console.log("체크 : " + i);
+                }
+            }
             this.foodItem = GameObject.Instantiate(this.foodItems[this.randomNumber], handPosition) as GameObject;
             // this.foodItem.transform.localScale = new Vector3(0.01, 0.01, 0.01);
             this.foodItem.transform.localPosition = new Vector3(-0.075000003,-0.00300000003,0.00200000009);

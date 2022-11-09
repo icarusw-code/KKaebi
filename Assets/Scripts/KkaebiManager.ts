@@ -44,6 +44,12 @@ export default class KkaebiManager extends ZepetoScriptBehaviour {
                 this.color.a = 255;
                 this.KkaebiBtnObjects[i].transform.GetChild(0).gameObject.GetComponent<Image>().color = this.color;
             }
+            else{
+                this.color = this.KkaebiBtnObjects[i].transform.GetChild(0).gameObject.GetComponent<Image>().color;
+                this.color.a = 0;
+                this.KkaebiBtnObjects[i].transform.GetChild(0).gameObject.GetComponent<Image>().color = this.color;
+
+            }
 
         }
 
@@ -77,7 +83,7 @@ export default class KkaebiManager extends ZepetoScriptBehaviour {
                 }
                 if(this.selectNumber != i){
                     const myPlayer = ZepetoPlayers.instance.ZepetoCamera.cameraParent;
-                    GameObject.Instantiate(this.KkaebiPrefabs[i], myPlayer.transform.position + new UnityEngine.Vector3(-1.5, -1.5, -1.5), UnityEngine.Quaternion.identity);
+                    GameObject.Instantiate(this.KkaebiPrefabs[i], myPlayer.transform.position + new UnityEngine.Vector3(-3, 0, -1.5), UnityEngine.Quaternion.identity);
                 }
                 this.selectNumber = i;
                 
