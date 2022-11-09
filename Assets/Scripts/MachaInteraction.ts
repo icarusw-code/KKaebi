@@ -11,6 +11,7 @@ import * as UnityEngine from 'UnityEngine';
 import IngredientBookController from '../TS/IngredientBookController';
 import Notifications from './Notifications';
 import LanguageChange from './Language/LanguageChange';
+import SoundManager from './SoundManager';
 
 export default class MachatInteraction extends ZepetoScriptBehaviour {
 
@@ -37,6 +38,7 @@ export default class MachatInteraction extends ZepetoScriptBehaviour {
 
         this.DestroyBtn = this.btn.GetComponent<Button>(); 
         this.DestroyBtn.onClick.AddListener(() => { 
+
             // 물건 드는 동작
             var localPlayer: GameObject = ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.gameObject;
             var handPosition = localPlayer.transform.GetChild(0).GetChild(1).GetChild(2).GetChild(0).GetChild(1).GetChild(2).GetChild(1).GetChild(1).GetChild(0).GetChild(1).GetChild(0);
@@ -52,6 +54,7 @@ export default class MachatInteraction extends ZepetoScriptBehaviour {
                 }
             }
             this.foodItem = GameObject.Instantiate(this.foodItems[this.randomNumber], handPosition) as GameObject;
+            SoundManager.getInstance().PlayBgm("UIbuttonBgm");
             // this.foodItem.transform.localScale = new Vector3(0.01, 0.01, 0.01);
             this.foodItem.transform.localPosition = new Vector3(-0.075000003,-0.00300000003,0.00200000009);
             this.foodItem.transform.localEulerAngles = Vector3.zero;
