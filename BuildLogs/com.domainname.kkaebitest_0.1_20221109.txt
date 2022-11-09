@@ -1,5 +1,5 @@
 [World Settings]
-world id             com.domainname.kkaebiworld
+world id             com.domainname.kkaebitest
 version              0.1                 
 max clients          16                  
 orientation          horizontal          
