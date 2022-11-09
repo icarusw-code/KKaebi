@@ -125,7 +125,7 @@ export default class LanguageChange extends ZepetoScriptBehaviour {
                 this.BookKkaebiButtonObj[i].transform.GetChild(1).GetComponent<Text>().text = this.BookKkaebiButtonObj[i].name;
             }
             for(let i=0; i<this.QMFoodButtonsObj.length;i++){ //퀘스트 음식이름 영어로 교체
-                this.QMFoodButtonsObj[i].transform.GetChild(0).GetComponent<Text>().text = this.QMFoodButtonsObj[i].name;
+                this.QMFoodButtonsObj[i].transform.GetChild(1).GetComponent<Text>().text = this.QMFoodButtonsObj[i].name;
             }
             for(let i=0; i<this.InventoryContent.transform.childCount;i++){ //인벤토리에 이미 들어간 재료들 한글로 교체
                 this.InventoryContent.transform.GetChild(i).GetChild(1).GetComponent<Text>().text = this.InventoryContent.transform.GetChild(i).name;
@@ -154,7 +154,7 @@ export default class LanguageChange extends ZepetoScriptBehaviour {
                 this.BookKkaebiButtonObj[i].transform.GetChild(1).GetComponent<Text>().text = this.EnlgishPack.get(this.BookKkaebiButtonObj[i].name);
             }
             for(let i=0; i<this.QMFoodButtonsObj.length;i++){ //퀘스트 음식이름 영어로 교체
-                this.QMFoodButtonsObj[i].transform.GetChild(0).GetComponent<Text>().text = this.EnlgishPack.get(this.QMFoodButtonsObj[i].name);
+                this.QMFoodButtonsObj[i].transform.GetChild(1).GetComponent<Text>().text = this.EnlgishPack.get(this.QMFoodButtonsObj[i].name);
             }
             for(let i=0; i<this.InventoryContent.transform.childCount;i++){ //인벤토리에 이미 들어간 재료들 영어로 교체
                 this.InventoryContent.transform.GetChild(i).GetChild(1).GetComponent<Text>().text = this.EnlgishPack.get(this.InventoryContent.transform.GetChild(i).name);

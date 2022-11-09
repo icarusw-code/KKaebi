@@ -115,8 +115,10 @@ MonoBehaviour:
     - content
     - imageList
     - IngredientController
+    - spawnmanager
     unityValues:
     - {fileID: 2231140363182708993, guid: 0d25589be16fe8c428f793b1d1a16457, type: 3}
+    - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
@@ -127,6 +129,7 @@ MonoBehaviour:
     - 
     - '{"type":"ZEPETO.Script.ZepetoScriptSerializer+ArrayInfo, ZEPETO.Script","value":"{\"offset\":0,\"length\":0,\"type\":\"UnityEngine.Object,
       UnityEngine.CoreModule\",\"isUnity\":true}"}'
+    - 
     - 
     unityArrayValues: []
     arrayValues: []

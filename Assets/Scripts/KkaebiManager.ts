@@ -25,7 +25,6 @@ export default class KkaebiManager extends ZepetoScriptBehaviour {
 
     private color : UnityEngine.Color;
     Start() {    
-
         for(let i=0; i<this.KkaebiBtnObjects.length;i++){
             this.KkaebiButtons[i] = this.KkaebiBtnObjects[i].GetComponent<Button>();
             //버튼별 소환/비소환 버튼할당
@@ -78,7 +77,7 @@ export default class KkaebiManager extends ZepetoScriptBehaviour {
                 }
                 if(this.selectNumber != i){
                     const myPlayer = ZepetoPlayers.instance.ZepetoCamera.cameraParent;
-                    GameObject.Instantiate(this.KkaebiPrefabs[i], myPlayer.transform.position + new UnityEngine.Vector3(-1.5, 0, -1.5), UnityEngine.Quaternion.identity);
+                    GameObject.Instantiate(this.KkaebiPrefabs[i], myPlayer.transform.position + new UnityEngine.Vector3(-1.5, -1.5, -1.5), UnityEngine.Quaternion.identity);
                 }
                 this.selectNumber = i;
                 
