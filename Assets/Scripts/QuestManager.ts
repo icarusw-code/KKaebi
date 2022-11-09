@@ -16,6 +16,7 @@ import LanguageChange from './Language/LanguageChange';
 import KkaebiInfo from '../TS/KkaebiInfo';
 import ingerdientInteraction from './ingredientInteraction';
 import SoundManager from './SoundManager';
+import AnalyticsController from '../TS/AnalyticsController';
 export default class QuestManager extends ZepetoScriptBehaviour {
     //플레이어 컨트롤러
     private playerController : GameObject;
@@ -84,6 +85,8 @@ export default class QuestManager extends ZepetoScriptBehaviour {
     // 인벤토리 리스트 가져오기
     public inventoryList : GameObject[];
 
+    public zepetoAnalytics : GameObject;
+
     public static instance:QuestManager;
     static getInstance(){
         return this.instance||(this.instance = new this());
@@ -93,6 +96,8 @@ export default class QuestManager extends ZepetoScriptBehaviour {
     }
 
     Start() {
+
+
         //this.acceptBtn.gameObject.SetActive(false);
         this.LeftPanel.SetActive(false);
         for(let i=0; i<this.btnsGO.length;i++){
@@ -252,6 +257,9 @@ export default class QuestManager extends ZepetoScriptBehaviour {
     //퀘스트 포기
     public QuestGiveUp(){
 
+        // 퀘스트 포기 로그
+        this.zepetoAnalytics.GetComponent<AnalyticsController>().QuestGiveupLog();
+
         //퀘스트 안받은상태로 전환
         this.isNowAccept = false;
         //인벤토리 비우기
@@ -295,6 +303,10 @@ export default class QuestManager extends ZepetoScriptBehaviour {
 
     //퀘스트 완료
     public QuestComplete(){
+
+        // 퀘스트 완료 로그 
+        this.zepetoAnalytics.GetComponent<AnalyticsController>().QusetCompleteLog();
+
         //퀘스트 안받은상태로 전환
         this.isNowAccept = false;
         //playerpref에서 여태 음식만든 횟수 끌어옴

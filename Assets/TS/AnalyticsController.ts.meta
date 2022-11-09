@@ -1,0 +1,42 @@
+fileFormatVersion: 2
+guid: 2f81b6ec61d8b7c4cadeb274484f3f4e
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: "{\"source\":\"\\\"use strict\\\";\\r\\nObject.defineProperty(exports,
+    \\\"__esModule\\\", { value: true });\\r\\nconst UnityEngine_1 = require(\\\"UnityEngine\\\");\\r\\nconst
+    UnityEngine_UI_1 = require(\\\"UnityEngine.UI\\\");\\r\\nconst ZEPETO_Analytics_1
+    = require(\\\"ZEPETO.Analytics\\\");\\r\\nconst ZEPETO_Script_1 = require(\\\"ZEPETO.Script\\\");\\r\\nconst
+    NpcInteraction_1 = require(\\\"../Scripts/NpcInteraction\\\");\\r\\nclass AnalyticsController
+    extends ZEPETO_Script_1.ZepetoScriptBehaviour {\\r\\n    Start() {\\r\\n       
+    // \uD018\uC2A4\uD2B8 \uC218\uB77D \uB85C\uADF8\\r\\n        this.questAcceptButton.onClick.AddListener(()
+    => {\\r\\n            // \uAD6C\uAE00\uB85C \uC3DC\uB2E4.\\r\\n            var
+    ga = this.zepetoAnalytics.Analytics(ZEPETO_Analytics_1.AnalyticsType.GoogleAnalytics);\\r\\n           
+    var _event = {\\r\\n                param_01: \\\"\uD018\uC2A4\uD2B8 \uC218\uB77D\\\",\\r\\n           
+    };\\r\\n            ga.LogEvent(\\\"\uD018\uC2A4\uD2B8\uC218\uB77D\\\", _event);\\r\\n       
+    });\\r\\n    }\\r\\n    QusetCompleteLog() {\\r\\n        // \uAD6C\uAE00\uB85C
+    \uC3DC\uB2E4.\\r\\n        var ga = this.zepetoAnalytics.Analytics(ZEPETO_Analytics_1.AnalyticsType.GoogleAnalytics);\\r\\n       
+    var _event = {\\r\\n            param_01: \\\"\uD018\uC2A4\uD2B8 \uC644\uB8CC\\\",\\r\\n       
+    };\\r\\n        ga.LogEvent(\\\"\uD018\uC2A4\uD2B8\uC644\uB8CC\\\", _event);\\r\\n   
+    }\\r\\n    QuestGiveupLog() {\\r\\n        // \uAD6C\uAE00\uB85C \uC3DC\uB2E4.\\r\\n       
+    var ga = this.zepetoAnalytics.Analytics(ZEPETO_Analytics_1.AnalyticsType.GoogleAnalytics);\\r\\n       
+    var _event = {\\r\\n            param_01: \\\"\uD018\uC2A4\uD2B8 \uD3EC\uAE30\\\",\\r\\n       
+    };\\r\\n        ga.LogEvent(\\\"\uD018\uC2A4\uD2B8\uD3EC\uAE30\\\", _event);\\r\\n   
+    }\\r\\n}\\r\\nexports.default = AnalyticsController;\\r\\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQW5hbHl0aWNzQ29udHJvbGxlci5qcyIsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIkFuYWx5dGljc0NvbnRyb2xsZXIudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7QUFBQSw2Q0FBeUM7QUFDekMsbURBQXdDO0FBQ3hDLHVEQUEwRTtBQUMxRSxpREFBcUQ7QUFDckQsOERBQXVEO0FBRXZELE1BQXFCLG1CQUFvQixTQUFRLHFDQUFxQjtJQUtsRSxLQUFLO1FBRUQsWUFBWTtRQUNaLElBQUksQ0FBQyxpQkFBaUIsQ0FBQyxPQUFPLENBQUMsV0FBVyxDQUFDLEdBQUcsRUFBRTtZQUU1QyxVQUFVO1lBQ1YsSUFBSSxFQUFFLEdBQUcsSUFBSSxDQUFDLGVBQWUsQ0FBQyxTQUFTLENBQUMsZ0NBQWEsQ0FBQyxlQUFlLENBQUMsQ0FBQztZQU12RSxJQUFJLE1BQU0sR0FBaUI7Z0JBQ3ZCLFFBQVEsRUFBRyxRQUFRO2FBQ3RCLENBQUE7WUFFRCxFQUFFLENBQUMsUUFBUSxDQUFjLE9BQU8sRUFBRSxNQUFNLENBQUMsQ0FBQztRQUU5QyxDQUFDLENBQUMsQ0FBQztJQUVQLENBQUM7SUFFRCxnQkFBZ0I7UUFFWixVQUFVO1FBQ1YsSUFBSSxFQUFFLEdBQUcsSUFBSSxDQUFDLGVBQWUsQ0FBQyxTQUFTLENBQUMsZ0NBQWEsQ0FBQyxlQUFlLENBQUMsQ0FBQztRQU12RSxJQUFJLE1BQU0sR0FBaUI7WUFDdkIsUUFBUSxFQUFHLFFBQVE7U0FDdEIsQ0FBQTtRQUVELEVBQUUsQ0FBQyxRQUFRLENBQWMsT0FBTyxFQUFFLE1BQU0sQ0FBQyxDQUFDO0lBQzlDLENBQUM7SUFFRCxjQUFjO1FBRVYsVUFBVTtRQUNWLElBQUksRUFBRSxHQUFHLElBQUksQ0FBQyxlQUFlLENBQUMsU0FBUyxDQUFDLGdDQUFhLENBQUMsZUFBZSxDQUFDLENBQUM7UUFNdkUsSUFBSSxNQUFNLEdBQWlCO1lBQ3ZCLFFBQVEsRUFBRyxRQUFRO1NBQ3RCLENBQUE7UUFFRCxFQUFFLENBQUMsUUFBUSxDQUFjLE9BQU8sRUFBRSxNQUFNLENBQUMsQ0FBQztJQUU5QyxDQUFDO0NBR0o7QUE3REQsc0NBNkRDIn0=\",\"assetPath\":\"Assets/TS/AnalyticsController.ts\",\"manifest\":{\"properties\":[{\"assembly\":\"ZEPETO.Analytics\",\"name\":\"zepetoAnalytics\",\"type\":\"ZEPETO.Analytics.ZepetoAnalyticsComponent\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]},{\"assembly\":\"UnityEngine.UI\",\"name\":\"questAcceptButton\",\"type\":\"UnityEngine.UI.Button\",\"isArray\":false,\"initValue\":[],\"enumKeys\":[],\"enumValues\":[],\"attributes\":[]}],\"name\":\"AnalyticsController\",\"description\":\"\"},\"isCompiled\":true}"
+  typescriptHash: 352861bceaf0b9140eb9302408e96cbd
+  onlyWriteTrigger: 0

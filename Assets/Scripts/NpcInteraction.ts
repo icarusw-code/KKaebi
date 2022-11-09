@@ -17,11 +17,15 @@ export default class NpcInteraction extends ZepetoScriptBehaviour {
     public NpcTalkUI: GameObject;
     private playerController : GameObject;
 
-    Start() {    
-        
+    Awake(){
         this.btn = GameObject.Instantiate(this.btnFactory) as GameObject; //재료 생성될때 버튼도 함께 생성
         this.btn.transform.SetParent(GameObject.Find("Canvas_ICON").transform); //캔버스 자식으로 생성
         this.btn.GetComponent<ButtonClick>().TurnOffButton(); //버튼일단 꺼주고
+    }
+
+    Start() {    
+        
+
         
         this.NpcTalkUI.GetComponent<Button>().onClick.AddListener(()=>{ //어떤요리가 만들고싶나 다음에 뜰창
             SoundManager.getInstance().PlayBgm("UIbuttonBgm");

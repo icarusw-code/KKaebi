@@ -134,6 +134,13 @@
         "com.unity.modules.imgui": "1.0.0"
       }
     },
+    "zepeto.analytics": {
+      "version": "0.0.1-preview.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://upm.zepeto.run"
+    },
     "zepeto.asset": {
       "version": "1.0.12",
       "depth": 1,
