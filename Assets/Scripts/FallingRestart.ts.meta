@@ -1,0 +1,32 @@
+fileFormatVersion: 2
+guid: e493359beddd31e47a89fe180058c0af
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst ZEPETO_Character_Controller_1
+    = require(\"ZEPETO.Character.Controller\");\r\nclass FallingRestart extends ZEPETO_Script_1.ZepetoScriptBehaviour
+    {\r\n    constructor() {\r\n        super(...arguments);\r\n        this.restartPosition
+    = new UnityEngine_1.Vector3(-16, 45, 1);\r\n    }\r\n    Start() {\r\n    }\r\n   
+    OnTriggerEnter(coll) {\r\n        var localPlayer = ZEPETO_Character_Controller_1.ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character;\r\n       
+    if (coll.gameObject == localPlayer.gameObject) {\r\n            localPlayer.Teleport(this.restartPosition,
+    UnityEngine_1.Quaternion.identity);\r\n        }\r\n    }\r\n}\r\nexports.default
+    = FallingRestart;\r\n//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRmFsbGluZ1Jlc3RhcnQuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJGYWxsaW5nUmVzdGFydC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUFrRjtBQUVsRixpREFBcUQ7QUFDckQsNkVBQTREO0FBQzVELE1BQXFCLGNBQWUsU0FBUSxxQ0FBcUI7SUFBakU7O1FBRVcsb0JBQWUsR0FBYSxJQUFJLHFCQUFPLENBQUMsQ0FBQyxFQUFFLEVBQUUsRUFBRSxFQUFFLENBQUMsQ0FBQyxDQUFDO0lBYS9ELENBQUM7SUFaRyxLQUFLO0lBRUwsQ0FBQztJQUVELGNBQWMsQ0FBQyxJQUFhO1FBQ3hCLElBQUksV0FBVyxHQUFvQiwyQ0FBYSxDQUFDLFFBQVEsQ0FBQyxXQUFXLENBQUMsWUFBWSxDQUFDLFNBQVMsQ0FBQztRQUM3RixJQUFJLElBQUksQ0FBQyxVQUFVLElBQUksV0FBVyxDQUFDLFVBQVUsRUFBRTtZQUMzQyxXQUFXLENBQUMsUUFBUSxDQUFDLElBQUksQ0FBQyxlQUFlLEVBQUUsd0JBQVUsQ0FBQyxRQUFRLENBQUMsQ0FBQztTQUNuRTtJQUNMLENBQUM7Q0FHSjtBQWZELGlDQWVDIn0=","assetPath":"Assets/Scripts/FallingRestart.ts","manifest":{"properties":[{"assembly":"UnityEngine.CoreModule","name":"restartPosition","type":"UnityEngine.Vector3","isArray":false,"initValue":[],"enumKeys":[],"enumValues":[],"attributes":[]}],"name":"FallingRestart","description":""},"isCompiled":true}'
+  typescriptHash: 585a8d31913758cc12a548af55255cf3
+  onlyWriteTrigger: 0
