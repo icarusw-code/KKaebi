@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &248567398766088364
+--- !u!1 &5987878767527170316
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2586680484722637272}
-  - component: {fileID: 3787232926049711370}
-  - component: {fileID: 6399905132871202868}
+  - component: {fileID: 8327035360889436280}
+  - component: {fileID: 7270176488113484970}
+  - component: {fileID: 629142166345693588}
   m_Layer: 0
   m_Name: I_SausageFrankfruter
   m_TagString: Untagged
@@ -18,35 +18,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2586680484722637272
+--- !u!4 &8327035360889436280
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 248567398766088364}
+  m_GameObject: {fileID: 5987878767527170316}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: -0.4, z: 0}
+  m_LocalPosition: {x: 0, y: -0.4, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3787232926049711370
+--- !u!33 &7270176488113484970
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 248567398766088364}
+  m_GameObject: {fileID: 5987878767527170316}
   m_Mesh: {fileID: 8457171293533635659, guid: fe9df2e9849021147bab53bbbd2dec87, type: 3}
---- !u!23 &6399905132871202868
+--- !u!23 &629142166345693588
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 248567398766088364}
+  m_GameObject: {fileID: 5987878767527170316}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1

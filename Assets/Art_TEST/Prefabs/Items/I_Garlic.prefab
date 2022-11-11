@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2735866179248267558
+--- !u!1 &4761094160436082415
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2735866179248267763}
-  - component: {fileID: 2735866179248267709}
-  - component: {fileID: 2735866179248267732}
+  - component: {fileID: 4761094160436082234}
+  - component: {fileID: 4761094160436082292}
+  - component: {fileID: 4761094160436082205}
   m_Layer: 0
   m_Name: I_Garlic
   m_TagString: Untagged
@@ -18,35 +18,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2735866179248267763
+--- !u!4 &4761094160436082234
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2735866179248267558}
+  m_GameObject: {fileID: 4761094160436082415}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: -0.4, z: 0}
-  m_LocalScale: {x: 10.096454, y: 10.096454, z: 10.096454}
+  m_LocalPosition: {x: 0, y: -0.4, z: 0}
+  m_LocalScale: {x: 15, y: 15, z: 15}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2735866179248267709
+--- !u!33 &4761094160436082292
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2735866179248267558}
+  m_GameObject: {fileID: 4761094160436082415}
   m_Mesh: {fileID: -2188938062020408022, guid: 81f33a0766094d1429c6e159ce13d11e, type: 3}
---- !u!23 &2735866179248267732
+--- !u!23 &4761094160436082205
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2735866179248267558}
+  m_GameObject: {fileID: 4761094160436082415}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1

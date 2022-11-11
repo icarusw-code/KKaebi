@@ -117,6 +117,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3723965545527246442}
     m_Modifications:
+    - target: {fileID: 2748795843511670108, guid: 8f589055aadba5a409b3f9c2e5cdf21a, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2748795843511670108, guid: 8f589055aadba5a409b3f9c2e5cdf21a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6945699856073782698, guid: 8f589055aadba5a409b3f9c2e5cdf21a, type: 3}
       propertyPath: m_Name
       value: I_RiceSack
