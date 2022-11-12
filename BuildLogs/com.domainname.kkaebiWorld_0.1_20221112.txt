@@ -1,0 +1,730 @@
+[World Settings]
+world id             com.domainname.kkaebiworld
+version              0.1                 
+max clients          16                  
+orientation          horizontal          
+disable invite       false               
+disable room list    false               
+disable private room false               
+
+[Build Manifest]
+[scenes]
+44 mb                assets/kkaebi_night_market.unity
+[assets]
+167 kb               assets/art_test/models/ingredients/spinach.fbx
+2 kb                 assets/art_test/materials/m_foods/m_tteokbokki.mat
+307 kb               assets/art_test/textures/t_foods/t_aehobak jeon.png
+34 kb                assets/art_test/textures/t_soy sauce.png
+81 kb                assets/art_test/textures/t_foods/t_tteokguk.png
+9 kb                 assets/image/npcquest/대왕깨비 대화창.png
+35 kb                packages/zepeto.character.controller/runtime/_resources/inputactions/zepetoinputcontrol.inputactions
+162 kb               assets/art_test/textures/t_hangari honey.png
+3 kb                 assets/art_test/prefabs/kkebis/songpyeonkkaebi.prefab
+2 kb                 assets/art_test/prefabs/items/i_ginkgonut.prefab
+2 kb                 assets/art_test/prefabs/items/i_sugar.prefab
+2 kb                 assets/art_test/prefabs/items/i_clam_opened.prefab
+6 kb                 assets/cherrystudio/toonexplosionvfx/art/textures/explosion/explosion_glow.png
+2 kb                 assets/art_test/prefabs/items/i_cucumber.prefab
+6 kb                 assets/prefab/kkaebiprefab/갈비찜깨비.prefab
+140 kb               assets/art_test/models/ingredients/egg with sokuri.fbx
+5 kb                 assets/prefab/kkaebiprefab/떡보깨비.prefab
+60 kb                assets/art_test/models/kkebi/hobaksikyekkaebi.fbx
+3 kb                 assets/cherrystudio/toonexplosionvfx/art/materials/explosion/explosion_clouds.mat
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/walk.anim
+129 kb               assets/art_test/textures/t_kkebi/t_gunbamkkebi.png
+2 kb                 assets/art_test/prefabs/items/i_gosari.prefab
+47 kb                assets/art_test/models/table.fbx
+1 kb                 assets/image/settingimage/환경설정_on버튼베이스.png
+174 kb               assets/image/bookimage/도감창2.png
+23 kb                assets/art_test/textures/t_cheongyang pepper.png
+2 kb                 assets/art_test/prefabs/items/i_sausagefrankfruter.prefab
+39 kb                assets/art_test/textures/t_sesame oil.png
+2 kb                 assets/art_test/materials/m_kkebi/m_hobaksikyekkaebi.mat
+255 kb               assets/art_test/textures/t_foods/t_kimchi.png
+5 kb                 assets/image/ingreimage/배추.jpg
+27 kb                packages/zepeto.character.controller/runtime/_resources/prefabs/uicontroller_touchpad_horizontal.prefab
+5 kb                 assets/prefab/kkaebiprefab/호박식혜깨비.prefab
+2 kb                 assets/art_test/materials/m_nakgi.mat
+546 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landingroll.anim
+52 kb                assets/art_test/models/foods/bungeoppang.fbx
+64 kb                assets/art_test/textures/t_kkebi/t_nakjihorongkkebi.png
+27 kb                packages/zepeto.character.controller/runtime/_resources/prefabs/uicontroller_touchpad_vertical.prefab
+1 kb                 assets/image/tutorialimage/이전.png
+2 kb                 assets/art_test/materials/m_jelly.mat
+1 kb                 packages/com.unity.inputsystem/inputsystem/editor/icons/inputsystemuiinputmodule@64.png
+2 kb                 assets/art_test/materials/m_spinach.mat
+612 b                assets/image/invenimage/종료버튼.png
+2 kb                 assets/art_test/prefabs/items/i_foods/i_chestnut_undercrack.prefab
+10 kb                assets/image/completedimage/요리확득창 검은배경.png
+45 kb                assets/art_test/models/ingredients/milk.fbx
+191 kb               assets/art_test/textures/t_floursack.png
+8 kb                 assets/image/ingreimage/쌀.jpg
+6 kb                 assets/image/ingreimage/사과.jpg
+2 kb                 assets/art_test/materials/m_foods/m_kimchi.mat
+3 kb                 assets/art_test/prefabs/kkebis/galbijjimkkaebi.prefab
+149 kb               assets/art_test/models/kkebi/gogikkaebi.fbx
+2 kb                 assets/art_test/materials/m_sugar.mat
+2 kb                 assets/art_test/prefabs/items/i_foods/i_ginkgonut kkochi.prefab
+2 kb                 assets/art_test/prefabs/items/i_hangari honey.prefab
+49 kb                assets/art_test/textures/t_cerealbox.png
+9 kb                 assets/image/kkaebiimage/낙지호롱깨비.png
+2 kb                 assets/art_test/materials/m_kkebi/m_bungeoppangkkaebi.mat
+2 kb                 assets/art_test/materials/m_kkebi/m_sotteokkkaebi.mat
+5 kb                 assets/image/ingreimage/후추.jpg
+141 kb               assets/art_test/textures/t_kkebi/t_chapssaltteokkkebi.png
+5 kb                 assets/prefab/foodprefab/감자전.prefab
+14 kb                assets/cherrystudio/toonexplosionvfx/art/textures/explosion/explosion_ringthick.png
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/gesture.anim
+2 kb                 assets/art_test/prefabs/items/i_kim.prefab
+6 kb                 assets/image/completedimage/요리확득창 확인.png
+5 kb                 assets/image/ingreimage/붕어.jpg
+205 kb               assets/art_test/textures/t_foods/t_sobulgogi keopbap.png
+135 kb               assets/art_test/models/kkebi/galbijjimkkaebi.fbx
+6 kb                 assets/image/foodimage/송편.jpg
+4 kb                 assets/image/ingreimage/햄.jpg
+51 kb                assets/art_test/models/ingredients/kalguksu noodles.fbx
+18 kb                assets/image/kkaebiimage/갈비찜깨비.png
+19 kb                assets/image/kkaebiimage/배숙깨비.png
+3 kb                 assets/art_test/prefabs/kkebis/hobaksikyekkaebi.prefab
+2 kb                 assets/art_test/materials/m_jocheong.mat
+86 kb                assets/sound/ui/uibuttonbgm.wav
+5 kb                 assets/image/ingreimage/케찹.jpg
+560 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/idle.anim
+2 kb                 assets/art_test/prefabs/items/i_danmugi.prefab
+2 kb                 assets/art_test/materials/m_foods/m_baesuk.mat
+2 kb                 assets/art_test/materials/m_ddeok.mat
+601 b                assets/image/bookimage/도감_요리법_요리회수비충족.png
+192 kb               assets/art_test/textures/t_kkebi/t_bungeoppangkkebi.png
+2 kb                 assets/art_test/materials/m_kimgaru.mat
+52 kb                assets/art_test/models/kkebi/aehobakjeonkkaebi.fbx
+5 kb                 assets/prefab/kkaebiprefab/군밤깨비.prefab
+93 kb                assets/art_test/models/foods/yakgwa.fbx
+193 kb               assets/art_test/textures/t_fishcake.png
+2 kb                 assets/art_test/prefabs/items/i_ramen.prefab
+1 kb                 assets/image/invenimage/인벤토리_재료칸.png
+2 kb                 assets/art_test/prefabs/items/i_soy sauce.prefab
+128 kb               assets/image/11_05_image/도감_요리재료 상세설명.png
+19 kb                assets/image/kkaebiimage/감자전깨비.png
+34 kb                assets/art_test/textures/t_jelly.png
+13 kb                assets/image/kkaebiimage/부대깨비.png
+13 kb                assets/image/foodimage/김밥.png
+2 kb                 assets/art_test/materials/m_kkebi/m_yakgwakkaebi.mat
+79 kb                assets/art_test/models/ingredients/glass bottle 03.fbx
+53 kb                assets/art_test/models/ingredients/sack_closed.fbx
+295 kb               packages/zepeto.character.controller/runtime/_resources/animatorcontroller/zepetoanimatorv2.controller
+2 kb                 assets/art_test/prefabs/items/i_sweet red beans.prefab
+91 kb                assets/art_test/models/kkebi/nakjihorongkkaebi.fbx
+17 kb                assets/art_test/textures/t_danmugi.png
+828 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/moveturn.anim
+2 kb                 assets/prefab/foodprefab/김밥.prefab
+2 kb                 assets/art_test/prefabs/bg_assets/bg_cerealbox.prefab
+78 kb                assets/art_test/models/foods/clam kalguksu.fbx
+5 kb                 assets/prefab/foodprefab/붕어빵.prefab
+3 kb                 assets/art_test/prefabs/kkebis/sotteokkkaebi.prefab
+3 kb                 assets/art_test/prefabs/kkebis/gogikkaebi.prefab
+26 kb                assets/art_test/textures/t_kkebi/t_hobaksikyekkebi.png
+2 kb                 assets/art_test/materials/m_kkebi/m_songpyeonkkaebi.mat
+2 kb                 assets/art_test/prefabs/items/i_foods/nakji horongi_hand.prefab
+219 kb               assets/tmp/간장.png   
+701 b                assets/image/settingimage/환경설정_언어바_디폴트.png
+9 kb                 assets/image/kkaebiimage/은행꼬치깨비.png
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/jump_idle.anim
+3 kb                 assets/art_test/prefabs/kkebis/aehobakjeonkkaebi.prefab
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_off.anim
+5 kb                 assets/image/ingreimage/낙지.jpg
+515 b                assets/image/npcquest/요리비법서_요리재료1칸.png
+3 kb                 assets/art_test/prefabs/kkebis/gamjajeonkkaebi.prefab
+2 kb                 assets/art_test/prefabs/items/i_beef.prefab
+843 kb               assets/art_test/textures/t_almond.png
+3 kb                 assets/image/ingreimage/파.jpg
+6 kb                 assets/art_test/textures/t_kkebi/t_songpyeonkkebi.png
+7 kb                 assets/image/ingreimage/양파.jpg
+2 kb                 assets/art_test/prefabs/items/i_foods/i_bibimbap.prefab
+7 kb                 assets/image/ingreimage/어묵.jpg
+2 kb                 assets/art_test/materials/m_kkebi/m_kimchikkaebi.mat
+5 kb                 packages/zepeto.character.controller/runtime/_resources/images/touchpad_handle_icon.png
+7 kb                 assets/image/foodimage/붕어빵.jpg
+2 kb                 assets/art_test/materials/m_hangari honey.mat
+5 kb                 assets/image/ingreimage/밤.jpg
+2 kb                 assets/art_test/prefabs/items/i_saucecontainer.prefab
+174 kb               assets/image/bookimage/도감창3.png
+5 kb                 packages/zepeto.character.controller/runtime/_resources/images/touchpad_jump_icon.png
+2 kb                 assets/art_test/materials/m_kkebi/m_bibimkkaebi.mat
+2 kb                 assets/art_test/prefabs/deco asset/i_pork_samgyop.prefab
+2 kb                 assets/art_test/materials/m_ginger.mat
+242 kb               assets/art_test/textures/t_foods/t_nakji horongi.png
+3 kb                 assets/art_test/prefabs/kkebis/yakgwakkaebi.prefab
+937 b                assets/image/bookimage/도감_한식깨비_꺼내기.png
+2 kb                 assets/art_test/materials/m_hangari gochu-jang.mat
+2 kb                 assets/art_test/prefabs/deco asset/i_eggsokuri.prefab
+2 kb                 assets/art_test/materials/m_foods/m_sogalbijjim.mat
+2 kb                 assets/art_test/prefabs/items/i_foods/i_sotteok sotteok.prefab
+8 kb                 assets/image/ingreimage/라면.jpg
+19 kb                assets/image/kkaebiimage/고기깨비.png
+2 kb                 assets/art_test/materials/m_condensedmilk.mat
+2 kb                 assets/art_test/prefabs/deco asset/i_beef.prefab
+9 kb                 assets/image/ingreimage/밀가루.jpg
+122 kb               assets/art_test/textures/t_chicken.png
+5 kb                 assets/image/ingreimage/조청.jpg
+42 kb                assets/art_test/textures/t_sausagefrankfruter.png
+6 kb                 assets/image/ingreimage/우유.jpg
+76 kb                assets/art_test/models/foods/tteok kkochi.fbx
+91 kb                assets/art_test/models/ingredients/glass bottle 04.fbx
+174 kb               assets/art_test/textures/t_foods/t_bungeoppang.png
+180 kb               assets/art_test/textures/t_mushroom_paenge.png
+55 kb                assets/art_test/models/ingredients/onion.fbx
+2 kb                 assets/art_test/materials/m_ramen.mat
+2 kb                 assets/art_test/materials/m_carp_bungeo.mat
+5 kb                 assets/prefab/foodprefab/송편.prefab
+2 kb                 assets/art_test/prefabs/items/i_foods/i_sobulgogi keopbap.prefab
+7 kb                 assets/image/ingreimage/된장.jpg
+2 kb                 assets/image/startimage/퀘스트.png
+2 kb                 packages/zepeto.buildit.common/common/cooltime_commons/data/build it select box.shader
+2 kb                 assets/art_test/materials/m_milk pack.mat
+2 kb                 assets/art_test/prefabs/items/i_foods/i_nakji horongi.prefab
+143 kb               assets/art_test/textures/t_spinach.png
+5 kb                 assets/prefab/kkaebiprefab/약과깨비.prefab
+58 kb                assets/art_test/textures/t_ricesack.png
+52 kb                assets/art_test/models/ingredients/gosari.fbx
+52 kb                assets/art_test/models/kkebi/chapssaltteokkkaebi.fbx
+2 kb                 assets/art_test/materials/m_eggsokuri.mat
+2 kb                 assets/art_test/materials/m_saucecontainer.mat
+702 b                assets/image/settingimage/환경설정_언어바_클릭시색변화.png
+2 kb                 assets/art_test/prefabs/deco asset/i_ricesack.prefab
+17 kb                assets/cherrystudio/toonexplosionvfx/art/textures/explosion/carsmokesprite.png
+144 kb               assets/art_test/textures/t_foods/t_tteok kkochi.png
+4 kb                 assets/image/ingreimage/닭고기.jpg
+2 mb                 assets/font/kotra hope.otf
+6 kb                 assets/image/foodimage/감자전.jpg
+2 kb                 assets/art_test/prefabs/items/i_ddeok.prefab
+2 kb                 assets/art_test/materials/m_foods/m_gamja-jeon.mat
+4 kb                 assets/image/ingreimage/당근.jpg
+7 kb                 assets/image/ingreimage/고추장.jpg
+2 kb                 assets/art_test/materials/m_onion.mat
+2 kb                 assets/art_test/prefabs/items/i_foods/i_baesuk.prefab
+3 kb                 assets/image/ingreimage/가래떡.jpg
+2 kb                 assets/art_test/prefabs/items/i_nakji.prefab
+12 kb                assets/image/kkaebiimage/애호박전깨비.png
+195 kb               assets/art_test/textures/t_kkebi/t_bibimkkebi.png
+2 mb                 assets/sound/한식깨비야시장브금(최종).mp3
+2 kb                 assets/art_test/prefabs/items/i_jelly.prefab
+2 kb                 assets/art_test/prefabs/items/i_red pepper.prefab
+2 kb                 assets/art_test/materials/t_almond.mat
+20 kb                assets/art_test/textures/t_milk pack.png
+2 kb                 assets/art_test/prefabs/items/i_ricesack.prefab
+2 kb                 assets/art_test/materials/m_foods/m_kimchi_plate.mat
+137 kb               assets/art_test/textures/t_hangari gochu-jang.png
+2 kb                 assets/art_test/prefabs/items/i_bungeo.prefab
+90 kb                assets/art_test/textures/t_ddeok.png
+2 kb                 assets/art_test/materials/m_soy sauce.mat
+3 kb                 assets/art_test/prefabs/kkebis/chapssaltteokkkaebi.prefab
+188 kb               assets/art_test/textures/t_kkebi/t_gogikkebi.png
+64 kb                assets/art_test/textures/낙지호롱이.png
+145 kb               assets/art_test/textures/t_foods/t_sotteok sotteok.png
+46 kb                assets/art_test/models/ingredients/beef.fbx
+4 kb                 assets/image/ingreimage/무.jpg
+2 kb                 assets/art_test/materials/m_almond.mat
+340 kb               assets/art_test/textures/t_clam_opened.png
+2 kb                 assets/art_test/materials/m_kkebi/m_tteokbokkaebi.mat
+61 kb                assets/art_test/models/ingredients/garlic.fbx
+2 kb                 assets/art_test/materials/m_foods/m_sikhye_sweetpumpkin.mat
+83 kb                assets/art_test/textures/t_kkebi/t_tteokgukkkebi.png
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/action2.anim
+2 kb                 assets/tmp/table.mat
+5 kb                 assets/image/foodimage/은행꼬치.jpg
+2 kb                 assets/art_test/prefabs/items/i_ginger.prefab
+2 kb                 assets/art_test/materials/m_foods/m_ginkgonut kkochi.mat
+7 kb                 packages/zepeto.character.controller/runtime/_resources/animatorcontroller/uicontrollertouchpadhandle.controller
+4 kb                 assets/image/ingreimage/연유.jpg
+70 kb                assets/art_test/models/foods/aehobak jeon.fbx
+5 kb                 assets/prefab/foodprefab/군밤.prefab
+7 kb                 assets/image/ingreimage/생강.jpg
+2 kb                 assets/art_test/materials/m_kkebi/m_tteokgukkkaebi.mat
+40 kb                assets/art_test/models/ingredients/cerealbox.fbx
+461 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/movewalkfast.anim
+5 kb                 assets/prefab/foodprefab/단호박식혜.prefab
+111 kb               assets/art_test/models/ingredients/glass bottle 01.fbx
+75 kb                assets/image/11_05_image/환경설정_기본베이스.png
+91 kb                assets/tmp/kakaotalk_20221102_160409802_03.png
+12 kb                packages/zepeto.character.controller/runtime/_resources/images/touchpad_jump_base.png
+5 kb                 assets/image/ingreimage/단무지.jpg
+6 kb                 assets/image/ingreimage/우럭.jpg
+120 kb               assets/art_test/textures/t_red pepper.png
+68 kb                assets/art_test/models/ingredients/zucchini.fbx
+2 kb                 assets/prefab/kkaebiprefab/붕찜깨비.prefab
+180 kb               assets/art_test/textures/t_mushroom_pyogo.png
+2 kb                 assets/art_test/materials/m_foods/m_clam kalguksu.mat
+128 kb               assets/art_test/models/kkebi/tteokgukkkaebi.fbx
+69 kb                assets/art_test/models/ingredients/sweetpumpkin.fbx
+5 mb                 packages/zepeto.character.controller/runtime/_resources/animations/gesture/6_dance.anim
+200 kb               assets/art_test/textures/t_zucchini.png
+4 kb                 assets/image/ingreimage/간장.jpg
+2 kb                 assets/art_test/prefabs/items/i_mushroom_paenge.prefab
+13 kb                assets/image/foodimage/팥빙수.png
+2 kb                 assets/art_test/materials/m_kkebi/m_gogikkaebi.mat
+14 kb                assets/image/kkaebiimage/떡꼬치깨비.png
+158 kb               assets/image/questimage/퀘스트창_요리재료목록.png
+4 kb                 assets/image/ingreimage/식용유.jpg
+158 kb               assets/image/npcquest/대왕깨비_요리비법서창.png
+41 kb                assets/art_test/textures/t_kim.png
+5 kb                 assets/prefab/kkaebiprefab/낙지호롱깨비.prefab
+8 kb                 assets/image/ingreimage/소고기.jpg
+2 kb                 assets/art_test/prefabs/items/i_radish.prefab
+136 kb               assets/art_test/models/foods/kimchi.fbx
+2 kb                 assets/art_test/materials/m_zucchini.mat
+2 kb                 assets/art_test/materials/m_sesame oil.mat
+2 kb                 assets/art_test/materials/m_ricesack.mat
+2 kb                 assets/art_test/materials/m_cerealbox.mat
+2 kb                 assets/art_test/prefabs/items/i_garlic.prefab
+24 kb                assets/art_test/textures/t_ramen.png
+2 kb                 assets/art_test/prefabs/items/i_hangari doenjang.prefab
+612 b                assets/image/bookimage/도감_종료버튼.png
+47 kb                assets/art_test/models/ingredients/ham.fbx
+5 kb                 assets/image/ingreimage/계란.jpg
+5 kb                 assets/prefab/foodprefab/떡볶이.prefab
+248 kb               assets/art_test/models/foods/nakji horongi.fbx
+2 kb                 assets/art_test/prefabs/items/i_foods/i_bungeoppang.prefab
+52 kb                assets/art_test/models/foods/sikhye_sweetpumpkin.fbx
+110 kb               assets/art_test/models/ingredients/sausage_frankfruter.fbx
+19 kb                assets/art_test/textures/t_saucecontainer.png
+2 kb                 assets/art_test/prefabs/items/i_sweetpumpkin.prefab
+2 kb                 assets/art_test/prefabs/items/i_hangari gochu-jang.prefab
+2 kb                 assets/art_test/prefabs/items/i_foods/i_chapssaltteok.prefab
+44 kb                assets/art_test/models/ingredients/almond.fbx
+141 kb               assets/art_test/textures/t_ginkgonut.png
+55 kb                assets/art_test/models/ingredients/pear.fbx
+3 kb                 assets/art_test/prefabs/kkebis/eunhaengkkochikkaebi.prefab
+5 kb                 assets/image/ingreimage/아몬드.jpg
+2 kb                 assets/art_test/materials/m_garlic.mat
+612 b                assets/image/tutorialimage/튜토리얼_종료버튼.png
+2 kb                 assets/art_test/prefabs/items/i_condensedmilk.prefab
+5 kb                 assets/image/foodimage/찹쌀떡.jpg
+20 kb                assets/prefab/questprefab/completed_canvas.prefab
+81 kb                assets/samplescene/reflectionprobe-0.exr
+2 kb                 assets/art_test/materials/m_foods/m_sotteok sotteok.mat
+2 kb                 assets/art_test/materials/m_potato.mat
+43 kb                assets/prefab/infoprefab/ingreinfo_canvas.prefab
+310 kb               assets/art_test/textures/t_maltsack.png
+137 kb               assets/art_test/textures/t_carrot.png
+5 kb                 assets/prefab/kkaebiprefab/붕어빵깨비.prefab
+126 kb               assets/art_test/models/foods/sogalbijjim.fbx
+53 kb                assets/art_test/models/ingredients/apple.fbx
+47 kb                assets/art_test/models/ingredients/chestnut.fbx
+129 kb               assets/art_test/textures/t_napa cabbage.png
+206 kb               assets/art_test/textures/t_pork_samgyop.png
+2 kb                 assets/_resources/[materials]/colortexture_001.mat
+18 kb                assets/samplescene/lightingdata.asset
+113 kb               assets/art_test/textures/t_kkebi/t_baesukkkebi.png
+5 kb                 assets/prefab/foodprefab/소불고기컵밥.prefab
+300 kb               assets/art_test/textures/t_radish.png
+6 kb                 assets/image/ingreimage/시금치.jpg
+119 kb               assets/art_test/models/foods/tteokguk.fbx
+19 kb                assets/image/kkaebiimage/김치깨비.png
+8 kb                 assets/image/ingreimage/고사리.jpg
+52 kb                assets/art_test/textures/t_apple.png
+2 kb                 assets/cherrystudio/toonexplosionvfx/art/materials/explosion/explosion_ringthick.mat
+14 kb                assets/image/kkaebiimage/군밤깨비.png
+145 kb               assets/art_test/textures/t_foods/t_baesuk.png
+618 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jumpidle.anim
+2 kb                 assets/prefab/kkaebiprefab/김밥깨비.prefab
+2 kb                 assets/prefab/foodprefab/0. 음식.prefab
+206 kb               assets/art_test/textures/t_foods/t_bibimbap.png
+451 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/stamp.anim
+3 mb                 packages/zepeto.character.controller/runtime/_resources/animations/gesture/5_sleep.anim
+6 kb                 assets/prefab/kkaebiprefab/소떡깨비.prefab
+296 kb               assets/art_test/textures/t_rockfish_ureok.png
+2 kb                 assets/prefab/kkaebiprefab/매운탕깨비.prefab
+2 kb                 assets/art_test/materials/m_pork_samgyop.mat
+145 kb               assets/art_test/textures/t_sesame.png
+5 kb                 assets/prefab/foodprefab/은행꼬치.prefab
+122 kb               assets/art_test/textures/t_kkebi/t_tteokbokkebi.png
+2 kb                 assets/art_test/materials/m_cucumber.mat
+39 kb                assets/art_test/textures/t_cooking oil.png
+184 kb               assets/art_test/textures/t_egg sokuri.png
+115 kb               assets/art_test/models/foods/songpyeon.fbx
+2 kb                 assets/art_test/materials/m_sausagefrankfruter.mat
+2 kb                 assets/art_test/prefabs/items/i_foods/i_tteokguk.prefab
+60 kb                assets/art_test/models/kkebi/gamjajeonkkaebi.fbx
+3 kb                 assets/prefab/kkaebiprefab/팥빙깨비.prefab
+3 kb                 assets/art_test/prefabs/kkebis/bungeoppangkkaebi.prefab
+2 kb                 assets/art_test/materials/m_foods/m_tteok kkochi.mat
+566 b                assets/image/bookimage/도감_요리법_요리회수충족.png
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/v2/movewalk.anim
+57 kb                assets/art_test/models/ingredients/mushroom_pyogo.fbx
+1 mb                 assets/sound/cook/cookingbgm.wav
+2 kb                 assets/art_test/materials/m_beef.mat
+4 kb                 assets/image/ingreimage/설탕.jpg
+5 kb                 assets/prefab/foodprefab/약과.prefab
+2 kb                 assets/art_test/prefabs/items/i_foods/i_gamja-jeon.prefab
+235 kb               assets/art_test/textures/t_gosari.png
+1014 kb              packages/zepeto.character.controller/runtime/_resources/animations/base/v2/idle.anim
+9 kb                 assets/image/foodimage/바지락칼국수.jpg
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/fall_end.anim
+60 kb                assets/art_test/models/foods/ginkgonut kkochi.fbx
+5 kb                 assets/prefab/foodprefab/김치.prefab
+5 kb                 assets/prefab/kkaebiprefab/칼국깨비.prefab
+1 kb                 assets/image/settingimage/환경설정_off버튼베이스.png
+428 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/hand_idle_01.anim
+31 kb                packages/com.unity.inputsystem/inputsystem/plugins/playerinput/defaultinputactions.inputactions
+3 kb                 assets/art_test/prefabs/kkebis/baesukkkaebi.prefab
+1 mb                 assets/fantasy skybox/panoramics/fs002/fs001_night_moonless(2th).png
+2 kb                 assets/art_test/prefabs/items/i_spinach.prefab
+2 kb                 assets/art_test/materials/m_salt.mat
+13 kb                assets/image/kkaebiimage/김밥깨비.png
+8 kb                 assets/image/ingreimage/단호박.jpg
+3 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_ziggle.anim
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_off.anim
+90 kb                assets/art_test/models/kkebi/baesukkkaebi.fbx
+59 kb                assets/art_test/models/ingredients/pepper.fbx
+7 kb                 assets/image/ingreimage/시리얼.jpg
+2 kb                 assets/art_test/materials/m_kkebi/m_aehobakjeonkkebi.mat
+83 kb                assets/art_test/models/foods/nakji horongi 01.fbx
+6 kb                 assets/image/foodimage/소떡소떡.jpg
+75 kb                assets/art_test/models/ingredients/green onion.fbx
+600 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landingslight.anim
+2 kb                 assets/art_test/prefabs/items/i_mushroom_pyogo.prefab
+259 kb               assets/art_test/textures/t_egg.png
+87 kb                assets/art_test/models/ingredients/ginger.fbx
+18 kb                assets/art_test/textures/t_sweet red beans.png
+2 kb                 assets/art_test/materials/m_carrot.mat
+13 kb                assets/image/kkaebiimage/붕찜깨비.png
+66 kb                assets/art_test/models/ingredients/bungeo.fbx
+50 kb                assets/art_test/models/ingredients/ramen.fbx
+3 kb                 assets/art_test/prefabs/kkebis/tteokgukkkaebi.prefab
+2 kb                 assets/art_test/materials/m_kkebi/m_kalgukkkaebi.mat
+2 kb                 assets/art_test/materials/m_hangari doenjang.mat
+13 kb                assets/image/kkaebiimage/찹쌀떡깨비.png
+5 kb                 assets/prefab/kkaebiprefab/애호박전깨비.prefab
+5 kb                 assets/image/ingreimage/표고버섯.jpg
+262 kb               assets/art_test/textures/t_bungeo_carp.png
+2 kb                 assets/art_test/materials/m_ham.mat
+16 kb                assets/art_test/textures/t_jocheong.png
+2 kb                 assets/art_test/materials/m_clam_opened.mat
+229 kb               assets/art_test/textures/t_beef.png
+88 kb                assets/art_test/models/ingredients/ddeok.fbx
+62 kb                assets/art_test/models/ingredients/sauce container.fbx
+7 kb                 assets/image/ingreimage/김가루.jpg
+127 kb               assets/art_test/textures/t_foods/t_chapssaltteok.png
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/jump_move.anim
+1 kb                 assets/kkaebianimator/kkaebianimater.controller
+56 kb                assets/art_test/models/foods/sotteok sotteok.fbx
+13 kb                assets/image/foodimage/우럭매운탕.png
+6 kb                 assets/prefab/button.prefab
+567 kb               assets/image/completedimage/한식깨비획득창_빛(가장자리수정).png
+5 kb                 assets/prefab/kkaebiprefab/감자전깨비.prefab
+2 kb                 assets/art_test/materials/m_kkebi/m_gunbamkkaebi.mat
+64 kb                assets/art_test/models/kkebi/sotteokkkaebi.fbx
+9 kb                 assets/image/foodimage/떡국.jpg
+87 kb                assets/art_test/models/kkebi/kalgukkkaebi.fbx
+2 kb                 assets/art_test/prefabs/items/i_pepper.prefab
+44 kb                assets/art_test/models/foods/chapssaltteok.fbx
+194 kb               assets/art_test/textures/t_onion.png
+2 kb                 assets/art_test/materials/m_chestnut.mat
+56 kb                assets/art_test/models/foods/bibimbap.fbx
+2 kb                 assets/art_test/prefabs/items/i_ureok.prefab
+6 kb                 assets/image/foodimage/떡볶이.jpg
+3 kb                 assets/art_test/prefabs/kkebis/gunbamkkaebi.prefab
+22 kb                assets/image/invenimage/인벤토리창_테두리없는마스크용.png
+831 b                packages/zepeto.buildit.common/common/cooltime_commons/data/builditadditive.shader
+2 kb                 assets/art_test/prefabs/items/i_kimgaru.prefab
+103 kb               assets/art_test/models/kkebi/yakgwakkaebi.fbx
+102 kb               assets/art_test/textures/t_foods/t_clam kalguksu.png
+58 kb                assets/art_test/textures/t_kimgaru.png
+442 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jumpmove.anim
+50 kb                assets/sound/quest/notificationbgm.wav
+2 kb                 assets/art_test/prefabs/items/i_foods/i_sogalbijjim.prefab
+2 kb                 assets/image/startimage/환경설정.png
+83 kb                assets/art_test/textures/t_foods/t_songpyeon.png
+4 kb                 assets/image/ingreimage/애호박.jpg
+2 kb                 assets/art_test/prefabs/items/i_foods/i_tteokbokki.prefab
+6 kb                 assets/image/foodimage/군밤.jpg
+126 kb               assets/art_test/textures/t_foods/t_tteokbokki.png
+2 kb                 assets/art_test/materials/m_red pepper.mat
+18 kb                packages/zepeto.character.controller/runtime/_resources/animatorcontroller/zepetoanimator.controller
+2 kb                 assets/art_test/materials/m_foods/m_bibimbap.mat
+17 kb                assets/image/kkaebiimage/약과깨비.png
+3 kb                 assets/prefab/kkaebiprefab/0. 깨비.prefab
+5 kb                 assets/image/foodimage/단호박식혜.jpg
+3 kb                 assets/cherrystudio/toonexplosionvfx/art/materials/explosion/explosion_clouds_add.mat
+53 kb                assets/art_test/models/ingredients/condensedmilk.fbx
+88 kb                assets/art_test/models/ingredients/nakji.fbx
+2 kb                 assets/art_test/prefabs/items/i_onion.prefab
+55 kb                assets/art_test/textures/t_kkebi/t_aehobakjeonkkebi.png
+84 kb                assets/art_test/textures/t_kkebi/t_kalgukkkebi.png
+2 kb                 assets/art_test/materials/m_maltsack.mat
+12 kb                assets/image/kkaebiimage/호박식혜깨비.png
+2 kb                 assets/art_test/materials/m_sweet red beans.mat
+61 kb                assets/art_test/models/kkebi/bungeoppangkkaebi.fbx
+2 kb                 assets/prefab/foodprefab/부대찌개.prefab
+13 kb                assets/image/kkaebiimage/소떡깨비.png
+53 kb                assets/art_test/models/ingredients/potato.fbx
+5 kb                 assets/prefab/kkaebiprefab/은행꼬치깨비.prefab
+2 kb                 assets/art_test/materials/m_foods/m_nakji horongi 1.mat
+3 kb                 assets/image/ingreimage/팽이버섯.jpg
+5 kb                 assets/prefab/foodprefab/배숙.prefab
+190 kb               assets/art_test/textures/t_nakgi.png
+2 kb                 assets/art_test/materials/m_gosari.mat
+2 kb                 assets/art_test/prefabs/items/i_sesame.prefab
+2 kb                 assets/art_test/prefabs/items/i_fishcake.prefab
+5 kb                 assets/prefab/foodprefab/애호박전.prefab
+1 kb                 assets/image/npcquest/요리비법서_선택요리.png
+5 kb                 assets/prefab/kkaebiprefab/송편깨비.prefab
+5 kb                 assets/image/ingreimage/마늘.jpg
+2 kb                 assets/art_test/materials/m_kim.mat
+2 kb                 assets/image/completedimage/요리확득창 아이템이미지.png
+120 kb               assets/art_test/models/ingredients/carrot.fbx
+13 kb                assets/image/foodimage/부대찌개.png
+51 kb                assets/art_test/models/ingredients/pork_samgyop.fbx
+73 kb                assets/art_test/models/ingredients/ureok.fbx
+54 kb                assets/art_test/textures/t_chestnut.png
+143 kb               assets/art_test/textures/t_hangari doenjang.png
+49 kb                assets/art_test/models/ingredients/jelly.fbx
+5 kb                 assets/prefab/foodprefab/떡꼬치.prefab
+2 kb                 assets/art_test/prefabs/items/i_jocheong.prefab
+158 kb               assets/art_test/textures/t_kkebi/t_sotteokkkebi.png
+374 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/moverunfast.anim
+5 kb                 assets/prefab/kkaebiprefab/떡꼬치깨비.prefab
+3 kb                 assets/art_test/prefabs/kkebis/tteokbokkaebi.prefab
+843 kb               assets/art_test/textures/m_almond_basemap.png
+227 kb               assets/sound/kkebiget/kkaeb_ingre_igetbgm.wav
+9 kb                 assets/image/foodimage/소갈비찜.jpg
+2 kb                 assets/art_test/prefabs/items/i_pork_samgyop.prefab
+5 kb                 assets/prefab/kkaebiprefab/떡꾹깨비.prefab
+416 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/moverun.anim
+2 kb                 assets/art_test/prefabs/items/i_eggsokuri.prefab
+2 kb                 assets/prefab/foodprefab/붕어찜.prefab
+376 kb               assets/art_test/textures/t_ginger.png
+2 kb                 assets/art_test/prefabs/items/i_cheongyang pepper.prefab
+82 kb                assets/art_test/models/ingredients/glass bottle 02.fbx
+2 kb                 assets/art_test/materials/m_foods/m_sobulgogi keopbap.mat
+51 kb                assets/art_test/models/ingredients/sokuri.fbx
+2 kb                 assets/art_test/materials/m_kalguksu noodles.mat
+2 kb                 assets/art_test/prefabs/items/i_sesameoil.prefab
+1 kb                 assets/image/startimage/도감.png
+2 kb                 assets/art_test/prefabs/items/i_foods/i_clam kalguksu.prefab
+5 kb                 assets/prefab/foodprefab/소떡소떡.prefab
+49 kb                assets/prefab/infoprefab/foodinfo_canvas.prefab
+253 kb               assets/art_test/textures/t_kkebi/t_galbijjimkkebi.png
+5 kb                 assets/art_test/prefabs/items/i_foods/i_kimchi.prefab
+2 kb                 assets/art_test/prefabs/items/i_napa cabbage.prefab
+2 kb                 assets/art_test/materials/m_foods/m_bungeoppang.mat
+2 kb                 assets/art_test/materials/m_kkebi/m_eunhaengkkochikkaebi.mat
+2 kb                 assets/art_test/materials/m_foods/m_aehobak jeon.mat
+2 kb                 assets/art_test/prefabs/items/i_cookingoil.prefab
+984 b                assets/image/settingimage/환경설정_확인.png
+103 kb               assets/art_test/textures/t_green onion.png
+64 kb                assets/art_test/models/kkebi/bibimkkaebi.fbx
+1 kb                 packages/zepeto.character.controller/runtime/_resources/camera/zepetocamera.prefab
+8 kb                 assets/image/foodimage/애호박전.jpg
+13 kb                assets/image/foodimage/비빔밥.jpg
+8 kb                 assets/image/foodimage/약과.jpg
+86 kb                assets/art_test/models/ingredients/hangari.fbx
+2 kb                 assets/materials/m_red.mat
+2 kb                 assets/art_test/prefabs/items/i_green onion.prefab
+2 kb                 assets/art_test/prefabs/items/i_foods/i_sikhye_sweetpumpkin.prefab
+5 kb                 packages/zepeto.buildit.common/common/cooltime_commons/data/builditstandard.shader
+2 kb                 assets/art_test/prefabs/items/i_potato.prefab
+186 kb               assets/art_test/textures/t_garlic.png
+2 kb                 assets/image/tutorialimage/copy of 시작화면_튜토리얼.png
+2 kb                 assets/art_test/materials/m_foods/m_songpyeon.mat
+2 kb                 assets/art_test/prefabs/items/i_floursack.prefab
+2 kb                 assets/art_test/prefabs/deco asset/bg_egg.prefab
+1 kb                 assets/image/npcquest/요리비법서_요리하기버튼 1.png
+136 kb               assets/art_test/textures/t_foods/t_gamja-jeon.png
+3 kb                 packages/zepeto.buildit.common/common/cooltime_commons/data/build it effect addictive soft.shader
+5 kb                 packages/zepeto.buildit.common/common/cooltime_commons/data/build it unlit.shader
+2 kb                 assets/cherrystudio/toonexplosionvfx/art/materials/explosion/explosion_glowadd.mat
+2 kb                 assets/art_test/materials/m_napa cabbage.mat
+464 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jumpdouble.anim
+5 kb                 assets/art_test/prefabs/items/i_foods/i_songpyeon.prefab
+2 kb                 assets/art_test/materials/m_kkebi/m_nakjihorongkkaebi.mat
+23 kb                assets/image/invenimage/인벤토리창_빈창.png
+69 kb                assets/art_test/models/foods/tteokbokki.fbx
+2 kb                 assets/art_test/materials/m_mushroom_pyogo.mat
+8 kb                 assets/image/ingreimage/꿀.jpg
+2 kb                 assets/art_test/materials/m_foods/m_songpyeon_plate.mat
+199 kb               assets/art_test/models/ingredients/mushroom_paenge.fbx
+1 kb                 assets/image/tutorialimage/다음.png
+53 kb                assets/art_test/models/ingredients/closed_sack.fbx
+15 kb                assets/image/kkaebiimage/비빔깨비.png
+926 b                assets/image/bookimage/도감_한식깨비_넣기.png
+2 kb                 assets/art_test/materials/m_foods/m_tteokguk.mat
+13 kb                packages/zepeto.character.controller/runtime/_resources/images/touchpad_handle_base.png
+5 kb                 assets/prefab/kkaebiprefab/비빔깨비.prefab
+2 kb                 assets/art_test/materials/m_sesame.mat
+196 kb               assets/art_test/textures/t_pear.png
+59 kb                assets/art_test/models/kkebi/gunbamkkaebi.fbx
+2 kb                 assets/art_test/materials/m_foods/m_chapssaltteok.mat
+91 kb                assets/art_test/textures/t_cucumber.png
+69 kb                assets/art_test/models/kkebi/eunhaengkkochikkaebi.fbx
+183 kb               assets/art_test/textures/t_foods/t_songpyeon_plate.png
+69 kb                assets/art_test/models/ingredients/fishcake.fbx
+40 kb                assets/art_test/textures/t_kalguksu noodles.png
+2 kb                 assets/art_test/materials/m_mushroom_paenge.mat
+62 kb                packages/zepeto.character.controller/runtime/_resources/animations/base/action1.anim
+56 kb                assets/art_test/models/ingredients/kimgaru.fbx
+2 kb                 assets/art_test/prefabs/deco asset/i_chicken.prefab
+2 kb                 assets/art_test/materials/m_kkebi/m_gamjajeonkkaebi.mat
+851 b                assets/image/settingimage/환경설정_언어바_클릭시확장.png
+123 kb               assets/art_test/textures/t_foods/t_yakgwa.png
+6 kb                 assets/image/ingreimage/돼지고기.jpg
+3 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_ziggle.anim
+2 kb                 assets/art_test/prefabs/items/i_cerealbox.prefab
+577 b                assets/image/bookimage/도감_한식깨비_등급별.png
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_on.anim
+2 kb                 assets/art_test/prefabs/items/i_chestnut.prefab
+637 b                assets/image/settingimage/환경설정_언어바_내림표시.png
+11 kb                assets/image/foodimage/소불고기컵밥.jpg
+171 kb               assets/sound/itemget/itemgetbgm.wav
+2 kb                 assets/art_test/materials/m_kkebi/m_chapssaltteokkkaebi.mat
+63 kb                assets/art_test/textures/t_sugar.png
+8 kb                 assets/image/foodimage/김치.jpg
+8 kb                 assets/image/ingreimage/단팥.jpg
+7 kb                 assets/image/ingreimage/김.jpg
+2 kb                 assets/art_test/materials/m_chicken.mat
+5 kb                 assets/prefab/foodprefab/낙지호롱이.prefab
+9 kb                 assets/image/ingreimage/소시지.jpg
+2 kb                 assets/art_test/prefabs/items/i_pear.prefab
+13 kb                assets/image/kkaebiimage/칼국깨비.png
+2 kb                 assets/art_test/prefabs/items/i_milk.prefab
+7 kb                 packages/zepeto.character.controller/runtime/_resources/animatorcontroller/uicontrollertouchpadhandleorigin.controller
+99 kb                assets/art_test/textures/t_foods/t_kimchi_plate.png
+2 kb                 assets/art_test/prefabs/items/i_foods/i_tteok kkochi.prefab
+76 kb                assets/art_test/models/kkebi/songpyeonkkaebi.fbx
+2 kb                 assets/art_test/materials/m_green onion.mat
+46 kb                assets/art_test/models/ingredients/kim.fbx
+2 kb                 assets/art_test/materials/m_foods/m_yakgwa.mat
+47 kb                assets/art_test/models/ingredients/ginkgo nut.fbx
+59 kb                assets/art_test/models/foods/gamja-jeon.fbx
+8 kb                 assets/image/ingreimage/칼국수면.jpg
+986 b                assets/image/bookimage/도감_요리재료1칸.png
+60 kb                assets/art_test/models/ingredients/sweet red beans.fbx
+81 kb                assets/art_test/models/foods/baesuk.fbx
+451 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/jumpdash.anim
+189 kb               assets/art_test/textures/t_foods/t_chestnut_undercrack.png
+3 kb                 assets/image/ingreimage/은행.jpg
+2 kb                 assets/art_test/prefabs/items/i_foods/i_yakgwa.prefab
+3 kb                 assets/image/ingreimage/청양고추.jpg
+3 kb                 assets/image/11_05_image/재료수집_수집버튼.png
+3 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/charactershadow.prefab
+2 kb                 assets/cherrystudio/toonexplosionvfx/art/materials/explosion/explosion_glowblended.mat
+2 kb                 assets/art_test/prefabs/items/i_kalguksu noodles.prefab
+3 kb                 assets/art_test/prefabs/kkebis/bibimkkaebi.prefab
+5 kb                 assets/image/ingreimage/깨.jpg
+649 b                assets/image/settingimage/환경설정_온오프토클버튼.png
+2 kb                 assets/prefab/kkaebiprefab/부대깨비.prefab
+795 b                packages/zepeto.buildit.common/common/cooltime_commons/data/build it effect addictive.shader
+262 kb               assets/art_test/textures/t_kkebi/t_kimchikkebi.png
+2 kb                 assets/art_test/materials/m_apple.mat
+959 kb               assets/cherrystudio/toonexplosionvfx/prefabs/particles/iceexplosionparticleprefab.prefab
+2 kb                 assets/prefab/foodprefab/우럭매운탕.prefab
+101 kb               assets/art_test/textures/t_kkebi/t_gamjajeonkkebi.png
+2 kb                 assets/art_test/materials/m_floursack.mat
+97 kb                assets/art_test/models/ingredients/napa cabbage.fbx
+612 b                assets/image/questimage/퀘스트_종료버튼.png
+2 kb                 packages/zepeto.character.controller/runtime/_resources/animations/ui/controller/touchpad_handle_origin_on.anim
+2 kb                 assets/art_test/prefabs/items/i_zucchini.prefab
+6 kb                 assets/prefab/npcinteractionbutton.prefab
+54 kb                assets/art_test/models/ingredients/cucumber.fbx
+172 kb               assets/image/bookimage/도감창1.png
+5 kb                 assets/prefab/foodprefab/비빔밥.prefab
+49 kb                assets/art_test/textures/t_ham.png
+2 kb                 assets/art_test/materials/m_egg.mat
+931 kb               assets/image/tutorialimage/튜토리얼베이스.png
+18 kb                assets/image/kkaebiimage/붕어빵깨비.png
+2 kb                 assets/art_test/prefabs/items/i_maltsack.prefab
+13 kb                assets/image/kkaebiimage/송편깨비.png
+1 kb                 packages/zepeto.buildit.common/common/cooltime_commons/data/builditcutout.shader
+5 kb                 assets/image/ingreimage/바지락.jpg
+2 kb                 assets/art_test/materials/m_pear.mat
+3 kb                 assets/image/ingreimage/오이.jpg
+2 kb                 assets/art_test/materials/m_foods/m_nakji horongi.mat
+5 kb                 assets/prefab/kkaebiprefab/찹쌀떡깨비.prefab
+2 kb                 assets/art_test/materials/m_radish.mat
+3 kb                 assets/art_test/prefabs/kkebis/kalgukkkaebi.prefab
+5 kb                 assets/prefab/kkaebiprefab/고기깨비.prefab
+1 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/fxt_blobshadow.png
+46 kb                assets/art_test/models/ingredients/egg.fbx
+67 kb                assets/art_test/models/ingredients/clam_opened.fbx
+2 kb                 assets/art_test/prefabs/deco asset/i_ginger.prefab
+2 kb                 assets/art_test/materials/m_kkebi/m_galbijjimkkaebi.mat
+2 kb                 assets/art_test/prefabs/items/i_ham.prefab
+61 kb                assets/art_test/models/ingredients/danmugi.fbx
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/gesture/4_ok.anim
+5 kb                 assets/prefab/kkaebiprefab/김치깨비.prefab
+2 kb                 assets/art_test/prefabs/items/i_apple.prefab
+8 kb                 assets/image/foodimage/배숙.jpg
+2 kb                 assets/art_test/prefabs/items/i_carrot.prefab
+18 kb                assets/image/kkaebiimage/떡국깨비.png
+9 kb                 assets/image/ingreimage/엿기름.jpg
+2 kb                 assets/art_test/prefabs/items/i_almond.prefab
+5 kb                 assets/prefab/kkaebiprefab/배숙깨비.prefab
+2 kb                 assets/art_test/materials/m_cooking oil.mat
+1 mb                 packages/zepeto.character.controller/runtime/_resources/animations/base/v2/landingdeep.anim
+82 kb                assets/art_test/models/ingredients/chicken.fbx
+5 kb                 assets/prefab/foodprefab/찹쌀떡.prefab
+163 kb               assets/art_test/textures/t_foods/t_ginkgonut kkochi.png
+2 kb                 assets/art_test/materials/m_ginkgonut.mat
+67 kb                assets/art_test/textures/t_salt.png
+2 kb                 assets/art_test/prefabs/items/i_chicken.prefab
+152 kb               assets/art_test/textures/t_kkebi/t_yakgwakkebi.png
+2 kb                 assets/art_test/materials/m_rockfish_ureok.mat
+5 kb                 assets/prefab/foodprefab/소갈비찜.prefab
+2 kb                 assets/image/questimage/퀘스트_요리 중단하기.png
+5 kb                 assets/image/ingreimage/참기름.jpg
+3 kb                 assets/art_test/prefabs/kkebis/nakjihorongkkaebi.prefab
+2 kb                 assets/art_test/materials/m_sweetpumpkin.mat
+2 kb                 assets/art_test/materials/m_danmugi.mat
+6 kb                 assets/image/ingreimage/배.jpg
+301 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/v2/falling.anim
+2 kb                 assets/image/bookimage/도감_요리이미지.png
+2 kb                 assets/fantasy skybox/panoramics/fs002/fs002_day.mat
+51 kb                assets/art_test/models/foods/chestnut_undercrack.fbx
+5 kb                 assets/prefab/foodprefab/바지락칼국수.prefab
+2 kb                 assets/prefab/foodprefab/팥빙수.prefab
+8 kb                 assets/image/foodimage/낙지 호롱이.jpg
+62 kb                assets/art_test/models/ingredients/sack_open.fbx
+2 kb                 assets/art_test/materials/m_cheongyangpepper.mat
+52 kb                assets/kkaebianimator/aehobakjeonkkaebi.fbx
+5 kb                 assets/image/11_05_image/대왕꺠비npc_대화하기버튼.png
+26 kb                assets/art_test/textures/t_condensedmilk.png
+9 kb                 assets/prefab/questprefab/quest_ingre.prefab
+2 kb                 assets/art_test/prefabs/items/i_salt.prefab
+9 kb                 assets/prefab/inven_slot.prefab
+3 kb                 assets/art_test/prefabs/kkebis/kimchikkaebi.prefab
+986 b                assets/image/questimage/퀘스트_요리재료1칸.png
+83 kb                assets/art_test/models/kkebi/kimchikkaebi.fbx
+13 kb                assets/image/kkaebiimage/팥빙깨비.png
+940 kb               packages/zepeto.character.controller/runtime/_resources/animations/base/run.anim
+13 kb                assets/image/kkaebiimage/매운탕깨비.png
+282 kb               assets/art_test/textures/t_foods/t_sogalbijjim.png
+5 kb                 assets/prefab/foodprefab/떡국.prefab
+13 kb                assets/image/foodimage/붕어찜.png
+5 kb                 assets/image/ingreimage/소금.jpg
+2 kb                 assets/image/questimage/퀘스트_요리이미지.png
+28 kb                assets/_resources/[materials]/texture/colortexture_001.png
+11 kb                assets/image/11_05_image/퀘스트 알림창_베이스.png
+140 kb               assets/art_test/models/foods/sobulgogi keopbap.fbx
+5 kb                 assets/image/ingreimage/고춧가루.jpg
+101 kb               assets/art_test/models/ingredients/radish.fbx
+34 kb                assets/art_test/textures/t_foods/t_sikhye_sweetpumpkin.png
+553 b                assets/image/settingimage/환경설정_닫기버튼.png
+8 kb                 assets/image/ingreimage/젤리.jpg
+2 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/shadow/fxt_blobshadow.mat
+2 kb                 packages/zepeto.character.controller/runtime/_resources/prefabs/eventsystem.prefab
+77 kb                assets/art_test/models/kkebi/tteokbokkaebi.fbx
+2 kb                 assets/art_test/materials/m_fishcake.mat
+44 kb                assets/art_test/textures/t_potato.png
+6 kb                 assets/image/foodimage/떡꼬치.jpg
+44 kb                assets/art_test/models/almond.fbx
+206 kb               assets/art_test/textures/t_sweetpumpkin.png
+16 kb                assets/image/kkaebiimage/떡보깨비.png
+2 kb                 assets/art_test/materials/m_foods/m_chestnut_undercrack.mat
+2 kb                 assets/art_test/prefabs/items/i_foods/i_aehobak jeon.prefab
+185 kb               assets/art_test/textures/t_kkebi/t_eunhaengkkochikkebi.png
+2 kb                 assets/art_test/materials/m_kkebi/m_baesukkkaebi.mat
+6 kb                 assets/image/ingreimage/감자.jpg
+2 kb                 assets/image/startimage/인벤토리.png
+[resources]
+0 b                  assets/resources    
+[streamingAssets]
