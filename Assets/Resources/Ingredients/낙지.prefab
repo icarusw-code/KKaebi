@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3723965545527246442}
     m_Modifications:
+    - target: {fileID: 2380592546562944556, guid: 70e4ea4a4ffd72d4994f7b14e05f29a1, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5860385345369064468, guid: 70e4ea4a4ffd72d4994f7b14e05f29a1, type: 3}
       propertyPath: m_Name
       value: I_Nakji
@@ -150,7 +154,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1977427983499493909, guid: 1e9cfff18c4fcf5409f238642e6e0487, type: 3}
       propertyPath: script.values.Array.data[0]
-      value: '{"type":"System.Single, mscorlib","value":"4013"}'
+      value: '{"type":"System.Single, mscorlib","value":"4103"}'
       objectReference: {fileID: 0}
     - target: {fileID: 1977427983499493909, guid: 1e9cfff18c4fcf5409f238642e6e0487, type: 3}
       propertyPath: script.values.Array.data[1]
