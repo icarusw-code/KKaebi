@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -5723250440540461546, guid: 26a1e7cd8e8431b48a9321453365bcef, type: 3}
       propertyPath: script.values.Array.data[0]
-      value: '{"type":"System.Single, mscorlib","value":"2"}'
+      value: '{"type":"System.Single, mscorlib","value":"1"}'
       objectReference: {fileID: 0}
     - target: {fileID: -5723250440540461546, guid: 26a1e7cd8e8431b48a9321453365bcef, type: 3}
       propertyPath: script.values.Array.data[1]
