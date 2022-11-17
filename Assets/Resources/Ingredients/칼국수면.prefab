@@ -226,5 +226,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: I_Kalguksu noodles
       objectReference: {fileID: 0}
+    - target: {fileID: 6036596182338234407, guid: 3ff6024f243fb0f4e9a2f28f04e228d9, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6036596182338234407, guid: 3ff6024f243fb0f4e9a2f28f04e228d9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6036596182338234407, guid: 3ff6024f243fb0f4e9a2f28f04e228d9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6036596182338234407, guid: 3ff6024f243fb0f4e9a2f28f04e228d9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6036596182338234407, guid: 3ff6024f243fb0f4e9a2f28f04e228d9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6036596182338234407, guid: 3ff6024f243fb0f4e9a2f28f04e228d9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ff6024f243fb0f4e9a2f28f04e228d9, type: 3}

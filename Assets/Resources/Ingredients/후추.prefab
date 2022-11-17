@@ -59,6 +59,30 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1483815629238816023, guid: 82b31d505a0e1834f969dca4ebba5bab, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483815629238816023, guid: 82b31d505a0e1834f969dca4ebba5bab, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483815629238816023, guid: 82b31d505a0e1834f969dca4ebba5bab, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483815629238816023, guid: 82b31d505a0e1834f969dca4ebba5bab, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483815629238816023, guid: 82b31d505a0e1834f969dca4ebba5bab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483815629238816023, guid: 82b31d505a0e1834f969dca4ebba5bab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 7302915397058777483, guid: 82b31d505a0e1834f969dca4ebba5bab, type: 3}
       propertyPath: m_Name
       value: I_Pepper

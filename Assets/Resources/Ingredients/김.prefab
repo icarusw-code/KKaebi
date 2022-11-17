@@ -173,5 +173,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: I_Kim
       objectReference: {fileID: 0}
+    - target: {fileID: 7441797059668588374, guid: 9da328e352f4e5342bf11ec26989a3fe, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7441797059668588374, guid: 9da328e352f4e5342bf11ec26989a3fe, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7441797059668588374, guid: 9da328e352f4e5342bf11ec26989a3fe, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7441797059668588374, guid: 9da328e352f4e5342bf11ec26989a3fe, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7441797059668588374, guid: 9da328e352f4e5342bf11ec26989a3fe, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9da328e352f4e5342bf11ec26989a3fe, type: 3}

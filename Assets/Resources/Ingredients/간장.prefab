@@ -133,6 +133,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3723965545527246442}
     m_Modifications:
+    - target: {fileID: 856872445535249297, guid: c1927b7bc2860494589c0386f5e56507, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 856872445535249297, guid: c1927b7bc2860494589c0386f5e56507, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 856872445535249297, guid: c1927b7bc2860494589c0386f5e56507, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 856872445535249297, guid: c1927b7bc2860494589c0386f5e56507, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 856872445535249297, guid: c1927b7bc2860494589c0386f5e56507, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 856872445535249297, guid: c1927b7bc2860494589c0386f5e56507, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 7230052919795077022, guid: c1927b7bc2860494589c0386f5e56507, type: 3}
       propertyPath: m_Name
       value: I_Soy Sauce

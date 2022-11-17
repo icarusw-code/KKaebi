@@ -109,6 +109,8 @@ export default class LanguageChange extends ZepetoScriptBehaviour {
         for(let i=0; i<this.QMFoodButtonsObj.length;i++){
             this.EnglishToKoreanDiction.set(this.QMFoodButtonsObj[i].GetComponent<FoodInfo>().foodEnlgishName,this.QMFoodButtonsObj[i].GetComponent<FoodInfo>().foodname);
         }
+
+        this.ChangeTxtInStatics(2);
     }
 
 
