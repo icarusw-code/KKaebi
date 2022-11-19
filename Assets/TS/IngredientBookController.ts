@@ -15,6 +15,7 @@ export default class IngredientBookController extends ZepetoScriptBehaviour {
     ingreSub : Text;    
     ingreInfo : GameObject;
     ingreInfoExtBtn : Button;
+    ingreTitle : Text;
     // ============================== //
 
     public ingredientList : GameObject[];
@@ -61,6 +62,9 @@ export default class IngredientBookController extends ZepetoScriptBehaviour {
                     });
 
                     if(LanguageChange.getInstance().LanguageMode == 1){
+
+                        this.ingreTitle = this.ingreInfo.transform.GetChild(0).GetChild(0).GetChild(0).GetComponentInChildren<Text>();
+                        this.ingreTitle.text = "재료 상세 설명";
                         // 재료 이름 넣기
                         this.ingreName = this.ingreInfo.transform.GetChild(0).GetChild(0).GetChild(2).GetComponentsInChildren<Text>()[0];
                         this.ingreName.text = "이름 : " + this.ingreBtn[i].name;
@@ -68,7 +72,10 @@ export default class IngredientBookController extends ZepetoScriptBehaviour {
                         this.ingreSub = this.ingreInfo.transform.GetChild(0).GetChild(0).GetChild(2).GetComponentsInChildren<Text>()[1];
                         this.ingreSub.text = IngreInfoData.getInstance().ingreDetailInfo.get(this.ingreBtn[i].name)[0];
                     }
-                    else if(LanguageChange.getInstance().LanguageMode == 2){                       
+                    else if(LanguageChange.getInstance().LanguageMode == 2){        
+                        
+                        this.ingreTitle = this.ingreInfo.transform.GetChild(0).GetChild(0).GetChild(0).GetComponentInChildren<Text>();
+                        this.ingreTitle.text = "Detail instructions for ingredients";
                          // 재료 이름 넣기
                         this.ingreName = this.ingreInfo.transform.GetChild(0).GetChild(0).GetChild(2).GetComponentsInChildren<Text>()[0];
                         this.ingreName.text = "Name : " + LanguageChange.getInstance().EnlgishPack.get(this.ingreBtn[i].name);
