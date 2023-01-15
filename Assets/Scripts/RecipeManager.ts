@@ -16,6 +16,7 @@ export default class RecipeManager extends ZepetoScriptBehaviour {
     foodSub : Text;
     foodIngre : Text;
     foodRecipe : Text;
+    foodTitle : Text;
     // ============================== // 
 
     public recipeBtnObject: GameObject[];
@@ -42,6 +43,7 @@ export default class RecipeManager extends ZepetoScriptBehaviour {
                     this.foodInfo = GameObject.Instantiate(this.foodInfoObject) as GameObject;
                     this.foodInfoExtBtn = this.foodInfo.transform.GetChild(0).GetComponentInChildren<Button>();
                     this.foodName = this.foodInfo.transform.GetChild(0).GetChild(0).GetChild(2).GetComponentsInChildren<Text>()[0];
+                    this.foodTitle = this.foodInfo.transform.GetChild(0).GetChild(0).GetChild(0).GetComponentInChildren<Text>();
                     // 음식 이미지 넣기
                     this.foodImage = this.foodInfo.transform.GetChild(0).GetChild(0).GetChild(2).GetComponentsInChildren<Image>()[3];
                     QuestManager.getInstance().FoodImageList.map((image) =>{
@@ -53,6 +55,9 @@ export default class RecipeManager extends ZepetoScriptBehaviour {
 
                     // 한국어
                     if(LanguageChange.getInstance().LanguageMode == 1){
+                        
+                        this.foodTitle.text = "요리 상세 설명";
+
                         // 음식 이름 넣기
                         this.foodName.text = "이름 : " + this.recipeBtn[i].name;
                         // 음식 간략 설명
@@ -69,6 +74,9 @@ export default class RecipeManager extends ZepetoScriptBehaviour {
                     }
                     // 영문
                     else if(LanguageChange.getInstance().LanguageMode == 2){
+                        
+                        this.foodTitle.text = "Detail instructions for cooking";
+
                         // 음식 이름 넣기
                         this.foodName.text = "Name : " + LanguageChange.getInstance().EnlgishPack.get(this.recipeBtn[i].name);
                         // 음식 간략 설명

@@ -83,7 +83,7 @@ export default class SettingManager extends ZepetoScriptBehaviour {
         //this.thaiColor = this.thai.gameObject.GetComponent<Image>();
         //this.indonesianColor = this.indonesian.gameObject.GetComponent<Image>();
 
-        this.listText.text = "한국어";
+        this.listText.text = "English";
         this.bgBtn.transform.position = this.bgOFF.transform.position;
         this.sfxBtn.transform.position = this.sfxOFF.transform.position;
     }
