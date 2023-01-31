@@ -32,7 +32,7 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
     Start() {    
         this.spawnmanager = GameObject.Find("SpawnManager");
         this.IngredientController= GameObject.Find("UI_Manager");
-        this.content = GameObject.Find("Canvas_UI").transform.GetChild(3).GetChild(0).GetChild(0).GetChild(0).gameObject;
+        this.content = GameObject.Find("Canvas_UI").transform.GetChild(4).GetChild(0).GetChild(0).GetChild(0).gameObject;
 
         this.myID = this.gameObject.GetComponent<IngredientInfo>().id;
 

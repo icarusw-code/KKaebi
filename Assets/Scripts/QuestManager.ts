@@ -17,6 +17,7 @@ import KkaebiInfo from '../TS/KkaebiInfo';
 import ingerdientInteraction from './ingredientInteraction';
 import SoundManager from './SoundManager';
 import AnalyticsController from '../TS/AnalyticsController';
+import { Vector3 } from 'ZEPETO.Multiplay.Schema';
 export default class QuestManager extends ZepetoScriptBehaviour {
     //플레이어 컨트롤러
     private playerController : GameObject;
@@ -417,7 +418,7 @@ export default class QuestManager extends ZepetoScriptBehaviour {
         // 요리 프리팹 생성
         this.foodModelList.map((d) => {
             if(d.name == this.QuestFoodName){
-                GameObject.Instantiate(d, this.tableOnFood.transform.position, UnityEngine.Quaternion.identity, this.tableOnFood.transform);
+                GameObject.Instantiate(d, this.tableOnFood.transform.position, UnityEngine.Quaternion.Euler(0,180,0), this.tableOnFood.transform);//**2차 업데이트 - 테이블에 음식나올때 회전값 수정 */
             }
         });
     }
@@ -505,11 +506,12 @@ export default class QuestManager extends ZepetoScriptBehaviour {
 
         for(let i = 0; i < this.inventoryList.length; i++)
         {
-            this.modelList.map((d) => {
+            this.modelList.map((d) => { //재료 테이블에 생성
                 if(d.name == this.inventoryList[i].name){
                     var ingreObject = GameObject.Instantiate(d) as GameObject;
                     ingreObject.transform.SetParent(this.tableOnIngres.transform);
                     ingreObject.transform.position = this.positionList[i].transform.position;
+                    ingreObject.transform.rotation = UnityEngine.Quaternion.Euler(0,90,0);//**2차 업데이트 - 테이블에 재료나올때 회전값 수정 */
                     ingreObject.GetComponent<UnityEngine.BoxCollider>().enabled = false;
                 }
             });
