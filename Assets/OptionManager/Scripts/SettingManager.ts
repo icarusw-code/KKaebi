@@ -242,10 +242,10 @@ export default class SettingManager extends ZepetoScriptBehaviour {
         if (this.isKorean == true)
         {
             // 한국어 버튼 색을 하얀색으로
-            this.koreanColor.color = new Color(1, 1, 1, 1);
+            //this.koreanColor.color = new Color(1, 1, 1, 1);
 
             // 나머지 언어 버튼 색은 원래 색(회색)으로
-            this.englishColor.color = new Color(0.66, 0.66, 0.66, 1);
+            //this.englishColor.color = new Color(0.66, 0.66, 0.66, 1);
             //this.thaiColor.color = new Color(0.66f, 0.66f, 0.66f, 1f);
             //this.japaneseColor.color = new Color(0.66f, 0.66f, 0.66f, 1f);
             //this.indonesianColor.color = new Color(0.66f, 0.66f, 0.66f, 1f);
@@ -268,10 +268,10 @@ export default class SettingManager extends ZepetoScriptBehaviour {
         if (this.isEnglish == true)
         {
             // 영어 버튼 색을 하얀색으로
-            this.englishColor.color = new Color(1, 1, 1, 1);
+            //this.englishColor.color = new Color(1, 1, 1, 1);
 
             // 나머지 언어 버튼 색은 원래 색(회색)으로
-            this.koreanColor.color = new Color(0.66, 0.66, 0.66, 1);
+            //this.koreanColor.color = new Color(0.66, 0.66, 0.66, 1);
             //this.thaiColor.color = new Color(0.66, 0.66, 0.66, 1);
             //this.japaneseColor.color = new Color(0.66, 0.66, 0.66, 1);
             //this.indonesianColor.color = new Color(0.66, 0.66, 0.66, 1);

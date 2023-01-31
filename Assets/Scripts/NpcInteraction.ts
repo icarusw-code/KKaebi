@@ -19,7 +19,8 @@ export default class NpcInteraction extends ZepetoScriptBehaviour {
 
     Awake(){
         this.btn = GameObject.Instantiate(this.btnFactory) as GameObject; //재료 생성될때 버튼도 함께 생성
-        this.btn.transform.SetParent(GameObject.Find("Canvas_ICON").transform); //캔버스 자식으로 생성
+        this.btn.transform.SetParent(GameObject.Find("Canvas_UI").transform); //캔버스 자식으로 생성 //**2차추가 : canvas_ui의 첫번째 자식으로 하게해서 무조건 밑에깔리게 */
+        this.btn.transform.SetAsFirstSibling();
         this.btn.GetComponent<ButtonClick>().TurnOffButton(); //버튼일단 꺼주고
     }
 
@@ -84,8 +85,8 @@ export default class NpcInteraction extends ZepetoScriptBehaviour {
     //NPC가 플레이어와 닿아있다면
     OnTriggerStay(coll:Collider){
         var localPlayer: GameObject = ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.gameObject;
-        if(coll.gameObject==localPlayer){
-            if(this.turnCheck2==false){
+        if(coll.gameObject==localPlayer){ //플레이어가 닿아있고
+            if(this.turnCheck2==false){ // 퀘스트를 안켰다면   
                 this.btn.GetComponent<ButtonClick>().TurnOnButton();
             }
             this.turnCheck= true; //들어오면 체크

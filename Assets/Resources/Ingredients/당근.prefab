@@ -190,6 +190,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: I_Carrot
       objectReference: {fileID: 0}
+    - target: {fileID: 7358418022887066005, guid: 2f4c03bd944fcdc42828b9c3dc15e33f, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358418022887066005, guid: 2f4c03bd944fcdc42828b9c3dc15e33f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358418022887066005, guid: 2f4c03bd944fcdc42828b9c3dc15e33f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358418022887066005, guid: 2f4c03bd944fcdc42828b9c3dc15e33f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7950657081051988675, guid: 2f4c03bd944fcdc42828b9c3dc15e33f, type: 3}
       propertyPath: m_RootOrder
       value: 1
