@@ -37,7 +37,10 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
         this.myID = this.gameObject.GetComponent<IngredientInfo>().id;
 
         this.btn = GameObject.Instantiate(this.btnFactory) as GameObject; //재료 생성될때 버튼도 함께 생성
-        this.btn.transform.SetParent(GameObject.Find("Canvas_ICON").transform); //캔버스 자식으로 생성
+        //this.btn.transform.SetParent(GameObject.Find("Canvas_ICON").transform); //캔버스 자식으로 생성 
+        //**2차 업데이트 - 우선순위때문에 자식 canvas_ui에서 첫번째로 */
+        this.btn.transform.SetParent(GameObject.Find("Canvas_UI").transform);
+        //this.btn.transform.SetAsFirstSibling();
         this.btn.GetComponent<ButtonClick>().TurnOffButton(); //버튼일단 꺼주고
 
         this.DestroyBtn = this.btn.GetComponent<Button>(); 
@@ -86,7 +89,7 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
                             Notifications.getIns().UpLoadText(QuestManager.getInstance().QuestAcceptFoodName+"의 재료를 전부 모았다! 대왕깨비에게 가서 요리를 부탁하자");
                         }   
                         else if(LanguageChange.getInstance().LanguageMode == 2){ //영어
-                            Notifications.getIns().UpLoadText("You collected all the ingredients for "+LanguageChange.getInstance().EnlgishPack.get(QuestManager.getInstance().QuestAcceptFoodName)+"! Let's go ask the King Kkaebi to cook");
+                            Notifications.getIns().UpLoadText("You collected all the ingredients for "+LanguageChange.getInstance().EnlgishPack.get(QuestManager.getInstance().QuestAcceptFoodName)+"!\n Let's go ask the King Kkaebi to cook");
                         }
                     }
                     this.isingrcheck=true; //레시피에 해당 재료가 있는것이므로
@@ -117,6 +120,8 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
         var localPlayer: GameObject = ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.gameObject;
         if(coll.gameObject==localPlayer){
             this.btn.GetComponent<ButtonClick>().TurnOnButton();
+            //**2차 업데이트 - 우선순위때문에 자식 canvas_ui에서 첫번째로 */
+            this.btn.transform.SetAsFirstSibling();
             this.turnCheck= true; //들어오면 체크
         }
     }
