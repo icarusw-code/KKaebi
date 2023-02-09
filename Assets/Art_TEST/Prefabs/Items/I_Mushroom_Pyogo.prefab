@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1154627533103136158
+--- !u!1 &5616349476451719558
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1967474023118874404}
-  - component: {fileID: 3234152595207497857}
-  - component: {fileID: 794590594261376075}
-  - component: {fileID: 5597398088201469278}
+  - component: {fileID: 5096553857466188604}
+  - component: {fileID: 8148492966900812953}
+  - component: {fileID: 6264986913824094291}
+  - component: {fileID: 1178452643653523782}
   m_Layer: 0
   m_Name: I_Mushroom_Pyogo
   m_TagString: Untagged
@@ -19,13 +19,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1967474023118874404
+--- !u!4 &5096553857466188604
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1154627533103136158}
+  m_GameObject: {fileID: 5616349476451719558}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -33,21 +33,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3234152595207497857
+--- !u!33 &8148492966900812953
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1154627533103136158}
+  m_GameObject: {fileID: 5616349476451719558}
   m_Mesh: {fileID: 4336557457207242871, guid: 747e6e0fd3af7c34190dbbf01e66f138, type: 3}
---- !u!23 &794590594261376075
+--- !u!23 &6264986913824094291
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1154627533103136158}
+  m_GameObject: {fileID: 5616349476451719558}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -82,14 +82,14 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!95 &5597398088201469278
+--- !u!95 &1178452643653523782
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1154627533103136158}
+  m_GameObject: {fileID: 5616349476451719558}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 747e6e0fd3af7c34190dbbf01e66f138, type: 3}
   m_Controller: {fileID: 0}
