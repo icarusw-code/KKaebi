@@ -7,6 +7,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3723965545527246442}
     m_Modifications:
+    - target: {fileID: 2046615983272854433, guid: 92007a4ffdf082a4aab8f58809ffa959, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046615983272854433, guid: 92007a4ffdf082a4aab8f58809ffa959, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046615983272854433, guid: 92007a4ffdf082a4aab8f58809ffa959, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046615983272854433, guid: 92007a4ffdf082a4aab8f58809ffa959, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046615983272854433, guid: 92007a4ffdf082a4aab8f58809ffa959, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 6066349805000464775, guid: 92007a4ffdf082a4aab8f58809ffa959, type: 3}
       propertyPath: m_Name
       value: I_Sweet Red Beans
