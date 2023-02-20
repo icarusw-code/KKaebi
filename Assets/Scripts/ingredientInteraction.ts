@@ -45,7 +45,7 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
 
         this.DestroyBtn = this.btn.GetComponent<Button>(); 
         this.DestroyBtn.onClick.AddListener(() => { //먹는 버튼 누르면 먹어지는 동작
-            if(QuestManager.getInstance().isNowAccept==false){
+            if(QuestManager.getInstance().isNowAccept==false){ //퀘스트 매니저에서 현재 퀘스트 수락상태가 아니라면
                 SoundManager.getInstance().PlayBgm("NotificationBgm");
                 if(LanguageChange.getInstance().LanguageMode == 1){ //한국어
                     Notifications.getIns().UpLoadText("진행중인 요리가 없습니다. 대왕깨비에게 가보세요!");
@@ -55,7 +55,7 @@ export default class ingerdientInteraction extends ZepetoScriptBehaviour {
                     Notifications.getIns().UpLoadText("There are no dishes in progress. Go to the King Kkaebi!");
                 }
             }
-            if(QuestManager.getInstance().GetIngreCheckDiction.get(this.myID)==true){
+            if(QuestManager.getInstance().GetIngreCheckDiction.get(this.myID)==true){ //퀘스트 매니저에서 지금 건드린 재료가 true상태라면(이미 먹은상태)
                 SoundManager.getInstance().PlayBgm("NotificationBgm");
                 //한글이라면
                 this.alreadyCheck=true;
