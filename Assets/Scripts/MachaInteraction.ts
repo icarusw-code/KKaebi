@@ -52,13 +52,14 @@ export default class MachatInteraction extends ZepetoScriptBehaviour {
             this.randomNumber = Math.floor(UnityEngine.Random.Range(0, this.foodItems.length));
             console.log("꼬치번호 : " + this.randomNumber);
 
-            for(let i = 0; i < handPosition.childCount; i++){
-                if(i >= 5){
-                    GameObject.Destroy(handPosition.GetChild(i).gameObject);
+            this.DestroyStick();
+            //for(let i = 0; i < handPosition.childCount; i++){
+            //    if(i >= 5){
+            //        GameObject.Destroy(handPosition.GetChild(i).gameObject);
 
-                    console.log("체크 : " + i);
-                }
-            }
+            //        console.log("체크 : " + i);
+            //    }
+            //}
             this.foodItem = GameObject.Instantiate(this.foodItems[this.randomNumber], handPosition) as GameObject;
 
 
@@ -72,17 +73,19 @@ export default class MachatInteraction extends ZepetoScriptBehaviour {
         // 꼬치 없애기
         this.stickDownBtn.onClick.AddListener(() => {
 
-            var localPlayer: GameObject = ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.gameObject;
-            var handPosition = localPlayer.transform.GetChild(0).GetChild(1).GetChild(2).GetChild(0).GetChild(1).GetChild(2).GetChild(1).GetChild(1).GetChild(0).GetChild(1).GetChild(0);
-
             console.log("꼬치 제거 버튼 클릭");
-            for (let i = 0; i < handPosition.childCount; i++) {
-                if (i >= 5) {
-                    GameObject.Destroy(handPosition.GetChild(i).gameObject);
+            this.DestroyStick();
 
-                    console.log("체크 : " + i);
-                }
-            }
+            //var localPlayer: GameObject = ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.gameObject;
+            //var handPosition = localPlayer.transform.GetChild(0).GetChild(1).GetChild(2).GetChild(0).GetChild(1).GetChild(2).GetChild(1).GetChild(1).GetChild(0).GetChild(1).GetChild(0);
+
+            //for (let i = 0; i < handPosition.childCount; i++) {
+            //    if (i >= 5) {
+            //        GameObject.Destroy(handPosition.GetChild(i).gameObject);
+
+            //        console.log("체크 : " + i);
+            //    }
+            //}
         });
         
     }
@@ -113,5 +116,19 @@ export default class MachatInteraction extends ZepetoScriptBehaviour {
         myPos = camera.WorldToScreenPoint(this.transform.position); //자기 자신의 위치를 스크린 포인트 좌표계로 바꿔줌
         this.btn.transform.position = myPos; //버튼을 계속 오브젝트 좌표(윗줄의 mypos)위에 뜨게함
     }
+
+    DestroyStick() {
+
+        var localPlayer: GameObject = ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.gameObject;
+        var handPosition = localPlayer.transform.GetChild(0).GetChild(1).GetChild(2).GetChild(0).GetChild(1).GetChild(2).GetChild(1).GetChild(1).GetChild(0).GetChild(1).GetChild(0);
+        for (let i = 0; i < handPosition.childCount; i++) {
+            if (i >= 5) {
+                GameObject.Destroy(handPosition.GetChild(i).gameObject);
+
+                console.log("체크 : " + i);
+            }
+        }
+    }
+
 
 }
