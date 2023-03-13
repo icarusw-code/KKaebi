@@ -29,12 +29,18 @@ export default class MachatInteraction extends ZepetoScriptBehaviour {
 
     public isOnHand : bool = false;
 
-    randomNumber : number;
+    randomNumber: number;
+
+    // 꼬치 없애기 버튼
+    stickDownBtn : Button;
 
     Start() {    
         this.btn = GameObject.Instantiate(this.btnFactory) as GameObject; //재료 생성될때 버튼도 함께 생성
         this.btn.transform.SetParent(GameObject.Find("Canvas_UI").transform); //캔버스 자식으로 생성
         this.btn.GetComponent<ButtonClick>().TurnOffButton(); //버튼일단 꺼주고
+
+        // 꼬치 없애기
+        this.stickDownBtn = GameObject.Find("StickDestroyButton").GetComponent<Button>();
 
         this.DestroyBtn = this.btn.GetComponent<Button>(); 
         this.DestroyBtn.onClick.AddListener(() => { 
@@ -44,7 +50,7 @@ export default class MachatInteraction extends ZepetoScriptBehaviour {
             var handPosition = localPlayer.transform.GetChild(0).GetChild(1).GetChild(2).GetChild(0).GetChild(1).GetChild(2).GetChild(1).GetChild(1).GetChild(0).GetChild(1).GetChild(0);
             
             this.randomNumber = Math.floor(UnityEngine.Random.Range(0, this.foodItems.length));
-            console.log(this.randomNumber);
+            console.log("꼬치번호 : " + this.randomNumber);
 
             for(let i = 0; i < handPosition.childCount; i++){
                 if(i >= 5){
@@ -54,12 +60,31 @@ export default class MachatInteraction extends ZepetoScriptBehaviour {
                 }
             }
             this.foodItem = GameObject.Instantiate(this.foodItems[this.randomNumber], handPosition) as GameObject;
+
+
             SoundManager.getInstance().PlayBgm("UIbuttonBgm");
             // this.foodItem.transform.localScale = new Vector3(0.01, 0.01, 0.01);
             this.foodItem.transform.localPosition = new Vector3(-0.075000003,-0.00300000003,0.00200000009);
             this.foodItem.transform.localEulerAngles = Vector3.zero;
             this.isOnHand = true;
         });
+
+        // 꼬치 없애기
+        this.stickDownBtn.onClick.AddListener(() => {
+
+            var localPlayer: GameObject = ZepetoPlayers.instance.LocalPlayer.zepetoPlayer.character.gameObject;
+            var handPosition = localPlayer.transform.GetChild(0).GetChild(1).GetChild(2).GetChild(0).GetChild(1).GetChild(2).GetChild(1).GetChild(1).GetChild(0).GetChild(1).GetChild(0);
+
+            console.log("꼬치 제거 버튼 클릭");
+            for (let i = 0; i < handPosition.childCount; i++) {
+                if (i >= 5) {
+                    GameObject.Destroy(handPosition.GetChild(i).gameObject);
+
+                    console.log("체크 : " + i);
+                }
+            }
+        });
+        
     }
 
     Update(){
